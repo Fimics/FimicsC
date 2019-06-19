@@ -1,0 +1,59 @@
+cmake_minimum_required(VERSION 3.13)
+project(FimicsCPP)
+
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_C_STANDARD 99)
+#set(CMAKE_C_FLAGS "-pipe -Wall -Wextra -Wpointer-arith -Wconditional-uninitialized -Wno-unused-parameter -Wno-deprecated-declarations")
+
+include_directories(
+        src/array
+        src/datatype
+        src/function
+        src/mian
+        src/pointer
+        src/system
+        src/string)
+
+
+set(SOURCE_C_FILES
+        #main
+        src/main.c
+
+        #dataType
+        src/datatype/DataType.h
+        src/datatype/DataType.c
+        src/datatype/BinaryConvert.c
+        src/datatype/Char.c
+
+        #function
+        src/function/Function.h
+        src/function/Function.c
+
+        #string
+        src/string/String.h
+        src/string/String.c
+        src/string/StringInputOutput.c
+
+        #pointer
+        src/pointer/Pointer.h
+        src/pointer/Pointer.c
+
+        #array
+        src/array/Array.h
+        src/array/Array.c
+        src/array/Array2d.c
+        src/array/ArrayAndPointer.c
+        src/array/Srand.c
+        src/array/vararr2d.c
+
+        #system
+        src/system/System.h
+        src/system/System.c
+        )
+
+set(SOURCE_CPP_FILES
+    srcplus/main.cpp
+)
+
+add_executable(FimicsC ${SOURCE_C_FILES})
+add_executable(FimicsCPP ${SOURCE_CPP_FILES})
