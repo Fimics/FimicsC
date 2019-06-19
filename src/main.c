@@ -4,57 +4,36 @@
 
 #include <stdio.h>
 
-#include "String.h"
+#include "YString.h"
 #include "Pointer.h"
 #include "Function.h"
 #include "DataType.h"
 #include "Array.h"
-#include "String.h"
 #include "System.h"
 
 int main() {
 
-/**
- * dataType
- */
+//datatype
 
-//    testDataType();
-//    testChar();
-//    binaryConvert();
-//    testRand();
 
-/**
- * String
- */
+//string
+    testString();
 
-//    testString();
-      stringInputOutput();
 
-/**
- * function
- */
-
+//function
 //    testFunction();
 
-/**
- * pointer
- */
+//pointer
 
 //    testPointer();
 
-/**
- * array
- */
-
+//array
 //      testArray();
 //      testArray2d();
 //      testArrayAndPointer();
-        testSum2d();
+//      testSum2d();
 
-/**
- * system
- */
-
+//system
 //     testSystem();
 
     return 0;

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 project(FimicsCPP)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD 11)
 #set(CMAKE_C_FLAGS "-pipe -Wall -Wextra -Wpointer-arith -Wconditional-uninitialized -Wno-unused-parameter -Wno-deprecated-declarations")
 
 include_directories(
@@ -30,9 +30,10 @@ set(SOURCE_C_FILES
         src/function/Function.c
 
         #string
-        src/string/String.h
-        src/string/String.c
-        src/string/StringInputOutput.c
+        src/string/YString.h
+        src/string/YString.c
+        src/string/GetssPuts.c
+        src/string/FgetsFputs.c
 
         #pointer
         src/pointer/Pointer.h
@@ -49,10 +50,10 @@ set(SOURCE_C_FILES
         #system
         src/system/System.h
         src/system/System.c
-        )
+        src/string/PrintfScanf.c)
 
 set(SOURCE_CPP_FILES
-    srcplus/main.cpp
+        srcplus/main.cpp
 )
 
 add_executable(FimicsC ${SOURCE_C_FILES})

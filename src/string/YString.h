@@ -7,5 +7,7 @@
 
 #endif //FIMICSC_STRING_H
 
+void putsGets();
+void fgetsFputs();
+void printfScanf();
 void testString();
-void stringInputOutput();
