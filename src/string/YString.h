@@ -10,4 +10,8 @@
 void putsGets();
 void fgetsFputs();
 void printfScanf();
+void strlenStrcpy();
+void sprintfsscanf();
+void strFind();
+void strtopatoi();
 void testString();

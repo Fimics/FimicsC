@@ -8,5 +8,9 @@
 void testString(){
     //putsGets();
    //fgetsFputs();
-   printfScanf();
+//   printfScanf();
+//strlenStrcpy();
+//sprintfsscanf();
+//strFind();
+strtopatoi();
 }
