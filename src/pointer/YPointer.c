@@ -118,7 +118,8 @@ void testPointer(){
 //   testDiff();
 //    testDiffPointer();
 //     pointerDefine();
-     wildNullPointer();
+//     wildNullPointer();
+      constTest ();
 
 
 }

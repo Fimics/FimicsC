@@ -7,4 +7,5 @@
 void testPointer();
 void pointerDefine();
 void wildNullPointer();
+void constTest();
 #endif //FIMICSC_POINTER_H

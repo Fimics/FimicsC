@@ -65,7 +65,7 @@ set(SOURCE_C_FILES
         src/system/System.h
         src/system/System.c
 
-        src/pointer/WildNullpointer.c)
+        src/pointer/WildNullpointer.c src/pointer/ConstDemo.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp
