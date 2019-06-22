@@ -12,12 +12,17 @@
 #include "System.h"
 #include "YDataStructure.h"
 
-int main() {
+/**
+ * @param argc  接收传递参数的个数
+ * @param argv  接收传递参数的内容
+ * @return
+ */
+int main(int argc,char *argv[]) {
 
 //datatype
 
 //datastructure
- structure();
+// structure();
 
 //string
 //    testString();
@@ -28,10 +33,10 @@ int main() {
 
 //pointer
 
-//    testPointer();
+    testPointer();
 
 //array
-      testArray();
+//      testArray();
 //      testArray2d();
 //      testArrayAndPointer();
 //      testSum2d();

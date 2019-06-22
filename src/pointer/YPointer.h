@@ -4,7 +4,6 @@
 
 #ifndef FIMICSC_POINTER_H
 #define FIMICSC_POINTER_H
-
-#endif //FIMICSC_POINTER_H
-
 void testPointer();
+void pointerDefine();
+#endif //FIMICSC_POINTER_H

@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <memory.h>
+#include "YPointer.h"
 
 
 /**
@@ -115,6 +116,7 @@ void testPointer(){
    //declarePointer();
    //swapWithPointer();
 //   testDiff();
-    testDiffPointer();
+//    testDiffPointer();
+     pointerDefine();
 
 }

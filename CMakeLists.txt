@@ -3,7 +3,6 @@ project(FimicsCPP)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_C_STANDARD 99)
-#set(CMAKE_C_FLAGS "-pipe -Wall -Wextra -Wpointer-arith -Wconditional-uninitialized -Wno-unused-parameter -Wno-deprecated-declarations")
 
 include_directories(
         src/array
@@ -51,6 +50,7 @@ set(SOURCE_C_FILES
         #pointer
         src/pointer/YPointer.h
         src/pointer/YPointer.c
+        src/pointer/PointerDefine.c
 
         #array
         src/array/YArray.h
