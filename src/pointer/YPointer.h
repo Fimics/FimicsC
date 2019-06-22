@@ -6,4 +6,5 @@
 #define FIMICSC_POINTER_H
 void testPointer();
 void pointerDefine();
+void wildNullPointer();
 #endif //FIMICSC_POINTER_H

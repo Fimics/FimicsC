@@ -117,6 +117,8 @@ void testPointer(){
    //swapWithPointer();
 //   testDiff();
 //    testDiffPointer();
-     pointerDefine();
+//     pointerDefine();
+     wildNullPointer();
+
 
 }
