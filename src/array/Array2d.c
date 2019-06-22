@@ -2,7 +2,7 @@
 // Created by lipnegju on 2019-06-15.
 //
 #include <stdio.h>
-#import "Array.h"
+#include  "YArray.h"
 
 #define MONTHS 12
 #define YEARS   5

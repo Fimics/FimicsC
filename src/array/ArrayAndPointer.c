@@ -3,7 +3,7 @@
 //
 
 #include <stdio.h>
-#include  "Array.h"
+#include  "YArray.h"
 
 #define SIZE 4
 #define SIZE_SUM 10

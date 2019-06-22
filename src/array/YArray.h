@@ -12,3 +12,4 @@ void testArray2d();
 void testArrayAndPointer();
 void testRand();
 void testSum2d();
+void stringArray();

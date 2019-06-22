@@ -36,25 +36,29 @@ set(SOURCE_C_FILES
         src/string/FgetsFputs.c
         src/string/PrintfScanf.c
         src/string/StrlenStrcpy.c
+        src/string/SprintfSscanf.c
+        src/string/StrFind.c
+        src/string/strtokAtoi.c
 
         #pointer
         src/pointer/Pointer.h
         src/pointer/Pointer.c
 
         #array
-        src/array/Array.h
-        src/array/Array.c
+        src/array/YArray.h
+        src/array/YArray.c
         src/array/Array2d.c
         src/array/ArrayAndPointer.c
         src/array/Srand.c
         src/array/vararr2d.c
+        src/array/StringArray.c
 
         #system
         src/system/System.h
         src/system/System.c
 
 
-        src/string/SprintfSscanf.c src/string/StrFind.c src/string/strtokAtoi.c)
+        )
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

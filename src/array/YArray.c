@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <strings.h>
+#include "YArray.h"
 
 #define MOHDHS 12
 
@@ -78,5 +79,7 @@ void init() {
 }
 
 void testArray() {
-    init();
+//    init();
+stringArray();
+
 }

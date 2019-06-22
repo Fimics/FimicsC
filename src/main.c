@@ -8,7 +8,7 @@
 #include "Pointer.h"
 #include "Function.h"
 #include "DataType.h"
-#include "Array.h"
+#include "YArray.h"
 #include "System.h"
 
 int main() {
@@ -17,7 +17,7 @@ int main() {
 
 
 //string
-    testString();
+//    testString();
 
 
 //function
@@ -28,7 +28,7 @@ int main() {
 //    testPointer();
 
 //array
-//      testArray();
+      testArray();
 //      testArray2d();
 //      testArrayAndPointer();
 //      testSum2d();

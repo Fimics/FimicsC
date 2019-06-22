@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 #include <MacTypes.h>
-#import "DataType.h"
+#include  "DataType.h"
 
 /**
  * 原码(原始的二进制数)
