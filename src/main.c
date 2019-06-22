@@ -5,16 +5,19 @@
 #include <stdio.h>
 
 #include "YString.h"
-#include "Pointer.h"
-#include "Function.h"
+#include "YPointer.h"
+#include "YFunction.h"
 #include "DataType.h"
 #include "YArray.h"
 #include "System.h"
+#include "YDataStructure.h"
 
 int main() {
 
 //datatype
 
+//datastructure
+ structure();
 
 //string
 //    testString();

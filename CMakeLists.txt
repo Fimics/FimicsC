@@ -12,7 +12,8 @@ include_directories(
         src/mian
         src/pointer
         src/system
-        src/string)
+        src/string
+        src/datastructure)
 
 
 set(SOURCE_C_FILES
@@ -26,8 +27,15 @@ set(SOURCE_C_FILES
         src/datatype/Char.c
 
         #function
-        src/function/Function.h
-        src/function/Function.c
+        src/function/YFunction.h
+        src/function/YFunction.c
+        src/function/FunctionDemo.c
+
+        #datastructure
+        src/datastructure/YDataStructure.h
+        src/datastructure/YDataStructure.c
+        src/datastructure/Sort.c
+
 
         #string
         src/string/YString.h
@@ -41,8 +49,8 @@ set(SOURCE_C_FILES
         src/string/strtokAtoi.c
 
         #pointer
-        src/pointer/Pointer.h
-        src/pointer/Pointer.c
+        src/pointer/YPointer.h
+        src/pointer/YPointer.c
 
         #array
         src/array/YArray.h
@@ -56,7 +64,6 @@ set(SOURCE_C_FILES
         #system
         src/system/System.h
         src/system/System.c
-
 
         )
 
