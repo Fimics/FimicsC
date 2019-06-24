@@ -4,6 +4,7 @@
 
 
 #include <printf.h>
+#define SIZE 20 //对应的内存空间不允许改变其值
 
 void constTest(){
 

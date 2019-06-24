@@ -44,13 +44,20 @@ set(SOURCE_C_FILES
         src/string/PrintfScanf.c
         src/string/StrlenStrcpy.c
         src/string/SprintfSscanf.c
-        src/string/StrFind.c
+        src/string/Strchr.c
         src/string/strtokAtoi.c
 
         #pointer
         src/pointer/YPointer.h
         src/pointer/YPointer.c
         src/pointer/PointerDefine.c
+        src/pointer/WildNullpointer.c
+        src/pointer/ConstDemo.c
+        src/pointer/PointerAndArray.c
+        src/pointer/PointerOperation.c
+        src/pointer/PointerBubbleSort.c
+        src/pointer/PointerStrchr.c
+        src/pointer/PointerMultilevel.c
 
         #array
         src/array/YArray.h
@@ -65,7 +72,7 @@ set(SOURCE_C_FILES
         src/system/System.h
         src/system/System.c
 
-        src/pointer/WildNullpointer.c src/pointer/ConstDemo.c)
+       )
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

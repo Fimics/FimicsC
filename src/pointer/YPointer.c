@@ -119,7 +119,10 @@ void testPointer(){
 //    testDiffPointer();
 //     pointerDefine();
 //     wildNullPointer();
-      constTest ();
-
-
+//      constTest ();
+//  pointerAndArray();
+//pointerOperation();
+//pointerBubbleSort();
+//    pointerStrchr();
+     pointerMultilevel();
 }

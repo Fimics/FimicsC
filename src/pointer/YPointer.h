@@ -8,4 +8,9 @@ void testPointer();
 void pointerDefine();
 void wildNullPointer();
 void constTest();
+void pointerAndArray();
+void pointerBubbleSort();
+void pointerMultilevel();
+void pointerStrchr();
+void pointerOperation();
 #endif //FIMICSC_POINTER_H
