@@ -13,4 +13,7 @@ void pointerBubbleSort();
 void pointerMultilevel();
 void pointerStrchr();
 void pointerOperation();
+void pointerAndParameter();
+void pointerReturnValue();
+void pointerString();
 #endif //FIMICSC_POINTER_H

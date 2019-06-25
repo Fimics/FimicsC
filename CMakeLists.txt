@@ -58,6 +58,7 @@ set(SOURCE_C_FILES
         src/pointer/PointerBubbleSort.c
         src/pointer/PointerStrchr.c
         src/pointer/PointerMultilevel.c
+        src/pointer/PointerAndParameter.c
 
         #array
         src/array/YArray.h
@@ -72,7 +73,7 @@ set(SOURCE_C_FILES
         src/system/System.h
         src/system/System.c
 
-       )
+        src/pointer/PointerReturnValue.c src/pointer/PointerString.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

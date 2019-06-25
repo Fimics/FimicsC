@@ -124,5 +124,8 @@ void testPointer(){
 //pointerOperation();
 //pointerBubbleSort();
 //    pointerStrchr();
-     pointerMultilevel();
+//     pointerMultilevel();
+//    pointerAndParameter();
+//    pointerReturnValue();
+    pointerString();
 }
