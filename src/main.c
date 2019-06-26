@@ -11,6 +11,7 @@
 #include "YArray.h"
 #include "System.h"
 #include "YDataStructure.h"
+#include "YMemory.h"
 
 /**
  * @param argc  接收传递参数的个数
@@ -33,7 +34,10 @@ int main(int argc,char *argv[]) {
 
 //pointer
 
-    testPointer();
+//    testPointer();
+
+//memory
+memory();
 
 //array
 //      testArray();
