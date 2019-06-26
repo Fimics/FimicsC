@@ -18,3 +18,4 @@ void scope(){
   fun(a,a,a);
 }
 
+
