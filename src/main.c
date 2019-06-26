@@ -21,7 +21,6 @@
 int main(int argc,char *argv[]) {
 
 //datatype
-
 //datastructure
 // structure();
 
@@ -38,6 +37,7 @@ int main(int argc,char *argv[]) {
 
 //memory
 memory();
+
 
 //array
 //      testArray();
