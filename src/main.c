@@ -13,6 +13,8 @@
 #include "YDataStructure.h"
 #include "YMemory.h"
 
+extern void fun(int a,int b,int c);
+
 /**
  * @param argc  接收传递参数的个数
  * @param argv  接收传递参数的内容
@@ -37,7 +39,6 @@ int main(int argc,char *argv[]) {
 
 //memory
 memory();
-
 
 //array
 //      testArray();

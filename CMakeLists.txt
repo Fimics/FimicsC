@@ -79,7 +79,7 @@ set(SOURCE_C_FILES
         #memory
         src/memory/YMemory.h
         src/memory/YMemory.c
-        src/memory/Scope.c)
+        src/memory/Scope.c src/memory/MemGlobal.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp
