@@ -7,5 +7,5 @@
 
 void memory(){
 //    scope();
-memArea();
+    testMemArea();
 }
