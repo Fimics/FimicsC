@@ -6,4 +6,5 @@
 #define FIMICSCPP_MEMORY_H
 void scope();
 void memory();
+void memArea();
 #endif //FIMICSCPP_MEMORY_H

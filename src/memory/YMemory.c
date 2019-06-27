@@ -6,5 +6,6 @@
 #include "YMemory.h"
 
 void memory(){
-    scope();
+//    scope();
+memArea();
 }
