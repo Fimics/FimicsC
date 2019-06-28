@@ -5,14 +5,15 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_C_STANDARD 99)
 
 include_directories(
-        src/array
-        src/datatype
-        src/function
         src/mian
+        src/system
+        src/datatype
+        src/array
+        src/function
+        src/string
         src/pointer
         src/memory
-        src/system
-        src/string
+        src/complex
         src/datastructure)
 
 
@@ -83,7 +84,12 @@ set(SOURCE_C_FILES
         src/memory/MemGlobal.c
         src/memory/MemArea.c
         src/memory/MemHeap.c
-        src/memory/MemFunction.c)
+        src/memory/MemFunction.c
+
+        #complex;
+        src/complex/YComplex.h
+        src/complex/YComplex.c
+        src/complex/StructDefine.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

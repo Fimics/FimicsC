@@ -12,6 +12,7 @@
 #include "System.h"
 #include "YDataStructure.h"
 #include "YMemory.h"
+#include "YComplex.h"
 
 extern void fun(int a,int b,int c);
 
@@ -38,7 +39,10 @@ int main(int argc,char *argv[]) {
 //    testPointer();
 
 //memory
-memory();
+//memory();
+
+//complex
+complex();
 
 //array
 //      testArray();
