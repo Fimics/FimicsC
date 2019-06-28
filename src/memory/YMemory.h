@@ -7,4 +7,6 @@
 void scope();
 void memory();
 void testMemArea();
+void memHeap();
+void memFunction();
 #endif //FIMICSCPP_MEMORY_H

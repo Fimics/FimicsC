@@ -82,6 +82,9 @@ void testDataStorgeRange(){
 
     const int m = 10;
 
+    /**
+     * 查看下列哪些地址距离
+     */
     printf("局部变量a的地址:%p\n", &a);
     printf("未初始化局部静态变量b的地址:%p\n", &b);
     printf("初始化局部静态变量c的地址:%p\n", &c);

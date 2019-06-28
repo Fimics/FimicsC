@@ -7,5 +7,7 @@
 
 void memory(){
 //    scope();
-    testMemArea();
+//    testMemArea();
+//memHeap();
+memFunction();
 }

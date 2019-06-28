@@ -81,7 +81,9 @@ set(SOURCE_C_FILES
         src/memory/YMemory.c
         src/memory/Scope.c
         src/memory/MemGlobal.c
-        src/memory/MemArea.c)
+        src/memory/MemArea.c
+        src/memory/MemHeap.c
+        src/memory/MemFunction.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp
