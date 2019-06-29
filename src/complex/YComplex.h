@@ -26,4 +26,5 @@ void structPointer();
 void structFunction();
 void structstruct();
 void unionDemo();
+void enumDemo();
 #endif //FIMICSCPP_YCOMPLEX_H

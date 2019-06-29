@@ -10,5 +10,7 @@ void complex(){
 //structPointer();
 //structFunction();
 //structstruct();
-unionDemo();
+//unionDemo();
+enumDemo();
 }
+
