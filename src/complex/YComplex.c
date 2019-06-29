@@ -7,5 +7,8 @@
 void complex(){
 // structDefine();
 //structMemory();
-structPointer();
+//structPointer();
+//structFunction();
+//structstruct();
+unionDemo();
 }

@@ -23,4 +23,7 @@ void structMemory();
 void structArray();
 void structSort();
 void structPointer();
+void structFunction();
+void structstruct();
+void unionDemo();
 #endif //FIMICSCPP_YCOMPLEX_H
