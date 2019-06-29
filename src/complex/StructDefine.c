@@ -6,6 +6,7 @@
 
 /**
  * 结构体定义
+ * 结构休一般写在.h文件中
  */
 struct student {
     char name[60];

@@ -5,7 +5,21 @@
 #ifndef FIMICSCPP_YCOMPLEX_H
 #define FIMICSCPP_YCOMPLEX_H
 
+/**
+ * 结构休需要根据数据类型，进行内存对齐，
+ * 定义结构体时，应该按照数据类型从大到小定义
+ */
+struct person {
+    char name[20];
+    unsigned int age;
+    char tel[17];
+    float scores[3];
+    char sex;
+};
+
 void complex();
 void structDefine();
-
+void structMemory();
+void structArray();
+void structSort();
 #endif //FIMICSCPP_YCOMPLEX_H

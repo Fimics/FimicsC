@@ -4,14 +4,14 @@
 
 #include <stdio.h>
 
-#include "YString.h"
-#include "YPointer.h"
-#include "YFunction.h"
-#include "DataType.h"
-#include "YArray.h"
-#include "System.h"
-#include "YDataStructure.h"
-#include "YMemory.h"
+//#include "YString.h"
+//#include "YPointer.h"
+//#include "YFunction.h"
+//#include "DataType.h"
+//#include "YArray.h"
+//#include "System.h"
+//#include "YDataStructure.h"
+//#include "YMemory.h"
 #include "YComplex.h"
 
 extern void fun(int a,int b,int c);

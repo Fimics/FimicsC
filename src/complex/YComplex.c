@@ -5,5 +5,6 @@
 #include "YComplex.h"
 
 void complex(){
- structDefine();
+// structDefine();
+structMemory();
 }
