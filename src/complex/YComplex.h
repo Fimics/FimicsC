@@ -9,7 +9,7 @@
  * 结构休需要根据数据类型，进行内存对齐，
  * 定义结构体时，应该按照数据类型从大到小定义
  */
-struct person {
+extern struct person {
     char name[20];
     unsigned int age;
     char tel[17];
@@ -22,4 +22,5 @@ void structDefine();
 void structMemory();
 void structArray();
 void structSort();
+void structPointer();
 #endif //FIMICSCPP_YCOMPLEX_H

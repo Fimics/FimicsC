@@ -2,6 +2,7 @@
 // Created by lipnegju on 2019-06-29.
 //
 
+#include <YComplex.h>
 
 /**
  * 结构体数组

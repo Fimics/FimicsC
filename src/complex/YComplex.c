@@ -6,5 +6,6 @@
 
 void complex(){
 // structDefine();
-structMemory();
+//structMemory();
+structPointer();
 }

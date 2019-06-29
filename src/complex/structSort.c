@@ -61,6 +61,4 @@ void structSort() {
         free(s[i].name);
     }
 
-    system("pause");
-    return EXIT_SUCCESS;
 }

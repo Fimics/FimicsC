@@ -93,7 +93,8 @@ set(SOURCE_C_FILES
         src/complex/StructDefine.c
         src/complex/StructMemory.c
         src/complex/structArray.c
-        src/complex/structSort.c)
+        src/complex/structSort.c
+        src/complex/StructPointer.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp
