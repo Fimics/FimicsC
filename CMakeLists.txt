@@ -96,7 +96,7 @@ set(SOURCE_C_FILES
         src/complex/structSort.c
         src/complex/StructPointer.c
         src/complex/StructFunction.c
-        src/complex/Structstruct.c src/complex/UnionDemo.c src/complex/EnumDemo.c)
+        src/complex/Structstruct.c src/complex/UnionDemo.c src/complex/EnumDemo.c src/complex/TypeDefDemo.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

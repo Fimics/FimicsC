@@ -11,6 +11,7 @@ void complex(){
 //structFunction();
 //structstruct();
 //unionDemo();
+typedefDemo();
 enumDemo();
 }
 
