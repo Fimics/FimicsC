@@ -1,0 +1,1 @@
+hello world   printf("第三次读取结果：%s\n", buf);

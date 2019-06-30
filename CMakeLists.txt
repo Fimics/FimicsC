@@ -14,7 +14,8 @@ include_directories(
 #        src/pointer
 #        src/memory
 #        src/datastructure
-        src/complex
+#        src/complex
+         src/file
 )
 
 
@@ -88,15 +89,26 @@ set(SOURCE_C_FILES
 #        src/memory/MemFunction.c
 
         #complex;
-        src/complex/YComplex.h
-        src/complex/YComplex.c
-        src/complex/StructDefine.c
-        src/complex/StructMemory.c
-        src/complex/structArray.c
-        src/complex/structSort.c
-        src/complex/StructPointer.c
-        src/complex/StructFunction.c
-        src/complex/Structstruct.c src/complex/UnionDemo.c src/complex/EnumDemo.c src/complex/TypeDefDemo.c)
+#        src/complex/YComplex.h
+#        src/complex/YComplex.c
+#        src/complex/StructDefine.c
+#        src/complex/StructMemory.c
+#        src/complex/structArray.c
+#        src/complex/structSort.c
+#        src/complex/StructPointer.c
+#        src/complex/StructFunction.c
+#        src/complex/Structstruct.c
+#        src/complex/UnionDemo.c
+#        src/complex/EnumDemo.c
+#        src/complex/TypeDefDemo.c
+
+        #File
+        src/file/YFile.h
+        src/file/YFile.c
+        src/file/FileOperate.c
+        src/file/FileCat.c
+        src/file/FileFscanf.c
+        src/file/FileBigDataSort.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp
