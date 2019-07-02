@@ -108,7 +108,8 @@ set(SOURCE_C_FILES
         src/file/FileOperate.c
         src/file/FileCat.c
         src/file/FileFscanf.c
-        src/file/FileBigDataSort.c)
+        src/file/FileBigDataSort.c
+        src/file/FreadFwrite.c src/file/FileCopy.c src/file/FileProperty.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

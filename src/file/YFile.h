@@ -9,4 +9,7 @@ void fileOperate();
 void fileCat();
 void fileFscanf();
 void fileBigDataSort();
+void freadFwrite();
+void copyBigFile();
+void fileProperty();
 #endif //FIMICSCPP_YFILE_H

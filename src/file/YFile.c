@@ -8,7 +8,10 @@
  * 2.二进制文件:基于值编码的文件
  */
 void yFile(){
- fileOperate();
+// fileOperate();
 // fileCat();
-    fileBigDataSort();
+//    fileBigDataSort();
+//freadFwrite();
+//copyBigFile();
+fileProperty();
 }
