@@ -12,4 +12,5 @@ void fileBigDataSort();
 void freadFwrite();
 void copyBigFile();
 void fileProperty();
+void fileRandomAccess();
 #endif //FIMICSCPP_YFILE_H

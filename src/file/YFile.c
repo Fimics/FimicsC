@@ -13,5 +13,6 @@ void yFile(){
 //    fileBigDataSort();
 //freadFwrite();
 //copyBigFile();
-fileProperty();
+//fileProperty();
+fileRandomAccess();
 }
