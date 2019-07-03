@@ -14,4 +14,5 @@ void copyBigFile();
 void fileProperty();
 void fileRandomAccess();
 void fileMvRm();
+void fileBuffer();
 #endif //FIMICSCPP_YFILE_H

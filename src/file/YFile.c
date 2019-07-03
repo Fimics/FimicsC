@@ -14,5 +14,6 @@ void yFile(){
 //freadFwrite();
 //copyBigFile();
 //fileProperty();
-fileRandomAccess();
+//fileRandomAccess();
+fileBuffer();
 }
