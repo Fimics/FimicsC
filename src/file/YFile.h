@@ -13,4 +13,5 @@ void freadFwrite();
 void copyBigFile();
 void fileProperty();
 void fileRandomAccess();
+void fileMvRm();
 #endif //FIMICSCPP_YFILE_H
