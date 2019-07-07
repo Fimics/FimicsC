@@ -15,7 +15,8 @@ include_directories(
 #        src/memory
 #        src/datastructure
 #        src/complex
-         src/file
+#        src/file
+         src/improve
 )
 
 
@@ -103,13 +104,25 @@ set(SOURCE_C_FILES
 #        src/complex/TypeDefDemo.c
 
         #File
-        src/file/YFile.h
-        src/file/YFile.c
-        src/file/FileOperate.c
-        src/file/FileCat.c
-        src/file/FileFscanf.c
-        src/file/FileBigDataSort.c
-        src/file/FreadFwrite.c src/file/FileCopy.c src/file/FileProperty.c src/file/FileRandomAccess.c src/file/FileMvRmRename.c src/file/FileBuffer.c)
+#        src/file/YFile.h
+#        src/file/YFile.c
+#        src/file/FileOperate.c
+#        src/file/FileCat.c
+#        src/file/FileFscanf.c
+#        src/file/FileBigDataSort.c
+#        src/file/FreadFwrite.c
+#        src/file/FileCopy.c
+#        src/file/FileProperty.c
+#        src/file/FileRandomAccess.c
+#        src/file/FileMvRmRename.c
+#        src/file/FileBuffer.c
+
+
+        #improve
+        src/improve/YImprove.h
+        src/improve/YImprove.c
+        src/improve/DataType.c
+        src/improve/YGlobal.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

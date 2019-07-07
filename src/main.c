@@ -13,49 +13,33 @@
 //#include "YDataStructure.h"
 //#include "YMemory.h"
 //#include "YComplex.h"
-#include "YFile.h"
+//#include "YFile.h"
+#include "YImprove.h"
 
-extern void fun(int a,int b,int c);
+extern void fun(int a, int b, int c);
 
 /**
  * @param argc  接收传递参数的个数
  * @param argv  接收传递参数的内容
  * @return
  */
-int main(int argc,char *argv[]) {
+int main(int argc, char *argv[]) {
 
-//datatype
-//datastructure
-// structure();
-
-//string
-//    testString();
-
-
-//function
-//    testFunction();
-
-//pointer
-
-//    testPointer();
-
-//memory
-//memory();
-
-//complex
-//complex();
-
-//file
-yFile();
-
-//array
-//      testArray();
-//      testArray2d();
-//      testArrayAndPointer();
-//      testSum2d();
-
-//system
-//     testSystem();
+#if 0
+    structure();
+    testString();
+    testFunction();
+    testPointer();
+    memory();
+    complex();
+    yFile();
+    testArray();
+    testArray2d();
+    testArrayAndPointer();
+    testSum2d();
+    testSystem();
+#endif
+    yImprove();
 
     return 0;
 }
