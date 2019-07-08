@@ -6,6 +6,7 @@
 #define FIMICSCPP_YIMPROVE_H
 
 void yImprove();
-void datatype();
+void iDatatype();
+void iFunction();
 
 #endif //FIMICSCPP_YIMPROVE_H

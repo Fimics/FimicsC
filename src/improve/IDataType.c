@@ -141,7 +141,19 @@ void testValue() {
  *    1.3汇编  :把汇编文件生成目录文件(二进制文件)
  *    1.4链接  :把目录文件链接为可执行文件
  *
- *2.
+ *2.运行只后
+ *  2.1 代码区
+ *      只读的(防止程序执行过程中被修改)，共享的(节省内存)
+ *  2.2 全局/静态区
+ *       2.2.1 全局区
+ *            初始化，未初始化的全局变量
+ *       2.2.2 静态区
+ *       2.2.3 常量区
+ *
+ *  2.3 栈区
+ *      自动申请，自动释放
+ *  2.4 堆区
+ *      需要手动申请，手到释放
  *
  */
 
@@ -304,7 +316,7 @@ void testConstLocal(){
 }
 #endif
 
-#if 1
+#if 0
 //-------------------------字符串常量------------------------
 
 void stringConst(){
@@ -326,9 +338,7 @@ void datatype() {
     testHeapArea();
     testStatic();
     testConstGlobal();
-     testConstLocal();
+    testConstLocal();
+    stringConst();
 #endif
-
-   stringConst();
-
 }

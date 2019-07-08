@@ -5,6 +5,9 @@
 
 #include "YImprove.h"
 
-void yImprove(){
-     datatype();
+void yImprove() {
+#if 0
+    iDatatype();
+#endif
+    iFunction();
 }

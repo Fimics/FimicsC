@@ -121,8 +121,8 @@ set(SOURCE_C_FILES
         #improve
         src/improve/YImprove.h
         src/improve/YImprove.c
-        src/improve/DataType.c
-        src/improve/YGlobal.c)
+        src/improve/IDataType.c
+        src/improve/YGlobal.c src/improve/IFunction.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp
