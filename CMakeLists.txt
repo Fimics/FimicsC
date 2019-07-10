@@ -122,7 +122,7 @@ set(SOURCE_C_FILES
         src/improve/YImprove.h
         src/improve/YImprove.c
         src/improve/IDataType.c
-        src/improve/YGlobal.c src/improve/IFunction.c)
+        src/improve/YGlobal.c src/improve/IFunction.c src/improve/IPointer.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

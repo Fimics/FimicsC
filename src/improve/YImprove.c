@@ -8,6 +8,7 @@
 void yImprove() {
 #if 0
     iDatatype();
+     iFunction();
 #endif
-    iFunction();
+    iPointer();
 }

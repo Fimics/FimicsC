@@ -8,5 +8,6 @@
 void yImprove();
 void iDatatype();
 void iFunction();
+void iPointer();
 
 #endif //FIMICSCPP_YIMPROVE_H
