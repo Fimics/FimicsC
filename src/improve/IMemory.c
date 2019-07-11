@@ -18,7 +18,7 @@
  */
 
 /**
- * realloc(void *ptr,size_t size)
+ * relloc(void *ptr,size_t size)
  * 功能:
  *    重新分配用malloc或calloc函数在堆中分配内存空间的大小
  *    relloc不会自动清理增加的内存，需要手动清理，如果指定的地址后面有连续的空间那么就会在已有地址基础上增加内存

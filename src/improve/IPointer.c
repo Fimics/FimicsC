@@ -157,6 +157,19 @@ void testOutput(){
 
 #endif
 
+#if 1
+//------------------------指针易错点----------------------------
+void errorPointer(){
+
+    char buf1[3]="hello";
+    printf("%s\n",buf1);
+
+
+
+}
+
+#endif
+
 void iPointer(){
 #if 0
     testStepSize();
@@ -164,4 +177,5 @@ void iPointer(){
      testInput();
      testOutput();
 #endif
+     errorPointer();
 }

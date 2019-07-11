@@ -3,6 +3,9 @@
 //
 
 #include <stddef.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 #if 1
 //-----------------------字符串初始化--------------------------------
@@ -193,11 +196,38 @@ void stringFormat(){
 }
 #endif
 
+#if 1
+//-----------------------sscanf--------------------------------
+
+/**
+ * int sscanf(constt char *str,const char *format ...)
+ * 从指定的字符串读取数据，并根据参数format来转换并格式化数据
+ *
+ *1. %*s %*d 跳过字符串，跳过数字
+ *2.%[a-z]匹配a-z中的字符(尽可能多的匹配)
+ *3.%[abc] 匹配a,b,c中的一员(贪婪模式)
+ *4.%[^a]匹配非a 任意字符
+ *
+ */
+
+
+void testSscanf(){
+
+    char *str ="12345abcde";
+    char buf[1024]={0};
+    sscanf(str,"%*d%s",buf);
+    printf("buf %s\n",buf);
+
+}
+#endif
+
 void iString(){
 #if 0
     testString();
     testStringCopy();
     testReverseString();
-#endif
     stringFormat();
+    testSscanf();
+#endif
+
 }
