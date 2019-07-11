@@ -23,7 +23,6 @@ include_directories(
 set(SOURCE_C_FILES
         #main
         src/main.c
-
 #        #dataType
 #        src/datatype/DataType.h
 #        src/datatype/DataType.c

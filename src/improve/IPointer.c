@@ -1,6 +1,9 @@
 //
 // Created by lipnegju on 2019-07-09.
 //
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * 1.指针不管什么类型，几级指针，都占用4/8个字节
@@ -96,13 +99,13 @@ void inputPointer( char * str){
     printf("%s\n",str+2);
 }
 
-void printArray(int * arr,len){
+void printArray(int * arr,int len){
     for (int i = 0; i <len ; i++) {
         printf("index %d, value %d \n",i,*(arr+i));
     }
 }
 
-void printCharArray(char ** arr,len){
+void printCharArray(char ** arr,int len){
     //    arr[0]=char * 类型
     for (int i = 0; i <len ; i++) {
         printf("index %d, value %s \n",i,arr[i]);
