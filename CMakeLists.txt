@@ -128,6 +128,9 @@ set(SOURCE_C_FILES
         src/improve/IMemory.c
         src/improve/IConst.c
         src/improve/ISecondaryPointer.c)
+        src/improve/IMemory.c
+        src/improve/IPointerFunction.c
+        src/improve/IArray.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

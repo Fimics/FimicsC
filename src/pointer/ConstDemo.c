@@ -6,6 +6,10 @@
 #include <printf.h>
 #define SIZE 20 //对应的内存空间不允许改变其值
 
+/**
+ * https://blog.csdn.net/phenixyf/article/details/82220448
+ */
+
 void constTest(){
 
     //这种方式不安全，可以通过指针修改
@@ -17,7 +21,7 @@ void constTest(){
 
     int b =20;
     int c=30;
-    //如果const修饰 int * 类型，不能修改指针变量指向内存地址的值,但可以改变指针指向的地址
+    //如果const修饰 (int *) 类型，不能修改指针变量指向内存地址的值,但可以改变指针指向的地址
     const int * q;
     q = &b;
     // *q =200;

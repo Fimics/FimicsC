@@ -5,7 +5,8 @@
 
 #include "YImprove.h"
 
-void yImprove() {
+void yImprove(){
+
 #if 0
     iDatatype();
     iFunction();
@@ -14,5 +15,7 @@ void yImprove() {
     iMemory();
     iConst();
 #endif
+    iPointerFunction();
+    iArray();
     iSecondaryPointer();
 }
