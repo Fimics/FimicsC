@@ -14,8 +14,9 @@ void yImprove(){
     iPointer();
     iMemory();
     iConst();
-#endif
     iPointerFunction();
     iArray();
     iSecondaryPointer();
+#endif
+    iFile();
 }
