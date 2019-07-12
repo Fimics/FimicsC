@@ -127,8 +127,7 @@ set(SOURCE_C_FILES
         src/improve/IString.c
         src/improve/IMemory.c
         src/improve/IConst.c
-        src/improve/ISecondaryPointer.c)
-        src/improve/IMemory.c
+        src/improve/ISecondaryPointer.c
         src/improve/IPointerFunction.c
         src/improve/IArray.c)
 
