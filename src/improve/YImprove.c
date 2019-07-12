@@ -9,9 +9,10 @@ void yImprove() {
 #if 0
     iDatatype();
     iFunction();
-
-    iMemory();
-#endif
-//    iString();
+    iString();
     iPointer();
+    iMemory();
+    iConst();
+#endif
+    iSecondaryPointer();
 }

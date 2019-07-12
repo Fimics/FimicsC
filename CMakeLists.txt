@@ -125,7 +125,9 @@ set(SOURCE_C_FILES
         src/improve/IFunction.c
         src/improve/IPointer.c
         src/improve/IString.c
-        src/improve/IMemory.c)
+        src/improve/IMemory.c
+        src/improve/IConst.c
+        src/improve/ISecondaryPointer.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp
