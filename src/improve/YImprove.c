@@ -5,13 +5,15 @@
 
 #include "YImprove.h"
 
-void yImprove() {
+void yImprove(){
+
 #if 0
     iDatatype();
     iFunction();
-
+    iString();
+    iPointer();
     iMemory();
 #endif
-//    iString();
-    iPointer();
+    iPointerFunction();
+    iArray();
 }

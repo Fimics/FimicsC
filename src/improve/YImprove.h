@@ -11,5 +11,7 @@ void iFunction();
 void iPointer();
 void iString();
 void iMemory();
+void iPointerFunction();
+void iArray();
 
 #endif //FIMICSCPP_YIMPROVE_H
