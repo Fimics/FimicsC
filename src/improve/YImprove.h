@@ -16,5 +16,6 @@ void iSecondaryPointer();
 void iPointerFunction();
 void iArray();
 void iFile();
+void iBitOperation();
 
 #endif //FIMICSCPP_YIMPROVE_H
