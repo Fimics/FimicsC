@@ -4,8 +4,7 @@
 
 #ifndef FIMICSCPP_YDATASTRUCTURE_H
 #define FIMICSCPP_YDATASTRUCTURE_H
-
-#endif //FIMICSCPP_YDATASTRUCTURE_H
-
 void sort();
 void structure();
+#endif //FIMICSCPP_YDATASTRUCTURE_H
+

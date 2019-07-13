@@ -26,7 +26,7 @@ extern void fun(int a, int b, int c);
 int main(int argc, char *argv[]) {
 
 #if 0
-    structure();
+
     testString();
     testFunction();
     testPointer();
@@ -40,6 +40,6 @@ int main(int argc, char *argv[]) {
     testSystem();
 #endif
     yImprove();
-
+//    structure();
     return 0;
 }

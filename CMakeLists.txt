@@ -34,10 +34,11 @@ set(SOURCE_C_FILES
 #        src/function/YFunction.c
 #        src/function/FunctionDemo.c
 #
-#        #datastructure
+#        datastructure
 #        src/datastructure/YDataStructure.h
 #        src/datastructure/YDataStructure.c
 #        src/datastructure/Sort.c
+
 #
 #
 #        #string
