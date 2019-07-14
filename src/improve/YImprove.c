@@ -18,6 +18,7 @@ void yImprove(){
     iSecondaryPointer();
     iFile();
     iBitOperation();
-#endif
     iArray();
+#endif
+    iStruct();
 }

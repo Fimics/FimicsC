@@ -17,5 +17,6 @@ void iPointerFunction();
 void iArray();
 void iFile();
 void iBitOperation();
+void iStruct();
 
 #endif //FIMICSCPP_YIMPROVE_H
