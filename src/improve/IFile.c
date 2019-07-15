@@ -52,23 +52,24 @@ void readData(FILE * file,char ** content ,int lines){
         memset(buf,0,1024);
     }
 
-
-
 }
 
+void testReadData(){
+    FILE * file = fopen(FILE_PATH,"r");
+    if(NULL==file){
+        printf("open file failed");
+    }
+    int lines = getFileLines(file);
+    printf("line num %d\n",lines);
 
-void iFile(){
-     FILE * file = fopen(FILE_PATH,"r");
-     if(NULL==file){
-         printf("open file failed");
-     }
-     int lines = getFileLines(file);
-     printf("line num %d\n",lines);
-
-     char ** cLines = (char**)malloc(sizeof(char*)*lines);
-     readData(file,cLines,lines);
+    char ** cLines = (char**)malloc(sizeof(char*)*lines);
+    readData(file,cLines,lines);
 
     for (int i = 0; i <lines ; ++i) {
         printf("index %d value %s\n",i,cLines[i]);
-    }
+    }}
+
+
+void iFile(){
+    testReadData();
 }

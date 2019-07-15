@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+//#pragma pack(show) 对齐模式
 
 /**
  * 总结
@@ -184,7 +185,7 @@ void testStructValue(){
 
 #endif
 
-#if 1
+#if 0
 //----------------------结构体嵌套一级指针--------------------------
 struct Teacher{
     char * name;
@@ -228,11 +229,151 @@ void testStructPointer(){
 }
 #endif
 
+#if 0
+//----------------------结构体嵌套二级指针--------------------------
+
+
+struct Teacher{
+    char * tname;
+    int age;
+    char  ** sname;
+};
+
+
+int init(struct Teacher *** t){
+
+    if(NULL==t){
+        return -1;
+    }
+
+    struct Teacher ** teacher = malloc(sizeof(struct Teacher* )*3);
+
+    for (int i = 0; i <3 ; ++i) {
+        teacher[i]=malloc(sizeof(struct Teacher));
+
+        //分配老师空间
+        teacher[i]->tname=malloc(sizeof(char)*64);
+        sprintf(teacher[i]->tname,"tname_%d",i);
+        teacher[i]->age=i;
+
+        //分配学生空间
+        teacher[i]->sname=malloc(sizeof(char*)*4);
+        for (int j = 0; j <4 ; ++j) {
+            teacher[i]->sname[j]=malloc(sizeof(char )*64);
+            sprintf(teacher[i]->sname[j],"_sname_%d",j);
+
+        }
+    }
+
+    *t = teacher;
+    return 0;
+}
+
+
+int printTeacherStudent(struct Teacher ** t){
+    if(NULL==t){
+        return -1;
+    }
+
+    for (int i = 0; i <3 ; ++i) {
+        printf("%s\n",t[i]->tname);
+
+        for (int j = 0; j <4 ; ++j) {
+            printf("    %s\n",t[i]->sname[j]);
+        }
+    }
+}
+
+int freeTeacherStudent(struct Teacher ** t){
+
+    for (int i = 0; i <3 ; ++i) {
+        if(t[i]->tname!=NULL) {
+            free(t[i]->tname);
+            t[i]->tname = NULL;
+        }
+
+        for (int j = 0; j <4 ; ++j) {
+            if(t[i]->sname[j]!=NULL){
+                free(t[i]->sname[j]);
+                t[i]->sname[j]=NULL;
+            }
+        }
+
+        free(t[i]->sname);
+        t[i]->sname=NULL;
+
+        free(t[i]);
+
+    }
+
+}
+
+void testTeacherStudent(){
+    struct Teacher ** teacher=NULL;
+    int result =init(&teacher);
+    if(result<0){
+        printf("init 出错");
+        return;
+    }
+    printTeacherStudent(teacher);
+    freeTeacherStudent(teacher);
+}
+
+
+#endif
+
+
+#if 1
+//----------------------结构体偏移量--------------------------
+struct A{
+    char a;
+    int b;
+};
+
+struct B{
+    int c;
+    struct A a;
+};
+
+/**
+ * B与C是等价的
+ */
+struct C{
+    int c;
+    char a;
+    int b;
+};
+void structOffset(){
+
+    struct A a ={'a',20};
+    //offsetof(struct A,b); 求无毒间的偏移量
+    int * b =(int*)((char *)&a +offsetof(struct A,b));
+    printf("value of A.b %d\n",*b);
+    printf("value of A.b %d\n",*((int *)&a+1));
+
+//    struct B b={2,'b',20};
+
+}
+
+#endif
+
+#if 1
+//----------------------内存对齐--------------------------
+/**
+ * 内存对齐原因
+ *    1.CPU读数据是一块一块读取的，一般一次读8个字节
+ *    2.
+ */
+#endif
+
+
 void iStruct(){
 //testTeacher();
 //testDog();
 //testTiger();
 //testMultiStruct();
 //testStructValue();
-testStructPointer();
+//testStructPointer();
+//testTeacherStudent();
+//structOffset();
 }

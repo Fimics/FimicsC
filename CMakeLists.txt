@@ -132,7 +132,11 @@ set(SOURCE_C_FILES
         src/improve/IPointerFunction.c
         src/improve/IArray.c
         src/improve/IFile.c
-        src/improve/IBitOperation.c src/improve/IStruct.c)
+        src/improve/IBitOperation.c
+        src/improve/IStruct.c
+        src/improve/ISumUp.c
+        src/improve/IFileConfig.h
+        src/improve/IFileConfig.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

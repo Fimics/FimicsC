@@ -53,7 +53,7 @@ void testRelloc(){
 
 
 void iMemory(){
-#if 1
+#if 0
     testCalloc();
     testRelloc();
 #endif

@@ -18,5 +18,7 @@ void iArray();
 void iFile();
 void iBitOperation();
 void iStruct();
+void iSumUp();
+void iFileConfig();
 
 #endif //FIMICSCPP_YIMPROVE_H

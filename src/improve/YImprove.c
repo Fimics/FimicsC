@@ -19,6 +19,8 @@ void yImprove(){
     iFile();
     iBitOperation();
     iArray();
-#endif
     iStruct();
+    iSumUp();
+#endif
+    iFileConfig();
 }
