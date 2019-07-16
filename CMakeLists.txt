@@ -136,7 +136,7 @@ set(SOURCE_C_FILES
         src/improve/IStruct.c
         src/improve/ISumUp.c
         src/improve/IFileConfig.h
-        src/improve/IFileConfig.c)
+        src/improve/IFileConfig.c src/improve/IFunctionPointer.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

@@ -21,6 +21,7 @@ void yImprove(){
     iArray();
     iStruct();
     iSumUp();
-#endif
     iFileConfig();
+#endif
+    iFunctionPointer();
 }

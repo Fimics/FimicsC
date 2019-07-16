@@ -6,7 +6,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+/**
+ * 指针做为函数参数
+ */
 
 
 #if 1

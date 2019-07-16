@@ -20,5 +20,6 @@ void iBitOperation();
 void iStruct();
 void iSumUp();
 void iFileConfig();
+void iFunctionPointer();
 
 #endif //FIMICSCPP_YIMPROVE_H
