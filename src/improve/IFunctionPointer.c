@@ -12,7 +12,7 @@
  * 2.
  */
 
-#if 0
+#if 1
 //--------------------------------函数指针定义-------------------------------
 void testFunc() {
     printf("hello world");
@@ -115,7 +115,7 @@ void testFunPointerArray(){
 }
 
 /**
- * 函数指针做函数参数
+ * 函数指针做函数参数(回调函数)
  * 打印任意数组
  */
 void printAnyArray(void * arr,int eleSize,int len,void(*print)(void *)){
@@ -171,5 +171,5 @@ void iFunctionPointer() {
     testOper(division);
     testFunPointerArray();
 #endif
-    testPrintAnyArray();
+//    testPrintAnyArray();
 }

@@ -6,5 +6,6 @@
 #define FIMICSCPP_YDATASTRUCTURE_H
 void sort();
 void structure();
+void linkedList();
 #endif //FIMICSCPP_YDATASTRUCTURE_H
 

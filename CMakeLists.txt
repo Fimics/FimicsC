@@ -13,7 +13,7 @@ include_directories(
 #        src/string
 #        src/pointer
 #        src/memory
-#        src/datastructure
+         src/datastructure
 #        src/complex
 #        src/file
          src/improve
@@ -33,14 +33,9 @@ set(SOURCE_C_FILES
 #        src/function/YFunction.h
 #        src/function/YFunction.c
 #        src/function/FunctionDemo.c
-#
-#        datastructure
-#        src/datastructure/YDataStructure.h
-#        src/datastructure/YDataStructure.c
-#        src/datastructure/Sort.c
 
-#
-#
+
+
 #        #string
 #        src/string/YString.h
 #        src/string/YString.c
@@ -135,7 +130,14 @@ set(SOURCE_C_FILES
         src/improve/IStruct.c
         src/improve/ISumUp.c
         src/improve/IFileConfig.h
-        src/improve/IFileConfig.c src/improve/IFunctionPointer.c)
+        src/improve/IFileConfig.c
+        src/improve/IFunctionPointer.c
+
+        #datastructure
+        src/datastructure/YDataStructure.h
+        src/datastructure/YDataStructure.c
+        src/datastructure/Sort.c
+        src/datastructure/LinkedList.c src/datastructure/LinkedList.h)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

@@ -5,4 +5,5 @@
 
 void structure(){
 //    sort();
+    linkedList();
 }

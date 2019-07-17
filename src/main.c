@@ -10,11 +10,12 @@
 //#include "DataType.h"
 //#include "YArray.h"
 //#include "System.h"
-//#include "YDataStructure.h"
 //#include "YMemory.h"
 //#include "YComplex.h"
 //#include "YFile.h"
 #include "YImprove.h"
+#include "YDataStructure.h"
+
 
 extern void fun(int a, int b, int c);
 
@@ -40,6 +41,6 @@ int main(int argc, char *argv[]) {
     testSystem();
 #endif
     yImprove();
-//    structure();
+    structure();
     return 0;
 }
