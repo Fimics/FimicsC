@@ -17,19 +17,19 @@ struct LinkNode {
 //1.初始化链表
 struct LinkNode *init();
 //2.插入
-void insert(struct LinkNode *head,int src,int dest);
+void insert(struct LinkNode *header,int src,int dest);
 //3.删除
-void delete(struct LinkNode *head,int value);
+void delete(struct LinkNode *header,int value);
 //4.查找
-int query(struct LinkNode *head,int value);
+int query(struct LinkNode *header,int value);
 //5.修改
-int update(struct LinkNode *head,int value);
+int update(struct LinkNode *header,int oldValue,int newValue);
 //6.清空
-int clear(struct LinkNode *head);
+int clear(struct LinkNode *header);
 //7.销毁
-void destroy(struct LinkNode *head);
+void destroy(struct LinkNode *header);
 //8.遍历
-void forEach(struct LinkNode *head);
+void forEach(struct LinkNode *header);
 
 #ifdef __cpluscplus
 }

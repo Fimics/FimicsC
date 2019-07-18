@@ -11,62 +11,168 @@
 
 #include <stddef.h>
 #include "LinkedList.h"
+#include <stdbool.h>
 
 #if 1
 //---------------------------链表结点定义-------------------------
 
 //1.初始化链表
 struct LinkNode *init(){
-    struct LinkNode node1 = {10, NULL};
-    struct LinkNode node2 = {20, NULL};
-    struct LinkNode node3 = {30, NULL};
-    struct LinkNode node4 = {40, NULL};
-    struct LinkNode node5 = {50, NULL};
-    struct LinkNode node6 = {60, NULL};
+    struct LinkNode *header = malloc(sizeof(struct LinkNode));
+    header->data=-1;
+    header->next=NULL;
 
-    node1.next=&node2;
-    node2.next=&node3;
-    node3.next=&node4;
-    node4.next=&node5;
-    node5.next=&node6;
+    struct LinkNode *tail = header;
 
-    return &node1;
+#if 0
+
+    int val = -1;
+    while (true) {
+        printf("输出插入的数据");
+        scanf("%d",&val);
+        if (val == -1){
+            break;
+        }
+
+        struct LinkNode *newNode = malloc(sizeof(struct LinkNode));
+        newNode->data = val;
+        newNode->next = NULL;
+
+        //新节点插入到链表中
+        tail->next = newNode;
+        tail=newNode;
+    }
+#endif
+
+    for (int i = 0; i <10 ; ++i) {
+        struct LinkNode *node = malloc(sizeof(struct LinkNode));
+        node->data=i;
+        node->next=NULL;
+
+        //新节点链接到链表中
+        tail->next=node;
+        tail=node;
+    }
+
+    return header;
 }
 //2.插入
-void insert(struct LinkNode *head,int src,int dest){
+void insert(struct LinkNode *header,int src,int dest){
+
+    if(NULL==header) return;
+
+    struct LinkNode * newNode = malloc(sizeof(struct LinkNode));
+    newNode->data=dest;
+    newNode->next=NULL;
+
+    struct LinkNode *node = header->next;
+    while (node!=NULL){
+        if(node->data==src){
+            newNode->next=node->next;
+            node->next=newNode;
+            break;
+        }
+        node=node->next;
+    }
 
 }
 //3.删除
-void delete(struct LinkNode *head,int value){
+void delete(struct LinkNode *header,int value){
+
+
+    if(NULL==header) return;
+
+    struct LinkNode *node = header->next;
+    struct LinkNode *previousNode =node;
+    while (node!=NULL){
+        if(node->data==value){
+            node->data=0;
+            previousNode->next=node->next;
+            free(node);
+            node=NULL;
+
+            break;
+        }
+        previousNode=node;
+        node=node->next;
+    }
 
 }
 //4.查找
-int query(struct LinkNode *head,int value){
+int query(struct LinkNode *header,int value){
 
+    if(NULL==header) return -1;
+
+    int index =0;
+    struct LinkNode *node = header->next;
+    while (node!=NULL){
+        if(node->data==value){
+            break;
+        }
+        node=node->next;
+        index++;
+    }
+
+    return index;
 }
 //5.修改
-int update(struct LinkNode *head,int value){
+int update(struct LinkNode *header,int oldValue,int newValue){
+    if(NULL==header) return -1;
 
+    struct LinkNode *node = header->next;
+    while (node!=NULL){
+        if(node->data==oldValue){
+            node->data=newValue;
+            return 1;
+        }
+        node=node->next;
+    }
+    return -1;
 }
 //6.清空
-int clear(struct LinkNode *head){
+int clear(struct LinkNode *header){
 
+    if(NULL==header) return -1;
+
+    struct LinkNode *node = header->next;
+    while (node!=NULL){
+        node->data=0;
+        node=node->next;
+    }
+
+    return 1;
 }
 //7.销毁
-void destroy(struct LinkNode *head){
+void destroy(struct LinkNode *header){
+    if(NULL==header) return;
+
+    struct LinkNode *current = header->next;
+    struct LinkNode * previosNode;
+    while (current!=NULL){
+        current->data=0;
+        previosNode=current;
+        current=previosNode->next;
+
+        free(current);
+    }
+
+    if(header!=NULL){
+        free(header);
+        header=NULL;
+    }
 
 }
 //8.遍历
-void forEach(struct LinkNode *head){
-    //遍历链表?
-    //定义辅助指针
-    struct LinkNode *curNode=head;
+void forEach(struct LinkNode *header){
+    if(NULL==header) return;
 
-    while (curNode!=NULL){
-        printf("%d\n",curNode->data);
-        //指针移向下一个元素首地址
-        curNode=head->next;
+    printf("------------------forEach start----------------\n");
+    struct LinkNode * current = header->next;
+    while (current!=NULL){
+        printf("%d ,",current->data);
+        current=current->next;
     }
+    printf("\n------------------forEach end---------------\n");
 }
 
 #endif
@@ -75,7 +181,30 @@ void linkedList() {
 
 #if 0
 #endif
-    struct LinkNode *head = init();
-    forEach(head);
-
+    //1.初始化
+    struct LinkNode *header = init();
+    forEach(header);
+    //2.查找
+    int index = query(header,5);
+    printf("index of element in linkedList %d\n",index);
+    //3.修改
+    printf("update \n");
+    update(header,5,50);
+    forEach(header);
+    //4.插入
+    printf("insert \n");
+    insert(header,6,60);
+    forEach(header);
+    //5.删除
+    printf("delete \n");
+    delete(header,3);
+    forEach(header);
+    //6.清空
+    printf("clear \n");
+    clear(header);
+    forEach(header);
+    //7.销毁
+    printf("destroy \n");
+    destroy(header);
+    forEach(header);
 }
