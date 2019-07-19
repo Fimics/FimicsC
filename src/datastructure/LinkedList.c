@@ -175,6 +175,24 @@ void forEach(struct LinkNode *header){
     printf("\n------------------forEach end---------------\n");
 }
 
+//9.Reverse
+void reverse(struct LinkNode *header){
+    if(NULL==header) return;
+
+    struct LinkNode * current = header->next;
+    struct LinkNode * previous =NULL;
+    struct LinkNode * next=NULL;// 1  2 3  4
+                                // p  c n
+                                //    p c  n
+
+    while (current!=NULL){
+       next=current->next;// p = 1 ,c = 2 ,n =3
+       current->next=previous;// 1<- currnet.next
+       previous=current;// p =2;
+       current=next;//c = 3
+    }
+}
+
 #endif
 
 void linkedList() {
@@ -184,27 +202,32 @@ void linkedList() {
     //1.初始化
     struct LinkNode *header = init();
     forEach(header);
-    //2.查找
-    int index = query(header,5);
-    printf("index of element in linkedList %d\n",index);
-    //3.修改
-    printf("update \n");
-    update(header,5,50);
+
+    //9.逆序
+    printf("Reverse \n");
+    reverse(header);
     forEach(header);
-    //4.插入
-    printf("insert \n");
-    insert(header,6,60);
-    forEach(header);
-    //5.删除
-    printf("delete \n");
-    delete(header,3);
-    forEach(header);
-    //6.清空
-    printf("clear \n");
-    clear(header);
-    forEach(header);
-    //7.销毁
-    printf("destroy \n");
-    destroy(header);
-    forEach(header);
+//    //2.查找
+//    int index = query(header,5);
+//    printf("index of element in linkedList %d\n",index);
+//    //3.修改
+//    printf("update \n");
+//    update(header,5,50);
+//    forEach(header);
+//    //4.插入
+//    printf("insert \n");
+//    insert(header,6,60);
+//    forEach(header);
+//    //5.删除
+//    printf("delete \n");
+//    delete(header,3);
+//    forEach(header);
+//    //6.清空
+//    printf("clear \n");
+//    clear(header);
+//    forEach(header);
+//    //7.销毁
+//    printf("destroy \n");
+//    destroy(header);
+//    forEach(header);
 }

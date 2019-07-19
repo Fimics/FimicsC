@@ -23,5 +23,6 @@ void yImprove(){
     iSumUp();
     iFileConfig();
 #endif
-    iFunctionPointer();
+//    iFunctionPointer();
+    iPreprocessingInstruction();
 }

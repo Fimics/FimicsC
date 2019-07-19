@@ -21,5 +21,6 @@ void iStruct();
 void iSumUp();
 void iFileConfig();
 void iFunctionPointer();
+void iPreprocessingInstruction();
 
 #endif //FIMICSCPP_YIMPROVE_H

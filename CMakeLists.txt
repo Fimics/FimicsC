@@ -137,7 +137,7 @@ set(SOURCE_C_FILES
         src/datastructure/YDataStructure.h
         src/datastructure/YDataStructure.c
         src/datastructure/Sort.c
-        src/datastructure/LinkedList.c src/datastructure/LinkedList.h)
+        src/datastructure/LinkedList.c src/datastructure/LinkedList.h src/improve/IPreprocessingInstruction.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp
