@@ -16,7 +16,7 @@ include_directories(
          src/datastructure
 #        src/complex
 #        src/file
-         src/improve
+#        src/improve
 )
 
 
@@ -114,30 +114,35 @@ set(SOURCE_C_FILES
 
 
         #improve
-        src/improve/YImprove.h
-        src/improve/YImprove.c
-        src/improve/IDataType.c
-        src/improve/YGlobal.c
-        src/improve/IFunction.c
-        src/improve/IPointer.c
-        src/improve/IString.c
-        src/improve/IMemory.c
-        src/improve/IConst.c
-        src/improve/IPointerFunction.c
-        src/improve/IArray.c
-        src/improve/IFile.c
-        src/improve/IBitOperation.c
-        src/improve/IStruct.c
-        src/improve/ISumUp.c
-        src/improve/IFileConfig.h
-        src/improve/IFileConfig.c
-        src/improve/IFunctionPointer.c
+#        src/improve/YImprove.h
+#        src/improve/YImprove.c
+#        src/improve/IDataType.c
+#        src/improve/YGlobal.c
+#        src/improve/IFunction.c
+#        src/improve/IPointer.c
+#        src/improve/IString.c
+#        src/improve/IMemory.c
+#        src/improve/IConst.c
+#        src/improve/IPointerFunction.c
+#        src/improve/IArray.c
+#        src/improve/IFile.c
+#        src/improve/IBitOperation.c
+#        src/improve/IStruct.c
+#        src/improve/ISumUp.c
+#        src/improve/IFileConfig.h
+#        src/improve/IFileConfig.c
+#        src/improve/IFunctionPointer.c
+#        src/improve/IPreprocessingInstruction.c
 
         #datastructure
         src/datastructure/YDataStructure.h
         src/datastructure/YDataStructure.c
         src/datastructure/Sort.c
-        src/datastructure/LinkedList.c src/datastructure/LinkedList.h src/improve/IPreprocessingInstruction.c)
+        src/datastructure/LinkedList.c
+        src/datastructure/LinkedList.h
+        src/datastructure/DynamicArray.c
+        src/datastructure/DynamicArray.h
+        )
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

@@ -5,5 +5,6 @@
 
 void structure(){
 //    sort();
-    linkedList();
+//    linkedList();
+    dynamicArray();
 }

@@ -13,7 +13,7 @@
 //#include "YMemory.h"
 //#include "YComplex.h"
 //#include "YFile.h"
-#include "YImprove.h"
+//#include "YImprove.h"
 #include "YDataStructure.h"
 
 
@@ -39,8 +39,8 @@ int main(int argc, char *argv[]) {
     testArrayAndPointer();
     testSum2d();
     testSystem();
-#endif
     yImprove();
+#endif
     structure();
     return 0;
 }
