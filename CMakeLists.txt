@@ -13,7 +13,7 @@ include_directories(
 #        src/string
 #        src/pointer
 #        src/memory
-         src/datastructure
+#        src/datastructure
 #        src/complex
 #        src/file
 #        src/improve
@@ -135,18 +135,21 @@ set(SOURCE_C_FILES
 #        src/improve/IPreprocessingInstruction.c
 
         #datastructure
-        src/datastructure/YDataStructure.h
-        src/datastructure/YDataStructure.c
-        src/datastructure/Sort.c
-        src/datastructure/LinkedList.c
-        src/datastructure/LinkedList.h
-        src/datastructure/DynamicArray.c
-        src/datastructure/DynamicArray.h
-        src/datastructure/LinkedList1.h src/datastructure/LinkedList1.c)
+#        src/datastructure/YDataStructure.h
+#        src/datastructure/YDataStructure.c
+#        src/datastructure/Sort.c
+#        src/datastructure/LinkedList.c
+#        src/datastructure/LinkedList.h
+#        src/datastructure/DynamicArray.c
+#        src/datastructure/DynamicArray.h
+#        src/datastructure/LinkedList1.h
+#        src/datastructure/LinkedList1.c
+        )
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp
-)
+        srcplus/base/Basic.cpp
+        srcplus/base/Basic.h)
 
 add_executable(FimicsC ${SOURCE_C_FILES})
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
