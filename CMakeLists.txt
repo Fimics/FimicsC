@@ -142,7 +142,7 @@ set(SOURCE_C_FILES
         src/datastructure/LinkedList.h
         src/datastructure/DynamicArray.c
         src/datastructure/DynamicArray.h
-        )
+        src/datastructure/LinkedList1.h src/datastructure/LinkedList1.c)
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp

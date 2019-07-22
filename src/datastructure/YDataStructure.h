@@ -8,5 +8,6 @@ void sort();
 void structure();
 void linkedList();
 void dynamicArray();
+void linkedList1();
 #endif //FIMICSCPP_YDATASTRUCTURE_H
 

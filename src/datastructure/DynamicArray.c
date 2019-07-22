@@ -5,10 +5,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "DynamicArray.h"
-#include "YDataStructure.h"
+//#include "DynamicArray.h"
+//#include "YDataStructure.h"
 
-#if 1
+#if 0
 /**
  * 动态数组必须知道以下条件
  * 1.存储数据元素的空间的首地址(void *)
@@ -137,6 +137,7 @@ void printRed(void *data){
 
 #endif
 void dynamicArray(){
+#if 0
     printf("%s\n","dynamicArray");
     struct DNCArray *da = inita(10);
 
@@ -149,5 +150,6 @@ void dynamicArray(){
     }
 
     foreacha(da,*printRed);
+#endif
 }
 
