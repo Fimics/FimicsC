@@ -111,7 +111,7 @@ void testUsing(){
 
 #endif
 
-#if 1
+#if 0
 
 //----------------------c++对c语言的增强---------------------------
 
@@ -211,12 +211,163 @@ void testBool(){
 
 #endif
 
+#if 1
+
+//----------------------引用的基本语法与注意事项---------------------------
+
+/**
+ * 1.引用基本使用
+ *   1.1.引用就是起别名
+ *   1.2. &写在左边是引用，写到右边是取地址
+ *   1.3.引用必须初始化， 引用初始化化就不能修改了
+ *
+ * 2.引用注意事项
+ *   2.1 引用必须引用一块合法的内存空间
+ *   2.2 不要返回局部变量的引用
+ *   2.3 如果函数的返回值是引用，那么这个函数调用可以作为左值使用
+ *
+ * 3.引用的本质
+ *   3.1 int a = 10; int &  aref = a;// 自动转换为 int * const aref = &a ,这也能说明引用为什么必须初始化
+ *       aref = 20 //内部发现aref是引用，自动帮我们转换成 * aref = 20;
+ *
+ * 4.指针的引用
+ * 5.常量引用
+ */
+
+void testRef(){
+    int a = 10;
+    //引用必须初始化， 引用初始化化就不能修改了
+    int &b = a;
+    cout<<a<<"\n";
+    cout<<b<<"\n";
+    b=20;
+    cout<<b<<"\n";
+
+    //对数组建立引用 第一种方式
+    int arr[10];
+
+    for (int i = 0; i <10 ; ++i) {
+        arr[i]=i;
+    }
+
+    int (&array)[10]=arr;
+
+    for (int j = 0; j <10 ; ++j) {
+        cout<<array[j]<<"，";
+    }
+
+    //对数组建立引用 第二种方式
+
+    typedef int(ARRAY1)[10];//一个具有10个元素的int类型的数组
+
+    cout<<"\n";
+    ARRAY1  &array1 = arr;
+    for (int k = 0; k <10 ; ++k) {
+        cout<<array1[k]<<"-";
+    }
+
+}
+
+/**
+ * 值传递
+ * @param a
+ * @param b
+ */
+void swap(int a ,int b){
+    int tmp = a;
+    a=b;
+    b=tmp;
+    cout<<"\n"<<"swap"<<"a= "<<a<<" b= "<<b;
+}
+
+/**
+ * 地址传递
+ */
+void swap1(int * a,int * b){
+    int tmp = *a;
+    *a=*b;
+    *b = tmp;
+
+    cout<<"\n"<<"swap1"<<"a= "<<*a<<" b= "<<*b;
+
+}
+
+/**
+ * 引用传递 与指针一样，可以修改原始值
+ */
+
+void swap2(int &a,int &b){
+    int tmp = a;
+    a = b;
+    b = tmp;
+    cout<<"\n"<<"swap1"<<"a= "<<a<<" b= "<<b;
+}
+void testPassParms(){
+    int a=10;
+    int b =20;
+//    swap(a,b);
+//     swap1(&a,&b);
+    int &c = a;
+    int & d = b;
+//    swap2(c,d);
+    swap2(a,b);
+    cout<<"\n"<<"testPassParms"<<"a= "<<a<<" b= "<<b;
+}
+
+struct Person{
+    int age;
+};
+
+/**
+ *
+ * p 指针的指针
+ * *p 对象的指针
+ * **p 具体的person对象
+ *
+ */
+void allocMemory(Person **p){
+    *p = (Person *)malloc(sizeof(Person));
+}
+
+/**
+ * 指针引用开辟空间
+ */
+void allocMemory1(Person * &p){
+    p = (Person *)malloc(sizeof(Person));
+}
+
+/**
+ * 指针的引用
+ */
+void testRefPointer(){
+   Person *p = NULL;
+}
+
+/**
+ * 常量引用
+ */
+
+void constRef(){
+//    int &ref = 10; //引用了不合法的内存
+   const int &ref = 10;// 加入const后 ，编译器处理方式为 int tmp = 10 ,const init &ref = tmp;
+
+   int * p =(int *) &ref;
+   *p = 90;
+   cout<<*p;
+}
+
+#endif
+
 void basic() {
 #if 0
     print();
     A::a();
     B::a();
     testUsing();
+    testRef();
+    testPassParms();
+    testRefPointer();
 #endif
 
+    constRef();
 }
