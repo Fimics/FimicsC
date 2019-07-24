@@ -3,3 +3,8 @@
 //
 
 #include "YObjectO.h"
+#include "Circle.h"
+
+void objecto() {
+    testGetArea();
+}

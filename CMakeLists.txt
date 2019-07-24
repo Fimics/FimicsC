@@ -144,12 +144,28 @@ set(SOURCE_C_FILES
 #        src/datastructure/DynamicArray.h
 #        src/datastructure/LinkedList1.h
 #        src/datastructure/LinkedList1.c
+
         )
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp
+        #basic
         srcplus/base/Basic.cpp
-        srcplus/base/Basic.h)
+        srcplus/base/Basic.h
+
+
+        #objecto
+        srcplus/objecto/Circle.cpp
+        srcplus/objecto/Circle.h
+        srcplus/objecto/YObjectO.cpp
+        srcplus/objecto/YObjectO.h
+
+        #function
+        srcplus/function/YFunction.cpp
+        srcplus/function/YFunction.h
+        srcplus/function/ExternC.c
+        srcplus/function/ExternC.h
+        srcplus/function/ExternC.cpp)
 
 add_executable(FimicsC ${SOURCE_C_FILES})
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})

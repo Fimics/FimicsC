@@ -4,13 +4,5 @@
 
 #ifndef FIMICSCPP_CIRCLE_H
 #define FIMICSCPP_CIRCLE_H
-
-
-
-class Circle {
-
-};
-
-
-
+void testGetArea();
 #endif //FIMICSCPP_CIRCLE_H
