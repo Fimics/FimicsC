@@ -11,7 +11,7 @@ int main() {
 //     cout << "hello";
 //    basic();
 
-//    objecto();
-yFunction();
+    objecto();
+//yFunction();
     return 0;
 }

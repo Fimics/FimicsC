@@ -4,7 +4,11 @@
 
 #include "YObjectO.h"
 #include "Circle.h"
+#include "Packing.h"
+#include "InitObject.h"
 
 void objecto() {
-    testGetArea();
+//    testGetArea();
+//    packing();
+      initObject();
 }
