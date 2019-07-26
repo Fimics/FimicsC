@@ -6,9 +6,12 @@
 #include "Circle.h"
 #include "Packing.h"
 #include "InitObject.h"
+#include "ClassMember.h"
 
 void objecto() {
 //    testGetArea();
 //    packing();
-      initObject();
+//    initObject();
+
+    classMember();
 }

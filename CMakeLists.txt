@@ -159,13 +159,21 @@ set(SOURCE_CPP_FILES
         srcplus/objecto/Circle.h
         srcplus/objecto/YObjectO.cpp
         srcplus/objecto/YObjectO.h
+        srcplus/objecto/Packing.h
+        srcplus/objecto/Packing.c
+        srcplus/objecto/Packing.cpp
+        srcplus/objecto/InitObject.cpp
+        srcplus/objecto/InitObject.h
+        srcplus/objecto/ClassMember.cpp
+        srcplus/objecto/ClassMember.h
 
         #function
         srcplus/function/YFunction.cpp
         srcplus/function/YFunction.h
         srcplus/function/ExternC.c
         srcplus/function/ExternC.h
-        srcplus/function/ExternC.cpp srcplus/objecto/Packing.h srcplus/objecto/Packing.c srcplus/objecto/Packing.cpp srcplus/objecto/InitObject.cpp srcplus/objecto/InitObject.h)
+        srcplus/function/ExternC.cpp
+       )
 
 add_executable(FimicsC ${SOURCE_C_FILES})
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})

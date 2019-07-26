@@ -12,7 +12,7 @@ using namespace std;
  */
 
 
-#if 1
+#if 0
 
 //-----------------------------构造函数------------------------------
 
@@ -297,5 +297,5 @@ void initObject() {
 //    testGetPerson();
 //  testTeacher();
 //    testStudent();
-testNew();
+//testNew();
 }
