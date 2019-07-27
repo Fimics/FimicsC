@@ -145,13 +145,26 @@ set(SOURCE_C_FILES
 #        src/datastructure/LinkedList1.h
 #        src/datastructure/LinkedList1.c
 
-        )
+         )
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp
         #basic
         srcplus/base/Basic.cpp
         srcplus/base/Basic.h
+
+        #function
+        srcplus/function/YFunction.cpp
+        srcplus/function/YFunction.h
+        srcplus/function/ExternC.c
+        srcplus/function/ExternC.h
+        srcplus/function/ExternC.cpp
+
+        #design
+        srcplus/design/YDesign.h
+        srcplus/design/YDesign.cpp
+        srcplus/design/Singleton.h
+        srcplus/design/Singleton.cpp
 
 
         #objecto
@@ -164,16 +177,13 @@ set(SOURCE_CPP_FILES
         srcplus/objecto/Packing.cpp
         srcplus/objecto/InitObject.cpp
         srcplus/objecto/InitObject.h
-        srcplus/objecto/ClassMember.cpp
-        srcplus/objecto/ClassMember.h
-
-        #function
-        srcplus/function/YFunction.cpp
-        srcplus/function/YFunction.h
-        srcplus/function/ExternC.c
-        srcplus/function/ExternC.h
-        srcplus/function/ExternC.cpp
-       )
+        srcplus/objecto/StaticDemo.cpp
+        srcplus/objecto/StaticDemo.h
+        srcplus/objecto/ObjectModel.h
+        srcplus/objecto/ObjectModel.cpp
+        srcplus/objecto/FriendClass.h
+        srcplus/objecto/FriendClass.cpp
+        )
 
 add_executable(FimicsC ${SOURCE_C_FILES})
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})

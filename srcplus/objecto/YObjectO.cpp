@@ -6,12 +6,18 @@
 #include "Circle.h"
 #include "Packing.h"
 #include "InitObject.h"
-#include "ClassMember.h"
+#include "StaticDemo.h"
+#include "ObjectModel.h"
+#include "FriendClass.h"
 
 void objecto() {
-//    testGetArea();
-//    packing();
-//    initObject();
-
+#if 0
+    testGetArea();
+    packing();
+    initObject();
     classMember();
+    objectModel();
+
+#endif
+    friendClass();
 }

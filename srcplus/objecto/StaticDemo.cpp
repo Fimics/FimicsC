@@ -2,13 +2,13 @@
 // Created by lipnegju on 2019-07-26.
 //
 
-#include "ClassMember.h"
+#include "StaticDemo.h"
 #include <string>
 #include <iostream>
 
 using namespace std;
 
-#if 1
+#if 0
 
 //-------------------------静态成员-----------------------------
 
@@ -64,6 +64,5 @@ void testStatic(){
 #endif
 
 void classMember(){
-    cout<<"classMember";
-    testStatic();
+    //testStatic();
 }
