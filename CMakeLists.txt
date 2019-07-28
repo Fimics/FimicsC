@@ -183,7 +183,20 @@ set(SOURCE_CPP_FILES
         srcplus/objecto/ObjectModel.cpp
         srcplus/objecto/FriendClass.h
         srcplus/objecto/FriendClass.cpp
+
+        #string
+        srcplus/array/Array.h
+        srcplus/array/Array.cpp
+
+        #string
+        srcplus/string/String.h
+        srcplus/string/String.cpp
+
+        #operator
+        srcplus/operator/YOperator.h
+        srcplus/operator/YOperator.cpp
+
         )
 
-add_executable(FimicsC ${SOURCE_C_FILES})
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
+add_executable(FimicsC ${SOURCE_C_FILES})

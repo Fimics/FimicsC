@@ -6,6 +6,9 @@ using namespace std;
 #include "objecto/YObjectO.h"
 #include "function/YFunction.h"
 #include "design/YDesign.h"
+#include "operator/YOperator.h"
+#include "string/String.h"
+#include "array/Array.h"
 
 int main() {
 //    std::cout << "Hello, World!" << std::endl;
@@ -13,7 +16,9 @@ int main() {
 //    basic();
 
 //      design();
-    objecto();
+//    objecto();
 //yFunction();
+yOperator();
+farray();
     return 0;
 }
