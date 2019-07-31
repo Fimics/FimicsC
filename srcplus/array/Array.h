@@ -14,6 +14,7 @@ public:
     void push(int value);//尾插法
     int get(int index);
     void update(int index,int value);
+    int operator[](int index);
     virtual ~MyArray();
 
 private:

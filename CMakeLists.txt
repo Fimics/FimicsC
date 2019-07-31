@@ -184,7 +184,7 @@ set(SOURCE_CPP_FILES
         srcplus/objecto/FriendClass.h
         srcplus/objecto/FriendClass.cpp
 
-        #string
+        #Array
         srcplus/array/Array.h
         srcplus/array/Array.cpp
 
@@ -196,7 +196,9 @@ set(SOURCE_CPP_FILES
         srcplus/operator/YOperator.h
         srcplus/operator/YOperator.cpp
 
-        )
+        #extends
+        srcplus/extends/FExtends.h
+        srcplus/extends/FExtends.cpp)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})

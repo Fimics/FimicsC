@@ -41,12 +41,16 @@ MyArray::MyArray(const MyArray &array) {
     }
 }
 
+int MyArray::operator[](int index) {
+    return this->paddress[index];
+}
+
 MyArray::~MyArray() {
-    if(this!=NULL){
-        cout<<"destroy";
-        delete [] this->paddress;
-        this->paddress=NULL;
-    }
+//    if(this!=NULL){
+//        cout<<"destroy";
+//        delete [] this->paddress;
+//        this->paddress=NULL;
+//    }
 }
 
 void farray(){
@@ -60,6 +64,8 @@ void farray(){
     for (int j = 0; j <10 ; ++j) {
         cout<<array->get(j);
     }
+
+//    cout<<"array[3] ="<<array[3];
 
    delete [] array;
 }

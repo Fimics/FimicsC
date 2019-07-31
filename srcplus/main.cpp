@@ -9,6 +9,8 @@ using namespace std;
 #include "operator/YOperator.h"
 #include "string/String.h"
 #include "array/Array.h"
+#include "string/String.h"
+#include "extends/FExtends.h"
 
 int main() {
 //    std::cout << "Hello, World!" << std::endl;
@@ -18,7 +20,9 @@ int main() {
 //      design();
 //    objecto();
 //yFunction();
-yOperator();
-farray();
+//yOperator();
+//farray();
+//    myString();
+fExtends();
     return 0;
 }
