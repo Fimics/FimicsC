@@ -10,6 +10,7 @@ using namespace std;
 #include "string/String.h"
 #include "array/Array.h"
 #include "string/StringDemo.h"
+#include "memory/FMemory.h"
 
 int main() {
 #if 0
@@ -19,9 +20,9 @@ int main() {
     yFunction();
     yOperator();
     farray();
+    stringDemo();
 #endif
 
-    stringDemo();
-
+    fMemory();
     return 0;
 }
