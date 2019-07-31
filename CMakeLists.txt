@@ -205,7 +205,9 @@ set(SOURCE_CPP_FILES
 
         #extends
         srcplus/extends/FExtends.h
-        srcplus/extends/FExtends.cpp)
+        srcplus/extends/FExtends.cpp
+        srcplus/extends/ExtendsMode.h
+        srcplus/extends/ExtendsMode.cpp)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
