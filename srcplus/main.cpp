@@ -9,16 +9,19 @@ using namespace std;
 #include "operator/YOperator.h"
 #include "string/String.h"
 #include "array/Array.h"
+#include "string/StringDemo.h"
 
 int main() {
-//    std::cout << "Hello, World!" << std::endl;
-//     cout << "hello";
-//    basic();
+#if 0
+    basic();
+    design();
+    objecto();
+    yFunction();
+    yOperator();
+    farray();
+#endif
 
-//      design();
-//    objecto();
-//yFunction();
-yOperator();
-farray();
+    stringDemo();
+
     return 0;
 }

@@ -195,8 +195,8 @@ set(SOURCE_CPP_FILES
         #operator
         srcplus/operator/YOperator.h
         srcplus/operator/YOperator.cpp
-
-        )
+        srcplus/string/StringDemo.h
+        srcplus/string/StringDemo.cpp)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
