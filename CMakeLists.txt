@@ -195,6 +195,13 @@ set(SOURCE_CPP_FILES
         #operator
         srcplus/operator/YOperator.h
         srcplus/operator/YOperator.cpp
+        srcplus/string/StringDemo.h
+        srcplus/string/StringDemo.cpp
+
+
+        #memory
+        srcplus/memory/FMemory.h
+        srcplus/memory/FMemory.cpp
 
         #extends
         srcplus/extends/FExtends.h

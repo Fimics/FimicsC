@@ -7,22 +7,24 @@ using namespace std;
 #include "function/YFunction.h"
 #include "design/YDesign.h"
 #include "operator/YOperator.h"
-#include "string/String.h"
 #include "array/Array.h"
 #include "string/String.h"
 #include "extends/FExtends.h"
+#include "string/StringDemo.h"
+#include "memory/FMemory.h"
 
 int main() {
-//    std::cout << "Hello, World!" << std::endl;
-//     cout << "hello";
-//    basic();
-
-//      design();
-//    objecto();
-//yFunction();
-//yOperator();
-//farray();
-//    myString();
-fExtends();
+#if 0
+    basic();
+    design();
+    objecto();
+    yFunction();
+    yOperator();
+    farray();
+    stringDemo();
+    myString();
+    fMemory();
+#endif
+    fExtends();
     return 0;
 }
