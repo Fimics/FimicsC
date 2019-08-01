@@ -159,6 +159,12 @@ set(SOURCE_CPP_FILES
         srcplus/function/ExternC.c
         srcplus/function/ExternC.h
         srcplus/function/ExternC.cpp
+        srcplus/extends/FExtends.h
+        srcplus/extends/FExtends.cpp
+        srcplus/extends/ExtendsMode.h
+        srcplus/extends/ExtendsMode.cpp
+        srcplus/function/FunctionPointer.h
+        srcplus/function/FunctionPointer.cpp
 
         #design
         srcplus/design/YDesign.h
@@ -207,7 +213,11 @@ set(SOURCE_CPP_FILES
         srcplus/extends/FExtends.h
         srcplus/extends/FExtends.cpp
         srcplus/extends/ExtendsMode.h
-        srcplus/extends/ExtendsMode.cpp)
+        srcplus/extends/ExtendsMode.cpp
+        srcplus/function/FunctionPointer.h
+        srcplus/function/FunctionPointer.cpp
+
+        )
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})

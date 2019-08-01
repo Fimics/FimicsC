@@ -18,13 +18,14 @@ int main() {
     basic();
     design();
     objecto();
-    yFunction();
+
     yOperator();
     farray();
     stringDemo();
     myString();
     fMemory();
 #endif
-    fExtends();
+//    fExtends();
+    yFunction();
     return 0;
 }

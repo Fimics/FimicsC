@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include "FunctionPointer.h"
 using namespace std;
 
 #include "YFunction.h"
@@ -100,5 +101,7 @@ void yFunction(){
 #if 0
     testDefineFunction();
 #endif
-    externC();
+   // externC();
+   functionPointer();
+
 }
