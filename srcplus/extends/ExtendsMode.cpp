@@ -134,6 +134,7 @@ void testArmyNews(){
     ArmyNews news;
 }
 
+//--------------------------多继承----------------------------
 class Base1{
 public:
     Base1() {
@@ -170,10 +171,48 @@ void testChild(){
     cout<<"child size: "<< sizeof(Child)<<endl;
 }
 
+//--------------------------菱形继承----------------------------
+/**
+ * 菱形继承会有空间浪费 同继承了 Sheep ,Tuo的age
+ * 1.解决方案
+ *    虚继承,操作的是一份共享数据
+ * 2.虚基类的内部工作原理
+ *
+ */
+
+class Animal{
+public:
+    int age;
+};
+
+//虚基类Sheep
+class Sheep:virtual public Animal{
+
+};
+
+//虚基类Tuo
+class Tuo:virtual public Animal{
+
+};
+
+class SheepTuo:public Sheep, public Tuo{
+
+};
+
+void testSheepTuo(){
+    SheepTuo st;
+    st.Sheep::age=1;
+    st.Tuo::age=2;
+
+    cout<<"ages = "<<st.Sheep::age<<"  aget ="<<st.Tuo::age<<endl;
+
+}
+
 void pager(){
 //    testNews();
 //      testArmyNews();
- testChild();
+// testChild();
+     testSheepTuo();
 }
 
 
