@@ -11,6 +11,7 @@ public:
 
     static int niceCount;
     int cCount =1;
+    int sameCount=1;
 
     BasePage() {
         cout<<"BasePage init..."<<endl;
@@ -69,11 +70,24 @@ int BasePage::niceCount =1000;
  *   访问parent的private属性
  * 4.子类会继承父类的成员属性，和成员方法，但不会继承父类的构造函数，和析构函数，只有父类知道怎么构造和析构自己
  *   子类是不知道父类构造与析构的
+ * 5.子类与父同名属性，优先调用子类的(就近原刚) ，
+ * 6.继承中的同名处理  --> news.BasePage::sameCount
+ *   6.1 成员属性，直接调用子类的，如果想调用父类的，需要作用域
+ *   6.2 成员函数, 直接调用子类的，父亲类的所有版本都会被隐藏，可果想调用，需要作域
+ *7.继承中静态成员处理
+ *  7.1 静态成员属性可以被继承下来
+ *  7.2 如果静态成员重名，会直接调用子类的，如果想访问父类的，可以通过域名访问
+ *  7.3 静态成员函数也可以继承下来，如果同名，直接调用子类的，如果想调用父类的，通过作用域
+ * 8.继承的概念与问题
+ *   8.1
+ *   8.2
+ *
  */
 
 class News: public BasePage{
 public:
 
+    int sameCount=2;
     News() {
         cout<<"news init..."<<endl;
     }
@@ -100,6 +114,8 @@ private:
 
 void testNews() {
     News news;
+    cout<<"\nnews.sameCount= "<<news.sameCount<<endl;
+    cout<<"\nnews->basePage->.sameCount= "<<news.BasePage::sameCount<<endl; //如果子类与父类成员同名，使用作用域调用父类成员
 }
 
 class ArmyNews:public News{
@@ -119,8 +135,8 @@ void testArmyNews(){
 }
 
 void pager(){
-//    testNews();
-      testArmyNews();
+    testNews();
+//      testArmyNews();
 }
 
 
