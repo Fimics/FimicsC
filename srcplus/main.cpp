@@ -25,7 +25,7 @@ int main() {
     myString();
     fMemory();
 #endif
-//    fExtends();
-    yFunction();
+    fExtends();
+//    yFunction();
     return 0;
 }

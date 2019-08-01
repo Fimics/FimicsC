@@ -134,9 +134,46 @@ void testArmyNews(){
     ArmyNews news;
 }
 
+class Base1{
+public:
+    Base1() {
+        this->a=1;
+        this->b=3;
+    }
+
+public:
+    int a;
+    int b;
+};
+
+class Base2{
+public:
+    Base2() {
+        this->b=2;
+    }
+
+public:
+    int b;
+};
+
+class Child:public Base1,public Base2{
+public:
+    int c;
+    int d;
+};
+
+
+void testChild(){
+    Child child;
+    int b =child.Base1::b;//多继承二义性需要作用域
+
+    cout<<"child size: "<< sizeof(Child)<<endl;
+}
+
 void pager(){
-    testNews();
+//    testNews();
 //      testArmyNews();
+ testChild();
 }
 
 
