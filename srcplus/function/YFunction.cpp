@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include "FunctionPointer.h"
+#include "ExternC.h"
+#include "ReferenceVariable.h"
 using namespace std;
 
 #include "YFunction.h"
@@ -94,7 +96,10 @@ void testOverload(const int &a){}//const也可以作为重载的条件
  * 1.编译器内部把函数名改了
  */
 
+
 #endif
+
+
 
 
 #if 1
@@ -108,6 +113,7 @@ void yFunction(){
     testDefineFunction();
 #endif
    // externC();
-   functionPointer();
+//   functionPointer();
+     referenceVariable();
 
 }

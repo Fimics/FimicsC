@@ -217,7 +217,7 @@ set(SOURCE_CPP_FILES
         srcplus/function/FunctionPointer.h
         srcplus/function/FunctionPointer.cpp
 
-        )
+        srcplus/function/ReferenceVariable.h srcplus/function/ReferenceVariavle.cpp)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
