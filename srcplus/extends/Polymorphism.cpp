@@ -20,7 +20,7 @@ class Cat :public Animal{
 public:
     void eat(){
         cout<<"cat eat..."<<endl;
-    }57038833
+    }
 };
 
 void testEat(Animal & animal){
