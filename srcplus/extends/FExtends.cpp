@@ -3,9 +3,11 @@
 //
 #include "ExtendsMode.h"
 #include "Polymorphism.h"
+#include "TypeCast.h"
 
 
 void fExtends(){
 //    pager();
-    polymorphism();
+//    polymorphism();
+      typeCast();
 }

@@ -30,10 +30,44 @@ public:
     virtual void eat() {
         cout << "animal eat..." << endl;
     }
+    // 普通的析构是不会调用子类的析构函数的，所以可能会导致子类释放不干净,用虚析构来解决
+//    ~Animal(){
+//        cout<<"~Animal";
+//    }
+
+    /**
+     * 纯虚析构
+     * 1.需要声明还需要实现，类内声明，类外实现
+     * 2.如果类中出现了纯虚析构，这个类也是抽象函数
+     */
+
+    virtual ~Animal()=0;
+//    virtual ~Animal(){
+//        cout<<"~Animal";
+//    }
 };
+
+Animal::~Animal() {
+
+}
 
 class Cat : public Animal {
 public:
+    char *name;
+
+    Cat(char *name) {
+        this->name=new char[strlen(name)+1];
+        strcpy(this->name,name);
+    }
+
+    ~Cat() {
+        cout<<"~Cat()";
+        if(this->name!=NULL){
+            delete [] this->name;
+            this->name=NULL;
+        }
+    }
+
     void eat() {
         cout << "cat eat..." << endl;
     }
@@ -131,9 +165,12 @@ void testCalculator(){
 void polymorphism() {
 
 #if 0
-    //如果发生了继承关系，编译器允许进行类型转换
-    Cat cat;
-    testEat(cat);
+
 #endif
-    testCalculator();
+
+    //testCalculator();
+    //如果发生了继承关系，编译器允许进行类型转换
+    Animal *animal = new Cat("Tom");
+    animal->eat();
+    delete animal;
 }
