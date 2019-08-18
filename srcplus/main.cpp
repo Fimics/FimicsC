@@ -12,6 +12,7 @@ using namespace std;
 #include "extends/FExtends.h"
 #include "string/StringDemo.h"
 #include "memory/FMemory.h"
+#include "funtemplate/FunTemplate.h"
 
 int main() {
 #if 0
@@ -24,8 +25,9 @@ int main() {
     stringDemo();
     myString();
     fMemory();
-#endif
     fExtends();
 //    yFunction();
+#endif
+    funTemplate();
     return 0;
 }

@@ -216,8 +216,18 @@ set(SOURCE_CPP_FILES
         srcplus/extends/ExtendsMode.cpp
         srcplus/function/FunctionPointer.h
         srcplus/function/FunctionPointer.cpp
+        srcplus/function/ReferenceVariable.h
+        srcplus/function/ReferenceVariavle.cpp
 
-        srcplus/function/ReferenceVariable.h srcplus/function/ReferenceVariavle.cpp srcplus/extends/Polymorphism.h srcplus/extends/Polymorphism.cpp srcplus/extends/TypeCast.h srcplus/extends/TypeCast.cpp)
+        #extends
+        srcplus/extends/Polymorphism.h
+        srcplus/extends/Polymorphism.cpp
+        srcplus/extends/TypeCast.h
+        srcplus/extends/TypeCast.cpp
+
+        #funTemplate
+        srcplus/funtemplate/FunTemplate.h
+        srcplus/funtemplate/FunTemplate.cpp)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
