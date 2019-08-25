@@ -4,5 +4,5 @@
 
 #ifndef FIMICSCPP_TYPECAST_H
 #define FIMICSCPP_TYPECAST_H
-
+void typeCast();
 #endif //FIMICSCPP_TYPECAST_H

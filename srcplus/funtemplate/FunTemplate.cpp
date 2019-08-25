@@ -164,6 +164,9 @@ public:
     T name;
     K age;
 
+    /**
+     *
+     */
     void showInfo() {
         cout << "name->" << this->name << " age-> " << this->age << endl;
     }
@@ -175,10 +178,119 @@ void testClassTemplate() {
 //    Strdent p1("zhangsan",100);
 
 
-    Strdent<string,int> s("张三", 100);
+    Strdent<string, int> s("张三", 100);
     s.showInfo();
+}
+
+//---------------------------------成员函数创建时机------------
+
+class Person1 {
+public:
+    void showPerson1() {
+        cout << "showPerson1\n";
+    }
+};
 
 
+class Person2 {
+public:
+    void showPerson2() {
+        cout << "showPerson1\n";
+    }
+};
+
+template<class T>
+class myClass {
+public:
+    T obj;
+
+    void func1() {
+        obj.showPerson1();
+    }
+
+    void func2() {
+        obj.showPerson2();
+    }
+};
+
+void testPerson1() {
+
+    myClass<Person1> m;
+    m.func1();
+}
+
+//---------------------------------类模板做函数参数-----------------------------------
+template<class T, class K=int>
+class Dog {
+public:
+
+    Dog(T name, K age) {
+        this->name = name;
+        this->age = age;
+    }
+
+    T name;
+    K age;
+
+    /**
+     *
+     */
+    void showInfo() {
+        cout << "name->" << this->name << " age-> " << this->age << endl;
+    }
+};
+
+//指定传入类型
+void doWork(Dog<string, int> &p) {
+    p.showInfo();
+}
+
+//参数模板
+template<class T1, class T2>
+void doWork1(Dog<T1, T2> &p) {
+    p.showInfo();
+}
+
+//-------------------------------模板与继承----------------------------
+
+template<class T>
+class Base {
+public:
+    T age;
+};
+
+/**
+ * Child继承base类时，必须告诉base中T的类型，否则T无法分配内存
+ */
+class Child : public Base<int> {
+
+};
+
+template<class T1, class T2>
+class Child2 : public Base<T2> {
+public:
+    T1 age;
+};
+
+//----------------------类内，类外实现类模板--------------
+//TODO
+
+template<class T1, class T2>
+class Cat {
+public:
+    Cat(T1 name, T2 age) {
+      this->name=name;
+      this->age=age;
+    }
+
+    T1 name;
+    T2 age;
+};
+
+
+void testChild2() {
+    //T1的类型是int,T2的类型是double
+    Child2<int, double> child2;
 }
 
 void funTemplate() {
@@ -186,5 +298,6 @@ void funTemplate() {
 //testMySwap();
 // testArraySort();
 //    testMyCompare();
-    testClassTemplate();
+//    testClassTemplate();
+//      testPerson1();
 }

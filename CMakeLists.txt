@@ -222,12 +222,18 @@ set(SOURCE_CPP_FILES
         #extends
         srcplus/extends/Polymorphism.h
         srcplus/extends/Polymorphism.cpp
-        srcplus/extends/TypeCast.h
-        srcplus/extends/TypeCast.cpp
 
         #funTemplate
         srcplus/funtemplate/FunTemplate.h
-        srcplus/funtemplate/FunTemplate.cpp)
+        srcplus/funtemplate/FunTemplate.cpp
+
+        #expection
+        srcplus/exception/FException.h
+        srcplus/exception/FException.cpp
+        srcplus/exception/TypeCast.h
+        srcplus/exception/TypeCast.cpp
+
+        )
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
