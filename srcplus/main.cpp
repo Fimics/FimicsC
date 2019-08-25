@@ -14,6 +14,9 @@ using namespace std;
 //#include "memory/FMemory.h"
 //#include "funtemplate/FunTemplate.h"
 #include "exception/FException.h"
+//#include "io/IO.h"
+
+#include "stl/FStl.h"
 
 
 int main() {
@@ -31,6 +34,8 @@ int main() {
 //    yFunction();
  funTemplate();
 #endif
-    fexception();
+//    fexception();
+//io();
+    fstl();
     return 0;
 }

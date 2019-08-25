@@ -145,7 +145,7 @@ set(SOURCE_C_FILES
 #        src/datastructure/LinkedList1.h
 #        src/datastructure/LinkedList1.c
 
-         )
+        )
 
 set(SOURCE_CPP_FILES
         srcplus/main.cpp
@@ -233,7 +233,13 @@ set(SOURCE_CPP_FILES
         srcplus/exception/TypeCast.h
         srcplus/exception/TypeCast.cpp
 
-        )
+        #io
+        srcplus/io/IO.h
+        srcplus/io/IO.cpp
+
+        #stl
+        srcplus/stl/FStl.h
+        srcplus/stl/FStl.cpp)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
