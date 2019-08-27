@@ -255,7 +255,7 @@ set(SOURCE_CPP_FILES
         srcplus/stl/DequeContainer.cpp
         srcplus/stl/DequeContainer.h
 
-        srcplus/stl/StackContainer.cpp srcplus/stl/StackContainer.h srcplus/stl/QueueContainer.cpp srcplus/stl/QueueContainer.h srcplus/stl/ListContainer.cpp srcplus/stl/ListContainer.h)
+        srcplus/stl/StackContainer.cpp srcplus/stl/StackContainer.h srcplus/stl/QueueContainer.cpp srcplus/stl/QueueContainer.h srcplus/stl/ListContainer.cpp srcplus/stl/ListContainer.h srcplus/stl/SetContainer.cpp srcplus/stl/SetContainer.h)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
