@@ -251,6 +251,9 @@ set(SOURCE_CPP_FILES
         srcplus/stl/StringContainer.cpp
         srcplus/stl/StringContainer.h
 
+        #deque
+        srcplus/stl/DequeContainer.cpp
+        srcplus/stl/DequeContainer.h
 
         )
 
