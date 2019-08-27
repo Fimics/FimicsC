@@ -60,7 +60,7 @@ char& operator[](int n);//通过[]方式取字符
 char& at(int n);//通过at方法获取字符
 
 */
-void test02()
+void strAt()
 {
     string s = "hello world";
 
@@ -111,7 +111,7 @@ string& replace(int pos, int n, const char* s); //替换从pos开始的n个字�
 
 */
 
-void test03()
+void strFind()
 {
     //拼接
     string s1 = "我";
@@ -151,7 +151,7 @@ int compare(const string &s) const;//与字符串s比较
 int compare(const char *s) const;//与字符串s比较
 */
 
-void test04()
+void strCompare()
 {
     string s1 = "abc";
     string s2 = "abcd";
@@ -178,7 +178,7 @@ string substr(int pos = 0, int n = npos) const;//返回由pos开始的n个字符
 
 */
 
-void test05()
+void strSub()
 {
     string s1 = "abcde";
 
@@ -205,7 +205,7 @@ string& erase(int pos, int n = npos);//删除从Pos开始的n个字符
 
 */
 
-void test06()
+void strInsert()
 {
     string s1 = "hello";
     s1.insert(1, "111");
@@ -222,24 +222,24 @@ void test06()
 string和c-style字符串转换
 */
 
-void func(string s)
+void funcStr(string s)
 {
     cout << s << endl;
 }
 
-void func2(const char * s)
+void func2Str(const char * s)
 {
     cout << s << endl;
 }
 
-void test07()
+void test07Str()
 {
     string s = "abc";
     //string -> const char *
 
     const char * p = s.c_str();
 
-    func(p); //const char * 隐式类型转换为 string
+    funcStr(p); //const char * 隐式类型转换为 string
 
     //const char * -> string
 
@@ -247,7 +247,7 @@ void test07()
     //func2(s2); //string 不能隐式类型转换为 char *
 }
 
-void test08()
+void test08Str()
 {
     string s = "abcdefg";
     char& a = s[2];
@@ -273,7 +273,7 @@ void test08()
 写一个函数，函数内部将string字符串中的所有小写字母都变为大写字母。
 */
 
-void test09()
+void test09Str()
 {
     string s = "abCdEfg";
 
@@ -290,6 +290,6 @@ void test09()
 
 
 void stringContainer(){
-     cout<<"stringAPI"<<endl;
-     testStringApi();
+//     cout<<"stringAPI"<<endl;
+//     testStringApi();
 }

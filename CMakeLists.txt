@@ -244,10 +244,15 @@ set(SOURCE_CPP_FILES
         #vector
         srcplus/stl/VectorContainer.cpp
         srcplus/stl/VectorContainer.h
+        srcplus/stl/VectorContainer1.cpp
+        srcplus/stl/VectorContainer1.h
 
         #string
         srcplus/stl/StringContainer.cpp
-        srcplus/stl/StringContainer.h)
+        srcplus/stl/StringContainer.h
+
+
+        )
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
