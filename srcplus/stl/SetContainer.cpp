@@ -194,8 +194,6 @@ void testSetInset()
     printperson(s);
 }
 
-
-
 void setContainer(){
 
 }
