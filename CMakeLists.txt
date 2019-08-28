@@ -287,7 +287,7 @@ set(SOURCE_CPP_FILES
         srcplus/stl/algorithm/Algorithm.h
         srcplus/stl/algorithm/Functor.cpp
         srcplus/stl/algorithm/Functor.h
-        srcplus/stl/algorithm/Predicate.cpp srcplus/stl/algorithm/Predicate.h)
+        srcplus/stl/algorithm/Predicate.cpp srcplus/stl/algorithm/Predicate.h srcplus/stl/algorithm/BuiltInFunction.cpp srcplus/stl/algorithm/BuiltInFunction.h)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
