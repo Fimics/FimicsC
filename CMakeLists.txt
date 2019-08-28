@@ -5,145 +5,144 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_C_STANDARD 99)
 
 include_directories(
-#        src/mian
-#        src/system
-#        src/datatype
-#        src/array
-#        src/function
-#        src/string
-#        src/pointer
-#        src/memory
-#        src/datastructure
-#        src/complex
-#        src/file
-#        src/improve
+        #        src/mian
+        #        src/system
+        #        src/datatype
+        #        src/array
+        #        src/function
+        #        src/string
+        #        src/pointer
+        #        src/memory
+        #        src/datastructure
+        #        src/complex
+        #        src/file
+        #        src/improve
 )
 
 
 set(SOURCE_C_FILES
         #main
         src/main.c
-#        #dataType
-#        src/datatype/DataType.h
-#        src/datatype/DataType.c
-#        src/datatype/BinaryConvert.c
-#        src/datatype/Char.c
-#
-#        #function
-#        src/function/YFunction.h
-#        src/function/YFunction.c
-#        src/function/FunctionDemo.c
+        #        #dataType
+        #        src/datatype/DataType.h
+        #        src/datatype/DataType.c
+        #        src/datatype/BinaryConvert.c
+        #        src/datatype/Char.c
+        #
+        #        #function
+        #        src/function/YFunction.h
+        #        src/function/YFunction.c
+        #        src/function/FunctionDemo.c
 
 
-
-#        #string
-#        src/string/YString.h
-#        src/string/YString.c
-#        src/string/GetssPuts.c
-#        src/string/FgetsFputs.c
-#        src/string/PrintfScanf.c
-#        src/string/StrlenStrcpy.c
-#        src/string/SprintfSscanf.c
-#        src/string/Strchr.c
-#        src/string/strtokAtoi.c
-#
-#        #pointer
-#        src/pointer/YPointer.h
-#        src/pointer/YPointer.c
-#        src/pointer/PointerDefine.c
-#        src/pointer/WildNullpointer.c
-#        src/pointer/ConstDemo.c
-#        src/pointer/PointerAndArray.c
-#        src/pointer/PointerOperation.c
-#        src/pointer/PointerBubbleSort.c
-#        src/pointer/PointerStrchr.c
-#        src/pointer/PointerMultilevel.c
-#        src/pointer/PointerAndParameter.c
-#        src/pointer/PointerReturnValue.c
-#        src/pointer/PointerString.c
-#
-#        #array
-#        src/array/YArray.h
-#        src/array/YArray.c
-#        src/array/Array2d.c
-#        src/array/ArrayAndPointer.c
-#        src/array/Srand.c
-#        src/array/vararr2d.c
-#        src/array/StringArray.c
-#
-#        #system
-#        src/system/System.h
-#        src/system/System.c
-#
-#        #memory
-#        src/memory/YMemory.h
-#        src/memory/YMemory.c
-#        src/memory/Scope.c
-#        src/memory/MemGlobal.c
-#        src/memory/MemArea.c
-#        src/memory/MemHeap.c
-#        src/memory/MemFunction.c
+        #        #string
+        #        src/string/YString.h
+        #        src/string/YString.c
+        #        src/string/GetssPuts.c
+        #        src/string/FgetsFputs.c
+        #        src/string/PrintfScanf.c
+        #        src/string/StrlenStrcpy.c
+        #        src/string/SprintfSscanf.c
+        #        src/string/Strchr.c
+        #        src/string/strtokAtoi.c
+        #
+        #        #pointer
+        #        src/pointer/YPointer.h
+        #        src/pointer/YPointer.c
+        #        src/pointer/PointerDefine.c
+        #        src/pointer/WildNullpointer.c
+        #        src/pointer/ConstDemo.c
+        #        src/pointer/PointerAndArray.c
+        #        src/pointer/PointerOperation.c
+        #        src/pointer/PointerBubbleSort.c
+        #        src/pointer/PointerStrchr.c
+        #        src/pointer/PointerMultilevel.c
+        #        src/pointer/PointerAndParameter.c
+        #        src/pointer/PointerReturnValue.c
+        #        src/pointer/PointerString.c
+        #
+        #        #array
+        #        src/array/YArray.h
+        #        src/array/YArray.c
+        #        src/array/Array2d.c
+        #        src/array/ArrayAndPointer.c
+        #        src/array/Srand.c
+        #        src/array/vararr2d.c
+        #        src/array/StringArray.c
+        #
+        #        #system
+        #        src/system/System.h
+        #        src/system/System.c
+        #
+        #        #memory
+        #        src/memory/YMemory.h
+        #        src/memory/YMemory.c
+        #        src/memory/Scope.c
+        #        src/memory/MemGlobal.c
+        #        src/memory/MemArea.c
+        #        src/memory/MemHeap.c
+        #        src/memory/MemFunction.c
 
         #complex;
-#        src/complex/YComplex.h
-#        src/complex/YComplex.c
-#        src/complex/StructDefine.c
-#        src/complex/StructMemory.c
-#        src/complex/structArray.c
-#        src/complex/structSort.c
-#        src/complex/StructPointer.c
-#        src/complex/StructFunction.c
-#        src/complex/Structstruct.c
-#        src/complex/UnionDemo.c
-#        src/complex/EnumDemo.c
-#        src/complex/TypeDefDemo.c
+        #        src/complex/YComplex.h
+        #        src/complex/YComplex.c
+        #        src/complex/StructDefine.c
+        #        src/complex/StructMemory.c
+        #        src/complex/structArray.c
+        #        src/complex/structSort.c
+        #        src/complex/StructPointer.c
+        #        src/complex/StructFunction.c
+        #        src/complex/Structstruct.c
+        #        src/complex/UnionDemo.c
+        #        src/complex/EnumDemo.c
+        #        src/complex/TypeDefDemo.c
 
         #File
-#        src/file/YFile.h
-#        src/file/YFile.c
-#        src/file/FileOperate.c
-#        src/file/FileCat.c
-#        src/file/FileFscanf.c
-#        src/file/FileBigDataSort.c
-#        src/file/FreadFwrite.c
-#        src/file/FileCopy.c
-#        src/file/FileProperty.c
-#        src/file/FileRandomAccess.c
-#        src/file/FileMvRmRename.c
-#        src/file/FileBuffer.c
+        #        src/file/YFile.h
+        #        src/file/YFile.c
+        #        src/file/FileOperate.c
+        #        src/file/FileCat.c
+        #        src/file/FileFscanf.c
+        #        src/file/FileBigDataSort.c
+        #        src/file/FreadFwrite.c
+        #        src/file/FileCopy.c
+        #        src/file/FileProperty.c
+        #        src/file/FileRandomAccess.c
+        #        src/file/FileMvRmRename.c
+        #        src/file/FileBuffer.c
 
 
         #improve
-#        src/improve/YImprove.h
-#        src/improve/YImprove.c
-#        src/improve/IDataType.c
-#        src/improve/YGlobal.c
-#        src/improve/IFunction.c
-#        src/improve/IPointer.c
-#        src/improve/IString.c
-#        src/improve/IMemory.c
-#        src/improve/IConst.c
-#        src/improve/IPointerFunction.c
-#        src/improve/IArray.c
-#        src/improve/IFile.c
-#        src/improve/IBitOperation.c
-#        src/improve/IStruct.c
-#        src/improve/ISumUp.c
-#        src/improve/IFileConfig.h
-#        src/improve/IFileConfig.c
-#        src/improve/IFunctionPointer.c
-#        src/improve/IPreprocessingInstruction.c
+        #        src/improve/YImprove.h
+        #        src/improve/YImprove.c
+        #        src/improve/IDataType.c
+        #        src/improve/YGlobal.c
+        #        src/improve/IFunction.c
+        #        src/improve/IPointer.c
+        #        src/improve/IString.c
+        #        src/improve/IMemory.c
+        #        src/improve/IConst.c
+        #        src/improve/IPointerFunction.c
+        #        src/improve/IArray.c
+        #        src/improve/IFile.c
+        #        src/improve/IBitOperation.c
+        #        src/improve/IStruct.c
+        #        src/improve/ISumUp.c
+        #        src/improve/IFileConfig.h
+        #        src/improve/IFileConfig.c
+        #        src/improve/IFunctionPointer.c
+        #        src/improve/IPreprocessingInstruction.c
 
         #datastructure
-#        src/datastructure/YDataStructure.h
-#        src/datastructure/YDataStructure.c
-#        src/datastructure/Sort.c
-#        src/datastructure/LinkedList.c
-#        src/datastructure/LinkedList.h
-#        src/datastructure/DynamicArray.c
-#        src/datastructure/DynamicArray.h
-#        src/datastructure/LinkedList1.h
-#        src/datastructure/LinkedList1.c
+        #        src/datastructure/YDataStructure.h
+        #        src/datastructure/YDataStructure.c
+        #        src/datastructure/Sort.c
+        #        src/datastructure/LinkedList.c
+        #        src/datastructure/LinkedList.h
+        #        src/datastructure/DynamicArray.c
+        #        src/datastructure/DynamicArray.h
+        #        src/datastructure/LinkedList1.h
+        #        src/datastructure/LinkedList1.c
 
         )
 
@@ -238,24 +237,57 @@ set(SOURCE_CPP_FILES
         srcplus/io/IO.cpp
 
         #stl
-        srcplus/stl/YStl.h
-        srcplus/stl/YStl.cpp
+        srcplus/stl/container/YStl.h
+        srcplus/stl/container/YStl.cpp
 
         #vector
-        srcplus/stl/VectorContainer.cpp
-        srcplus/stl/VectorContainer.h
-        srcplus/stl/VectorContainer1.cpp
-        srcplus/stl/VectorContainer1.h
+        srcplus/stl/container/VectorContainer.cpp
+        srcplus/stl/container/VectorContainer.h
+        srcplus/stl/container/VectorContainer1.cpp
+        srcplus/stl/container/VectorContainer1.h
 
         #string
-        srcplus/stl/StringContainer.cpp
-        srcplus/stl/StringContainer.h
+        srcplus/stl/container/StringContainer.cpp
+        srcplus/stl/container/StringContainer.h
 
         #deque
-        srcplus/stl/DequeContainer.cpp
-        srcplus/stl/DequeContainer.h
+        srcplus/stl/container/DequeContainer.cpp
+        srcplus/stl/container/DequeContainer.h
 
-        srcplus/stl/StackContainer.cpp srcplus/stl/StackContainer.h srcplus/stl/QueueContainer.cpp srcplus/stl/QueueContainer.h srcplus/stl/ListContainer.cpp srcplus/stl/ListContainer.h srcplus/stl/SetContainer.cpp srcplus/stl/SetContainer.h srcplus/stl/PairContainer.cpp srcplus/stl/PairContainer.h srcplus/stl/MapContainer.cpp srcplus/stl/MapContainer.h srcplus/stl/MultiMapContainer.cpp srcplus/stl/MultiMapContainer.h)
+        #stack
+        srcplus/stl/container/StackContainer.cpp
+        srcplus/stl/container/StackContainer.h
+
+        #queue
+        srcplus/stl/container/QueueContainer.cpp
+        srcplus/stl/container/QueueContainer.h
+
+        #list
+        srcplus/stl/container/ListContainer.cpp
+        srcplus/stl/container/ListContainer.h
+
+        #set
+        srcplus/stl/container/SetContainer.cpp
+        srcplus/stl/container/SetContainer.h
+
+        #pair
+        srcplus/stl/container/PairContainer.cpp
+        srcplus/stl/container/PairContainer.h
+
+        #map
+        srcplus/stl/container/MapContainer.cpp
+        srcplus/stl/container/MapContainer.h
+
+        #multimap
+        srcplus/stl/container/MultiMapContainer.cpp
+        srcplus/stl/container/MultiMapContainer.h
+
+        #functor
+        srcplus/stl/algorithm/Algorithm.cpp
+        srcplus/stl/algorithm/Algorithm.h
+        srcplus/stl/algorithm/Functor.cpp
+        srcplus/stl/algorithm/Functor.h
+        srcplus/stl/algorithm/Predicate.cpp srcplus/stl/algorithm/Predicate.h)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
