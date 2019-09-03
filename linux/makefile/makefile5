@@ -1,0 +1,22 @@
+#get all .c file
+srcFiles=$(wildcard *.c)
+#all.c files->.o files
+objectFiles=$(patsubst %.c,%.o,$(srcFiles))
+
+#目标文件用法$(var)
+app:$(objectFiles)
+	gcc -o app -I./include $(objectFiles)
+
+#模式匹配规则，$@,$<这样的变量只能在规则中出现
+%.o:%.c
+#	gcc -c $< -I ./include
+	gcc -c $< -I ./include -o $@
+test:
+	@echo $(srcFiles)
+	@echo $(objectFiles)
+
+clean:
+	#指令前加"-"的作用，当这第指令出错了会继续执行
+	-@rm -f *.o
+	#指令前加@ 就不会输出该指令，但会执行该指令
+	@rm -f app

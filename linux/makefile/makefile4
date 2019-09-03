@@ -1,0 +1,29 @@
+#get all .c file
+srcFiles=$(wildcard *.c)
+#all.c files->.o files
+objectFiles=$(patsubst %.c,%.o,$(srcFiles))
+
+#目标文件用法$(var)
+app:$(objectFiles)
+	gcc -o app -I./include $(objectFiles)
+
+#模式匹配规则，$@,$<这样的变量只能在规则中出现
+%.o:%.c
+#	gcc -c $< -I ./include
+	gcc -c $< -I ./include -o $@
+
+
+#main.o:main.c
+#	gcc -c main.c -I ./include
+#add.o:add.c
+#	gcc -c add.c -I ./include
+#div.o:div.c
+#	gcc -c div.c -I ./include
+#mul.o:mul.c
+#	gcc -c mul.c -I ./include
+#sub.o:sub.c
+#	gcc -c sub.c -I ./include
+
+test:
+	echo $(srcFiles)
+	echo $(objectFiles)

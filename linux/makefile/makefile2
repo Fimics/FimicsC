@@ -1,0 +1,13 @@
+app:main.o add.o div.o mul.o sub.o
+	gcc -o app -I./include  main.o add.o div.o mul.o sub.o
+main.o:main.c
+	gcc -c main.c -I ./include
+add.o:add.c
+	gcc -c add.c -I ./include
+div.o:div.c
+	gcc -c div.c -I ./include
+mul.o:mul.c
+	gcc -c mul.c -I ./include
+sub.o:sub.c
+	gcc -c sub.c -I ./include
+
