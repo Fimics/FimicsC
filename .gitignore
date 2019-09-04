@@ -2,6 +2,7 @@
 *.iml
 *.o
 *.so
+*.out
 out/
 gen/
 idea-gitignore.jar
