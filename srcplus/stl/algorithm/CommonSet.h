@@ -22,7 +22,7 @@ set_intersection算法 求两个set集合的交集
 @param dest  目标容器开始迭代器
 @return 目标容器的最后一个元素的迭代器地址
 */
-void test01()
+void testCommonSet01()
 {
     vector<int>v1;
     vector<int>v2;

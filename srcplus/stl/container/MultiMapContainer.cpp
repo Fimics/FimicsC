@@ -158,7 +158,7 @@ void deletemes(map<int, staff> &M,int ID)
 
 
 
-void test01()
+void testMultiMapContainer01()
 {
     map<int, staff> M;
     insermes(M);

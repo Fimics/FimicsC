@@ -2,6 +2,7 @@
 // Created by lipnegju on 2019-08-02.
 //
 #include <iostream>
+#include <string.h>
 
 using namespace std;
 
