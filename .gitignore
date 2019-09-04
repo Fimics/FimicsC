@@ -1,5 +1,7 @@
 .idea/
 *.iml
+*.o
+*.so
 out/
 gen/
 idea-gitignore.jar
