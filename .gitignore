@@ -16,3 +16,4 @@ IgnoreLexer.java~
 
 /verification
 /cmake-build-debug
+/cmake-build-debug-server
