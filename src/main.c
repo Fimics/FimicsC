@@ -22,9 +22,9 @@ extern void fun(int a, int b, int c);
 /**
  * @param argc  接收传递参数的个数
  * @param argv  接收传递参数的内容
- * @return
+ * @return int argc, char *argv[
  */
-int main(int argc, char *argv[]) {
+int main() {
 
 #if 0
 

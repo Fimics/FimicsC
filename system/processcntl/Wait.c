@@ -88,8 +88,8 @@ int testWaitPid(){
 //TODO
 //回收多个子进程
 
-int main(){
-//    testWait();
-    testWaitPid();
-    return 0;
-}
+//int main(){
+////    testWait();
+//    testWaitPid();
+//    return 0;
+//}

@@ -39,5 +39,5 @@ void testPam(){
 }
 
 void functionPointer(){
-//       process();
+//       processcntl();
 }

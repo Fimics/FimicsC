@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.10.2)
-project(FimicsCPP)
+#project(FimicsCPP)
+#project(FimicsC)
+project(FimicsCLINUX)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_C_STANDARD 99)
@@ -308,5 +310,32 @@ set(SOURCE_CPP_FILES
 
         )
 
+set(SOURCE_SYSTEM_FILES
+        #file
+        system/mian.c
+        system/file/File.c
+        system/file/MyTouch.c
+        system/file/MyCat.c
+        system/file/Lseek.c
+        system/file/FileStat.c
+        system/file/AccessTruncate.c
+        system/file/Link.c
+        system/file/Chown.c
+        system/file/CountFiles.c
+        system/file/Errno.c
+        system/file/Dup2.c
+
+        #processcntl
+        system/processcntl/Fork.c
+        system/processcntl/ProcessShared.c
+        system/processcntl/Execl.c
+        system/processcntl/Wait.c
+
+        #processcomon
+
+        system/processcomon/Pipe.c
+        )
+
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
+add_executable(FimicsCLINUX ${SOURCE_SYSTEM_FILES})
