@@ -334,7 +334,9 @@ set(SOURCE_SYSTEM_FILES
         #processcomon
 
         system/processcomon/Pipe.c
-        )
+        system/processcomon/FifoWrite.c
+        system/processcomon/FifoRead.c
+        system/processcomon/Mmap.c system/processcomon/MmapWriter.c)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
