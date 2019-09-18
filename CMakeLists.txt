@@ -332,11 +332,16 @@ set(SOURCE_SYSTEM_FILES
         system/processcntl/Wait.c
 
         #processcomon
-
         system/processcomon/Pipe.c
         system/processcomon/FifoWrite.c
         system/processcomon/FifoRead.c
-        system/processcomon/Mmap.c system/processcomon/MmapWriter.c)
+        system/processcomon/Mmap.c
+        system/processcomon/MmapWriter.c
+
+        #singal
+        system/signal/Kill.c
+
+        system/signal/Alarm.c system/signal/SetITimer.c)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
