@@ -340,8 +340,15 @@ set(SOURCE_SYSTEM_FILES
 
         #singal
         system/signal/Kill.c
+        system/signal/Alarm.c
+        system/signal/SetITimer.c
+        system/signal/SigSet.c
+        system/signal/SigAction.c
+        system/signal/SigChild.c
 
-        system/signal/Alarm.c system/signal/SetITimer.c)
+        #thread
+        system/thread/DaemonP.c
+        )
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
