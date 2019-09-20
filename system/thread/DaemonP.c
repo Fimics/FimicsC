@@ -32,28 +32,28 @@ void touchFile(int num){
  * 创建一个守护进程，每秒在HOME/log/创建一个wnejian，程序名.时间戳
  * @return
  */
-int main(){
-
-    //1.创建子进程，父进程退出
-    pid_t  pid = fork();
-    //2.当会长
-    //3.设置掩码
-    umask(0);
-    //4.切换目录
-    chdir(getenv("HOME"));
-    //5.关闭文件描述符
-    //6.执行核心逻辑
-    struct  itimerval myit = {{5,0},{5,0}};
-    setitimer(ITIMER_REAL,&myit,NULL);
-    struct sigaction act;
-    act.sa_flags=0;
-    sigemptyset(&act.sa_mask);
-    act.sa_handler = touchFile;
-    sigaction(SIGALRM,&act,NULL);
-    while (1){
-        //每隔一分钟在/home/log/下创建一个文件
-        sleep(1);
-    }
-    //7.退出
-
-}
+//int main(){
+//
+//    //1.创建子进程，父进程退出
+//    pid_t  pid = fork();
+//    //2.当会长
+//    //3.设置掩码
+//    umask(0);
+//    //4.切换目录
+//    chdir(getenv("HOME"));
+//    //5.关闭文件描述符
+//    //6.执行核心逻辑
+//    struct  itimerval myit = {{5,0},{5,0}};
+//    setitimer(ITIMER_REAL,&myit,NULL);
+//    struct sigaction act;
+//    act.sa_flags=0;
+//    sigemptyset(&act.sa_mask);
+//    act.sa_handler = touchFile;
+//    sigaction(SIGALRM,&act,NULL);
+//    while (1){
+//        //每隔一分钟在/home/log/下创建一个文件
+//        sleep(1);
+//    }
+//    //7.退出
+//
+//}
