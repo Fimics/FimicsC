@@ -1,11 +1,4 @@
-//
-// Created by lipengju on 2019-09-21.
-//
 
-
-//
-// Created by lipengju on 2019-09-21.
-//
 
 #include <pthread.h>
 #include <stdio.h>
@@ -40,7 +33,7 @@ void run(){
     }
 }
 
-int main(){
-    run();
-    return 0;
-}
+//int main(){
+//    run();
+//    return 0;
+//}
