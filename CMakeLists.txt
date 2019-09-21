@@ -348,7 +348,10 @@ set(SOURCE_SYSTEM_FILES
 
         #thread
         system/thread/DaemonP.c
-        system/thread/Thread.c)
+        system/thread/Thread.c
+        system/thread/Mutex.c
+        system/thread/TryLock.c
+        )
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
