@@ -351,7 +351,7 @@ set(SOURCE_SYSTEM_FILES
         system/thread/Thread.c
         system/thread/Mutex.c
         system/thread/TryLock.c
-        system/thread/RwLock.c)
+        system/thread/RwLock.c system/thread/Producer.c system/thread/Sem.c)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
