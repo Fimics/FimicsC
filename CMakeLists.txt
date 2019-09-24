@@ -351,7 +351,13 @@ set(SOURCE_SYSTEM_FILES
         system/thread/Thread.c
         system/thread/Mutex.c
         system/thread/TryLock.c
-        system/thread/RwLock.c system/thread/Producer.c system/thread/Sem.c system/thread/FileLock.c)
+        system/thread/RwLock.c
+        system/thread/Producer.c
+        system/thread/Sem.c
+        system/thread/FileLock.c
+
+        #socket
+        system/socket/tcp/client_tcp.cpp)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
