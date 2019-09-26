@@ -357,7 +357,12 @@ set(SOURCE_SYSTEM_FILES
         system/thread/FileLock.c
 
         #socket
-        system/socket/tcp/client_tcp.cpp)
+        system/socket/tcp/client_tcp.c
+        system/socket/tcp/warp/client.c
+        system/socket/tcp/warp/server.c
+        system/socket/tcp/warp/wrap.c
+
+        )
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
