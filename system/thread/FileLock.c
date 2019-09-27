@@ -35,7 +35,7 @@ void testFileLock(){
         perror("get lock error");
     }
 
-    while (){
+    while (1){
         printf("i am alive!\n");
         sleep(1);
     }
