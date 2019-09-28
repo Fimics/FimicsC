@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.10.2)
-#project(FimicsCPP)
-#project(FimicsC)
+project(FimicsCPP)
+project(FimicsC)
 project(FimicsCLINUX)
+project(FimicsCNDK)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_C_STANDARD 99)
@@ -362,8 +363,14 @@ set(SOURCE_SYSTEM_FILES
         system/socket/tcp/warp/server.c
         system/socket/tcp/warp/wrap.c
 
-        )
+        system/socket/tcp/server_p.c)
+
+
+set(SOURCE_NDK_FILES
+        #file
+        ndk/c/Pointer.cpp ndk/c/Function.cpp)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
+add_executable(FimicsCNDK ${SOURCE_NDK_FILES})
 add_executable(FimicsCLINUX ${SOURCE_SYSTEM_FILES})
