@@ -2,8 +2,6 @@
 // Created by lipnegju on 2019-06-15.
 //
 #include <stdio.h>
-#include  "YArray.h"
-
 #define MONTHS 12
 #define YEARS   5
 
@@ -42,6 +40,10 @@ void initArray2D() {
 
 }
 
-void testArray2d() {
+#if 0
+
+int main() {
     initArray2D();
-};
+}
+
+#endif

@@ -43,15 +43,14 @@ set(SOURCE_C_FILES
                 src/pointer/PointerReturnValue.c
                 src/pointer/PointerString.c
 
-        #        #array
-        #        src/array/YArray.h
-        #        src/array/YArray.c
-        #        src/array/Array2d.c
-        #        src/array/ArrayAndPointer.c
-        #        src/array/Srand.c
-        #        src/array/vararr2d.c
-        #        src/array/StringArray.c
-        #
+                #array
+                src/array/YArray.c
+                src/array/Array2d.c
+                src/array/ArrayAndPointer.c
+                src/array/Srand.c
+                src/array/vararr2d.c
+                src/array/StringArray.c
+
         #        #system
         #        src/system/System.h
         #        src/system/System.c

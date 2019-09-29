@@ -3,7 +3,6 @@
 //
 
 #include <stdio.h>
-#include  "YArray.h"
 
 #define SIZE 4
 #define SIZE_SUM 10
@@ -89,8 +88,8 @@ int sump(int *start, int *end) {
     return total;
 }
 
-void testSump(){
-    int marbles[SIZE_SUM] = {20,10,5,39,4,16,19,26,31,20};
+void testSump() {
+    int marbles[SIZE_SUM] = {20, 10, 5, 39, 4, 16, 19, 26, 31, 20};
     long answer;
 
     answer = sump(marbles, marbles + SIZE_SUM);
@@ -98,7 +97,10 @@ void testSump(){
 }
 
 
-void testArrayAndPointer() {
-//    testSumArr1();
-testSump();
+#if  0
+int main() {
+    testSumArr1();
+    testSump();
 }
+
+#endif

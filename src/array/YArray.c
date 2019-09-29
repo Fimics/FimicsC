@@ -4,7 +4,6 @@
 
 #include <stdio.h>
 #include <strings.h>
-#include "YArray.h"
 
 #define MOHDHS 12
 
@@ -19,7 +18,7 @@ void init() {
     const int days1[MOHDHS] = {31, 28, 31};
     const int days2[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     for (int i = 0; i < MOHDHS; i++) {
-        //printf("Month %2d has %2d days.\n",i+1,days[i]);
+        printf("Month %2d has %2d days.\n",i+1,days[i]);
         /**
          * error: read-only variable is not assignable
          */
@@ -78,8 +77,8 @@ void init() {
 
 }
 
-void testArray() {
-//    init();
-stringArray();
-
+#if 0
+int main(){
+  init();
 }
+#endif
