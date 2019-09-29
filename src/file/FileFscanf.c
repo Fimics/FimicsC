@@ -25,7 +25,7 @@ fprintf(fp,"%s%d",ch,a);
 
 */
 void testFprintf() {
-    FILE *fp1 = fopen("resource/a.txt", "w");
+    FILE *fp1 = fopen("../resource/a.txt", "w");
     if (!fp1)
         return ;
 
@@ -34,7 +34,7 @@ void testFprintf() {
     fclose(fp1);
 }
 
-void testFprintf1() {
+void testFprintf1(){
     FILE *fp1 = fopen("resource/a.txt", "r");
     if (!fp1)
         return ;
@@ -62,6 +62,9 @@ void testFprintf2() {
     fclose(fp1);
 }
 
-void fileFscanf() {
+#if 0
 
+int main(){
+    testFprintf();
 }
+#endif

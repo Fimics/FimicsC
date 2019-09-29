@@ -10,7 +10,7 @@
  * 文件操作
  */
 
-void fileOpenClose(){
+void fileOpenClose() {
 
     /**
      * https://blog.csdn.net/djw931017/article/details/87832073
@@ -26,25 +26,25 @@ void fileOpenClose(){
      * w 以写的方式打开文件 文件不存在会创建新文件 如果文件里面有内容会覆盖原始内容
      * a 以追加方式打开文件 文件不存在会创建新文件 在文件末尾追加内容
     */
-    FILE * fp = fopen("resource/a.txt","r");
-    if(fp==NULL){
+    FILE *fp = fopen("../resource/a.txt", "r");
+    if (fp == NULL) {
         /**
          * case 1:找不到文件
          * case 2: 没有权限
          * case 3:程序打开文件超出上限 一个程序最多打开65535个文件
          */
-        printf("%s\n","file open filed.");
+        printf("%s\n", "file open filed.");
         return;
     }
 
-    printf("%s\n","file open success.");
+    printf("%s\n", "file open success.");
     //把一个字符写入文件中
-    fputc('a',fp);
+    fputc('a', fp);
 
     //从文件中读取一个字符
     char ch;
-    while((ch=fgetc(fp))!=EOF){
-        printf("%c",ch);
+    while ((ch = fgetc(fp)) != EOF) {
+        printf("%c", ch);
     }
 
 
@@ -56,24 +56,24 @@ void fileOpenClose(){
 
 /**
  * int fputs(const char *str, FILE * stream)
- * 功能：指导str所指定的字符串写到stream指定的文件中，字符串结束符'\0'不写入文件
+ * 功能：指到str所指定的字符串写到stream指定的文件中，字符串结束符'\0'不写入文件
  */
-void testFputs(){
+void testFputs() {
 
-    char  *p ="hello world";
-    FILE *fp = fopen("resource/fputs.txt","w");
-    if(!fp)
+    char *p = "hello world";
+    FILE *fp = fopen("../resource/fputs.txt", "w");
+    if (!fp)
         return;
 
-    fputs(p,fp);
+    fputs(p, fp);
     fclose(fp);
 }
 
 /**
  * 行读取
  */
-void testFgets(){
-    FILE * fp = fopen("resource/fputs.txt", "r");
+void testFgets() {
+    FILE *fp = fopen("resource/fputs.txt", "r");
     if (!fp)
         return;
 //    //块读取
@@ -96,19 +96,22 @@ void testFgets(){
 //    fclose(fp);
 
     //char buf[1024*1024];//1M
-    char * buf = malloc(sizeof(char) * 1024);
+    char *buf = malloc(sizeof(char) * 1024);
 
     //feof判断文件流是否到结尾  EOF 判断字符是否到结尾
-    while (feof(fp) == 0)
-    {
+    while (feof(fp) == 0) {
         memset(buf, 0, 1024);
         fgets(buf, 1024, fp);
         printf("%s", buf);
     }
 }
 
-void fileOperate(){
-// fileOpenClose();
-//testFputs();
-testFgets();
+#if 0
+
+int main() {
+    fileOpenClose();
+    testFputs();
+    testFgets();
 }
+
+#endif

@@ -74,18 +74,16 @@ set(SOURCE_C_FILES
         src/complex/TypeDefDemo.c
 
         #File
-        #        src/file/YFile.h
-        #        src/file/YFile.c
-        #        src/file/FileOperate.c
-        #        src/file/FileCat.c
-        #        src/file/FileFscanf.c
-        #        src/file/FileBigDataSort.c
-        #        src/file/FreadFwrite.c
-        #        src/file/FileCopy.c
-        #        src/file/FileProperty.c
-        #        src/file/FileRandomAccess.c
-        #        src/file/FileMvRmRename.c
-        #        src/file/FileBuffer.c
+        src/file/FileOperate.c
+        src/file/FileCat.c
+        src/file/FileFscanf.c
+        src/file/FileBigDataSort.c
+        src/file/FreadFwrite.c
+        src/file/FileCopy.c
+        src/file/FileProperty.c
+        src/file/FileRandomAccess.c
+        src/file/FileMvRmRename.c
+        src/file/FileBuffer.c
 
 
         #improve

@@ -24,3 +24,10 @@ void fileCat(){
     fclose(fp);
 
 }
+
+#if 0
+int main(){
+    fileCat();
+}
+
+#endif

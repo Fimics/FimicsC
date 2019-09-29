@@ -2,7 +2,6 @@
 // Created by lipnegju on 2019-07-01.
 //
 
-#include "YFile.h"
 #include <stdio.h>
 
 #define FILE_PATH "resource/write.txt"

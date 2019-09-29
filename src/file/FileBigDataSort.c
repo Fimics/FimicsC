@@ -8,7 +8,7 @@
 #include<stdlib.h>
 
 
-#define FILE_PATH "resource/f.txt"
+#define FILE_PATH "../resource/f.txt"
 #define DATA_COUNT 10000
 
 /**
@@ -53,7 +53,11 @@ void bigDataRead() {
     }
 }
 
-void fileBigDataSort() {
+#if 0
+
+int  main() {
 // bigDataWrite();
     bigDataRead();
 }
+
+#endif
