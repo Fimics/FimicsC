@@ -12,8 +12,8 @@
 /**
  * memset 内存重置
  */
-void testMemset(){
-    int  *p = malloc(sizeof(int)*MAX);
+void testMemset() {
+    int *p = malloc(sizeof(int) * MAX);
 
     /**
      * 参数：
@@ -21,10 +21,10 @@ void testMemset(){
      * 0: 每个字节被重置后的值，只能重置为0 ，因为是重设置的每个字节
      * len->字节大小
      */
-    memset(p,1, sizeof(int)*MAX);
+    memset(p, 1, sizeof(int) * MAX);
 
-    for (int i = 0; i <MAX ; i++) {
-        printf("index = %d value =%d\n",i,p[i]);
+    for (int i = 0; i < MAX; i++) {
+        printf("index = %d value =%d\n", i, p[i]);
     }
 
     free(p);
@@ -32,18 +32,17 @@ void testMemset(){
     /**
      * 每个字节者是'A'=65
      */
-    char *q =malloc(sizeof(char)*MAX);
-    memset(q,65,10);
-    printf("%s\n",q);
+    char *q = malloc(sizeof(char) * MAX);
+    memset(q, 65, 10);
+    printf("%s\n", q);
     free(q);
 
     /**
      * 重置一个栈区数组
      */
-    int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+    int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     memset(arr, 0, 40);
-    for (int i = 0; i < 10; i++)
-    {
+    for (int i = 0; i < 10; i++) {
         printf("%d\n", arr[i]);
     }
 
@@ -52,14 +51,14 @@ void testMemset(){
 /**
  * memcpy 内存拷贝，堆区和栈区可以相互拷贝
  */
-void testMemcpy(){
+void testMemcpy() {
 
-    int arr[MAX] ={1,2,3,4,5,6,7,8,9,10};
-    int * p = malloc(sizeof(int)*MAX);
-    memcpy(p,arr, sizeof(int)*MAX);
+    int arr[MAX] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int *p = malloc(sizeof(int) * MAX);
+    memcpy(p, arr, sizeof(int) * MAX);
 
-    for (int i = 0; i <MAX ; i++) {
-        printf("value =%d\n",p[i]);
+    for (int i = 0; i < MAX; i++) {
+        printf("value =%d\n", p[i]);
     }
 
     free(p);
@@ -69,35 +68,34 @@ void testMemcpy(){
      */
 //    memcpy(&arr[2],arr,20);
 
-     char arr1 [] ={'h','e','l','l','o'};
-     char *q = malloc(100);
+    char arr1[] = {'h', 'e', 'l', 'l', 'o'};
+    char *q = malloc(100);
 //     memset(q,0,100);
-     strcpy(q,arr1);//拷贝'\0'之前的内容
-     printf(" q-> %s",q);
+    strcpy(q, arr1);//拷贝'\0'之前的内容
+    printf(" q-> %s", q);
 }
 
 /**
  * memMove 出现内存重叠时用这个，保证不出错
  * memcmp 比较
  */
-void testMemMove(){
-    int arr[MAX] ={1,2,3,4,5,6,7,8,9,10};
-    memmove(&arr[2],arr,20);
-    for (int i = 0; i < 10; i++)
-    {
+void testMemMove() {
+    int arr[MAX] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    memmove(&arr[2], arr, 20);
+    for (int i = 0; i < 10; i++) {
         printf("%d\n", arr[i]);
     }
 
-    int arr1[5] ={1,2,3,4,5};
+    int arr1[5] = {1, 2, 3, 4, 5};
 
-    int cmp = memcmp(arr,arr1,4);//返回 0 ，前一个元素相同
-    printf("cmp =%d\n",cmp);
+    int cmp = memcmp(arr, arr1, 4);//返回 0 ，前一个元素相同
+    printf("cmp =%d\n", cmp);
 }
 
 /**
  * memcmp
  */
-void testMemCmp(){
+void testMemCmp() {
 //int arr1[10] = { 1,2,3,4,5,6,7,8,9,10 };
     //int arr2[5] = { 1,2,3,4 };
 
@@ -126,12 +124,9 @@ void testMemCmp(){
     int a = 0xffff;
     char b = 0xffff;
     //printf("%d\n", b);
-    if (!memcmp(&a, &b, 1))
-    {
+    if (!memcmp(&a, &b, 1)) {
         printf("内容相同\n");
-    }
-    else
-    {
+    } else {
         printf("内容不相同\n");
 
     }
@@ -140,10 +135,13 @@ void testMemCmp(){
     //free(p2);
 }
 
+#if 0
 
-void memFunction(){
-//   testMemset();
-//testMemcpy();
-//testMemMove();
-testMemCmp();
+int main() {
+    testMemset();
+//    testMemcpy();
+//    testMemMove();
+//    testMemCmp();
 }
+
+#endif

@@ -2,7 +2,6 @@
 // Created by lipnegju on 2019-06-27.
 //
 
-#include <YMemory.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -105,7 +104,10 @@ void testDataStorgeRange(){
     printf("字符数组ch的地址：%p\n", ch);
 }
 
-void testMemArea(){
+#if 0
+int main(){
 //   int arr[100000];
     testDataStorgeRange();
 }
+
+#endif

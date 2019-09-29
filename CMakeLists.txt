@@ -7,61 +7,58 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_C_STANDARD 99)
 
 
-
 set(SOURCE_C_FILES
 
-                #dataType
-                src/datatype/DataType.c
-                src/datatype/BinaryConvert.c
-                src/datatype/Char.c
+        #dataType
+        src/datatype/DataType.c
+        src/datatype/BinaryConvert.c
+        src/datatype/Char.c
 
-                #function
-                src/function/YFunction.h
-                src/function/YFunction.c
-                src/function/FunctionDemo.c
+        #function
+        src/function/YFunction.h
+        src/function/YFunction.c
+        src/function/FunctionDemo.c
 
-                #string
-                src/string/GetssPuts.c
-                src/string/FgetsFputs.c
-                src/string/PrintfScanf.c
-                src/string/StrlenStrcpy.c
-                src/string/SprintfSscanf.c
-                src/string/Strchr.c
-                src/string/strtokAtoi.c
+        #string
+        src/string/GetssPuts.c
+        src/string/FgetsFputs.c
+        src/string/PrintfScanf.c
+        src/string/StrlenStrcpy.c
+        src/string/SprintfSscanf.c
+        src/string/Strchr.c
+        src/string/strtokAtoi.c
 
-                #pointer
-                src/pointer/YPointer.c
-                src/pointer/PointerDefine.c
-                src/pointer/WildNullpointer.c
-                src/pointer/ConstDemo.c
-                src/pointer/PointerAndArray.c
-                src/pointer/PointerOperation.c
-                src/pointer/PointerBubbleSort.c
-                src/pointer/PointerStrchr.c
-                src/pointer/PointerMultilevel.c
-                src/pointer/PointerAndParameter.c
-                src/pointer/PointerReturnValue.c
-                src/pointer/PointerString.c
+        #pointer
+        src/pointer/YPointer.c
+        src/pointer/PointerDefine.c
+        src/pointer/WildNullpointer.c
+        src/pointer/ConstDemo.c
+        src/pointer/PointerAndArray.c
+        src/pointer/PointerOperation.c
+        src/pointer/PointerBubbleSort.c
+        src/pointer/PointerStrchr.c
+        src/pointer/PointerMultilevel.c
+        src/pointer/PointerAndParameter.c
+        src/pointer/PointerReturnValue.c
+        src/pointer/PointerString.c
 
-                #array
-                src/array/YArray.c
-                src/array/Array2d.c
-                src/array/ArrayAndPointer.c
-                src/array/Srand.c
-                src/array/vararr2d.c
-                src/array/StringArray.c
+        #array
+        src/array/YArray.c
+        src/array/Array2d.c
+        src/array/ArrayAndPointer.c
+        src/array/Srand.c
+        src/array/vararr2d.c
+        src/array/StringArray.c
 
-                #system
+        #system
         src/system/System.c
 
-        #        #memory
-        #        src/memory/YMemory.h
-        #        src/memory/YMemory.c
-        #        src/memory/Scope.c
-        #        src/memory/MemGlobal.c
-        #        src/memory/MemArea.c
-        #        src/memory/MemHeap.c
-        #        src/memory/MemFunction.c
+        #memory
+        src/memory/Scope.c
+        src/memory/MemGlobal.c
+        src/memory/MemArea.c
+        src/memory/MemHeap.c
+        src/memory/MemFunction.c
 
         #complex;
         #        src/complex/YComplex.h
