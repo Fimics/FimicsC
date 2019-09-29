@@ -11,3 +11,9 @@ void testSystem() {
     int who =system("who");
     printf("sytem ls -l ls %d ,pwd %d,who %d ",ls,pwd,who);
 }
+
+#if 0
+int main(){
+    testSystem();
+}
+#endif

@@ -34,7 +34,7 @@ void stringArray(){
     printf("arr2 %s,size of %d,len is %d\n",arr2, sizeof(arr2),strlen(arr2));
 }
 
-#if 1
+#if 0
 int main(){
     stringArray();
 }

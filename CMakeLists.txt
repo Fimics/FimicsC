@@ -51,10 +51,9 @@ set(SOURCE_C_FILES
                 src/array/vararr2d.c
                 src/array/StringArray.c
 
-        #        #system
-        #        src/system/System.h
-        #        src/system/System.c
-        #
+                #system
+        src/system/System.c
+
         #        #memory
         #        src/memory/YMemory.h
         #        src/memory/YMemory.c
