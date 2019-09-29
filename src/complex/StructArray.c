@@ -2,7 +2,8 @@
 // Created by lipnegju on 2019-06-29.
 //
 
-#include <YComplex.h>
+#include <stdio.h>
+#include "YComplex.h"
 
 /**
  * 结构体数组
@@ -26,3 +27,10 @@ void structArray(){
         printf("性别: %s\n", s[i].sex == 'M' ? "男" : "女");
     }
 }
+
+#if 0
+int main(){
+    structArray();
+}
+
+#endif

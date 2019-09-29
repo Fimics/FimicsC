@@ -61,18 +61,17 @@ set(SOURCE_C_FILES
         src/memory/MemFunction.c
 
         #complex;
-        #        src/complex/YComplex.h
-        #        src/complex/YComplex.c
-        #        src/complex/StructDefine.c
-        #        src/complex/StructMemory.c
-        #        src/complex/structArray.c
-        #        src/complex/structSort.c
-        #        src/complex/StructPointer.c
-        #        src/complex/StructFunction.c
-        #        src/complex/Structstruct.c
-        #        src/complex/UnionDemo.c
-        #        src/complex/EnumDemo.c
-        #        src/complex/TypeDefDemo.c
+        src/complex/YComplex.h
+        src/complex/StructDefine.c
+        src/complex/StructMemory.c
+        src/complex/StructArray.c
+        src/complex/StructSort.c
+        src/complex/StructPointer.c
+        src/complex/StructFunction.c
+        src/complex/Structstruct.c
+        src/complex/UnionDemo.c
+        src/complex/EnumDemo.c
+        src/complex/TypeDefDemo.c
 
         #File
         #        src/file/YFile.h

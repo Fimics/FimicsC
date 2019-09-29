@@ -2,8 +2,9 @@
 // Created by lipnegju on 2019-06-29.
 //
 
-#include <stddef.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <memory.h>
 
 /**
  * 结构体成员为指针
@@ -111,6 +112,11 @@ void structPointer() {
         free(p);
         p = NULL;
     }
-
-
 }
+
+#if 0
+int main(){
+ structArray1();
+}
+
+#endif

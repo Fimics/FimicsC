@@ -6,7 +6,7 @@
 #define FIMICSCPP_YCOMPLEX_H
 
 /**
- * 结构休需要根据数据类型，进行内存对齐，
+ * 结构体需要根据数据类型，进行内存对齐，
  * 定义结构体时，应该按照数据类型从大到小定义
  */
 extern struct person {
@@ -17,15 +17,4 @@ extern struct person {
     char sex;
 };
 
-void complex();
-void structDefine();
-void structMemory();
-void structArray();
-void structSort();
-void structPointer();
-void structFunction();
-void structstruct();
-void unionDemo();
-void enumDemo();
-void typedefDemo();
 #endif //FIMICSCPP_YCOMPLEX_H

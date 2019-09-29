@@ -2,6 +2,8 @@
 // Created by lipnegju on 2019-06-30.
 //
 
+#include <stdio.h>
+
 struct stra{
     int a;
     int b;

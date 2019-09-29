@@ -6,7 +6,7 @@
 
 /**
  * 结构体定义
- * 结构休一般写在.h文件中
+ * 结构体一般写在.h文件中
  */
 struct student {
     char name[60];
@@ -52,6 +52,10 @@ void usingStruct() {
 
 }
 
-void structDefine() {
+#if 0
+
+int main() {
     usingStruct();
 }
+
+#endif

@@ -62,3 +62,10 @@ void structSort() {
     }
 
 }
+
+#if 0
+int main(){
+    structSort();
+}
+
+#endif

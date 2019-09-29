@@ -8,7 +8,7 @@
 
 void structMem() {
 
-    struct person stu={"河南省", 22, "13520591502",100,200,300,'M'};
+    struct person stu = {"河南省", 22, "13520591502", 100, 200, 300, 'M'};
 
     printf("name:%s\n", stu.name);
     printf("age:%d\n", stu.age);
@@ -24,7 +24,10 @@ void structMem() {
 
 }
 
-void structMemory() {
-//    structMem();
+#if 0
 
+int main() {
+    structMem();
 }
+
+#endif
