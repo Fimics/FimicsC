@@ -5,7 +5,6 @@
 
 #include <stdio.h>
 #include <MacTypes.h>
-#include  "DataType.h"
 
 /**
  * 原码(原始的二进制数)
@@ -72,14 +71,17 @@ void testTypeDef(){
 
     /**
      * 定义寄存器变量，提高效率，register是建议型指令，而不是命令型指令，
-     * 如果CPU有空闲寄存器，那扔register生效，如果没有空闲寄存器，那么register无效
+     * 如果CPU有空闲寄存器，那么register生效，如果没有空闲寄存器，那么register无效
      */
     register  int d ;
 
 
 }
 
-void binaryConvert(){
-//    binaryOutput();
-      testUnSinged();
+#if 0
+int main(){
+    binaryOutput();
+    testUnSinged();
 }
+
+#endif

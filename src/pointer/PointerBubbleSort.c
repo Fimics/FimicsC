@@ -32,5 +32,10 @@ void pointerBubbleSort(){
     for(int i=0;i<10;i++){
         printf("%d\n",arr[i]);
     }
-
 }
+
+#if 0
+int main(){
+    pointerBubbleSort();
+}
+#endif

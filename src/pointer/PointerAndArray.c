@@ -37,7 +37,7 @@ void pointerArray1(){
     for (int i = 0; i <SIZE ; i++) {
         //*(p+i)  内存改变了1*sizeof(int)
         printf("index : %d ,value :%3d address: %p\n",i,*(p+i),p+i);
-        printf("pi----------------------------------------------------> index : %d ,value :%3d address: %p\n",i,arr[i],p+i);
+        printf("pi-------------------> index : %d ,value :%3d address: %p\n",i,arr[i],p+i);
     }
 }
 
@@ -72,7 +72,11 @@ void pointerArray(){
 /**
  * 指针与数组
  */
-void pointerAndArray(){
+
+#if 0
+int main(){
 //   pointerArray1();
 pointerArray();
 }
+
+#endif

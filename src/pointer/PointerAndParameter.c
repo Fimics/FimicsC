@@ -6,7 +6,7 @@
 #include <string.h>
 
 /**
- * 值传递：实参的值伟给形参，
+ * 值传递：实参的值传给形参，
  * @param a
  * @param b
  */
@@ -70,3 +70,11 @@ void pointerAndParameter(){
     char arr1 ={"a",'b','c'};//字符数组
     printCharArray(arr);
 }
+
+#if 0
+
+int main(){
+
+}
+
+#endif

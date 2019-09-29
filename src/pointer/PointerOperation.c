@@ -5,54 +5,55 @@
 
 #define SIZE 10
 
-extern void printArray(int * arr);
+extern void printArray(int *arr);
+
 extern void operation();
 
-void printArray(int * arr){
+void printArray(int *arr) {
 
     int i;
-    for (i=0;i<=SIZE;i++){
-        printf("index :%d --> value ；%d\n ",i,arr[i]);
+    for (i = 0; i <SIZE; i++) {
+        printf("index :%d --> value ；%d\n ", i, arr[i]);
     }
 
-    printf("%s\n","-------------------------------------------");
+    printf("%s\n", "-------------------------------------------");
 }
 
-void operation(){
-    int arr[SIZE]={1,2,3,4,5,6,7,8,9,10};
-    int *p =arr;
+void operation() {
+    int arr[SIZE] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int *p = arr;
     p++;
-    *p =100; //arr[1]=100;
+    *p = 100; //arr[1]=100;
     printArray(arr);
-    p=100; //野指针 不会出错，但非法操作会出错
+    p = 100; //野指针 不会出错，但非法操作会出错
     //*p=100; //非法操作野指针内存
     printArray(arr);
-    p=&arr[9]; //p指向arr[9]
-    *p=100; //arr[9]=100
+    p = &arr[9]; //p指向arr[9]
+    *p = 100; //arr[9]=100
     printArray(arr);
-    p--;//p指向arr[9]
-    *p=20;//arr[9]=20
+    p--;//p指向arr[8]
+    *p = 20;//arr[8]=20
     printArray(arr);
-    p=&arr[0];//p指向arr
-    *p+=100; //arr[0]=101
+    p = &arr[0];//p指向arr
+    *p += 100; //arr[0]=101
     printArray(arr);
 
-    p+=100;
-    int len = p-arr; //len=100? 400? ==> 100个 int Size
-    printf("%d",len);
+    p += 100;
+    int len = p - arr; //len=100? 400? ==> 100个 int Size
+    printf("%d", len);
 }
 
-void operationArray(){
-    int arr[SIZE]={1,2,3,4,5,6,7,8,9,10};
-    int *p =arr;
-    p=&arr[9];
-    int len =p-arr; //len=9 间隔了9个
-    printf("len %d",len);
+void operationArray() {
+    int arr[SIZE] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int *p = arr;
+    p = &arr[9];
+    int len = p - arr; //len=9 间隔了9个
+    printf("len %d", len);
 
-    for (p=arr; p<=&arr[9];p++) {
+    for (p = arr; p <= &arr[9]; p++) {
         //printf("%d\n",*p);
         //printf("%d\n",p);
-        printf("%d\n",p[0]);
+        printf("%d\n", p[0]);
     }
 
 
@@ -63,10 +64,13 @@ void operationArray(){
 /**
  * 指针运算
  */
-void pointerOperation(){
-//operation();
 
-operationArray();
+#if 0
 
+int main() {
+//    operation();
+    operationArray();
 }
+
+#endif
 

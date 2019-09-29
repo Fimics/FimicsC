@@ -5,18 +5,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void getCharPutChar(){
+void getCharPutChar() {
     char ch;
-    while ((ch=getchar())!='q'){
+    while ((ch = getchar()) != 'q') {
         putchar(ch);
     }
 
 //    while ((ch=getchar()!=EOF)) 判断文件末尾
 }
 
-void testFileEof(){
+void testFileEof() {
     int ch;
-    FILE * fp;
+    FILE *fp;
     char fname[50];         // to hold the file name
 
     printf("Enter the name of the file: ");
@@ -33,8 +33,11 @@ void testFileEof(){
     fclose(fp);
 }
 
-void testChar(){
-//    getCharPutChar();
-//      testFileEof();
-
+#if 0
+int main() {
+    getCharPutChar();
+    testFileEof();
+    return 0;
 }
+
+#endif

@@ -2,68 +2,47 @@ cmake_minimum_required(VERSION 3.10.2)
 project(FimicsCPP)
 project(FimicsC)
 project(FimicsCLINUX)
-project(FimicsCNDK)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_C_STANDARD 99)
 
-include_directories(
-        #        src/mian
-        #        src/system
-        #        src/datatype
-        #        src/array
-        #        src/function
-        #        src/string
-        #        src/pointer
-        #        src/memory
-        #        src/datastructure
-        #        src/complex
-        #        src/file
-        #        src/improve
-)
 
 
 set(SOURCE_C_FILES
-        #main
-        src/main.c
-        #        #dataType
-        #        src/datatype/DataType.h
-        #        src/datatype/DataType.c
-        #        src/datatype/BinaryConvert.c
-        #        src/datatype/Char.c
-        #
-        #        #function
-        #        src/function/YFunction.h
-        #        src/function/YFunction.c
-        #        src/function/FunctionDemo.c
 
+                #dataType
+                src/datatype/DataType.c
+                src/datatype/BinaryConvert.c
+                src/datatype/Char.c
 
-        #        #string
-        #        src/string/YString.h
-        #        src/string/YString.c
-        #        src/string/GetssPuts.c
-        #        src/string/FgetsFputs.c
-        #        src/string/PrintfScanf.c
-        #        src/string/StrlenStrcpy.c
-        #        src/string/SprintfSscanf.c
-        #        src/string/Strchr.c
-        #        src/string/strtokAtoi.c
-        #
-        #        #pointer
-        #        src/pointer/YPointer.h
-        #        src/pointer/YPointer.c
-        #        src/pointer/PointerDefine.c
-        #        src/pointer/WildNullpointer.c
-        #        src/pointer/ConstDemo.c
-        #        src/pointer/PointerAndArray.c
-        #        src/pointer/PointerOperation.c
-        #        src/pointer/PointerBubbleSort.c
-        #        src/pointer/PointerStrchr.c
-        #        src/pointer/PointerMultilevel.c
-        #        src/pointer/PointerAndParameter.c
-        #        src/pointer/PointerReturnValue.c
-        #        src/pointer/PointerString.c
-        #
+                #function
+                src/function/YFunction.h
+                src/function/YFunction.c
+                src/function/FunctionDemo.c
+
+                #string
+                src/string/GetssPuts.c
+                src/string/FgetsFputs.c
+                src/string/PrintfScanf.c
+                src/string/StrlenStrcpy.c
+                src/string/SprintfSscanf.c
+                src/string/Strchr.c
+                src/string/strtokAtoi.c
+
+                #pointer
+                src/pointer/YPointer.c
+                src/pointer/PointerDefine.c
+                src/pointer/WildNullpointer.c
+                src/pointer/ConstDemo.c
+                src/pointer/PointerAndArray.c
+                src/pointer/PointerOperation.c
+                src/pointer/PointerBubbleSort.c
+                src/pointer/PointerStrchr.c
+                src/pointer/PointerMultilevel.c
+                src/pointer/PointerAndParameter.c
+                src/pointer/PointerReturnValue.c
+                src/pointer/PointerString.c
+
         #        #array
         #        src/array/YArray.h
         #        src/array/YArray.c
@@ -362,15 +341,10 @@ set(SOURCE_SYSTEM_FILES
         system/socket/tcp/warp/client.c
         system/socket/tcp/warp/server.c
         system/socket/tcp/warp/wrap.c
+        system/socket/tcp/server_p.c
+        )
 
-        system/socket/tcp/server_p.c)
-
-
-set(SOURCE_NDK_FILES
-        #file
-        ndk/c/Pointer.cpp ndk/c/Function.cpp)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
-add_executable(FimicsCNDK ${SOURCE_NDK_FILES})
 add_executable(FimicsCLINUX ${SOURCE_SYSTEM_FILES})

@@ -45,7 +45,10 @@ void constTest(){
 //      *n=j;
     printf("%d",*n);
 
-
-
-
 }
+
+#if 0
+int main(){
+    constTest();
+}
+#endif

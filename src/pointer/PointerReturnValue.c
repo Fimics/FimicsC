@@ -12,9 +12,12 @@ char * charTest(){
     return arr;
 }
 
+#if 0
 
-void pointerReturnValue(){
+int main(){
 
     char  * arr =charTest();
     printf("%s\n",arr);
 }
+
+#endif

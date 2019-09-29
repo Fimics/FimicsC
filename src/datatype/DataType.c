@@ -27,11 +27,11 @@ void  testSizeof(){
     int a; // int ->long int ->unsigned long ->long long
     long b;
     short c;
-    unsigned d;
+    unsigned d; //无符号
     char e;
     float f;
     double h;
-    signed j;
+    signed j; //有符号
     _Bool  k;
     _Complex l;
     long int li;
@@ -41,8 +41,7 @@ void  testSizeof(){
     signed  int q;
 
     printf("int sizeof %d \n", sizeof(a));
-    printf("int sizeof %d \n", a);
-    printf("long sizeof %l \n", sizeof(b));
+    printf("long sizeof %lu \n", sizeof(b));
     printf("short sizeof %d \n", sizeof(c));
     printf("unsigned sizeof %d \n", sizeof(d));
     printf("char sizeof %d \n" , sizeof(e));
@@ -68,10 +67,14 @@ void  testSizeof(){
 
 }
 
-void testDataType() {
-    //testScanf();
+
+#if 0
+int main(){
     testSizeof();
+    return 0;
 }
+
+#endif
 
 
 

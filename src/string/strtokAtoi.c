@@ -3,7 +3,6 @@
 //
 
 #include <stdio.h>
-#include "YString.h"
 #include <string.h>
 #include <stdlib.h>
 
@@ -28,3 +27,10 @@ void strtopatoi(){
     printf("atoi %d\n",ai);
 
 }
+
+#if 0
+int main(){
+    strtopatoi();
+}
+
+#endif

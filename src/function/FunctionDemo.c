@@ -5,7 +5,7 @@
 
 /**
  * 1.声明
- * exgdfn int add(int x ,int y);
+ * extern int add(int x ,int y);
  * 2。定义
  * int add(int x ,int y){
  *    return x+y;

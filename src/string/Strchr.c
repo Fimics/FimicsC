@@ -3,7 +3,6 @@
 //
 
 #include <string.h>
-#include "YString.h"
 #include <stdio.h>
 
 /**
@@ -24,3 +23,9 @@ void strchr1(){
 void strFind(){
     strchr1();
 }
+
+#if 0
+int main(){
+    strFind();
+}
+#endif

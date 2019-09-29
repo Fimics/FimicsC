@@ -80,13 +80,16 @@ void testFunctionPointer() {
     printf("*p is %p \n", *p);
 }
 
-void testFunction() {
-    //andOperator();
-//    testExchange()
-//    testSwap();
-    testFunctionPointer();
+#if 0
 
+int main() {
+    andOperator();
+//    testExchange();
+//    testSwap();
+//    testFunctionPointer();
 }
+
+#endif
 
 
 

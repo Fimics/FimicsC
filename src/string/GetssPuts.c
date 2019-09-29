@@ -3,7 +3,6 @@
 //
 
 #include <stdio.h>
-#include <YString.h>
 #include <stdlib.h>
 
 
@@ -37,3 +36,11 @@ void putsGets(){
   //同样可以接收
   printf("%s",p);
 }
+
+#if 0
+
+int main(){
+    putsGets();
+}
+
+#endif

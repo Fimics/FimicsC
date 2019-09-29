@@ -4,7 +4,6 @@
 
 #include <stdio.h>
 #include <memory.h>
-#include "YPointer.h"
 
 
 /**
@@ -15,9 +14,9 @@ void testPoint(){
     int a =5;
     int b =6;
     int *p =&a;
-    printf("p%ld\n",p);
+    printf("p-> %ld\n",p);
     p=&b;
-    printf("*p %p\n",*p);
+    printf("*p %d\n",*p);
     printf("p%ld\n",p);
     int c =7;
     p=&c;
@@ -37,7 +36,7 @@ void testPoint(){
 }
 
 /**
- * 声明指针时必须指定指针所指向变量的类型j
+ * 声明指针时必须指定指针所指向变量的类型
  * (*) p * 表示声明的变量是一个指针，指针是一个新类型，不是int类型， | 两个整数可以相乘，两个指针不可以
  * int *pi， pi是一个指针，*pi是int类型
  */
@@ -111,21 +110,10 @@ int testDiffPointer(){
     printf("%d \n", *p); //4 指针变量所指变量的值被改变
 }
 
-void testPointer(){
-   //testPoint();
-   //declarePointer();
-   //swapWithPointer();
-//   testDiff();
-//    testDiffPointer();
-//     pointerDefine();
-//     wildNullPointer();
-//      constTest ();
-//  pointerAndArray();
-//pointerOperation();
-//pointerBubbleSort();
-//    pointerStrchr();
-//     pointerMultilevel();
-//    pointerAndParameter();
-//    pointerReturnValue();
-    pointerString();
+
+#if 0
+int main(){
+//    testPoint();
+    declarePointer();
 }
+#endif

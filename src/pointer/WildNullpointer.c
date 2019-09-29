@@ -22,10 +22,14 @@ void wildNullPointer(){
    // int *q =NULL;//指向内存编号为0的空间 ,可以作为条件判断使用
    // *p=100;
 
-    void * q =&a;// void * 万能指针，因为所有指针类型点用内存大小都是一样的
+    void * q =&a;// void * 万能指针，因为所有指针类型用占内存大小都是一样的
     *(int *)q =100; //万能指针使用时要强转
     printf("%d\n",a);
     printf("%d\n",*(int *)q);
-
-
 }
+
+#if 0
+int main(){
+    wildNullPointer();
+}
+#endif

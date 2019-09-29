@@ -30,6 +30,9 @@ void define(){
 
 }
 
-void pointerDefine(){
+
+#if 0
+int main(){
     define();
 }
+#endif

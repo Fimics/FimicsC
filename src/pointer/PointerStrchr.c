@@ -43,3 +43,9 @@ void pointerStrchr(){
     char *p =strchrPointer1(arr,ch);
     printf("%s\n",p);
 }
+
+#if 0
+int main(){
+
+}
+#endif

@@ -4,7 +4,6 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "YString.h"
 
 #define W " -------- "
 #define H "|"
@@ -87,3 +86,11 @@ void drawLine(int x){
         }
     }
 }
+
+#if 0
+
+int main(){
+    printfScanf();
+}
+
+#endif

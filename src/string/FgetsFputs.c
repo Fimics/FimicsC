@@ -2,7 +2,6 @@
 // Created by lipnegju on 2019-06-19.
 //
 
-#include "YString.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -37,7 +36,7 @@
  *
  */
 void fgetsFputs(){
-    //    FILE * fileOut = "../resource/b.txt";
+//    FILE * fileOut = "../resource/b.txt";
 
     char file [10];
     fgets(file,10,stdin);
@@ -45,3 +44,11 @@ void fgetsFputs(){
 
     fputs(file,stdout);
 }
+
+#if 0
+
+int main(){
+    fgetsFputs();
+}
+
+#endif
