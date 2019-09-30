@@ -2,6 +2,8 @@
 // Created by lipnegju on 2019-07-13.
 //
 
+#include <stdio.h>
+
 /**
  * float不能进行位运算不能，只适用shot long int char
  * 1.按位取反 ~
@@ -49,6 +51,6 @@ void testOperation(){
 
 }
 
-void iBitOperation(){
-     testOperation();
-}
+//int main(){
+//     testOperation();
+//}

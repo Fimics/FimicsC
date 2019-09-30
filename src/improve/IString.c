@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#if 1
+
 //-----------------------字符串初始化--------------------------------
 void testString(){
     char arr0 [] ={'h','e','l','l','o'};
@@ -27,9 +27,9 @@ void testString(){
     printf("sizeof str%d\n", sizeof(arr3));
     printf("strlen str%d\n",strlen(arr3));
 }
-#endif
 
-#if 1
+
+
 //-----------------------字符串拷贝--------------------------------
 
 /**
@@ -54,7 +54,6 @@ void stringCopy1(char *dest ,char * src){
         dest++;
         src++;
     }
-
     dest='\0';
 }
 
@@ -66,8 +65,6 @@ void stringCopy2(char *dest ,char * src){
 }
 
 void testStringCopy(){
-
-
   char* source ="hello world";
   char buf[1024]={0};
     //一个字符一个字符的拷贝
@@ -77,13 +74,10 @@ void testStringCopy(){
 
   stringCopy2(buf,source);
   printf("%s\n",buf);
-
-
 }
 
-#endif
 
-#if 1
+
 //-----------------------字符串反转--------------------------------
 
 void resverseString(char *str){
@@ -109,9 +103,7 @@ void testReverseString(){
     printf("%s\n",str);
 }
 
-#endif
 
-#if 1
 //-----------------------字符串格式化sprintf--------------------------------
 
 /**
@@ -194,9 +186,7 @@ void testStringFormat(){
 void stringFormat(){
     testStringFormat();
 }
-#endif
 
-#if 1
 //-----------------------sscanf--------------------------------
 
 /**
@@ -212,22 +202,20 @@ void stringFormat(){
 
 
 void testSscanf(){
-
     char *str ="12345abcde";
     char buf[1024]={0};
     sscanf(str,"%*d%s",buf);
     printf("buf %s\n",buf);
-
 }
-#endif
 
-void iString(){
 #if 0
-    testString();
-    testStringCopy();
-    testReverseString();
-    stringFormat();
-    testSscanf();
-#endif
 
+int main(){
+    testString();
+//    testStringCopy();
+//    testReverseString();
+//    stringFormat();
+//    testSscanf();
 }
+
+#endif

@@ -28,33 +28,34 @@
  *
  */
 
-void testCalloc(){
- int * p = calloc(SIZE, sizeof(int));
-    for (int i = 0; i <SIZE ; ++i) {
-        p[i]=i;
+void testCalloc() {
+    int *p = calloc(SIZE, sizeof(int));
+    for (int i = 0; i < SIZE; ++i) {
+        p[i] = i;
     }
 
-    for (int j = 0; j <SIZE ; ++j) {
-        printf("index- %d value- %d\n",j,p[j]);
+    for (int j = 0; j < SIZE; ++j) {
+        printf("index- %d value- %d\n", j, p[j]);
     }
 
-    if(p!=NULL){
+    if (p != NULL) {
         free(p);
-        p=NULL;
+        p = NULL;
     }
 
 }
 
-void testRelloc(){
- int *p = malloc(sizeof(int)*10);
- int * q = realloc(p,200);
+void testRelloc() {
+    int *p = malloc(sizeof(int) * 10);
+    int *q = realloc(p, 200);
 
 }
 
-
-void iMemory(){
 #if 0
+
+int main() {
     testCalloc();
     testRelloc();
-#endif
 }
+
+#endif

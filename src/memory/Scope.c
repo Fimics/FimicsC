@@ -83,7 +83,7 @@ void staticVar(){
     printf("%d\n",a++);
 }
 
-void testStatic(){
+void testStatic1(){
     for (int i = 0; i <10 ; i++) {
         staticVar();
     }

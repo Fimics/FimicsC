@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stddef.h>
 
 /**
  * 书<<c与指针>>
@@ -17,9 +18,9 @@
  * 4.
  */
 
-#include <stddef.h>
 
-#if 0
+
+
 //------------------------指针步长----------------------------
 /**
  * 1.指针变量加1时，指针向后跳多少个字节,步长由指针类型决定
@@ -37,10 +38,12 @@ struct Person{
 void testStepSize(){
 
     char * p =NULL;
+    printf("sizeof p %d\n", sizeof(p));
     printf(" p %d\n",p);
     printf( "p+1  %d\n",p+1);
 
     int *q = NULL;
+    printf("siizeof q %d\n", sizeof(q));
     printf(" q %d\n",q);
     printf( "q+1  %d\n",q+1);
 
@@ -54,21 +57,22 @@ void testStepSize(){
 
     struct Person person = {10,'a',"hello world",5};
     printf("a offset b %d\n",offsetof(struct Person,b));//从struct首地址到b的地址偏移量
+    //TODO 下面这行怎么理解？？？
     printf("d %d\n", *(int *) ((char *)&person+offsetof(struct Person,d)));
 
 
 }
-#endif
 
-#if 0
+
+
 //------------------------指针间接赋值----------------------------
-void changeValue(int *p){
+void changeValuei(int *p){
     *p =100;
 }
 
-void test1(){
+void test1i(){
     int a =10;
-    changeValue(&a);
+    changeValuei(&a);
     printf("a %d",a);
 
     printf("&a %ld",&a);
@@ -79,51 +83,51 @@ void test1(){
 //    printf("a %d",a);
 
 }
-void changePointer(int ** val){
+void changePointeri(int ** val){
     *val=(int *)0x008;//函数参数一定要对等
 }
 
-void test2(){
+void test2i(){
     int * p =NULL;
-    changePointer(&p);
+    changePointeri(&p);
 }
-#endif
 
-#if 0
+
+
 //------------------------指针做函数参数的输入输出特性----------------------------
 
 /**
  * 指针输入特性->主调函数分配内存，被调函数使用内存
  *
  */
-void inputPointer( char * str){
+void inputPointeri( char * str){
     printf("%s\n",str+2);
 }
 
-void printArray(int * arr,int len){
+void printArrayi(int * arr,int len){
     for (int i = 0; i <len ; i++) {
         printf("index %d, value %d \n",i,*(arr+i));
     }
 }
 
-void printCharArray(char ** arr,int len){
+void printCharArrayi(char ** arr,int len){
     //    arr[0]=char * 类型
     for (int i = 0; i <len ; i++) {
         printf("index %d, value %s \n",i,arr[i]);
     }
 }
 
-void testInput(){
+void testInputi(){
     //堆上分配内存
     char *s = malloc(sizeof(char)*100);
     memset(s,0,100);
     strcpy(s,"hello world");
-    inputPointer(s);
+    inputPointeri(s);
 
     //数组名作函数参数就会退化为指向数组首元素的指针
     int  arr []={1,2,3,4,5,6};
     int arrlen = sizeof(arr)/ sizeof(arr[0]);
-    printArray(arr,arrlen);
+    printArrayi(arr,arrlen);
 
     //栈上分配
     char * strs[]={
@@ -135,14 +139,14 @@ void testInput(){
     };
 
     int len = sizeof(strs)/ sizeof(strs[0]);
-    printCharArray(strs,len);
+    printCharArrayi(strs,len);
 
 }
 
 /**
  * 输出特性，被调函数分配内存，主调函数使用内存
  */
-void outputPointer(char ** temp){
+void outputPointeri(char ** temp){
    char *p=malloc(100);
    memset(p,0,100);
    strcpy(p,"hello world");
@@ -150,13 +154,13 @@ void outputPointer(char ** temp){
    *temp = p;
 }
 
-void testOutput(){
+void testOutputi(){
     char *p =NULL;
-    outputPointer(&p);
+    outputPointeri(&p);
     printf("p=%s\n",p);
 };
 
-#endif
+
 
 #if 1
 //------------------------指针易错点----------------------------
@@ -167,23 +171,25 @@ void testOutput(){
  * 3.返回局部变量地址
  * 4.同一块内存多次释放
  */
-void errorPointer(){
+void errorPointer() {
 
-    char buf1[3]="hello";
-    printf("%s\n",buf1);
-
+    char buf1[3] = "hello";
+    printf("%s\n", buf1);
 
 
 }
 
 #endif
 
-void iPointer(){
 #if 0
-    testStepSize();
-     test1();
-     testInput();
-     testOutput();
-#endif
-     errorPointer();
+
+int main(){
+
+//    testStepSize();
+//     test1i();
+//     testInputi();
+//     testOutputi();
+//     errorPointer();
 }
+
+#endif

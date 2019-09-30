@@ -2,6 +2,8 @@
 // Created by lipnegju on 2019-07-08.
 //
 
+#include <stdio.h>
+
 /**
  * 1.宏函数，它不是一个函数，但使用起来像一个函数
  * 2.宏函数在一定场景下比函数效率高
@@ -15,7 +17,7 @@
  * 3.
  */
 
-#if 1
+
 
 /**
  * 这个才是函数
@@ -38,12 +40,11 @@ void macroFunction() {
    printf("a+b=%d\n",MYADD(a,b));
 }
 
-#endif
 
-
-void iFunction() {
 #if 0
 
-#endif
+int main() {
     macroFunction();
 }
+
+#endif

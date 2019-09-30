@@ -87,25 +87,23 @@ set(SOURCE_C_FILES
 
 
         #improve
-        #        src/improve/YImprove.h
-        #        src/improve/YImprove.c
-        #        src/improve/IDataType.c
-        #        src/improve/YGlobal.c
-        #        src/improve/IFunction.c
-        #        src/improve/IPointer.c
-        #        src/improve/IString.c
-        #        src/improve/IMemory.c
-        #        src/improve/IConst.c
-        #        src/improve/IPointerFunction.c
-        #        src/improve/IArray.c
-        #        src/improve/IFile.c
-        #        src/improve/IBitOperation.c
-        #        src/improve/IStruct.c
-        #        src/improve/ISumUp.c
-        #        src/improve/IFileConfig.h
-        #        src/improve/IFileConfig.c
-        #        src/improve/IFunctionPointer.c
-        #        src/improve/IPreprocessingInstruction.c
+        src/improve/IDataType.c
+        src/improve/YGlobal.c
+        src/improve/IFunction.c
+        src/improve/IPointer.c
+        src/improve/IString.c
+        src/improve/IMemory.c
+        src/improve/IConst.c
+        src/improve/IPointerFunction.c
+        src/improve/IArray.c
+        src/improve/IFile.c
+        src/improve/IBitOperation.c
+        src/improve/IStruct.c
+        src/improve/ISumUp.c
+        src/improve/IFileConfig.h
+        src/improve/IFileConfig.c
+        src/improve/IFunctionPointer.c
+        src/improve/IPreprocessingInstruction.c
 
         #datastructure
         #        src/datastructure/YDataStructure.h

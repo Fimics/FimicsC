@@ -6,8 +6,9 @@
 #include <stdlib.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 
-#define FILE_PATH "resource/file.txt"
+#define FILE_PATH "../resource/file.txt"
 
 /**
  * 获得文件行数
@@ -28,7 +29,6 @@ int getFileLines(FILE *file){
     if(file!=NULL){
 //        fseek(file,0,SEEK_SET);
           rewind(file);//文件指针恢复到开头
-
     }
     return lines;
 }
@@ -70,6 +70,6 @@ void testReadData(){
     }}
 
 
-void iFile(){
+int main(){
     testReadData();
 }

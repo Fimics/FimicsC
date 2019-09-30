@@ -2,6 +2,9 @@
 // Created by lipnegju on 2019-07-19.
 //
 
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
  * 1.预处理是在程序源代码编译之前，由预处理器对程序源代码进行的处理，这个过程并不是对程序的源
  * 代码语法进行解析，但它会把源代码分割或处理成为特定的符号，为下一步编译做准备工作
@@ -36,8 +39,5 @@ void condationCompile1(int a){
 
 #ifndef __FLAG_64 1
 #define __FLAG_64 1
+#endif __FLAG_64 1
 
-
-iPreprocessingInstruction(){
-
-}

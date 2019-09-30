@@ -5,10 +5,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "YImprove.h"
 
 
-#if 0
+
 //----------------------------typedef------------------------------
 struct Person {
     char name[20];
@@ -17,26 +16,27 @@ struct Person {
 typedef struct Person MyPerson;
 
 //上面的简写
-typedef struct Person{
+typedef struct Student{
     char name[20];
     int age;
-}MyPerson;
+}stu;
 
 
 typedef char * PCHAR;
 typedef long long xll; //平台兼容时，统一定义一个方便修改
 
-void testTypeDef(){
+void testTypeDefine(){
     struct Person person;//不想写这么长，可以使用typedef
+    MyPerson p;
     MyPerson pp;//
 
     //char * p1,p2;// p1的类型是char *  ,p2的的类型是char ,如果想让p1,p2的数据类型都是char * 可以使用typedef定义
     PCHAR p1,p2;
 }
-#endif
 
-#if 0
-//---------------------------void 数学类型------------------------------------
+
+
+//---------------------------void 类型------------------------------------
 /*
 void字面意思是"无类型"，void * 无类型指针，无类型指针可以指向任何类型的数据
 void定义变量是没有任何意义的，当你定义void a，编辑器会报错
@@ -50,26 +50,27 @@ void 真正用在以下两个方面
 struct Dog{
     char name[20];
     int age;
-    struct Dog d;//error
+    //struct Dog d;//error
 };
-#endif
 
-#if 0
-//-----------------------void 数学类型------------------------------------
+
+
+//-----------------------sizeof------------------------------------
 /*
 基本用法
 sizeof(变量)
 size 变量
 sizeof(类型)
 sizeof注意点
-   1.sizeof返回的战胜空间大小是这这个变量开辟的大小，而不是它们用到的空间，所以
+   1.sizeof返回的占用空间大小是这这个变量开辟的大小，而不是它们用到的空间，所以
      对结构体用的时候，大多数情况下就得考虑字节对齐的问题了
    2.sizeof返回的数据结果类型是unsigned int;
    3.要注意数组名和指针变量的区别，通常情况下，我们总觉得数组名和指针变量差不多
    */
 
 #pragma pack(1)//对齐模式影响分配内存空间大小
-struct Person {
+//#pragma once //只导入一次头文件
+struct Person2 {
     char a;
     int b;
 };
@@ -77,7 +78,7 @@ struct Person {
 void testSizeof() {
     printf("int sizeof %ld\n", sizeof(int));
     printf("double sizeof %ld\n", sizeof(double));
-    printf("person sizeof %ld\n", sizeof(struct Person));
+    printf("person sizeof %ld\n", sizeof(struct Person2));
 
     unsigned int a = 20;
     if (a - 20 > 0){
@@ -98,15 +99,17 @@ void sizeofArray(){
     int arr[]={0,1,2,3,4,5,6,7,8,9};
     printf("sizeof arr:%d\n", sizeof(arr));
     printf("sizeof arr as params:%d\n", caculateArraySize(arr));
+    int *p ;
+    printf("sizeof * int%d\n", sizeof(p));
 }
 
-#endif
 
-#if 0
+
+
 
 //-----------------------变量间接赋值------------------------------------
 //指针p的类型大小为n，加p+1=?
-struct Person{
+struct Person3{
     char a;
     int b;
     char c;
@@ -118,19 +121,20 @@ void testValue() {
 
     int *p = &a;//间接赋值
 
-    struct Person person ={'a',100,'b',200};
+    struct Person3 person ={'a',100,'b',200};
     printf("d value%d\n",person.d);
 
     person.d=1000;
 
+    printf("%ld\n",&person);
     printf("%ld\n",(char*)&person+12);
     printf("%ld\n",&(person.d));
-    printf("%ld\n",* (int *)((char*)&person+12));//间接取值
+    printf("%ld\n",* ((int *)((char*)&person+12)));//间接取值
 
 }
-#endif
 
-#if 0
+
+
 //-----------------------内存分区------------------------------------
 
 /**
@@ -157,14 +161,9 @@ void testValue() {
  *
  */
 
-void testMemoryArea(){
-
-}
-
-#endif
 
 
-#if 0
+
 //-----------------------栈区分区------------------------------------
 /**
  * 栈区的内存自动申请自动释放，不需要手动管理
@@ -183,13 +182,13 @@ char * getString(){
 void testStackArea() {
     //我们并不关心值是多少了，因为a是局部变量内在已经被回收，不要返回局部变量的地址
    int *p = myFunc();
-//   printf("*p %d\n",*p);
+   printf("*p %d\n",*p);
    char *s =getString();//
-   printf("%s\n",*s);
+   printf("%s\n",s);
 }
-#endif
 
-#if 0
+
+
 //-----------------------堆区分区------------------------------------
 
 int * getSpace(){
@@ -217,6 +216,7 @@ void allocateSpace(char *p){
     memset(p,0,100);
     strcpy(p,"hello world");
     //没释放会内存泄漏
+    free(p);
 
 }
 
@@ -252,9 +252,8 @@ void testHeapArea(){
     allocateSpace1(&q);//取地址相当于升一级指针
     printf("%s\n",q);
 }
-#endif
 
-#if 0
+
 //-----------------------全局变量，局部变量，static,extern------------------------
 
 int a=10;//合局区 相当于 extern int a=10 外部链接 c语言默认省略extern关键字
@@ -262,7 +261,7 @@ int a=10;//合局区 相当于 extern int a=10 外部链接 c语言默认省略e
 static int b=20;//静态区
 
 /**
- * 1.全局静态变量和局部静态变量都存储在表态区，都是程序运行期间都是合法在效的
+ * 1.全局静态变量和局部静态变量都存储在静态区，都是程序运行期间都是合法在效的
  * 2.局部静态变量的可见范围只限于当前函数内部，全局静态变量可见范围从定义到文件结尾
  * 3.外部链接和内部链接的区别
  *    3.1内部链接只能在当前文件内使用
@@ -284,16 +283,16 @@ void testStatic(){
 
 }
 
-#endif
 
-#if 0
+
+
 //-----------------------const 常量区------------------------
 
 /**
  * 1.全局const变量 在堆上，直接或间接不能修改
  * 2.局部const在栈上，可以修改
  */
-const  int a =20;
+//const  int a =20;
 
 void testConstGlobal(){
 //    a=300; 不能直接修改
@@ -314,9 +313,9 @@ void testConstLocal(){
     *p = 300;
     printf(" %d\n",cc);
 }
-#endif
 
-#if 0
+
+
 //-------------------------字符串常量------------------------
 
 void stringConst(){
@@ -325,20 +324,20 @@ void stringConst(){
     printf("%d\n",p);
 }
 
-#endif
-
-void datatype() {
 
 #if 0
-    testSizeof();
-    sizeofArray();
-    testValue();
-    testMemoryArea();
-    testStackArea();
-    testHeapArea();
-    testStatic();
-    testConstGlobal();
-    testConstLocal();
-    stringConst();
-#endif
+
+int main() {
+//      testTypeDefine();
+//     testSizeof();
+//    sizeofArray();
+//    testValue();
+//    testMemoryArea();
+//    testStackArea();
+//      testHeapArea();
+//    testStatic();
+//    testConstGlobal();
+//    testConstLocal();
+//    stringConst();
 }
+#endif

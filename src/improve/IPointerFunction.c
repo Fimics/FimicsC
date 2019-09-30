@@ -10,97 +10,84 @@
  * 指针做为函数参数
  */
 
+void allocateSpace11(int **temp) {
+    int *arr = malloc(sizeof(int) * 10);
 
-#if 1
-
-void allocateSpace(int ** temp){
-    int *arr = malloc(sizeof(int)*10);
-
-    for (int i = 0; i <10 ; ++i) {
-        arr[i]=i;
+    for (int i = 0; i < 10; ++i) {
+        arr[i] = i;
     }
 
-    *temp =arr;
+    *temp = arr;
 
-    if(arr!=NULL){
+    if (arr != NULL) {
         free(arr);
     }
-
 }
 
-#if 0
 void freeSpace0(void * p){
     if(p==NULL) return;
 
     free(p);
     p=NULL;
-
 }
-#endif
+
 
 /**
  * 释放被调函数的指针
  * @param p
  */
-void freeSpace0(int  ** p){
-    if(p==NULL) return;
-
+void freeSpace01(int **p) {
+    if (p == NULL) return;
     free(*p);
-    *p=NULL;
-
+    *p = NULL;
 }
 
-void printArray(int * arr ,int len){
-    for (int i = 0; i <len ; ++i) {
-        printf("index : %d value %d\n",i,arr[i]);
+void printArrayii(int *arr, int len) {
+    for (int i = 0; i < len; ++i) {
+        printf("index : %d value %d\n", i, arr[i]);
     }
 }
 
-void testArr(){
-    int * arr =NULL;
-    allocateSpace(&arr);
-    printArray(arr,10);
+void testArr() {
+    int *arr = NULL;
+    allocateSpace11(&arr);
+    printArrayii(arr, 10);
 }
 
-
-void testArrStack(){
+void testArrStack1() {
     //堆上分配指针数组
-    int ** arr = malloc(sizeof(int *)*5);//{int *,int *,int * ,int *, int*}
+    int **arr = malloc(sizeof(int *) * 5);//{int *,int *,int * ,int *, int*}
 
     for (int i = 0; i < 5; ++i) {
-        arr[i]=malloc(sizeof(int));
-        *(arr[i])=i;
+        arr[i] = malloc(sizeof(int));
+        *(arr[i]) = i;
     }
 
-    for (int j = 0; j <5 ; ++j) {
-        printf("index %d value %d\n",j, *arr[j]);
+    for (int j = 0; j < 5; ++j) {
+        printf("index %d value %d\n", j, *arr[j]);
     }
-
-
 }
 
-void pointerChar(){
+void pointerChar() {
 //    "abc" 的类型是char *
 
-   //栈区指针数组
-   char  *p [] ={"aaa","bbb","ccc"};
-   //堆区指针数组
-   char **p3 = (char **)malloc(sizeof(char *)*3);
+    //栈区指针数组
+    char *p[] = {"aaa", "bbb", "ccc"};
+    //堆区指针数组
+    char **p3 = (char **) malloc(sizeof(char *) * 3);
 
-   int i=0;
+    int i = 0;
 
-   for(i=0;i<3;i++){
-       p3[i]=(char *)malloc(10* sizeof(char));//char buf[10]
-   }
-
-
-
+    for (i = 0; i < 3; i++) {
+        p3[i] = (char *) malloc(10 * sizeof(char));//char buf[10]
+    }
 }
-#endif
 
-void iPointerFunction(){
 #if 0
-#endif
-    //testArr();
-    testArrStack();
+
+int main() {
+    testArr();
+//    testArrStack1();
 }
+
+#endif
