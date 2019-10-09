@@ -185,14 +185,14 @@ void testStructValue(){
 
 #endif
 
-#if 0
+#if 1
 //----------------------结构体嵌套一级指针--------------------------
 struct Teacher{
     char * name;
     int age;
 };
 
-struct Teacher** allocateSpace1(){
+struct Teacher** allocateSpace2(){
     struct  Teacher **t = malloc(sizeof(struct Teacher *)*3);
     for (int i = 0; i <3 ; ++i) {
         t[i]=malloc(sizeof(struct Teacher));
@@ -222,7 +222,7 @@ void freeTeacher(struct Teacher ** teacher){
 
 void testStructPointer(){
     struct Tercher ** t = NULL;
-    t = allocateSpace1();
+    t = allocateSpace2();
     printTeacher(t);
    freeTeacher(t);
 
@@ -346,7 +346,7 @@ struct C{
 void structOffset(){
 
     struct A a ={'a',20};
-    //offsetof(struct A,b); 求无毒间的偏移量
+    //offsetof(struct A,b); 求元素间的偏移量
     int * b =(int*)((char *)&a +offsetof(struct A,b));
     printf("value of A.b %d\n",*b);
     printf("value of A.b %d\n",*((int *)&a+1));
@@ -367,13 +367,16 @@ void structOffset(){
 #endif
 
 
-void iStruct(){
+#if 0
+int main(){
 //testTeacher();
 //testDog();
 //testTiger();
 //testMultiStruct();
 //testStructValue();
-//testStructPointer();
+testStructPointer();
 //testTeacherStudent();
 //structOffset();
 }
+
+#endif

@@ -69,7 +69,7 @@ void testReadData(){
         printf("index %d value %s\n",i,cLines[i]);
     }}
 
-
-int main(){
-    testReadData();
-}
+//
+//int main(){
+//    testReadData();
+//}
