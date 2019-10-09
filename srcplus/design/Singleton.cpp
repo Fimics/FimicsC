@@ -73,7 +73,7 @@ void testUserManager() {
 }
 
 #endif
-
-void singleton() {
-    testUserManager();
-}
+//
+//int main() {
+//    testUserManager();
+//}

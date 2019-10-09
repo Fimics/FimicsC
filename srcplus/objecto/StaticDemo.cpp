@@ -2,19 +2,18 @@
 // Created by lipnegju on 2019-07-26.
 //
 
-#include "StaticDemo.h"
 #include <string>
 #include <iostream>
 
 using namespace std;
 
-#if 0
+
 
 //-------------------------静态成员-----------------------------
 
 /**
  * 1.静态成员变量是属于某个类，所有对象共享，
- * 2.静态变量是在编译阶段分配空间，对象还创建时，就已经分配空间
+ * 2.静态变量是在编译阶段分配空间，对象还没创建时，就已经分配空间
  * 3.静态成员变量，在类内声明，类外进行初始化
  */
 
@@ -38,6 +37,7 @@ private:
 
 //在类外初始化
 int Person::age=10;
+int Person::sex=1;
 
 void testStatic(){
 
@@ -61,8 +61,7 @@ void testStatic(){
 
 }
 
-#endif
 
-void classMember(){
-    //testStatic();
-}
+//int main(){
+//    testStatic();
+//}

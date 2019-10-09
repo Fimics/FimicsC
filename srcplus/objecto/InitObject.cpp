@@ -12,7 +12,7 @@ using namespace std;
  */
 
 
-#if 0
+
 
 //-----------------------------构造函数------------------------------
 
@@ -56,7 +56,7 @@ public:
      * 1.与类名相同，类名前加一个符号"~" 也没有返回值，不写void 不可以有参数
      * 2.自动调用，而且只调用一次
      */
-    virtual ~Person() {
+    ~Person() {
         cout << "destrory" << "\n";
     }
 };
@@ -84,13 +84,13 @@ void testInit() {
  * 拷贝构造调用时机
  * 1.用已经创建好的对象来初始化新的对象
  */
-void testCopy() {
+static void testCopy() {
     Person p1;
     p1.age = 10;
     Person p2(p1);
 }
 
-//2.以仠传递的方式给函数传值
+//2.以值传递的方式给函数传值
 void doCopy(Person p1) {
     Person p2(p1);
 }
@@ -146,13 +146,13 @@ public:
     }
 
     //列表默认值
-    Teacher(): a(1), b(2), c(3){}
+    Teacher() : a(1), b(2), c(3) {}
 };
 
-void testTeacher(){
-//    Teacher teacher(1,2,3);
-    Teacher teacher;
-    cout<<"a= "<<teacher.a<<"  b= "<<teacher.b<<"  c= "<<teacher.c;
+void testTeacher() {
+    Teacher teacher(1, 2, 3);
+//    Teacher teacher;
+    cout << "a= " << teacher.a << "  b= " << teacher.b << "  c= " << teacher.c;
 }
 
 //----------------------------类作为类的成员-------------------------------
@@ -162,59 +162,59 @@ void testTeacher(){
  * 1.构造顺序先把成员类一一构造，然后再构造自己，析构是相反的，先析构自己，再析构成员类
  */
 
-class Phone{
+class Phone {
 
 public:
     string phoneName;
 
     Phone() {
-        cout<<"phone init\n";
+        cout << "phone init\n";
     }
 
-    Phone(string name){
-        phoneName=name;
-        cout<<"phone params init\n";
+    Phone(string name) {
+        phoneName = name;
+        cout << "phone params init\n";
     }
 
-    ~Phone(){
-        cout<<"phone destroy\n";
+    ~Phone() {
+        cout << "phone destroy\n";
     }
 };
 
-class Game{
+class Game {
 
 public:
     Game() {
-        cout<<"Game init\n";
+        cout << "Game init\n";
     }
 
-    Game(string name){
-        gameName=name;
-        cout<<"Game params init\n";
+    Game(string name) {
+        gameName = name;
+        cout << "Game params init\n";
     }
 
-    ~Game(){
-        cout<<"Game destroy\n";
+    ~Game() {
+        cout << "Game destroy\n";
     }
 
     string gameName;
 };
 
-class Student{
+class Student {
 
 public:
 
     Student() {
-        cout<<"student init \n";
+        cout << "student init \n";
     }
 
     Student(string name) {
         studentName = name;
-        cout<<"student params init \n";
+        cout << "student params init \n";
     }
 
-    virtual ~Student() {
-       cout<<"student destroy\n";
+    ~Student() {
+        cout << "student destroy\n";
     }
 
     string studentName;
@@ -222,80 +222,96 @@ public:
     Game game;
 };
 
-void testStudent(){
+void testStudent() {
     Student student("zhanshan");
     Phone phone("android");
     Game game("jump");
 
-    student.phone=phone;
-    student.game=game;
+    student.phone = phone;
+    student.game = game;
 }
 
 //----------------------------explicit关键字的作用-------------------------------
 
 /**
  * explicit关键字的作用-->防止隐式类型转换
+ *
  */
 
-class MyString{
+/**
+ * 为什么赋值语句会隐式调用构造函数?
+
+ *类B有自定义构造函数，所以编译器不会自动生成编译器，但会自动生成析构函数{\red{析构函数}}析构函数，
+ * 复制构造函数{\orange{复制构造函数}}复制构造函数，赋值函数{\green{赋值函数}}赋值函数，取址函数{\blue{取址函数}}取址函数。
+ *
+ *B b = 15； 执行顺序如下：
+ *"15"隐式转换为实例B，即调用B(int)构造生成临时实例t，变为B b = t;
+ *临时实例t隐式调用复制构造函数，把t复制给b，t销毁。
+ */
+
+
+class B {
 public:
-    MyString(const char *str){
+    explicit B(int b) { cout << b << endl; }
+};
+
+
+class MyString {
+public:
+    MyString(const char *str) {
 
     }
 
-    explicit MyString(int strSize){
-        size =strSize;
+    explicit MyString(int strSize) {
+        size = strSize;
     }
 
-    char * str;
+    char *str;
     int size;
 };
 
-void testMyString(){
-    MyString str="abc";
-//    MyString str1 = 10;//等价于隐式类型转换 MyString str1 =MyString(10)
+void testMyString() {
+//    MyString str = "abc";
+    MyString str1 = "dd";//等价于隐式类型转换 MyString str1 =MyString(10)
 }
 
 
 //------------------------------动态对象创建  new 运算符的使用-------------------------------
 
-void testNew(){
+static void testNew() {
 
 //    Game game;//栈区开辟
 
-      /**
-       * new
-       * 1.堆区开辟空间
-       * 2.默认不会调用析构函数 ,但会调用构造函数
-       * 3.所有new出来的对象，都会返回该类型的指针 ，malloc返回void * 还要强转，malloc不会调用构造函数
-       * 4.delete game 释放对象 ，delete 与new 都是运算符
-       * 5.
-       */
-      Game *game = new Game;
-      delete  game;
+    /**
+     * new
+     * 1.堆区开辟空间
+     * 2.默认不会调用析构函数 ,但会调用构造函数
+     * 3.所有new出来的对象，都会返回该类型的指针 ，malloc返回void * 还要强转，malloc不会调用构造函数
+     * 4.delete game 释放对象 ，delete 与new 都是运算符
+     * 5.
+     */
+    Game *game = new Game;
+    delete game;
 
-      void * p =new Game;//会出现释放问题，不能释放对象
-      delete p;
+//    void *p = new Game;//会出现释放问题，不能释放对象
+//    delete p;
 
-      //通过new开辟数组
-      Game * games = new Game[10];//调用10次默认构造函数，所以一定要提供默认构造函数
-      delete [] games;//释放数组必须加[]
+    //通过new开辟数组
+    Game *games = new Game[10];//调用10次默认构造函数，所以一定要提供默认构造函数
+    delete[] games;//释放数组必须加[]
 
-      //在栈上开辟数组，可以指定有参函数
-      Game games1[2]={Game("1"),Game("2")};
+    //在栈上开辟数组，可以指定有参函数
+    Game games1[2] = {Game("1"), Game("2")};
 
 
 }
 
-#endif
 
-void initObject() {
-
-#if 0
-#endif
+//int main() {
 //    testInit();
 //    testGetPerson();
-//  testTeacher();
+//    testTeacher();
 //    testStudent();
-//testNew();
-}
+//    testMyString();
+//    testNew();
+//}

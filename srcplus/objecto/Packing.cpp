@@ -5,7 +5,6 @@
 //c++封装 与类成员权限
 
 #include <iostream>
-#include "Packing.h"
 using namespace std;
 
 /**
@@ -33,7 +32,7 @@ void testEat(){
 }
 
 /**
- * struct与class的一个意思，但struct的默认权限是public ,class的默认权限是private
+ * struct与class是一个意思，但struct的默认权限是public ,class的默认权限是private
  */
 class Animal{
     //如果不声明权限默认是private的
@@ -71,7 +70,7 @@ public:
     }
 
     void setL(int l) {
-        Cube::l = l;
+       this->l = l;
     }
 
     int getS(){
@@ -127,6 +126,8 @@ void packing(){
     bool isMemberEqual = cube.isEqual(cube1);
 
     cout<<"isGlobalEqual ="<<isGlobalEqual<<" isMemberEqual = "<<isMemberEqual<<"\n";
-
-
 }
+
+//int main(){
+//    packing();
+//}

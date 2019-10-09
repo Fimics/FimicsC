@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-#if 1
+
 //----------------------------对象模型  |this -------------------------------
 class Person{
 
@@ -21,7 +21,7 @@ public:
     }
 
     const string name;
-    mutable int age1; //加了mutable可以在常函数的被修改
+    mutable int age1; //加了mutable可以在常函数中被修改
     int age; //非静态成员对象属于类身上
     int getAge(){ //非静态成员函数不属于对象身上 //编译器会偷偷的加一个 Person * this指针
 //        return age;
@@ -43,8 +43,7 @@ public:
 
     /**
      * 1.常函数，不允许修改指针指向的值
-     * 2.加了mutable可以在常函数的被修改
-     *
+     * 2.加了mutable可以在常函数中被修改
      */
     void showInfo() const {
 //        this->age=10;
@@ -81,9 +80,6 @@ void testObjectModel(){
 }
 
 
-
-#endif
-
-void objectModel(){
+//int main(){
 //    testObjectModel();
-}
+//}
