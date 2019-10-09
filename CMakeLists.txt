@@ -119,10 +119,8 @@ set(SOURCE_C_FILES
         )
 
 set(SOURCE_CPP_FILES
-        srcplus/main.cpp
         #basic
         srcplus/base/Basic.cpp
-        srcplus/base/Basic.h
 
         #function
         srcplus/function/YFunction.cpp

@@ -3,13 +3,12 @@
 //
 
 #include <iostream>
-#include "Basic.h"
 
 using namespace std;
 
 int num = 200;
 
-#if 0
+
 
 //----------------------::作用域运算符--------------------
 /**
@@ -70,9 +69,9 @@ void B::a() {
     cout<<vln::a;
 }
 
-#endif
 
-#if 0
+
+
 
 //----------------------::作用域运算符--------------------
 void print(){
@@ -84,9 +83,9 @@ void print(){
       cout<<::num <<"\n";//
 }
 
-#endif
 
-#if 0
+
+
 
 //----------------------using---------------------------
 
@@ -95,23 +94,23 @@ namespace E{
 }
 
 void testUsing(){
-    int c =20;
+//    int c =20;
 
     /**
      * 1.写了using 后，下面这行代码说明以后看到的a 就是用E namespace下的
      * 2.但是编译器的就近原则，全使用当前方法中的a ,产生了二义性，编译器报错
      */
-   // using  E::a;
+    using  E::c;
 
    //using 编译指令 ，
-   using namespace E;
+//   using namespace E;
 
     cout<<c<<endl;
 }
 
-#endif
 
-#if 0
+
+
 
 //----------------------c++对c语言的增强---------------------------
 
@@ -209,9 +208,9 @@ void testBool(){
  *
  */
 
-#endif
 
-#if 1
+
+
 
 //----------------------引用的基本语法与注意事项---------------------------
 
@@ -227,7 +226,7 @@ void testBool(){
  *   2.3 如果函数的返回值是引用，那么这个函数调用可以作为左值使用
  *
  * 3.引用的本质
- *   3.1 int a = 10; int &  aref = a;// 自动转换为 int * const aref = &a ,这也能说明引用为什么必须初始化
+ *   3.1 int a = 10; int &aref = a;// 自动转换为 int * const aref = &a ,这也能说明引用为什么必须初始化
  *       aref = 20 //内部发现aref是引用，自动帮我们转换成 * aref = 20;
  *
  * 4.指针的引用
@@ -236,6 +235,7 @@ void testBool(){
 
 void testRef(){
     int a = 10;
+    int c =30;
     //引用必须初始化， 引用初始化化就不能修改了
     int &b = a;
     cout<<a<<"\n";
@@ -314,9 +314,7 @@ void testPassParms(){
     cout<<"\n"<<"testPassParms"<<"a= "<<a<<" b= "<<b;
 }
 
-struct Person{
-    int age;
-};
+
 
 /**
  *
@@ -356,18 +354,16 @@ void constRef(){
    cout<<*p;
 }
 
-#endif
 
-void basic() {
-#if 0
-    print();
-    A::a();
-    B::a();
-    testUsing();
-    testRef();
-    testPassParms();
-    testRefPointer();
-#endif
 
-    constRef();
-}
+//int main() {
+//
+//    print();
+//    A::a();
+//    B::a();
+//    testUsing();
+//    testRef();
+//    testPassParms();
+//    testRefPointer();
+//     constRef();
+//}

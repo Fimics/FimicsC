@@ -34,6 +34,3 @@ void testChild1(){
 //    BaseA *base1 = static_cast<BaseA>(child);
 }
 
-void typeCast(){
-    staticCast();
-}
