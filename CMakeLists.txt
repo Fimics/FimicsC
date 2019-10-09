@@ -149,13 +149,11 @@ set(SOURCE_CPP_FILES
         #string
         srcplus/string/String.h
         srcplus/string/String.cpp
+        srcplus/string/StringDemo.cpp
 
         #operator
         srcplus/operator/YOperator.h
         srcplus/operator/YOperator.cpp
-        srcplus/string/StringDemo.h
-        srcplus/string/StringDemo.cpp
-
 
         #memory
         srcplus/memory/FMemory.h

@@ -126,9 +126,9 @@ bool MyString::operator==(const MyString &str) {
     }
 }
 
-void myString(){
+int main(){
 
-#if 0
+
     MyString str="hello";
     cout<<str;
 
@@ -137,23 +137,23 @@ void myString(){
 //    cout<<"a="<<a<<endl;
 
 
-    cin>>str;
-    cout<<str;
-
-#endif
-
-    MyString str ="abc";
-    MyString str2(str);
-    MyString str3="333";
-    str3=str2;
-    str3="bbb";
-
-    cout<<str3<<endl;
-
-    char c = str3[1];
-    cout<<"c= "<<c<<endl;
-
-    MyString str4 = str+str3;
-    cout<<"str4="<<str4<<endl;
+//    cin>>str;
+//    cout<<str;
+//
+//
+//
+//    MyString str ="abc";
+//    MyString str2(str);
+//    MyString str3="333";
+//    str3=str2;
+//    str3="bbb";
+//
+//    cout<<str3<<endl;
+//
+//    char c = str3[1];
+//    cout<<"c= "<<c<<endl;
+//
+//    MyString str4 = str+str3;
+//    cout<<"str4="<<str4<<endl;
 
 }
