@@ -3,15 +3,12 @@
 //
 
 #include <iostream>
-#include "FunctionPointer.h"
 #include "ExternC.h"
-#include "ReferenceVariable.h"
 using namespace std;
 
-#include "YFunction.h"
 #include "ExternC.h"
 
-#if 0
+
 //------------------------宏函数的缺点----------------------------
 /**
  * 宏函数的缺点
@@ -29,9 +26,9 @@ void testDefineFunction(){
     cout<<"b ="<<b<<"\n";
 }
 
-#endif
 
-#if 0
+
+
 //------------------------内联函数----------------------------
 
 //类内部的成员函数默认为inline函数
@@ -52,7 +49,7 @@ inline void funa(){// 如函数实现没有加inline 那么这个函数任然不
  * 2.不能存在过多的条件判断语句
  * 3.函数体不能过于庞大
  * 4.不能对函数进行取地址操作
- * //内联仅仅只是给编译器一个建议，编译器不一定会接受这种建议，如果你没有把函数声明为内联函数，那么编译器也可能瓜皮函数内联编译
+ * //内联仅仅只是给编译器一个建议，编译器不一定会接受这种建议，如果你没有把函数声明为内联函数，那么编译器也可能吧函数内联编译
  * //一个好的编译器会内联小的，简单的函数
  */
 
@@ -97,7 +94,6 @@ void testOverload(const int &a){}//const也可以作为重载的条件
  */
 
 
-#endif
 
 
 
@@ -107,13 +103,6 @@ void testOverload(const int &a){}//const也可以作为重载的条件
 
 #endif
 
-void yFunction(){
-
-#if 0
-    testDefineFunction();
-#endif
-   // externC();
-//   functionPointer();
-     referenceVariable();
-
-}
+//int main(){
+//    testDefineFunction();
+//}

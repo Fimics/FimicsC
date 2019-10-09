@@ -123,17 +123,12 @@ set(SOURCE_CPP_FILES
         srcplus/base/Basic.cpp
 
         #function
-        srcplus/function/YFunction.cpp
-        srcplus/function/YFunction.h
         srcplus/function/ExternC.c
         srcplus/function/ExternC.h
         srcplus/function/ExternC.cpp
-        srcplus/extends/FExtends.h
-        srcplus/extends/FExtends.cpp
-        srcplus/extends/ExtendsMode.h
-        srcplus/extends/ExtendsMode.cpp
-        srcplus/function/FunctionPointer.h
         srcplus/function/FunctionPointer.cpp
+        srcplus/function/ReferenceVariavle.cpp
+        srcplus/function/YFunction.cpp
 
         #design
         srcplus/design/YDesign.h
@@ -183,9 +178,7 @@ set(SOURCE_CPP_FILES
         srcplus/extends/FExtends.cpp
         srcplus/extends/ExtendsMode.h
         srcplus/extends/ExtendsMode.cpp
-        srcplus/function/FunctionPointer.h
         srcplus/function/FunctionPointer.cpp
-        srcplus/function/ReferenceVariable.h
         srcplus/function/ReferenceVariavle.cpp
 
         #extends

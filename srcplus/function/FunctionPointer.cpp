@@ -38,6 +38,7 @@ void testPam(){
     double (*pf)(int);
 }
 
-void functionPointer(){
-//       processcntl();
-}
+
+//int main(){
+//    process();
+//}

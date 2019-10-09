@@ -14,3 +14,7 @@
 void externC(){
     show(); //c++ 中函数是可以重载的，编译器会把这个函数名称偷偷改成 void _show()
 }
+
+//int main(){
+//    externC();
+//}

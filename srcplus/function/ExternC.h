@@ -17,4 +17,3 @@ void show();
 #endif __cplusplus
 
 
-void externC();
