@@ -7,10 +7,11 @@
 
 using namespace std;
 
+//https://www.cnblogs.com/yangxiaoping/p/8268209.html
+
 /**
  * 函数模板->泛型
  */
-
 
 void swapInt(int &a, int &b) {
     int tmp = a;
@@ -293,11 +294,11 @@ void testChild2() {
     Child2<int, double> child2;
 }
 
-void funTemplate() {
-//     testSwapInt();
-//testMySwap();
-// testArraySort();
+//int main() {
+//    testSwapInt();
+//    testMySwap();
+//    testArraySort();
 //    testMyCompare();
 //    testClassTemplate();
-//      testPerson1();
-}
+//    testPerson1();
+//}

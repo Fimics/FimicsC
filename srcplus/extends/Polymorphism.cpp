@@ -166,11 +166,11 @@ void testCalculator() {
 
 }
 
-int main() {
+//int main() {
 
 //    testCalculator();
     //如果发生了继承关系，编译器允许进行类型转换
 //    Animal *animal = new Cat("Tom");
 //    animal->eat();
 //    delete animal;
-}
+//}

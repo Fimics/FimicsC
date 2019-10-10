@@ -163,7 +163,6 @@ set(SOURCE_CPP_FILES
         srcplus/extends/Polymorphism.cpp
 
         #funTemplate
-        srcplus/funtemplate/FunTemplate.h
         srcplus/funtemplate/FunTemplate.cpp
 
         #expection
