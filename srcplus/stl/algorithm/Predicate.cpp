@@ -2,7 +2,6 @@
 // Created by lipengju on 2019-08-28.
 //
 
-#include "Predicate.h"
 #include<iostream>
 #include <vector>
 #include <algorithm>

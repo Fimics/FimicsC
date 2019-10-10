@@ -2,8 +2,6 @@
 // Created by lipengju on 2019-08-29.
 //
 
-#include "Adapter.h"
-
 #include<iostream>
 #include <vector>
 #include <algorithm>

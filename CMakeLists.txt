@@ -207,28 +207,16 @@ set(SOURCE_CPP_FILES
         srcplus/stl/container/MultiMap.cpp
 
         #functor
-        srcplus/stl/algorithm/Algorithm.cpp
-        srcplus/stl/algorithm/Algorithm.h
         srcplus/stl/algorithm/Functor.cpp
-        srcplus/stl/algorithm/Functor.h
         srcplus/stl/algorithm/Predicate.cpp
-        srcplus/stl/algorithm/Predicate.h
         srcplus/stl/algorithm/BuiltInFunction.cpp
-        srcplus/stl/algorithm/BuiltInFunction.h
         srcplus/stl/algorithm/Adapter.cpp
-        srcplus/stl/algorithm/Adapter.h
         srcplus/stl/algorithm/Traversal.cpp
-        srcplus/stl/algorithm/Traversal.h
         srcplus/stl/algorithm/Find.cpp
-        srcplus/stl/algorithm/Find.h
         srcplus/stl/algorithm/Sort.cpp
-        srcplus/stl/algorithm/Sort.h
         srcplus/stl/algorithm/CopyAndReplace.cpp
-        srcplus/stl/algorithm/CopyAndReplace.h
         srcplus/stl/algorithm/AlgorithmCreater.cpp
-        srcplus/stl/algorithm/AlgorithmCreater.h
         srcplus/stl/algorithm/CommonSet.cpp
-        srcplus/stl/algorithm/CommonSet.h
 
         )
 

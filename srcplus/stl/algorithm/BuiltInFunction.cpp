@@ -2,7 +2,6 @@
 // Created by lipengju on 2019-08-29.
 //
 
-#include "BuiltInFunction.h"
 #include<iostream>
 using namespace std;
 //内建函数对象头文件
