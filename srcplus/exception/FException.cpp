@@ -2,14 +2,13 @@
 // Created by lipengju on 2019-08-24.
 //
 
-#include "TypeCast.h"
 #include <iostream>
 #include <stdexcept>
 using namespace std;
 
 /**
- * 1.catch(...) 代表其它的类型
- * 2.如果不想处理异常，可以继续向上跑出 throw
+ * 1.catch(...) 代表其它的异常类型
+ * 2.如果不想处理异常，可以继续向上抛出 throw
  * 3.如果没有任何处理异常的地方，那么成员调用terminate函数，中断程序
  *
  * 解旋
@@ -93,8 +92,8 @@ void testFun2(){
 
 
 
-void fexception(){
-//     testDivTry();
-     testFun2();
+//int main(){
+//   testDivTry();
+//   testFun2();
 //   typeCast();
-}
+//}

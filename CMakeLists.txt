@@ -166,9 +166,7 @@ set(SOURCE_CPP_FILES
         srcplus/funtemplate/FunTemplate.cpp
 
         #expection
-        srcplus/exception/FException.h
         srcplus/exception/FException.cpp
-        srcplus/exception/TypeCast.h
         srcplus/exception/TypeCast.cpp
 
         #io
