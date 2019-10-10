@@ -218,11 +218,11 @@ void testSheepTuo() {
     cout << "ages = " << st.Sheep::age << "  aget =" << st.Tuo::age << endl;
 }
 
-int main() {
+//int main() {
 //    testNews();
 //    testArmyNews();
 //    testChild();
-    testSheepTuo();
-}
+//    testSheepTuo();
+//}
 
 

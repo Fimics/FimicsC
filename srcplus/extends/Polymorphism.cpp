@@ -6,6 +6,8 @@
 
 using namespace std;
 
+//https://blog.csdn.net/yc461515457/article/details/52658589
+
 /**
  * 1.静态多态就是函数重载
  * 2.静态多态和动态多态的区别就是函数地址的早绑定(静态联编)还是晚绑定(动态联编)
@@ -24,10 +26,11 @@ public:
      *   1.vfptr内部有这么个指针 virtual function poiner(虚函数指针) 指向虚函数表
      *   2.子类在调用构造函数时，将所有的虚函数表指针都指向自己的虚函数表，这个操作我们是看不到的
      *   3.子类的虚函数表会把子类内部的虚函数表覆盖(重写)，但父类的虚函数表不受影响
-     *
-     * @return
      */
 
+    //虚函数
+    //可以定义一个基类的指针, 其指向一个继承类, 当通过基类的指针去调用函数时, 可以在运行时决定该调用基类的函数还是继承类的函数.
+    // 虚函数是实现多态(动态绑定)/接口函数的基础. 可以说: 没有虚函数, C++将变得一无是处!
     virtual void eat() {
         cout << "animal eat..." << endl;
     }
@@ -39,10 +42,10 @@ public:
     /**
      * 纯虚析构
      * 1.需要声明还需要实现，类内声明，类外实现
-     * 2.如果类中出现了纯虚析构，这个类也是抽象函数
+     * 2.如果类中出现了纯虚析构，这个类也是抽象类
      */
 
-    virtual ~Animal()=0;
+    virtual ~Animal() = 0;
 //    virtual ~Animal(){
 //        cout<<"~Animal";
 //    }
@@ -57,15 +60,15 @@ public:
     char *name;
 
     Cat(char *name) {
-        this->name=new char[strlen(name)+1];
-        strcpy(this->name,name);
+        this->name = new char[strlen(name) + 1];
+        strcpy(this->name, name);
     }
 
     ~Cat() {
-        cout<<"~Cat()";
-        if(this->name!=NULL){
-            delete [] this->name;
-            this->name=NULL;
+        cout << "~Cat()";
+        if (this->name != NULL) {
+            delete[] this->name;
+            this->name = NULL;
         }
     }
 
@@ -100,11 +103,11 @@ public:
     /**
      * 纯虚函数
      * 1.如果父类有纯虚函数，子类在继承的时候必须实现这些纯虚函数
-     * 2.如果类里函数纯虚函数，这个类抽象函数，不能实例化对象
+     * 2.如果类里函数纯虚函数，这个类是抽像类，不能实例化对象
      * 3.virtual int getResult()=0; 告诉编译器在vrable中为函数保留一个位置，但这个特定位置不放地址
      * @return
      */
-    virtual int getResult()=0;
+    virtual int getResult() = 0;
 
     int getVal1() const {
         return val1;
@@ -128,50 +131,46 @@ private:
 };
 
 //加法计算器
-class PlusCalculator:public AbstractCalculator{
+class PlusCalculator : public AbstractCalculator {
 public:
 
     virtual int getResult() {
-        return this->getVal1()+this->getVal2();
+        return this->getVal1() + this->getVal2();
     }
 };
 
 //减法法计算器
-class SubCalculator:public AbstractCalculator{
+class SubCalculator : public AbstractCalculator {
 public:
 
     virtual int getResult() {
-        return this->getVal1()-this->getVal2();
+        return this->getVal1() - this->getVal2();
     }
 };
 
 
-class A:public AbstractCalculator{
+class A : public AbstractCalculator {
 public:
     int getResult() override {
         return 0;
     }
 };
 
-void testCalculator(){
+void testCalculator() {
 //     AbstractCalculator  *ac = new PlusCalculator;
-    AbstractCalculator  *ac = new SubCalculator;
-     ac->setVal1(20);
-     ac->setVal2(10);
-     int plus = ac->getResult();
-     cout<<"plus= "<< plus<<endl;
+    AbstractCalculator *ac = new SubCalculator;
+    ac->setVal1(20);
+    ac->setVal2(10);
+    int plus = ac->getResult();
+    cout << "plus= " << plus << endl;
 
 }
 
-void polymorphism() {
+int main() {
 
-#if 0
-
-#endif
-
-    //testCalculator();
+//    testCalculator();
     //如果发生了继承关系，编译器允许进行类型转换
-    Animal *animal = new Cat("Tom");
-    animal->eat();
-    delete animal;
+//    Animal *animal = new Cat("Tom");
+//    animal->eat();
+//    delete animal;
 }
