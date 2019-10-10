@@ -3,61 +3,64 @@
 //
 
 #include <iostream>
+
 using namespace std;
 
-class BasePage{
+class BasePage {
 
 public:
 
     static int niceCount;
-    int cCount =1;
-    int sameCount=1;
+    int cCount = 1;
+    int sameCount = 1;
 
     BasePage() {
-        cout<<"BasePage init..."<<endl;
+        cout << "BasePage init..." << endl;
     }
 
     BasePage(int viewCount) {
-        this->viewCount=viewCount;
-        cout<<"BasePage init..."<<endl;
+        this->viewCount = viewCount;
+        cout << "BasePage init..." << endl;
     }
 
     virtual ~BasePage() {
-        cout<<"BasePage destroy..."<<endl;
+        cout << "BasePage destroy..." << endl;
     }
 
-    void header(){
-        cout<<"header"<<endl;
+    void header() {
+        cout << "header" << endl;
     }
 
-    void footer(){
-        cout<<"footer"<<endl;
+    void footer() {
+        cout << "footer" << endl;
     }
 
-    string getContent(){
+    string getContent() {
         return this->content;
     }
 
 protected:
-    int dCount=2;
-    void left(){
-        cout<<"left"<<endl;
+    int dCount = 2;
+
+    void left() {
+        cout << "left" << endl;
     }
 
-    void right(){
-        cout<<"right"<<endl;
+    void right() {
+        cout << "right" << endl;
     }
 
 private:
-    int eCount=3;
-    string content="base_page";
-    int viewCount =1000;
-    int getViewCount(){
+    int eCount = 3;
+    string content = "base_page";
+    int viewCount = 1000;
+
+    int getViewCount() {
         return viewCount;
     }
 };
 
-int BasePage::niceCount =1000;
+int BasePage::niceCount = 1000;
 
 /**
  * 1.先调用parent init-->child init-->child destroy-->parent destroy
@@ -84,53 +87,54 @@ int BasePage::niceCount =1000;
  *
  */
 
-class News: public BasePage{
+class News : public BasePage {
 public:
 
-    int sameCount=2;
+    int sameCount = 2;
+
     News() {
-        cout<<"news init..."<<endl;
+        cout << "news init..." << endl;
     }
 
     /**
      * 用初始化列表，显示调用父类有参构造，
      * @param a
      */
-    News(int a):BasePage(2) {
-        cout<<"news init..."<<endl;
+    News(int a) : BasePage(2) {
+        cout << "news init..." << endl;
     }
 
     virtual ~News() {
-        cout<<"news destroy..."<<endl;
+        cout << "news destroy..." << endl;
     }
 
-    void newsHeader(){
-        cout<<"news_header"<<endl;
+    void newsHeader() {
+        cout << "news_header" << endl;
     }
 
 private:
-    int newsCount=100;
+    int newsCount = 100;
 };
 
 void testNews() {
     News news;
-    cout<<"\nnews.sameCount= "<<news.sameCount<<endl;
-    cout<<"\nnews->basePage->.sameCount= "<<news.BasePage::sameCount<<endl; //如果子类与父类成员同名，使用作用域调用父类成员
+    cout << "\nnews.sameCount= " << news.sameCount << endl;
+    cout << "\nnews->basePage->.sameCount= " << news.BasePage::sameCount << endl; //如果子类与父类成员同名，使用作用域调用父类成员
 }
 
-class ArmyNews:public News{
+class ArmyNews : public News {
 public:
 
     ArmyNews() {
-        cout<<"ArmyNews init ...\n";
+        cout << "ArmyNews init ...\n";
     }
 
     virtual ~ArmyNews() {
-       cout<<"ArmyNews destroy ...\n";
+        cout << "ArmyNews destroy ...\n";
     }
 };
 
-void testArmyNews(){
+void testArmyNews() {
     ArmyNews news;
 }
 
@@ -138,11 +142,11 @@ void testArmyNews(){
 /**
  *
  */
-class Base1{
+class Base1 {
 public:
     Base1() {
-        this->a=1;
-        this->b=3;
+        this->a = 1;
+        this->b = 3;
     }
 
 public:
@@ -150,33 +154,33 @@ public:
     int b;
 };
 
-class Base2{
+class Base2 {
 public:
     Base2() {
-        this->b=2;
+        this->b = 2;
     }
 
 public:
     int b;
 };
 
-class Child:public Base1,public Base2{
+class Child : public Base1, public Base2 {
 public:
     int c;
     int d;
 };
 
 
-void testChild(){
+void testChild() {
     Child child;
-    int b =child.Base1::b;//多继承二义性需要作用域
+    int b = child.Base1::b;//多继承二义性需要作用域
 
-    cout<<"child size: "<< sizeof(Child)<<endl;
+    cout << "child size: " << sizeof(Child) << endl;
 }
 
 //--------------------------菱形继承----------------------------
 /**
- * 菱形继承会有空间浪费 同继承了 Sheep ,Tuo的age
+ * 菱形继承会有空间浪费 同时继承了 Sheep ,Tuo的age
  * 1.解决方案
  *    虚继承,继承虚基类，操作的是一份共享数据,没有二义性，操作的是同一份数据
  * 2.虚基类的内部工作原理
@@ -188,39 +192,37 @@ void testChild(){
  *
  */
 
-class Animal{
+class Animal {
 public:
     int age;
 };
 
 //虚基类Sheep
-class Sheep:virtual public Animal{
+class Sheep : virtual public Animal {
 
 };
 
 //虚基类Tuo
-class Tuo:virtual public Animal{
+class Tuo : virtual public Animal {
 
 };
 
-class SheepTuo:public Sheep, public Tuo{
+class SheepTuo : public Sheep, public Tuo {
 
 };
 
-void testSheepTuo(){
+void testSheepTuo() {
     SheepTuo st;
-    st.Sheep::age=1;
-    st.Tuo::age=2;
-
-    cout<<"ages = "<<st.Sheep::age<<"  aget ="<<st.Tuo::age<<endl;
-
+    st.Sheep::age = 1;
+    st.Tuo::age = 2;
+    cout << "ages = " << st.Sheep::age << "  aget =" << st.Tuo::age << endl;
 }
 
-void pager(){
+int main() {
 //    testNews();
-//      testArmyNews();
-// testChild();
-     testSheepTuo();
+//    testArmyNews();
+//    testChild();
+    testSheepTuo();
 }
 
 

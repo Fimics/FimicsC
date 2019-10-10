@@ -3,7 +3,7 @@
 //
 #include <cstdio>
 #include <iostream>
-#include "O.h"
+#include "Array.h"
 using namespace std;
 
 MyArray::MyArray() {

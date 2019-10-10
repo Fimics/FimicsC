@@ -144,7 +144,7 @@ set(SOURCE_CPP_FILES
         srcplus/design/Singleton.cpp
 
         #Array
-        srcplus/array/O.h
+        srcplus/array/Array.h
         srcplus/array/Array.cpp
 
         #string
@@ -153,23 +153,13 @@ set(SOURCE_CPP_FILES
         srcplus/string/StringDemo.cpp
 
         #operator
-        srcplus/operator/YOperator.h
         srcplus/operator/YOperator.cpp
 
         #memory
-        srcplus/memory/FMemory.h
         srcplus/memory/FMemory.cpp
 
         #extends
-        srcplus/extends/FExtends.h
-        srcplus/extends/FExtends.cpp
-        srcplus/extends/ExtendsMode.h
         srcplus/extends/ExtendsMode.cpp
-        srcplus/function/FunctionPointer.cpp
-        srcplus/function/ReferenceVariavle.cpp
-
-        #extends
-        srcplus/extends/Polymorphism.h
         srcplus/extends/Polymorphism.cpp
 
         #funTemplate
@@ -314,7 +304,7 @@ set(SOURCE_SYSTEM_FILES
 
 set(Fimics_C_STRUCTURE
 
-        structure/O.cpp)
+        structure/Array.cpp)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})

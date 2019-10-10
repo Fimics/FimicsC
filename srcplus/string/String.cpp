@@ -126,11 +126,11 @@ bool MyString::operator==(const MyString &str) {
     }
 }
 
-int main(){
-
-
-    MyString str="hello";
-    cout<<str;
+//int main(){
+//
+//
+//    MyString str="hello";
+//    cout<<str;
 
 //    int a =10;
 //    cin>>a;
@@ -156,4 +156,4 @@ int main(){
 //    MyString str4 = str+str3;
 //    cout<<"str4="<<str4<<endl;
 
-}
+//}
