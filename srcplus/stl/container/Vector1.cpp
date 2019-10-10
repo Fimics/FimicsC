@@ -2,7 +2,6 @@
 // Created by lipengju on 2019-08-28.
 //
 
-#include "VectorContainer1.h"
 #include<iostream>
 #include <vector>
 #include <list>

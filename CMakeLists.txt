@@ -174,50 +174,37 @@ set(SOURCE_CPP_FILES
         srcplus/io/IO.cpp
 
         #stl
-        srcplus/stl/container/YStl.h
-        srcplus/stl/container/YStl.cpp
 
         #vector
-        srcplus/stl/container/VectorContainer.cpp
-        srcplus/stl/container/VectorContainer.h
-        srcplus/stl/container/VectorContainer1.cpp
-        srcplus/stl/container/VectorContainer1.h
+        srcplus/stl/container/Vector.cpp
+        srcplus/stl/container/Vector1.cpp
 
         #string
-        srcplus/stl/container/StringContainer.cpp
-        srcplus/stl/container/StringContainer.h
+        srcplus/stl/container/String.cpp
 
         #deque
-        srcplus/stl/container/DequeContainer.cpp
-        srcplus/stl/container/DequeContainer.h
+        srcplus/stl/container/Deque.cpp
 
         #stack
-        srcplus/stl/container/StackContainer.cpp
-        srcplus/stl/container/StackContainer.h
+        srcplus/stl/container/Stack.cpp
 
         #queue
-        srcplus/stl/container/QueueContainer.cpp
-        srcplus/stl/container/QueueContainer.h
+        srcplus/stl/container/Queue.cpp
 
         #list
-        srcplus/stl/container/ListContainer.cpp
-        srcplus/stl/container/ListContainer.h
+        srcplus/stl/container/List.cpp
 
         #set
-        srcplus/stl/container/SetContainer.cpp
-        srcplus/stl/container/SetContainer.h
+        srcplus/stl/container/Set.cpp
 
         #pair
-        srcplus/stl/container/PairContainer.cpp
-        srcplus/stl/container/PairContainer.h
+        srcplus/stl/container/Pair.cpp
 
         #map
-        srcplus/stl/container/MapContainer.cpp
-        srcplus/stl/container/MapContainer.h
+        srcplus/stl/container/Map.cpp
 
         #multimap
-        srcplus/stl/container/MultiMapContainer.cpp
-        srcplus/stl/container/MultiMapContainer.h
+        srcplus/stl/container/MultiMap.cpp
 
         #functor
         srcplus/stl/algorithm/Algorithm.cpp
