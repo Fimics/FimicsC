@@ -144,7 +144,7 @@ set(SOURCE_CPP_FILES
         srcplus/design/Singleton.cpp
 
         #Array
-        srcplus/array/Array.h
+        srcplus/array/O.h
         srcplus/array/Array.cpp
 
         #string
@@ -276,7 +276,7 @@ set(SOURCE_SYSTEM_FILES
 
 set(Fimics_C_STRUCTURE
 
-        structure/Array.cpp)
+        structure/O.cpp)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
