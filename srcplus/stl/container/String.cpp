@@ -7,6 +7,8 @@
 using namespace std;
 
 /*
+ * C++ 从 C 继承的字符串概念仍然是以 '\0' 为结束符的 char 数组。C++ 标准库中的 string class 可以将 string 作为一个型别，
+ * 可以实现复制、赋值和比较，不必担心内存大小及占用内存实际长度等具体问题。
 string 构造函数
 string();//创建一个空的字符串 例如: string str;
 string(const string& str);//使用一个string对象初始化另一个string对象
@@ -25,7 +27,7 @@ string& assign(const string &s, int start, int n);//将s从start开始n个字符
 
 */
 
-void testStringApi(){
+void create(){
     string str; //默认构造
     string str2(str); //拷贝构造
     string str3 = str;
@@ -50,6 +52,7 @@ void testStringApi(){
     str6.assign(str, 1, 3); //ell ? hel 从0索引
 
     cout << str6 << endl;
+
 
 }
 
@@ -288,7 +291,6 @@ void test09Str()
 }
 
 
-void stringContainer(){
-//     cout<<"stringAPI"<<endl;
-//     testStringApi();
+int main(){
+    create();
 }
