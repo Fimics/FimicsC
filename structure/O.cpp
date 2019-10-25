@@ -46,19 +46,19 @@ void reverse2(string str, int len) {//空间O(1)
 
 }
 
-int main() {
+//int main() {
+////
+////    int sum11 = sum1(100);
+////    int sum22 = sum2(100);
+////    cout<<"sum11="<<sum11<<" sum22="<<sum22<<endl;
 //
-//    int sum11 = sum1(100);
-//    int sum22 = sum2(100);
-//    cout<<"sum11="<<sum11<<" sum22="<<sum22<<endl;
-
-    char *str = "aaa222bbb";
-    int len = strlen(str);
-//     char * reverse = reverseStr1(str,len);
-//     cout<<"reverse1 = "<<reverse<<endl;
-
-    string string1 = "aaa222bbb";
-    reverse2(string1, len - 1);
-    cout << "reverse2 =" << str << endl;
-
-}
+//    char *str = "aaa222bbb";
+//    int len = strlen(str);
+////     char * reverse = reverseStr1(str,len);
+////     cout<<"reverse1 = "<<reverse<<endl;
+//
+//    string string1 = "aaa222bbb";
+//    reverse2(string1, len - 1);
+//    cout << "reverse2 =" << str << endl;
+//
+//}
