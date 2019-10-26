@@ -22,7 +22,7 @@ long double fib2(int n)
     long double temp;
     if(n<1)
         return -1;
-    long long *a=new long double[n+1];
+    long double *a=new long double[n+1];
     a[1]=a[2]=1;
     for(int i=3;i<=n;i++)
     {

@@ -276,7 +276,9 @@ set(SOURCE_SYSTEM_FILES
 
 set(Fimics_C_STRUCTURE
 
-        structure/Sum.cpp structure/Fib.cpp)
+        structure/Sum.cpp
+        structure/Fib.cpp
+        structure/linkedlist/LinkedList.cpp)
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 add_executable(FimicsC ${SOURCE_C_FILES})
