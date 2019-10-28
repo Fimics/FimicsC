@@ -275,11 +275,7 @@ set(SOURCE_SYSTEM_FILES
         )
 
 set(Fimics_C_STRUCTURE
-
-        structure/Sum.cpp
-        structure/Fib.cpp
-        structure/O.cpp
-        structure/reviewcpp/Functioin.cpp)
+        structure/lineartable/LinearList.cpp)
 
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
