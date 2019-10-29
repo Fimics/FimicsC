@@ -275,7 +275,7 @@ set(SOURCE_SYSTEM_FILES
         )
 
 set(Fimics_C_STRUCTURE
-        structure/lineartable/LinearList.cpp)
+        structure/lineartable/LinearList.cpp structure/aprepare/Array.cpp)
 
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})

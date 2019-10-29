@@ -240,25 +240,23 @@ ostream &operator<<(ostream &out, const ArrayList<T> &x) {
 }
 
 
-int main() {
-    //初始化数组
-    LinearList<int> *list = new ArrayList<int>(100);
-//    ArrayList<double> d(100);
-//      ArrayList<char> c;
-//      ArrayList<double > dcopy(d)
-
-    cout << " is empty " << list->empty() << endl;
-
-    for (int i = 0; i < 50; i++) {
-        list->insert(i, i);
-    }
-
-    int value = list->get(8);
-    int index = list->indexOf(9);
-    cout<<"value = "<<value<<" index = "<<index<<endl;
-
-    list->output(cout);
-
-
-    return 0;
-}
+//int main() {
+//    //初始化数组
+//    LinearList<int> *list = new ArrayList<int>(100);
+////    ArrayList<double> d(100);
+////      ArrayList<char> c;
+////      ArrayList<double > dcopy(d)
+//
+//    cout << " is empty " << list->empty() << endl;
+//
+//    for (int i = 0; i < 50; i++) {
+//        list->insert(i, i);
+//    }
+//
+//    int value = list->get(8);
+//    int index = list->indexOf(9);
+//    cout<<"value = "<<value<<" index = "<<index<<endl;
+//
+//    list->output(cout);
+//    return 0;
+//}
