@@ -23,9 +23,7 @@ bool make2dArray(T ** &x,int rows,int columns){
 
 }
 
-int main(){
-
-    int * y = new int(10);
-    delete []y;
-
-}
+//int main(){
+//    int * y = new int(10);
+//    delete []y;
+//}
