@@ -5,12 +5,14 @@
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
+#include <vector>
 #include "LinearList.h"
 #include "../common/Expect.h"
+#include "../common/Iterator.h"
 using namespace std;
 
 template <class T>
-class VectorList:LinearList{
+class VectorList : public LinearList<T>{
 
 public:
 
@@ -19,33 +21,35 @@ public:
     ~VectorList() {}
 
     //ADT method
-private:
     bool empty() const {
-        return false;
+        return element->empty();
     }
 
-    int size() const override {
-        return 0;
+    int size() const {
+        return element->size();
     }
 
-    T &get(int index) const override {
-        return <#initializer#>;
+    T & get(int index) const;
+
+    int indexOf(const T &element);
+
+    void insert(int index, T &element);
+    void erase(int index);
+
+    void output(ostream &out) const;
+
+    int capacity() const {
+        return element->size();
     }
 
-    int indexOf(const T &element) override {
-        return 0;
+    //线性表的起始和结束位置的迭代器
+    typedef typename vector<T>::iterator iterator;
+    iterator begin(){
+        return element->begin();
     }
 
-    void insert(int index, T &element) override {
-
-    }
-
-    void erase(int index) override {
-
-    }
-
-    void output(ostream &out) const override {
-
+    iterator end(){
+        return element->end();
     }
 
 protected:
