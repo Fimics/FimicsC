@@ -5,56 +5,9 @@
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
-
+#include "LinearList.h"
+#include "../common/Expect.h"
 using namespace std;
-
-
-class illegalParameterValue {
-public:
-    illegalParameterValue(string theMessage = "Illegal parameter value") {
-        message = theMessage;
-    }
-
-    void outputMessage() { cout << message << endl; }
-
-private:
-    string message;
-};
-
-class illegalIndex {
-public:
-    illegalIndex(string theMessage = "Illegal index") //初始化
-    {
-        message = theMessage;
-    }
-
-    void outputMessage() { cout << message << endl; }
-
-private:
-    string message;
-
-};
-
-
-template<class T>
-class LinearList {
-public:
-    virtual ~LinearList() {}
-
-    virtual bool empty() const = 0;
-
-    virtual int size() const = 0;
-
-    virtual T &get(int index) const = 0;
-
-    virtual int indexOf(const T &element) = 0;
-
-    virtual void insert(int index, T &element) = 0;
-
-    virtual void erase(int index) = 0;
-
-    virtual void output(ostream &out) const = 0;
-};
 
 template<class T>
 class ArrayList : public LinearList<T> {
@@ -184,7 +137,7 @@ void ArrayList<T>::erase(int index) {
  * @param newLength
  */
 template<class T>
-void changeLengthlD(T *&a, int oldLength, int newLength) {
+void changeLength1D(T *&a, int oldLength, int newLength) {
     if (newLength < 0) {
         throw illegalParameterValue("new length must be >=0");
     }
@@ -213,7 +166,7 @@ void ArrayList<T>::insert(int index, T &theElement) {
     //有效索引，确定数组是否已满
     if (listSize == arrayLength) {
         //数组空间已满，数组长度倍增
-        changeLengthlD(element, arrayLength, 2 * arrayLength);
+        changeLength1D(element, arrayLength, 2 * arrayLength);
         arrayLength *= 2;
     }
 
@@ -240,23 +193,23 @@ ostream &operator<<(ostream &out, const ArrayList<T> &x) {
 }
 
 
-int main() {
-    //初始化数组
-    LinearList<int> *list = new ArrayList<int>(10);
-//    ArrayList<double> d(100);
-//      ArrayList<char> c;
-//      ArrayList<double > dcopy(d)
-
-    cout << " is empty " << list->empty() << endl;
-
-    for (int i = 0; i < 50; i++) {
-        list->insert(i, i);
-    }
-
-    int value = list->get(8);
-    int index = list->indexOf(9);
-    cout<<"value = "<<value<<" index = "<<index<<endl;
-
-    list->output(cout);
-    return 0;
-}
+//int main() {
+//    //初始化数组
+//    LinearList<int> *list = new ArrayList<int>(10);
+////    ArrayList<double> d(100);
+////      ArrayList<char> c;
+////      ArrayList<double > dcopy(d)
+//
+//    cout << " is empty " << list->empty() << endl;
+//
+//    for (int i = 0; i < 50; i++) {
+//        list->insert(i, i);
+//    }
+//
+//    int value = list->get(8);
+//    int index = list->indexOf(9);
+//    cout<<"value = "<<value<<" index = "<<index<<endl;
+//
+//    list->output(cout);
+//    return 0;
+//}
