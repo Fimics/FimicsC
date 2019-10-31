@@ -275,10 +275,18 @@ set(SOURCE_SYSTEM_FILES
         )
 
 set(Fimics_C_STRUCTURE
-        structure/arraylist/LinearList.cpp
+        #prepare
         structure/aprepare/Array.cpp
-        structure/arraylist/LinearList.h
-        structure/common/Expect.h structure/arraylist/VectorList.cpp structure/common/Iterator.h structure/linkedlist/Node.cpp)
+        structure/arraylist/ArrayList.cpp
+
+        #linearlist
+        structure/common/AbstractList.h
+        structure/common/Expect.h
+        structure/arraylist/VectorList.cpp
+        structure/arraylist/Iterator.h
+
+        #linkedlist
+        structure/linkedlist/Node.h structure/linkedlist/LinkedList.cpp)
 
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})

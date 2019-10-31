@@ -5,12 +5,13 @@
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
-#include "LinearList.h"
+#include "../common/AbstractList.h"
 #include "../common/Expect.h"
+#include "Iterator.h"
 using namespace std;
 
 template<class T>
-class ArrayList : public LinearList<T> {
+class ArrayList : public AbstractList<T> {
 
 public:
 

@@ -9,9 +9,9 @@ using namespace std;
 #define FIMICSCSTRUCTURE_LINEARLIST_H
 
 template<class T>
-class LinearList {
+class AbstractList {
 public:
-    virtual ~LinearList() {}
+    virtual ~AbstractList() {}
 
     virtual bool empty() const = 0;
 
