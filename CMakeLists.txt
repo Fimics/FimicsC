@@ -280,14 +280,13 @@ set(Fimics_C_STRUCTURE
         structure/arraylist/ArrayList.cpp
 
         #linearlist
-        structure/common/AbstractList.h
+        structure/common/linearList.h
         structure/common/Expect.h
         structure/arraylist/VectorList.cpp
-        structure/arraylist/Iterator.h
 
         #linkedlist
         structure/linkedlist/Node.h
-        structure/linkedlist/LinkedList.cpp)
+        structure/linkedlist/LinkedList.cpp structure/arraylist/ArrayListWithIterator.cpp structure/common/ChangeLength1D.h)
 
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})

@@ -6,13 +6,13 @@
 #include <sstream>
 #include <stdexcept>
 #include <vector>
-#include "../common/AbstractList.h"
+#include "../common/linearList.h"
 #include "../common/Expect.h"
 #include "Node.h"
 using namespace std;
 
 template<class T>
-class LinkedList : public AbstractList<T> {
+class LinkedList : public linearList<T> {
 
 public:
 
@@ -34,7 +34,7 @@ public:
 
     T &get(int index) const;
 
-    int indexOf(const T &element);
+    int indexOf(const T &element) const ;
 
     void insert(int index, const T &theElement);
 
@@ -141,7 +141,7 @@ T& LinkedList<T>::get(int index) const {
 }
 
 template <class T>
-int LinkedList<T>::indexOf(const T &element) {
+int LinkedList<T>::indexOf(const T &element) const {
 
     Node<T> * currentNode = head;
     //当前节点的索引
@@ -242,9 +242,9 @@ template <class T>
 ostream& operator<<(ostream& out, const LinkedList<T>& x)
 {x.output(out); return out;}
 
-
+#if 1
 int main(){
-    AbstractList<double> * x = new LinkedList<double>;
+    linearList<double> * x = new LinkedList<double>;
     LinkedList <int> y ,z;
 
     // test size
@@ -327,3 +327,5 @@ int main(){
 
     return 0;
 }
+
+#endif

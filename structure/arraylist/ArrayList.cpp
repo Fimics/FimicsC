@@ -5,13 +5,13 @@
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
-#include "../common/AbstractList.h"
+#include "../common/linearList.h"
 #include "../common/Expect.h"
-#include "Iterator.h"
+#include "../common/ChangeLength1D.h"
 using namespace std;
 
 template<class T>
-class ArrayList : public AbstractList<T> {
+class ArrayList : public linearList<T> {
 
 public:
 
@@ -130,25 +130,6 @@ void ArrayList<T>::erase(int index) {
     element[--listSize].~T();
 }
 
-/**
- * 改变一个数组的长度
- * @tparam T
- * @param a
- * @param oldLength
- * @param newLength
- */
-template<class T>
-void changeLength1D(T *&a, int oldLength, int newLength) {
-    if (newLength < 0) {
-        throw illegalParameterValue("new length must be >=0");
-    }
-
-    T *temp = new T[newLength];
-    int number = min(oldLength, newLength);
-    copy(a, a + number, temp);
-    delete[] a;
-    a = temp;
-}
 
 /**
  * 指定位置插入元素

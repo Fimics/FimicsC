@@ -6,12 +6,12 @@
 #include <sstream>
 #include <stdexcept>
 #include <vector>
-#include "../common/AbstractList.h"
+#include "../common/linearList.h"
 #include "../common/Expect.h"
 using namespace std;
 
 template <class T>
-class VectorList : public AbstractList<T>{
+class VectorList : public linearList<T>{
 
 public:
 
