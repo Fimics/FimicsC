@@ -21,7 +21,7 @@ public:
 
     virtual int indexOf(const T &element) = 0;
 
-    virtual void insert(int index, T &element) = 0;
+    virtual void insert(int index, const T &element) = 0;
 
     virtual void erase(int index) = 0;
 
