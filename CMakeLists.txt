@@ -286,7 +286,8 @@ set(Fimics_C_STRUCTURE
         structure/arraylist/Iterator.h
 
         #linkedlist
-        structure/linkedlist/Node.h structure/linkedlist/LinkedList.cpp)
+        structure/linkedlist/Node.h
+        structure/linkedlist/LinkedList.cpp)
 
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})
