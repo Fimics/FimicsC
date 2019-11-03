@@ -280,13 +280,22 @@ set(Fimics_C_STRUCTURE
         structure/arraylist/ArrayList.cpp
 
         #linearlist
-        structure/common/linearList.h
-        structure/common/Expect.h
+        structure/common/LinearList.h
+        structure/common/MyExceptions.h
         structure/arraylist/VectorList.cpp
+
+        #common
+        structure/common/ChangeLength1D.h
+        structure/common/Make2dArray.cpp
+        structure/common/Make2dArray.h
+        structure/common/Make2dArrayNoCatch.cpp
+        structure/common/Make2dArrayNoCatch.h
 
         #linkedlist
         structure/linkedlist/Node.h
-        structure/linkedlist/LinkedList.cpp structure/arraylist/ArrayListWithIterator.cpp structure/common/ChangeLength1D.h)
+        structure/linkedlist/LinkedList.cpp
+        structure/arraylist/ArrayListWithIterator.cpp
+        structure/arraylist/ExtendedArrayList.cpp structure/linkedlist/LinkedListWithIterator.cpp structure/linkedlist/LinkedListWithIterator.h)
 
 
 add_executable(FimicsCPP ${SOURCE_CPP_FILES})

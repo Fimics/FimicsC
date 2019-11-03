@@ -6,13 +6,13 @@
 #include <sstream>
 #include <stdexcept>
 #include <vector>
-#include "../common/linearList.h"
-#include "../common/Expect.h"
+#include "../common/LinearList.h"
+#include "../common/MyExceptions.h"
 #include "Node.h"
 using namespace std;
 
 template<class T>
-class LinkedList : public linearList<T> {
+class LinkedList : public LinearList<T> {
 
 public:
 
@@ -242,7 +242,7 @@ template <class T>
 ostream& operator<<(ostream& out, const LinkedList<T>& x)
 {x.output(out); return out;}
 
-#if 1
+#if 0
 int main(){
     linearList<double> * x = new LinkedList<double>;
     LinkedList <int> y ,z;

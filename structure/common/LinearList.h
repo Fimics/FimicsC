@@ -8,9 +8,9 @@ using namespace std;
 
 
 template<class T>
-class linearList {
+class LinearList {
 public:
-    virtual ~linearList() {}
+    virtual ~LinearList() {}
 
     virtual bool empty() const = 0;
 

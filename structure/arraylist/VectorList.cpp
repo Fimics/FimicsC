@@ -6,12 +6,12 @@
 #include <sstream>
 #include <stdexcept>
 #include <vector>
-#include "../common/linearList.h"
-#include "../common/Expect.h"
+#include "../common/LinearList.h"
+#include "../common/MyExceptions.h"
 using namespace std;
 
 template <class T>
-class VectorList : public linearList<T>{
+class VectorList : public LinearList<T>{
 
 public:
 

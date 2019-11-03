@@ -5,13 +5,13 @@
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
-#include "../common/linearList.h"
-#include "../common/Expect.h"
+#include "../common/LinearList.h"
+#include "../common/MyExceptions.h"
 #include "../common/ChangeLength1D.h"
 using namespace std;
 
 template<class T>
-class ArrayList : public linearList<T> {
+class ArrayList : public LinearList<T> {
 
 public:
 

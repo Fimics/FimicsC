@@ -1,13 +1,16 @@
 //
-// Created by pengju.li on 2019-11-01.
+// Created by lipengju on 2019-11-02.
 //
 
-#include<iostream>
-#include<sstream>
-#include<string>
-#include<algorithm>
-#include<iterator>
-#include <numeric>
+// extended array implementation of a linear list
+// This is arrayListWithIterator.h with methods to reset
+// and clear linear lists and to set the value at an index added
+
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <algorithm>
+#include <iterator>
 #include "../common/LinearList.h"
 #include "../common/MyExceptions.h"
 #include "../common/ChangeLength1D.h"
@@ -39,8 +42,14 @@ public:
 
     void output(ostream &out) const;
 
-    // additional method
+    // additional methods
     int capacity() const { return arrayLength; }
+
+    void reSet(int);
+
+    void set(int, const T &);
+
+    void clear() { listSize = 0; }
 
     // iterators to start and end of list
     class iterator;
@@ -134,13 +143,29 @@ arrayList<T>::arrayList(const arrayList<T> &theList) {// Copy constructor.
 }
 
 template<class T>
+void arrayList<T>::reSet(int theSize) {// Set list size to theSize and ensure that element array
+    // is large enough for this many elements.
+    if (theSize < 0) {
+        ostringstream s;
+        s << "Requested size = " << theSize << " Must be >= 0";
+        throw illegalParameterValue(s.str());
+    }
+
+    if (theSize > arrayLength) {// need a larger array
+        delete element;
+        element = new T[theSize];
+        arrayLength = listSize;
+    }
+    listSize = theSize;
+}
+
+template<class T>
 void arrayList<T>::checkIndex(int theIndex) const {// Verify that theIndex is between 0 and listSize - 1.
     if (theIndex < 0 || theIndex >= listSize) {
         ostringstream s;
         s << "index = " << theIndex << " size = " << listSize;
         throw illegalIndex(s.str());
     }
-
 }
 
 template<class T>
@@ -148,6 +173,13 @@ T &arrayList<T>::get(int theIndex) const {// Return element whose index is theIn
     // Throw illegalIndex exception if no such element.
     checkIndex(theIndex);
     return element[theIndex];
+}
+
+template<class T>
+void arrayList<T>::set(int theIndex, const T &newValue) {// Set element whose index is theIndex to newValue.
+    // Throw illegalIndex exception if no such element.
+    checkIndex(theIndex);
+    element[theIndex] = newValue;
 }
 
 template<class T>
@@ -213,48 +245,3 @@ ostream &operator<<(ostream &out, const arrayList<T> &x) {
 }
 
 
-#if 0
-
-int main(){
-    // create a linear list
-    arrayList<int> y(2);
-    y.insert(0, 2);
-    y.insert(1, 6);
-    y.insert(0, 1);
-    y.insert(2, 4);
-    y.insert(3, 5);
-    y.insert(2, 3);
-    cout << "Inserted 6 integers, list y should be 1 2 3 4 5 6" << endl;
-    cout << "Size of y = " << y.size() << endl;
-    cout << "Capacity of y = " << y.capacity() << endl;
-
-    // test iterator
-    cout << "Ouput using forward iterators pre and post ++" << endl;
-    for (arrayList<int>::iterator i = y.begin();
-         i != y.end(); i++)
-        cout << *i << "  ";
-    cout << endl;
-    for (arrayList<int>::iterator i = y.begin();
-         i != y.end(); ++i)
-        cout << *i << "  ";
-    cout << endl;
-
-    cout << "Ouput using backward iterators pre and post --" << endl;
-    for (arrayList<int>::iterator i = y.end();
-         i != y.begin(); cout << *(--i) << "  ");
-    cout << endl;
-    for (arrayList<int>::iterator i = y.end();
-         i != y.begin();)
-    {i--; cout << *i << "  "; *i += 1;}
-    cout << endl;
-    cout << "Incremented by 1 list is " << y << endl;
-
-    // try out some STL algorithms
-    reverse(y.begin(), y.end());
-    cout << "The reversed list is " << y << endl;
-    int sum = accumulate(y.begin(), y.end(), 0);
-    cout << "The sum of the elements is " << sum << endl;
-    return 0;
-}
-
-#endif

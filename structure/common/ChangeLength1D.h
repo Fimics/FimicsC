@@ -5,7 +5,7 @@
 #ifndef FIMICSCSTRUCTURE_CHANGELENGTH1D_H
 #define FIMICSCSTRUCTURE_CHANGELENGTH1D_H
 
-#include "Expect.h"
+#include "MyExceptions.h"
 
 /**
  * 改变一个数组的长度
