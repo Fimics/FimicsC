@@ -1,17 +1,21 @@
-// matrix addition
+// multipy square matrices
 
 #include <iostream>
-#include "make2dArrayNoCatch.h"
+#include "../make2dArrayNoCatch.h"
 
 using namespace std;
 
 template<class T>
-void matrixAdd( T **a, T **b, T **c, int numberOfRows,
-                                     int numberOfColumns)
-{// Add matrices a and b to obtain matrix c.
-   for (int i = 0; i < numberOfRows; i++)
-      for (int j = 0;  j < numberOfColumns; j++)
-         c[i][j] = a[i][j] + b[i][j];
+void squareMatrixMultiply(T **a, T **b, T **c, int n)
+{// Multiply the n x n matrices a and b to get c.
+   for (int i = 0; i < n; i++)
+      for (int j = 0; j < n; j++)
+      {
+         T sum = 0;
+         for (int k = 0; k < n; k++)
+            sum += a[i][k] * b[k][j];
+         c[i][j] = sum;
+      }
 }
 
 int main()
@@ -32,9 +36,9 @@ int main()
    cout << b[0][0] << ' ' << b[0][1] << endl;
    cout << b[1][0] << ' ' << b[1][1] << endl;
 
-   matrixAdd(a,b,c,2,2);
+   squareMatrixMultiply(a,b,c,2);
 
-   cout << "Their sum is" << endl;
+   cout << "Their product is" << endl;
    cout << c[0][0] << ' ' << c[0][1] << endl;
    cout << c[1][0] << ' ' << c[1][1] << endl;
 

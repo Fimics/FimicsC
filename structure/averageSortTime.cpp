@@ -3,10 +3,10 @@
 #include <iostream>
 #include <time.h>
 #include <math.h>
-#include "insertionSort.h"
+#include "2nd_performance_analysis/insertionSort.h"
 #include "heapSort.h"
 #include "mergeSort.h"
-#include "quickSort.h"
+#include "2nd_performance_analysis/quickSort.h"
 
 using namespace std;
 

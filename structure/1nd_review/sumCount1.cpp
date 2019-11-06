@@ -1,20 +1,26 @@
-// simplified step count of sum of n numbers
+// step count for sum of n numbers
 
 #include <iostream>
 #include <algorithm> // has copy
 
 using namespace std;
 
-
-int stepCount = 0;
+static int stepCount = 0;
 
 template<class T>
 T sum(T a[], int n)
 {// Return sum of numbers a[0:n - 1].
+   T theSum = 0;
+   stepCount++;    // for theSum = 0
    for (int i = 0; i < n; i++)
-      stepCount += 2;
-   stepCount += 3; 
-   return 0;
+   {
+      stepCount++; // for the for statement
+      theSum += a[i];
+      stepCount++; // for assignment
+   }
+   stepCount++;   // for last execution of for statement
+   stepCount++;   // for return
+   return theSum;
 }
 
 int main()

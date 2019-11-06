@@ -275,6 +275,55 @@ set(SOURCE_SYSTEM_FILES
         )
 
 set(Fimics_C_STRUCTURE
+
+        #1nd_review
+#        structure/1nd_review/abcConstRef.cpp
+#        structure/1nd_review/abcException.cpp
+#        structure/1nd_review/abcExceptionChar.cpp
+#        structure/1nd_review/abcFloat.cpp
+#        structure/1nd_review/abcGeneral.cpp
+#        structure/1nd_review/abcInt.cpp
+#        structure/1nd_review/abcRef.cpp
+#        structure/1nd_review/abcTemplate.cpp
+#        structure/1nd_review/factorial.cpp
+#        structure/1nd_review/rsum.cpp
+#        structure/1nd_review/rSumCount.cpp
+#        structure/1nd_review/sum.cpp
+#        structure/1nd_review/sumCount1.cpp
+#        structure/1nd_review/sumCount2.cpp
+#        structure/1nd_review/sumSTL.cpp
+
+        #2nd_performance_analysis
+#        structure/2nd_performance_analysis/bubbleSort.cpp
+#        structure/2nd_performance_analysis/horner.cpp
+#        structure/2nd_performance_analysis/inef.cpp
+#        structure/2nd_performance_analysis/insert.cpp
+#        structure/2nd_performance_analysis/insertionSort.h
+#        structure/2nd_performance_analysis/insertionSort1.cpp
+#        structure/2nd_performance_analysis/insertionSort2.cpp
+#        structure/2nd_performance_analysis/matrixAdd.cpp
+#        structure/2nd_performance_analysis/matrixMultiply1.cpp
+#        structure/2nd_performance_analysis/matrixMultiply2.cpp
+#        structure/2nd_performance_analysis/matrixMultiply3.cpp
+#        structure/2nd_performance_analysis/matrixTerm.h
+#        structure/2nd_performance_analysis/matrixTranspose.cpp
+#        structure/2nd_performance_analysis/matrixWithTranspose.cpp
+#        structure/2nd_performance_analysis/matrixWithTranspose.h
+#        structure/2nd_performance_analysis/minmax1.cpp
+#        structure/2nd_performance_analysis/minmax2.cpp
+#        structure/2nd_performance_analysis/minMax3.cpp
+#        structure/2nd_performance_analysis/polyEval.cpp
+#        structure/2nd_performance_analysis/quickSort.cpp
+#        structure/2nd_performance_analysis/quickSort.h
+#        structure/2nd_performance_analysis/rank.cpp
+#        structure/2nd_performance_analysis/rankSort1.cpp
+#        structure/2nd_performance_analysis/rankSort2.cpp
+#        structure/2nd_performance_analysis/rSequentialSearch.cpp
+#        structure/2nd_performance_analysis/selectionSort.cpp
+#        structure/2nd_performance_analysis/sequentialSearch1.cpp
+#        structure/2nd_performance_analysis/sequentialSearch2.cpp
+
+
        )
 
 

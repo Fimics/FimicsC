@@ -1,7 +1,7 @@
 // multiply compatible matrices
 
 #include <iostream>
-#include "make2dArrayNoCatch.h"
+#include "../make2dArrayNoCatch.h"
 
 using namespace std;
 

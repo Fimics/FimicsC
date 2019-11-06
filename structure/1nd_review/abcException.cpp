@@ -3,11 +3,11 @@
 // in case one of the parameters is <= 0
 
 #include<iostream>
-#include "myExceptions.h"
+#include "../myExceptions.h"
 
 using namespace std;
 
-int abc(int a, int b, int c)
+int abcE(int a, int b, int c)
 {
    if (a <= 0 || b <= 0 || c <= 0)
        throw illegalParameterValue ("All parameters should be > 0");

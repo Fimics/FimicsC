@@ -3,7 +3,7 @@
 #ifndef quickSort_
 #define quickSort_
 
-#include "indexOfMax.h"
+#include "../indexOfMax.h"
 
 using namespace std;
 

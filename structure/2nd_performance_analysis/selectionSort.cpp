@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <algorithm> // has copy
-#include "indexOfMax.h"
+#include "../indexOfMax.h"
 
 using namespace std;
 

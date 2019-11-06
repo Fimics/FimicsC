@@ -4,7 +4,7 @@
 #define sparseMatrix_
 
 #include <iostream>
-#include "matrixTerm.h"
+#include "2nd_performance_analysis/matrixTerm.h"
 #include "extendedArrayList.h"
 #include "myExceptions.h"
 

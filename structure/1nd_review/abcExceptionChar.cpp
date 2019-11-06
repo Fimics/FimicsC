@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int abc(int a, int b, int c)
+int abcChar(int a, int b, int c)
 {
    if (a <= 0 || b <= 0 || c <= 0)
           throw "All parameters should be > 0";
