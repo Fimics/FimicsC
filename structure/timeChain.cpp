@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <time.h>
-#include "chain.h"
+#include "6nd_linkedlist/chain.h"
 
 using namespace std;
 

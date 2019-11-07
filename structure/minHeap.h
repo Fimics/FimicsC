@@ -7,7 +7,7 @@
 
 #include "minPriorityQueue.h"
 #include "myExceptions.h"
-#include "changeLength1D.h"
+#include "5nd_arraylist/changeLength1D.h"
 #include <sstream>
 #include <algorithm>
 

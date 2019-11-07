@@ -1,6 +1,6 @@
 // test the class chain
 #include<iostream>
-#include "linearList.h"
+#include "../5nd_arraylist/linearList.h"
 #include "chain.h"
 
 using namespace std;

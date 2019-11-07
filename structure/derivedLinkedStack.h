@@ -5,7 +5,7 @@
 #ifndef derivedLinkedStack_
 #define derivedLinkedStack_
 
-#include "chain.h"
+#include "6nd_linkedlist/chain.h"
 #include "stack.h"
 #include "myExceptions.h"
 

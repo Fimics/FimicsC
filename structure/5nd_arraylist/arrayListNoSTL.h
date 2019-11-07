@@ -1,29 +1,28 @@
 // array implementation of a linear list
 // derives from abstract class linearList just to make sure
 // all methods of the ADT are implemented
-// USES STL ALGORITHMS TO SIMPLIFY CODE
+// code does not use STL algorithms
 
-#ifndef arrayList_
-#define arrayList_
+#ifndef arrayListNoSTL_
+#define arrayListNoSTL_
 
 #include<iostream>
 #include<sstream>
 #include<string>
-#include<algorithm>
 #include "linearList.h"
-#include "myExceptions.h"
+#include "../myExceptions.h"
 #include "changeLength1D.h"
 
 using namespace std;
 
 template<class T>
-class arrayList : public linearList<T> 
+class arrayListNoSTL : public linearList<T> 
 {
    public:
       // constructor, copy constructor and destructor
-      arrayList(int initialCapacity = 10);
-      arrayList(const arrayList<T>&);
-      ~arrayList() {delete [] element;}
+      arrayListNoSTL(int initialCapacity = 10);
+      arrayListNoSTL(const arrayListNoSTL<T>&);
+      ~arrayListNoSTL() {delete [] element;}
 
       // ADT methods
       bool empty() const {return listSize == 0;}
@@ -46,7 +45,7 @@ class arrayList : public linearList<T>
 };
 
 template<class T>
-arrayList<T>::arrayList(int initialCapacity)
+arrayListNoSTL<T>::arrayListNoSTL(int initialCapacity)
 {// Constructor.
    if (initialCapacity < 1)
    {ostringstream s;
@@ -59,16 +58,19 @@ arrayList<T>::arrayList(int initialCapacity)
 }
 
 template<class T>
-arrayList<T>::arrayList(const arrayList<T>& theList)
+arrayListNoSTL<T>::arrayListNoSTL(const arrayListNoSTL<T>& theList)
 {// Copy constructor.
    arrayLength = theList.arrayLength;
    listSize = theList.listSize;
    element = new T[arrayLength];
-   copy(theList.element, theList.element + listSize, element);
+
+   // copy the list elements
+   for (int i = 0; i < listSize; i++)
+      element[i] = theList.element[i];
 }
 
 template<class T>
-void arrayList<T>::checkIndex(int theIndex) const
+void arrayListNoSTL<T>::checkIndex(int theIndex) const
 {// Verify that theIndex is between 0 and listSize - 1.
    if (theIndex < 0 || theIndex >= listSize)
    {ostringstream s;
@@ -79,7 +81,7 @@ void arrayList<T>::checkIndex(int theIndex) const
 }
 
 template<class T>
-T& arrayList<T>::get(int theIndex) const
+T& arrayListNoSTL<T>::get(int theIndex) const
 {// Return element whose index is theIndex.
  // Throw illegalIndex exception if no such element.
    checkIndex(theIndex);
@@ -87,36 +89,33 @@ T& arrayList<T>::get(int theIndex) const
 }
 
 template<class T>
-int arrayList<T>::indexOf(const T& theElement) const
+int arrayListNoSTL<T>::indexOf(const T& theElement) const
 {// Return index of first occurrence of theElement.
  // Return -1 if theElement not in list.
 
    // search for theElement
-   int theIndex = (int) (find(element, element + listSize, theElement)
-                         - element);
+   for (int i = 0; i < listSize; i++)
+      if (element[i] == theElement) return i;
 
-   // check if theElement was found
-   if (theIndex == listSize)
-     // not found
-     return -1;
-   else return theIndex;
+   // theElement not found
+   return -1;
  }
 
 template<class T>
-void arrayList<T>::erase(int theIndex)
+void arrayListNoSTL<T>::erase(int theIndex)
 {// Delete the element whose index is theIndex.
  // Throw illegalIndex exception if no such element.
-   checkIndex(theIndex);
+    checkIndex(theIndex);
 
-   // valid index, shift elements with higher index
-   copy(element + theIndex + 1, element + listSize,
-                                element + theIndex);
+    // valid index, shift elements with higher index
+    for (int i = theIndex + 1; i < listSize; i++)
+       element[i-1] = element[i];
 
-   element[--listSize].~T(); // invoke destructor
+    element[--listSize].~T();  // destructor for T
 }
 
 template<class T>
-void arrayList<T>::insert(int theIndex, const T& theElement)
+void arrayListNoSTL<T>::insert(int theIndex, const T& theElement)
 {// Insert theElement so that its index is theIndex.
    if (theIndex < 0 || theIndex > listSize)
    {// invalid index
@@ -133,8 +132,8 @@ void arrayList<T>::insert(int theIndex, const T& theElement)
       }
 
    // shift elements right one position
-   copy_backward(element + theIndex, element + listSize,
-                 element + listSize + 1);
+   for (int i = listSize-1; i >= theIndex; i--)
+      element[i + 1] = element[i];
 
    element[theIndex] = theElement;
 
@@ -142,14 +141,15 @@ void arrayList<T>::insert(int theIndex, const T& theElement)
 }
 
 template<class T>
-void arrayList<T>::output(ostream& out) const
+void arrayListNoSTL<T>::output(ostream& out) const
 {// Put the list into the stream out.
-   copy(element, element + listSize, ostream_iterator<T>(cout, "  "));
+   for (int i = 0; i < listSize; i++)
+      out << element[i] << "  ";
 }
 
 // overload <<
 template <class T>
-ostream& operator<<(ostream& out, const arrayList<T>& x)
+ostream& operator<<(ostream& out, const arrayListNoSTL<T>& x)
    {x.output(out); return out;}
 
 #endif

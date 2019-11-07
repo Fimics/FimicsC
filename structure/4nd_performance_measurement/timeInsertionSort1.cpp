@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <time.h>   // has clock stuff
-#include "2nd_performance_analysis/insertionSort.h"
+#include "../2nd_performance_analysis/insertionSort.h"
 
 using namespace std;
 

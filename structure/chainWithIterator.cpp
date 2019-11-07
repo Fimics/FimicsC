@@ -1,7 +1,7 @@
 // test the iterator for chain
 #include<iostream>
 #include<numeric>     // has accumulate
-#include "linearList.h"
+#include "5nd_arraylist/linearList.h"
 #include "chainWithIterator.h"
 
 using namespace std;

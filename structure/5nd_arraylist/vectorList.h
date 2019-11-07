@@ -14,7 +14,7 @@
 #include<algorithm>
 #include<iterator>
 #include "linearList.h"
-#include "myExceptions.h"
+#include "../myExceptions.h"
 
 using namespace std;
 

@@ -1,8 +1,9 @@
-// determine the overhead time
+// worst-case insertion sort times
+// correct way
 
 #include <iostream>
 #include <time.h>
-#include "2nd_performance_analysis/insertionSort.h"
+#include "../2nd_performance_analysis/insertionSort.h"
 
 using namespace std;
 
@@ -29,7 +30,7 @@ int main()
          for (int i = 0; i < n; i++)
             a[i] = n - i;
 
-         // insertionSort(a, n);
+         insertionSort(a, n);
       } while (clock( ) - startTime < 1000);
            // repeat until enough time has elapsed
 

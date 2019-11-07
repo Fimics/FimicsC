@@ -5,7 +5,7 @@
 #define linkedStack_
 
 #include "stack.h"
-#include "chainNode.h"
+#include "6nd_linkedlist/chainNode.h"
 #include "myExceptions.h"
 #include <sstream>
 

@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <time.h>
-#include "arrayList.h"
+#include "5nd_arraylist/arrayList.h"
 //#include "vectorList.h"
 
 using namespace std;

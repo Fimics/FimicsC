@@ -6,7 +6,7 @@
 #define linkedQueue_
 
 #include "queue.h"
-#include "chainNode.h"
+#include "6nd_linkedlist/chainNode.h"
 #include "myExceptions.h"
 #include <sstream>
 

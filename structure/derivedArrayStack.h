@@ -5,7 +5,7 @@
 #ifndef derivedArrayStack_
 #define derivedArrayStack_
 
-#include "arrayList.h"
+#include "5nd_arraylist/arrayList.h"
 #include "stack.h"
 #include "myExceptions.h"
 

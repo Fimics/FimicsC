@@ -8,9 +8,9 @@
 #include<iostream>
 #include<sstream>
 #include<string>
-#include "linearList.h"
+#include "../5nd_arraylist/linearList.h"
 #include "chainNode.h"
-#include "myExceptions.h"
+#include "../myExceptions.h"
 
 using namespace std;
 

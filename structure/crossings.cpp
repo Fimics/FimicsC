@@ -2,7 +2,7 @@
 // crossing distribution using an array linear list
 
 #include <iostream>
-#include "arrayList.h"
+#include "5nd_arraylist/arrayList.h"
 
 using namespace std;
 
