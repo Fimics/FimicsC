@@ -3,7 +3,7 @@
 #ifndef matrixElements_
 #define matrixElements_
 
-#include "extendedChain.h"
+#include "6nd_linkedlist/extendedChain.h"
 
 using namespace std;
 

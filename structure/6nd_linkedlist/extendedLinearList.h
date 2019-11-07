@@ -5,7 +5,7 @@
 #ifndef extendedLinearList_
 #define extendedLinearList_
 #include <iostream>
-#include "5nd_arraylist/linearList.h"
+#include "../5nd_arraylist/linearList.h"
 
 using namespace std;
 

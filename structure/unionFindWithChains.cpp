@@ -2,7 +2,7 @@
 // integer pointers used
 
 #include <iostream>
-#include "equivNode.h"
+#include "6nd_linkedlist/equivNode.h"
 
 using namespace std;
 

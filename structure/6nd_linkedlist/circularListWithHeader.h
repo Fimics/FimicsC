@@ -6,8 +6,8 @@
 #include<iostream>
 #include<sstream>
 #include<string>
-#include "6nd_linkedlist/chainNode.h"
-#include "1nd_review/myExceptions.h"
+#include "chainNode.h"
+#include "../1nd_review/myExceptions.h"
 
 using namespace std;
 

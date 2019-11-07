@@ -285,16 +285,37 @@ set(Fimics_C_STRUCTURE
 #        structure/1nd_review/abcInt.cpp
 #        structure/1nd_review/abcRef.cpp
 #        structure/1nd_review/abcTemplate.cpp
+#        structure/1nd_review/currency.cpp
+#        structure/1nd_review/currency.h
+#        structure/1nd_review/currencyFriend.cpp
+#        structure/1nd_review/currencyFriend.h
+#        structure/1nd_review/currencyNew.cpp
+#        structure/1nd_review/currencyNew.h
+#        structure/1nd_review/currencyOverload.cpp
+#        structure/1nd_review/currencyOverload.h
+#        structure/1nd_review/delete2dArray.cpp
+#        structure/1nd_review/delete2dArray.h
 #        structure/1nd_review/factorial.cpp
+#        structure/1nd_review/indexOfMax.cpp
+#        structure/1nd_review/make2dArray.cpp
+#        structure/1nd_review/make2dArray.h
+#        structure/1nd_review/make2dArrayNoCatch.cpp
+#        structure/1nd_review/make2dArrayNoCatch.h
+#        structure/1nd_review/myExceptions.h
+#        structure/1nd_review/noSwap.cpp
+#        structure/1nd_review/permutations.cpp
+#        structure/1nd_review/permutationsSTL.cpp
+#        structure/1nd_review/productSTL.cpp
+#        structure/1nd_review/quadraticRoots.cpp
 #        structure/1nd_review/rsum.cpp
-#        structure/1nd_review/rSumCount.cpp
 #        structure/1nd_review/sum.cpp
-#        structure/1nd_review/sumCount1.cpp
-#        structure/1nd_review/sumCount2.cpp
 #        structure/1nd_review/sumSTL.cpp
 
         #2nd_performance_analysis
 #        structure/2nd_performance_analysis/bubbleSort.cpp
+#        structure/2nd_performance_analysis/d.cpp
+#        structure/2nd_performance_analysis/earlyBubbleSort.cpp
+#        structure/2nd_performance_analysis/earlySelectionSort.cpp
 #        structure/2nd_performance_analysis/horner.cpp
 #        structure/2nd_performance_analysis/inef.cpp
 #        structure/2nd_performance_analysis/insert.cpp
@@ -319,9 +340,12 @@ set(Fimics_C_STRUCTURE
 #        structure/2nd_performance_analysis/rankSort1.cpp
 #        structure/2nd_performance_analysis/rankSort2.cpp
 #        structure/2nd_performance_analysis/rSequentialSearch.cpp
+#        structure/2nd_performance_analysis/rSumCount.cpp
 #        structure/2nd_performance_analysis/selectionSort.cpp
 #        structure/2nd_performance_analysis/sequentialSearch1.cpp
 #        structure/2nd_performance_analysis/sequentialSearch2.cpp
+#        structure/2nd_performance_analysis/sumCount1.cpp
+#        structure/2nd_performance_analysis/sumCount2.cpp
 
 
         #3nd_asymptotic_analysis
@@ -351,6 +375,15 @@ set(Fimics_C_STRUCTURE
 #        structure/6nd_linkedlist/chain.cpp
         structure/6nd_linkedlist/chainWithIterator.h
 #        structure/6nd_linkedlist/chainWithIterator.cpp
+        structure/6nd_linkedlist/extendedChain.h
+        structure/6nd_linkedlist/extendedLinearList.h
+#        structure/6nd_linkedlist/extendedChain.cpp
+#        structure/6nd_linkedlist/circularListWithHeader.cpp
+        structure/6nd_linkedlist/circularListWithHeader.h
+#        structure/6nd_linkedlist/binsort1.cpp
+
+        #7nd_array_and_matrix
+        structure/7nd_array_and_matrix/irregularArray.cpp
 
        )
 

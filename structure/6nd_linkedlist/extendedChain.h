@@ -10,8 +10,8 @@
 #include <sstream>
 #include <string>
 #include "extendedLinearList.h"
-#include "6nd_linkedlist/chainWithIterator.h"
-#include "1nd_review/myExceptions.h"
+#include "chainWithIterator.h"
+#include "../1nd_review/myExceptions.h"
 
 using namespace std;
 
@@ -53,9 +53,21 @@ class extendedChain : public extendedLinearList<T>, public chain<T>
          {firstNode = NULL; listSize = 0;}
       
    protected:
+      void checkIndex(int theIndex) const;
       chainNode<T>* lastNode;  // pointer to last node in chain
+      chainNode<T>* firstNode;
+      int listSize = 0;
 };
 
+template<class T>
+void extendedChain<T>::checkIndex(int theIndex) const
+{// Verify that theIndex is between 0 and listSize - 1.
+    if (theIndex < 0 || theIndex >= listSize)
+    {ostringstream s;
+        s << "index = " << theIndex << " size = " << listSize;
+        throw illegalIndex(s.str());
+    }
+}
 
 template<class T>
 void extendedChain<T>::erase(int theIndex)

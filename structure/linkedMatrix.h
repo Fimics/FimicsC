@@ -4,7 +4,7 @@
 #define linkedMatrix_
 
 #include <iostream>
-#include "extendedChain.h"
+#include "6nd_linkedlist/extendedChain.h"
 #include "matrixElements.h"
 
 using namespace std;
