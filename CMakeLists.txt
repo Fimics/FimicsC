@@ -383,7 +383,9 @@ set(Fimics_C_STRUCTURE
 #        structure/6nd_linkedlist/binsort1.cpp
 
         #7nd_array_and_matrix
-        structure/7nd_array_and_matrix/irregularArray.cpp
+#        structure/7nd_array_and_matrix/irregularArray.cpp
+        structure/7nd_array_and_matrix/matrix.cpp
+        structure/7nd_array_and_matrix/matrix.h
 
        )
 

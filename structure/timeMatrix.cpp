@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include<time.h>
-#include "matrix.h"
+#include "7nd_array_and_matrix/matrix.h"
 
 using namespace std;
 
