@@ -3,7 +3,7 @@
 #ifndef eventList_
 #define eventList_
 
-#include "myExceptions.h"
+#include "1nd_review/myExceptions.h"
 
 using namespace std;
 

@@ -1,6 +1,6 @@
 // find location of maximum of n numbers
 
-#include "myExceptions.h"
+#include "1nd_review/myExceptions.h"
 
 using namespace std;
 

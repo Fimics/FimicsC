@@ -3,7 +3,7 @@
 #define lowerTriangularMatrix_
 
 
-#include "myExceptions.h"
+#include "1nd_review/myExceptions.h"
 
 using namespace std;
 

@@ -1,7 +1,7 @@
 // in-place matrix transpose
 
 #include <iostream>
-#include "../make2dArrayNoCatch.h"
+#include "../1nd_review/make2dArrayNoCatch.h"
 
 using namespace std;
 

@@ -10,7 +10,7 @@
 #include "maxPriorityQueue.h"
 #include "linkedBinaryTree.h"
 #include "binaryTreeNode.h"
-#include "myExceptions.h"
+#include "1nd_review/myExceptions.h"
 #include <sstream>
 
 using namespace std;

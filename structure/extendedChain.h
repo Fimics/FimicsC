@@ -10,8 +10,8 @@
 #include <sstream>
 #include <string>
 #include "extendedLinearList.h"
-#include "chainWithIterator.h"
-#include "myExceptions.h"
+#include "6nd_linkedlist/chainWithIterator.h"
+#include "1nd_review/myExceptions.h"
 
 using namespace std;
 

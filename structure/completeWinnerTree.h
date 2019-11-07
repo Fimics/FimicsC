@@ -6,7 +6,7 @@
 
 #include <iostream>
 #include "winnerTree.h"
-#include "myExceptions.h"
+#include "1nd_review/myExceptions.h"
 
 template<class T>
 class completeWinnerTree : public winnerTree<T>

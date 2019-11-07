@@ -6,7 +6,7 @@
 
 #include "stack.h"
 #include "6nd_linkedlist/chainNode.h"
-#include "myExceptions.h"
+#include "1nd_review/myExceptions.h"
 #include <sstream>
 
 using namespace std;

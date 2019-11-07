@@ -6,7 +6,7 @@
 #define maxHeap_
 
 #include "maxPriorityQueue.h"
-#include "myExceptions.h"
+#include "1nd_review/myExceptions.h"
 #include "5nd_arraylist/changeLength1D.h"
 #include <sstream>
 #include <algorithm>

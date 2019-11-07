@@ -1,7 +1,7 @@
 // simple unite/find using 1D array
 
 #include <iostream>
-#include "myExceptions.h"
+#include "1nd_review/myExceptions.h"
 
 using namespace std;
 

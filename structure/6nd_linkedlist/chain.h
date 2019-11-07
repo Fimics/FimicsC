@@ -10,7 +10,7 @@
 #include<string>
 #include "../5nd_arraylist/linearList.h"
 #include "chainNode.h"
-#include "../myExceptions.h"
+#include "../1nd_review/myExceptions.h"
 
 using namespace std;
 

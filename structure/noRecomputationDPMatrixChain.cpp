@@ -4,7 +4,7 @@
 // computes each c(i,j) at most once 
 
 #include <iostream>
-#include "make2dArray.h"
+#include "1nd_review/make2dArray.h"
 
 using namespace std;
 

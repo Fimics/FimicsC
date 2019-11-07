@@ -6,7 +6,7 @@
 #include <iostream>
 #include "2nd_performance_analysis/matrixTerm.h"
 #include "extendedArrayList.h"
-#include "myExceptions.h"
+#include "1nd_review/myExceptions.h"
 
 template<class T>
 class sparseMatrix

@@ -3,7 +3,7 @@
 // in case one of the parameters is <= 0
 
 #include<iostream>
-#include "../myExceptions.h"
+#include "myExceptions.h"
 
 using namespace std;
 

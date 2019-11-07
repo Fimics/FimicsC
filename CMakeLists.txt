@@ -327,14 +327,14 @@ set(Fimics_C_STRUCTURE
         #3nd_asymptotic_analysis
 #        structure/3nd_asymptotic_analysis/binarySearch.cpp
 
-        #4nd_performance_measurement
+        #4nd_performance_measurement------------------------------------------------
 #        structure/4nd_performance_measurement/timeInsertionSort1.cpp
 #        structure/4nd_performance_measurement/timeInsertionSort2.cpp
 #        structure/4nd_performance_measurement/timeInsertionSort3.cpp
 #        structure/4nd_performance_measurement/timeInsertionSort4.cpp
 
 
-        #5nd_arraylist
+        #5nd_arraylist----------------------------------------------------------------
         structure/5nd_arraylist/linearList.h
         structure/5nd_arraylist/arrayList.h
 #        structure/5nd_arraylist/arrayList.cpp
@@ -348,7 +348,9 @@ set(Fimics_C_STRUCTURE
         #6nd_linkedlist
         structure/6nd_linkedlist/chain.h
         structure/6nd_linkedlist/chainNode.h
-        structure/6nd_linkedlist/chain.cpp
+#        structure/6nd_linkedlist/chain.cpp
+        structure/6nd_linkedlist/chainWithIterator.h
+#        structure/6nd_linkedlist/chainWithIterator.cpp
 
        )
 

@@ -2,8 +2,8 @@
 
 #include <iostream>
 #include "studentRecord1.h"
-#include "chainWithIterator.h"
-#include "myExceptions.h"
+#include "6nd_linkedlist/chainWithIterator.h"
+#include "1nd_review/myExceptions.h"
 
 void binSort(chain<studentRecord>& theChain, int range)
 {// Sort by score.

@@ -11,7 +11,7 @@
 #include<string>
 #include<algorithm>
 #include "linearList.h"
-#include "../myExceptions.h"
+#include "../1nd_review/myExceptions.h"
 #include "changeLength1D.h"
 
 using namespace std;

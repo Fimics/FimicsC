@@ -5,7 +5,7 @@
 #ifndef graphChain_
 #define graphChain_
 
-#include "chainWithIterator.h"
+#include "6nd_linkedlist/chainWithIterator.h"
 #include "6nd_linkedlist/chainNode.h"
 
 using namespace std;

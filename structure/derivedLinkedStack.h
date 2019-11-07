@@ -7,7 +7,7 @@
 
 #include "6nd_linkedlist/chain.h"
 #include "stack.h"
-#include "myExceptions.h"
+#include "1nd_review/myExceptions.h"
 
 using namespace std;
 

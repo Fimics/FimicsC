@@ -2,7 +2,7 @@
 // the matrix multiplication chains problem
 
 #include <iostream>
-#include "make2dArray.h"
+#include "1nd_review/make2dArray.h"
 
 using namespace std;
 

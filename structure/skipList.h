@@ -11,7 +11,7 @@
 #include <string>
 #include "dictionary.h"
 #include "skipNode.h"
-#include "myExceptions.h"
+#include "1nd_review/myExceptions.h"
 
 using namespace std;
 

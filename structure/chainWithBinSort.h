@@ -8,7 +8,7 @@
 #include<string>
 #include "5nd_arraylist/linearList.h"
 #include "6nd_linkedlist/chainNode.h"
-#include "myExceptions.h"
+#include "1nd_review/myExceptions.h"
 #include "studentRecord2.h"
 
 using namespace std;

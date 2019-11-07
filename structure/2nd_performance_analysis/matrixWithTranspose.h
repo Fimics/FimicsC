@@ -2,7 +2,7 @@
 #ifndef matrix_
 #define matrix_
 
-#include "../myExceptions.h"
+#include "../1nd_review/myExceptions.h"
 
 using namespace std;
 template<class T>
