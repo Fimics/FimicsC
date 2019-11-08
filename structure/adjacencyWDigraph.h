@@ -13,7 +13,7 @@
 #include "1nd_review/make2dArrayNoCatch.h"
 #include "1nd_review/delete2dArray.h"
 #include "1nd_review/myExceptions.h"
-#include "arrayQueue.h"
+#include "9nd_queue/arrayQueue.h"
 #include "graphChain.h"
 #include "minHeap.h"
 

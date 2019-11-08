@@ -7,7 +7,7 @@
 
 #include "edge.h"
 #include "vertexIterator.h"
-#include "arrayQueue.h"
+#include "9nd_queue/arrayQueue.h"
 #include "8nd_stack/arrayStack.h"
 #include "1nd_review/myExceptions.h"
 #include "binNode.h"

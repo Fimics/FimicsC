@@ -5,7 +5,7 @@
 #ifndef linkedQueue_
 #define linkedQueue_
 
-#include "queue.h"
+#include "9nd_queue/queue.h"
 #include "6nd_linkedlist/chainNode.h"
 #include "1nd_review/myExceptions.h"
 #include <sstream>

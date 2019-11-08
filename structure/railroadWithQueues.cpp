@@ -2,7 +2,7 @@
 // railroad car rearrangement using queues
 
 #include <iostream>
-#include "arrayQueue.h"
+#include "9nd_queue/arrayQueue.h"
 
 using namespace std;
 

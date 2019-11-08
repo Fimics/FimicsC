@@ -1,7 +1,7 @@
 // binary tree traversal methods
 
 #include <iostream>
-#include "arrayQueue.h"
+#include "9nd_queue/arrayQueue.h"
 #include "binaryTreeNode.h"
 #include "1nd_review/myExceptions.h"
 

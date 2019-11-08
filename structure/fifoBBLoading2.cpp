@@ -2,7 +2,7 @@
 // code finds weight of best loading for first ship only
 
 #include <iostream>
-#include "arrayQueue.h"
+#include "9nd_queue/arrayQueue.h"
 
 using namespace std;
 

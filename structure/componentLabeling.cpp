@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include "1nd_review/make2dArray.h"
-#include "arrayQueue.h"
+#include "9nd_queue/arrayQueue.h"
 #include "position.h"
 
 using namespace std;
