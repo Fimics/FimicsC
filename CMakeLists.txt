@@ -384,9 +384,26 @@ set(Fimics_C_STRUCTURE
 
         #7nd_array_and_matrix
 #        structure/7nd_array_and_matrix/irregularArray.cpp
-        structure/7nd_array_and_matrix/matrix.cpp
+#        structure/7nd_array_and_matrix/matrix.cpp
         structure/7nd_array_and_matrix/matrix.h
+        structure/7nd_array_and_matrix/diagonalMatrix.h
+#        structure/7nd_array_and_matrix/diagonalMatrix.cpp
 
+        #8nd_stack
+        structure/8nd_stack/stack.h
+        structure/8nd_stack/derivedArrayStack.h
+#        structure/8nd_stack/derivedArrayStack.cpp
+        structure/8nd_stack/arrayStack.h
+#        structure/8nd_stack/arrayStack.cpp
+        structure/8nd_stack/derivedArrayStackWithCatch.h
+#        structure/8nd_stack/derivedArrayStackWithCatch.cpp
+        structure/8nd_stack/derivedLinkedStack.h
+#        structure/8nd_stack/derivedLinkedStack.cpp
+        structure/8nd_stack/linkedStack.h
+#        structure/8nd_stack/linkedStack.cpp
+#        structure/8nd_stack/parenthesisMatching.cpp
+#        structure/8nd_stack/hanoiRecursive.cpp
+#        structure/8nd_stack/hanoiUsingStacks.cpp
        )
 
 

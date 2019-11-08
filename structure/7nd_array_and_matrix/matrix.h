@@ -42,7 +42,7 @@ matrix<T>::matrix(int theRows, int theColumns)
    // create the matrix
    this->theRows = theRows;
    this->theColumns = theColumns;
-   element = new T [theRows * theColumns];
+   element = new T [theRows * theColumns];//3x5
 }
 
 template<class T>

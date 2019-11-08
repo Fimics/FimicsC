@@ -3,7 +3,7 @@
 #include <iostream>
 #include<time.h>
 //#include "sparseMatrix.h"
-#include "linkedMatrix.h"
+#include "7nd_array_and_matrix/linkedMatrix.h"
 
 using namespace std;
 

@@ -1,14 +1,14 @@
-// test derivedArrayStackWithCatch
+// test stack derived from arrayList
 
 #include <iostream>
-#include "derivedArrayStackWithCatch.h"
-#include "1nd_review/myExceptions.h"
+#include "derivedArrayStack.h"
+#include "../1nd_review/myExceptions.h"
 
 using namespace std;
 
 int main(void)
 {
-   derivedArrayStackWithCatch<int> s;
+   derivedArrayStack<int> s;
 
    // add a few elements
    s.push(1);

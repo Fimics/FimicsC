@@ -5,7 +5,7 @@
 //#include "arrayStack.h"
 //#include "derivedArrayStack.h"
 //#include "derivedArrayStackWithCatch.h"
-#include "linkedStack.h"
+#include "8nd_stack/linkedStack.h"
 //#include "derivedLinkedStack.h"
 //#include <stack>
 

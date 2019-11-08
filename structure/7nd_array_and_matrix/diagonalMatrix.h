@@ -3,7 +3,7 @@
 #define diagonalMatrix_
 
 
-#include "1nd_review/myExceptions.h"
+#include "../1nd_review/myExceptions.h"
 
 using namespace std;
 

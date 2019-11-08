@@ -16,8 +16,9 @@ void towersOfHanoi(int n, int x, int y, int z)
    }
 }
 
-void main(void)
+int main(void)
 {
    cout << "Moves for a three disk problem are" << endl;
-   towersOfHanoi(3,1,2,3);
+   towersOfHanoi(10,1,2,3);
+    return 1;
 }

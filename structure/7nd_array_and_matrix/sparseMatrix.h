@@ -4,9 +4,9 @@
 #define sparseMatrix_
 
 #include <iostream>
-#include "2nd_performance_analysis/matrixTerm.h"
-#include "5nd_arraylist/extendedArrayList.h"
-#include "1nd_review/myExceptions.h"
+#include "../2nd_performance_analysis/matrixTerm.h"
+#include "../5nd_arraylist/extendedArrayList.h"
+#include "../1nd_review/myExceptions.h"
 
 template<class T>
 class sparseMatrix

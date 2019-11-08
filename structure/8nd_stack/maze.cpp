@@ -2,8 +2,8 @@
 
 #include <iostream>
 #include "arrayStack.h"
-#include "position.h"
-#include "1nd_review/make2dArray.h"
+#include "../position.h"
+#include "../1nd_review/make2dArray.h"
 
 // globals
 int **maze, size;

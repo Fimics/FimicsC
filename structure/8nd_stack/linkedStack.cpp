@@ -1,20 +1,20 @@
-// test stack derived from arrayList
+// test linked stack
 
 #include <iostream>
-#include "derivedArrayStack.h"
-#include "1nd_review/myExceptions.h"
+#include "linkedStack.h"
+#include "../1nd_review/myExceptions.h"
 
 using namespace std;
 
 int main(void)
 {
-   derivedArrayStack<int> s;
+   linkedStack<int> s;
 
    // add a few elements
-   s.push(1);
-   s.push(2);
-   s.push(3);
-   s.push(4);
+//   s.push(1);
+//   s.push(2);
+//   s.push(3);
+//   s.push(4);
 
    cout << "Stack should be 1234, bottom to top" << endl;
 

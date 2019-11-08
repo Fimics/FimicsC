@@ -1,14 +1,14 @@
-// test linked stack
+// test derivedArrayStackWithCatch
 
 #include <iostream>
-#include "linkedStack.h"
-#include "1nd_review/myExceptions.h"
+#include "derivedArrayStackWithCatch.h"
+#include "../1nd_review/myExceptions.h"
 
 using namespace std;
 
 int main(void)
 {
-   linkedStack<int> s;
+   derivedArrayStackWithCatch<int> s;
 
    // add a few elements
    s.push(1);

@@ -1,14 +1,14 @@
-// test stack derived from chain
+// test array stack
 
 #include <iostream>
-#include "derivedLinkedStack.h"
-#include "1nd_review/myExceptions.h"
+#include "arrayStack.h"
+#include "../1nd_review/myExceptions.h"
 
 using namespace std;
 
 int main(void)
 {
-   derivedLinkedStack<int> s;
+   arrayStack<int> s;
 
    // add a few elements
    s.push(1);
