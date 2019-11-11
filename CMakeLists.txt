@@ -406,9 +406,11 @@ set(Fimics_C_STRUCTURE
 #        structure/8nd_stack/hanoiUsingStacks.cpp
 
         #9nd_queue
-        structure/9nd_queue/arrayQueue.cpp
-        structure/9nd_queue/arrayQueue.h
         structure/9nd_queue/queue.h
+        structure/9nd_queue/arrayQueue.h
+#        structure/9nd_queue/arrayQueue.cpp
+        structure/9nd_queue/linkedQueue.cpp
+        structure/9nd_queue/linkedQueue.h
 
        )
 
