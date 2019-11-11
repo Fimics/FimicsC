@@ -409,8 +409,16 @@ set(Fimics_C_STRUCTURE
         structure/9nd_queue/queue.h
         structure/9nd_queue/arrayQueue.h
 #        structure/9nd_queue/arrayQueue.cpp
-        structure/9nd_queue/linkedQueue.cpp
+#        structure/9nd_queue/linkedQueue.cpp
         structure/9nd_queue/linkedQueue.h
+
+        #10nd_skiplist_hash
+        structure/10nd_skiplist_hash/dictionary.h
+#        structure/10nd_skiplist_hash/sortedChain.cpp
+        structure/10nd_skiplist_hash/sortedChain.h
+#        structure/10nd_skiplist_hash/skipList.cpp
+        structure/10nd_skiplist_hash/skipList.h
+        structure/10nd_skiplist_hash/skipNode.h
 
        )
 

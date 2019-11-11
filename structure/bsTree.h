@@ -6,7 +6,7 @@
 #ifndef bsTree_
 #define bsTree_
 
-#include "dictionary.h"
+#include "10nd_skiplist_hash/dictionary.h"
 
 using namespace std;
 
