@@ -20,11 +20,13 @@ long threeToLong(string s)
 }
 
 // test program 
-void main(void)
+int main(void)
 {
     string s = "abc";
-    for (int i = 0; i < 3; i++)
-       cout << s.at(i) << " " << ((int) s.at(i)) << endl;
+    for (int i = 0; i < 3; i++) {
+//        cout << (97<< 8)<<endl;
+        cout << s.at(i) << " " << ((int) s.at(i)) << endl;
+    }
 
     cout << threeToLong(s) << endl;
 }

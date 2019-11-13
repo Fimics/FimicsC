@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void main()
+int main()
 {
    skipList<int, int> z(1000);
    pair<int, int> p;

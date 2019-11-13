@@ -419,6 +419,8 @@ set(Fimics_C_STRUCTURE
 #        structure/10nd_skiplist_hash/skipList.cpp
         structure/10nd_skiplist_hash/skipList.h
         structure/10nd_skiplist_hash/skipNode.h
+#        structure/10nd_skiplist_hash/threeToLong.cpp
+        structure/10nd_skiplist_hash/stringToInt.cpp
 
        )
 

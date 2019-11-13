@@ -30,7 +30,7 @@ int stringToInt(string s)
 }
 
 // test program 
-void main(void)
+int main(void)
 {
     string s = "abc";
     cout << s << " = " << stringToInt(s) << endl;
