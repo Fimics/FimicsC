@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include "hash.h"  // mapping functions from K to nonnegative integer
-#include "1nd_review/myExceptions.h"
+#include "../1nd_review/myExceptions.h"
 
 using namespace std;
 

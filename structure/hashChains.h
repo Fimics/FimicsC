@@ -7,7 +7,7 @@
 
 
 #include <iostream>
-#include "hash.h"  // mapping functions from K to nonnegative integer
+#include "10nd_skiplist_hash/hash.h"  // mapping functions from K to nonnegative integer
 #include "10nd_skiplist_hash/dictionary.h"
 #include "10nd_skiplist_hash/sortedChain.h"
 
