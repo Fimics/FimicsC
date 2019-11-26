@@ -1,6 +1,6 @@
 // test hash table class
 #include <iostream>
-#include "10nd_skiplist_hash/hashTable.h"
+#include "hashTable.h"
 
 using namespace std;
 

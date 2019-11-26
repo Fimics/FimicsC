@@ -414,13 +414,19 @@ set(Fimics_C_STRUCTURE
 
         #10nd_skiplist_hash
         structure/10nd_skiplist_hash/dictionary.h
-#        structure/10nd_skiplist_hash/sortedChain.cpp
-        structure/10nd_skiplist_hash/sortedChain.h
+        structure/10nd_skiplist_hash/hash.h
+        structure/10nd_skiplist_hash/hashChains.cpp
+        structure/10nd_skiplist_hash/hashChains.h
+#        structure/10nd_skiplist_hash/hashTable.cpp
+        structure/10nd_skiplist_hash/hashTable.h
+        structure/10nd_skiplist_hash/pairNode.h
 #        structure/10nd_skiplist_hash/skipList.cpp
         structure/10nd_skiplist_hash/skipList.h
         structure/10nd_skiplist_hash/skipNode.h
+#        structure/10nd_skiplist_hash/sortedChain.cpp
+        structure/10nd_skiplist_hash/sortedChain.h
+#        structure/10nd_skiplist_hash/stringToInt.cpp
 #        structure/10nd_skiplist_hash/threeToLong.cpp
-        structure/10nd_skiplist_hash/stringToInt.cpp
 
        )
 

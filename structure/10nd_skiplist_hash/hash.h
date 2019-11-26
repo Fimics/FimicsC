@@ -10,7 +10,9 @@
 
 using namespace std;
 
-template <class K> class hash;
+
+
+//template <class K> class hash;
 
 template<>
 class hash<string>
@@ -26,21 +28,21 @@ class hash<string>
          return size_t(hashValue);
       }
 };
-
-template<>
-class hash<int>
-{
-   public:
-      size_t operator()(const int theKey) const
-      {return size_t(theKey);}
-};
-
-template<>
-class hash<long>
-{
-   public:
-      size_t operator()(const long theKey) const
-      {return size_t(theKey);}
-};
+//
+//template<>
+//class hash<int>
+//{
+//   public:
+//      size_t operator()(const int theKey) const
+//      {return size_t(theKey);}
+//};
+//
+//template<>
+//class hash<long>
+//{
+//   public:
+//      size_t operator()(const long theKey) const
+//      {return size_t(theKey);}
+//};
 
 #endif
