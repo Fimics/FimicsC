@@ -10,10 +10,10 @@ using namespace std;
 
 #include <iostream>
 #include "binaryTree.h"
-#include "9nd_queue/arrayQueue.h"
+#include "../9nd_queue/arrayQueue.h"
 #include "binaryTreeNode.h"
-#include "1nd_review/myExceptions.h"
-#include "booster.h"
+#include "../1nd_review/myExceptions.h"
+#include "../booster.h"
 
 
 template<class E>

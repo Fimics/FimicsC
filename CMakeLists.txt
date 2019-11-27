@@ -415,7 +415,7 @@ set(Fimics_C_STRUCTURE
         #10nd_skiplist_hash
         structure/10nd_skiplist_hash/dictionary.h
         structure/10nd_skiplist_hash/hash.h
-        structure/10nd_skiplist_hash/hashChains.cpp
+#        structure/10nd_skiplist_hash/hashChains.cpp
         structure/10nd_skiplist_hash/hashChains.h
 #        structure/10nd_skiplist_hash/hashTable.cpp
         structure/10nd_skiplist_hash/hashTable.h
@@ -428,6 +428,14 @@ set(Fimics_C_STRUCTURE
 #        structure/10nd_skiplist_hash/stringToInt.cpp
 #        structure/10nd_skiplist_hash/threeToLong.cpp
 
+
+        #11nd_binary_tree
+        structure/11nd_binary_tree/binaryTree.h
+        structure/11nd_binary_tree/binaryTreeNode.h
+#        structure/11nd_binary_tree/binaryTreeTraversals.cpp
+#        structure/11nd_binary_tree/infix.cpp
+        structure/11nd_binary_tree/linkedBinaryTree.cpp
+        structure/11nd_binary_tree/linkedBinaryTree.h
        )
 
 

@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include "booster.h"
-#include "linkedBinaryTree.h"
+#include "11nd_binary_tree/linkedBinaryTree.h"
 
 using namespace std;
 
