@@ -5,8 +5,8 @@
 #define completeWinnerTree_
 
 #include <iostream>
-#include "13nd_tournament_tree/winnerTree.h"
-#include "1nd_review/myExceptions.h"
+#include "winnerTree.h"
+#include "../1nd_review/myExceptions.h"
 
 template<class T>
 class completeWinnerTree : public winnerTree<T>

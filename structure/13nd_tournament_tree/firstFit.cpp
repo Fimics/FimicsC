@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include "completeWinnerTree.h"
-#include "binType.h"
+#include "../binType.h"
 
 using namespace std;
    
