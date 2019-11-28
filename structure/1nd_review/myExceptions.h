@@ -100,6 +100,16 @@ class hashTableFull
 };
 
 // edge weight undefined
+class emptyTree
+{
+public:
+    emptyTree(){}
+    void outputMessage() {cout << message << endl;}
+private:
+    string message;
+};
+
+// edge weight undefined
 class undefinedEdgeWeight
 {
    public:

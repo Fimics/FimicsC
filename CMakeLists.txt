@@ -435,7 +435,7 @@ set(Fimics_C_STRUCTURE
 #        structure/11nd_binary_tree/binaryTreeTraversals.cpp
 #        structure/11nd_binary_tree/infix.cpp
 #        structure/11nd_binary_tree/linkedBinaryTree.cpp
-#        structure/11nd_binary_tree/linkedBinaryTree.h
+        structure/11nd_binary_tree/linkedBinaryTree.h
 
         #12nd_priority_queue
 #        structure/12nd_priority_queue/heapSort.cpp
@@ -450,6 +450,21 @@ set(Fimics_C_STRUCTURE
         structure/12nd_priority_queue/minPriorityQueue.h
 
         #13nd_tournament_tree
+#        structure/13nd_tournament_tree/completeWinnerTree.cpp
+        structure/13nd_tournament_tree/completeWinnerTree.h
+#        structure/13nd_tournament_tree/firstFit.cpp
+#        structure/13nd_tournament_tree/leastCostBBBoard.cpp
+        structure/13nd_tournament_tree/winnerTree.h
+
+        #14nd_search_tree
+#        structure/14nd_search_tree/binarySearchTree.cpp
+        structure/14nd_search_tree/binarySearchTree.h
+#        structure/14nd_search_tree/bst.cpp
+        structure/14nd_search_tree/bst.h
+        structure/14nd_search_tree/bsTree.h
+#        structure/14nd_search_tree/dBinarySearchTree.cpp
+        structure/14nd_search_tree/dBinarySearchTree.h
+        structure/14nd_search_tree/indexedBSTree.h
        )
 
 

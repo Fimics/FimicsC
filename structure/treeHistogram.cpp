@@ -1,7 +1,7 @@
 // histogramming using a binary search tree
 
 #include <iostream>
-#include "binarySearchTreeWithVisit.h"
+#include "14nd_search_tree/binarySearchTreeWithVisit.h"
 void add1(int& count) {count++;}
 
 
