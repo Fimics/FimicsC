@@ -2,8 +2,8 @@
 // output LPT schedules
 
 #include <iostream>
-#include "minHeap.h"
-#include "heapSort.h"
+#include "12nd_priority_queue/minHeap.h"
+#include "12nd_priority_queue/heapSort.h"
 #include "lptNodes.h"
 
 using namespace std;

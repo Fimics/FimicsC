@@ -434,8 +434,20 @@ set(Fimics_C_STRUCTURE
         structure/11nd_binary_tree/binaryTreeNode.h
 #        structure/11nd_binary_tree/binaryTreeTraversals.cpp
 #        structure/11nd_binary_tree/infix.cpp
-        structure/11nd_binary_tree/linkedBinaryTree.cpp
-        structure/11nd_binary_tree/linkedBinaryTree.h
+#        structure/11nd_binary_tree/linkedBinaryTree.cpp
+#        structure/11nd_binary_tree/linkedBinaryTree.h
+
+        #12nd_priority_queue
+        structure/12nd_priority_queue/heapSort.cpp
+        structure/12nd_priority_queue/heapSort.h
+#        structure/12nd_priority_queue/maxHblt.cpp
+        structure/12nd_priority_queue/maxHblt.h
+#        structure/12nd_priority_queue/maxHeap.cpp
+        structure/12nd_priority_queue/maxHeap.h
+        structure/12nd_priority_queue/maxPriorityQueue.h
+#        structure/12nd_priority_queue/minHeap.cpp
+        structure/12nd_priority_queue/minHeap.h
+        structure/12nd_priority_queue/minPriorityQueue.h
        )
 
 

@@ -8,9 +8,9 @@
 #define maxHblt_
 
 #include "maxPriorityQueue.h"
-#include "11nd_binary_tree/linkedBinaryTree.h"
-#include "11nd_binary_tree/binaryTreeNode.h"
-#include "1nd_review/myExceptions.h"
+#include "../11nd_binary_tree/linkedBinaryTree.h"
+#include "../11nd_binary_tree/binaryTreeNode.h"
+#include "../1nd_review/myExceptions.h"
 #include <sstream>
 
 using namespace std;

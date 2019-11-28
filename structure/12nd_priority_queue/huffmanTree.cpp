@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include "minHeap.h"
-#include "11nd_binary_tree/linkedBinaryTree.h"
+#include "../11nd_binary_tree/linkedBinaryTree.h"
 #include "huffmanNode.h"
 
 using namespace std;

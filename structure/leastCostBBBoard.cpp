@@ -1,7 +1,7 @@
 // least-cost branch-and-bound method to find best board arrangement
 
 #include <iostream>
-#include "minHeap.h"
+#include "12nd_priority_queue/minHeap.h"
 #include "1nd_review/make2dArrayNoCatch.h"
 
 struct heapNode

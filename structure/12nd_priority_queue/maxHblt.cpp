@@ -1,7 +1,7 @@
 // test max height biased leftist tree class
 
 #include <iostream>
-#include "maxhblt.h"
+#include "maxHblt.h"
 
 using namespace std;
 

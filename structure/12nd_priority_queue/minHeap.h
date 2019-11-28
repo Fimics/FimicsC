@@ -1,29 +1,29 @@
 
-// heap implementation of a max priority queue
-// derives from the ADT maxPriorityQueue
+// heap implementation of a min priority queue
+// derives from the ADT minPriorityQueue
 
-#ifndef maxHeap_
-#define maxHeap_
+#ifndef minHeap_
+#define minHeap_
 
-#include "maxPriorityQueue.h"
-#include "1nd_review/myExceptions.h"
-#include "5nd_arraylist/changeLength1D.h"
+#include "minPriorityQueue.h"
+#include "../1nd_review/myExceptions.h"
+#include "../5nd_arraylist/changeLength1D.h"
 #include <sstream>
 #include <algorithm>
 
 using namespace std;
 
 template<class T>
-class maxHeap : public maxPriorityQueue<T>
+class minHeap : public minPriorityQueue<T>
 {
    public:
-      maxHeap(int initialCapacity = 10);
-      ~maxHeap() {delete [] heap;}
+      minHeap(int initialCapacity = 10);
+      ~minHeap() {delete [] heap;}
       bool empty() const {return heapSize == 0;}
       int size() const
           {return heapSize;}
       const T& top()
-         {// return max element
+         {// return min element
             if (heapSize == 0)
                throw queueEmpty();
             return heap[1];
@@ -41,7 +41,7 @@ class maxHeap : public maxPriorityQueue<T>
 };
 
 template<class T>
-maxHeap<T>::maxHeap(int initialCapacity)
+minHeap<T>::minHeap(int initialCapacity)
 {// Constructor.
    if (initialCapacity < 1)
    {ostringstream s;
@@ -54,7 +54,7 @@ maxHeap<T>::maxHeap(int initialCapacity)
 }
 
 template<class T>
-void maxHeap<T>::push(const T& theElement)
+void minHeap<T>::push(const T& theElement)
 {// Add theElement to heap.
 
    // increase array length if necessary
@@ -67,7 +67,7 @@ void maxHeap<T>::push(const T& theElement)
    // find place for theElement
    // currentNode starts at new leaf and moves up tree
    int currentNode = ++heapSize;
-   while (currentNode != 1 && heap[currentNode / 2] < theElement)
+   while (currentNode != 1 && heap[currentNode / 2] > theElement)
    {
       // cannot put theElement in heap[currentNode]
       heap[currentNode] = heap[currentNode / 2]; // move element down
@@ -78,13 +78,13 @@ void maxHeap<T>::push(const T& theElement)
 }
 
 template<class T>
-void maxHeap<T>::pop()
+void minHeap<T>::pop()
 {// Remove max element.
    // if heap is empty return null
    if (heapSize == 0)   // heap empty
       throw queueEmpty();
 
-   // Delete max element
+   // Delete min element
    heap[1].~T();
 
    // Remove last element and reheapify
@@ -95,12 +95,12 @@ void maxHeap<T>::pop()
        child = 2;     // child of currentNode
    while (child <= heapSize)
    {
-      // heap[child] should be larger child of currentNode
-      if (child < heapSize && heap[child] < heap[child + 1])
+      // heap[child] should be smaller child of currentNode
+      if (child < heapSize && heap[child] > heap[child + 1])
          child++;
 
       // can we put lastElement in heap[currentNode]?
-      if (lastElement >= heap[child])
+      if (lastElement <= heap[child])
          break;   // yes
 
       // no
@@ -112,7 +112,7 @@ void maxHeap<T>::pop()
 }
 
 template<class T>
-void maxHeap<T>::initialize(T *theHeap, int theSize)
+void minHeap<T>::initialize(T *theHeap, int theSize)
 {// Initialize max heap to element array theHeap[1:theSize].
    delete [] heap;
    heap = theHeap;
@@ -128,12 +128,12 @@ void maxHeap<T>::initialize(T *theHeap, int theSize)
                             // location for rootElement
       while (child <= heapSize)
       {
-         // heap[child] should be larger sibling
-         if (child < heapSize && heap[child] < heap[child + 1])
+         // heap[child] should be smaller sibling
+         if (child < heapSize && heap[child] > heap[child + 1])
             child++;
 
          // can we put rootElement in heap[child/2]?
-         if (rootElement >= heap[child])
+         if (rootElement <= heap[child])
             break;  // yes
 
          // no
@@ -145,14 +145,14 @@ void maxHeap<T>::initialize(T *theHeap, int theSize)
 }
 
 template<class T>
-void maxHeap<T>::output(ostream& out) const
-{// Put the list into the stream out.
+void minHeap<T>::output(ostream& out) const
+{// Put the array into the stream out.
    copy(heap + 1, heap + heapSize + 1, ostream_iterator<T>(cout, "  "));
 }
 
 // overload <<
 template <class T>
-ostream& operator<<(ostream& out, const maxHeap<T>& x)
+ostream& operator<<(ostream& out, const minHeap<T>& x)
    {x.output(out); return out;}
 
 #endif

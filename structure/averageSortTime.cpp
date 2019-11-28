@@ -4,7 +4,7 @@
 #include <time.h>
 #include <math.h>
 #include "2nd_performance_analysis/insertionSort.h"
-#include "heapSort.h"
+#include "12nd_priority_queue/heapSort.h"
 #include "mergeSort.h"
 #include "2nd_performance_analysis/quickSort.h"
 

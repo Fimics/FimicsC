@@ -3,8 +3,8 @@
 #ifndef machine_
 #define machine_
 
-#include "9nd_queue/arrayQueue.h"
-#include "job.h"
+#include "../9nd_queue/arrayQueue.h"
+#include "../job.h"
 
 using namespace std;
 

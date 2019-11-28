@@ -12,6 +12,7 @@ int main(void)
    h.push(10);
    h.push(20);
    h.push(5);
+    h.push(14);
 
    cout << "Heap size is " << h.size() << endl;
    cout << "Elements in array order are" << endl;

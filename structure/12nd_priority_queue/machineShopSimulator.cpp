@@ -1,11 +1,11 @@
 // machine shop simulation
 
 #include <iostream>
-#include "task.h"
-#include "job.h"
+#include "../task.h"
+#include "../job.h"
 #include "machine.h"
-#include "eventList.h"
-#include "1nd_review/myExceptions.h"
+#include "../eventList.h"
+#include "../1nd_review/myExceptions.h"
 
 using namespace std;
 

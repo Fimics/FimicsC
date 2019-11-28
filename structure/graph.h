@@ -12,7 +12,7 @@
 #include "1nd_review/myExceptions.h"
 #include "binNode.h"
 #include "weightedEdge.h"
-#include "minHeap.h"
+#include "12nd_priority_queue/minHeap.h"
 #include "fastUnionFind.h"
 #include "5nd_arraylist/arrayListWithIterator.h"
 

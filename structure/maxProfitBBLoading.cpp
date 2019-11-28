@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <iterator>
-#include "maxHeap.h"
+#include "12nd_priority_queue/maxHeap.h"
 
 using namespace std;
 

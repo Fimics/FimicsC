@@ -15,7 +15,7 @@
 #include "1nd_review/myExceptions.h"
 #include "9nd_queue/arrayQueue.h"
 #include "graphChain.h"
-#include "minHeap.h"
+#include "12nd_priority_queue/minHeap.h"
 
 using namespace std;
 

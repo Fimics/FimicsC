@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include "../6nd_linkedlist/extendedChain.h"
-#include "../matrixElements.h"
+#include "matrixElements.h"
 
 using namespace std;
 
