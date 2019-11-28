@@ -438,7 +438,7 @@ set(Fimics_C_STRUCTURE
 #        structure/11nd_binary_tree/linkedBinaryTree.h
 
         #12nd_priority_queue
-        structure/12nd_priority_queue/heapSort.cpp
+#        structure/12nd_priority_queue/heapSort.cpp
         structure/12nd_priority_queue/heapSort.h
 #        structure/12nd_priority_queue/maxHblt.cpp
         structure/12nd_priority_queue/maxHblt.h
@@ -448,6 +448,8 @@ set(Fimics_C_STRUCTURE
 #        structure/12nd_priority_queue/minHeap.cpp
         structure/12nd_priority_queue/minHeap.h
         structure/12nd_priority_queue/minPriorityQueue.h
+
+        #13nd_tournament_tree
        )
 
 
