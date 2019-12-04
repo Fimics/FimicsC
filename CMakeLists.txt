@@ -465,6 +465,11 @@ set(Fimics_C_STRUCTURE
 #        structure/14nd_search_tree/dBinarySearchTree.cpp
         structure/14nd_search_tree/dBinarySearchTree.h
         structure/14nd_search_tree/indexedBSTree.h
+
+        #15nd_balanced_search_tree
+
+        #16nd_graph
+
        )
 
 

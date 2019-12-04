@@ -1,6 +1,8 @@
 #ifndef binaryTreeNode_
 #define binaryTreeNode_
 
+#include <MacTypes.h>
+
 using namespace std;
 
 template <class T>

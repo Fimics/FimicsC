@@ -15,9 +15,9 @@ class binarySearchTree : public bsTree<K, E>,
                          public linkedBinaryTree<pair<const K, E> > {
 public:
     // methods of dictionary
-    bool empty() const { return binarySearchTree::treeSize == 0; }
+    bool empty() const { return treeSize == 0; }
 
-    int size() const { return binarySearchTree::treeSize; }
+    int size() const { return treeSize; }
 
     pair<const K, E> *find(const K &theKey) const;
 
@@ -26,7 +26,7 @@ public:
     void erase(const K &theKey);
 
     // additional method of bsTree
-    void ascend() { binarySearchTree::inOrderOutput(); }
+    void ascend() { inOrderOutput(); }
 };
 
 template<class K, class E>
@@ -34,7 +34,7 @@ pair<const K, E> *binarySearchTree<K, E>::find(const K &theKey) const {// Return
     // Return NULL if no matching pair.
     // p starts at the root and moves through
     // the tree looking for an element with key theKey
-    binaryTreeNode<pair<const K, E> > *p = binarySearchTree::root;
+    binaryTreeNode<pair<const K, E> > *p = root;
     while (p != NULL)
         // examine p->element
         if (theKey < p->element.first)
@@ -53,16 +53,17 @@ void
 binarySearchTree<K, E>::insert(const pair<const K, E> &thePair) {// Insert thePair into the tree. Overwrite existing
     // pair, if any, with same key.
     // find place to insert
-    binaryTreeNode<pair<const K, E> > *p = binarySearchTree::root,
+    binaryTreeNode<pair<const K, E> > *p = root,
             *pp = NULL;
     while (p != NULL) {// examine p->element
         pp = p;
         // move p to a child
         if (thePair.first < p->element.first)
             p = p->leftChild;
-        else if (thePair.first > p->element.first)
-            p = p->rightChild;
-        else {// replace old value
+        else
+            if (thePair.first > p->element.first)
+             p = p->rightChild;
+            else {// replace old value
             p->element.second = thePair.second;
             return;
         }
@@ -71,21 +72,21 @@ binarySearchTree<K, E>::insert(const pair<const K, E> &thePair) {// Insert thePa
     // get a node for thePair and attach to pp
     binaryTreeNode<pair<const K, E> > *newNode
             = new binaryTreeNode<pair<const K, E> >(thePair);
-    if (binarySearchTree::root != NULL) // the tree is not empty
+    if (root != NULL) // the tree is not empty
         if (thePair.first < pp->element.first)
             pp->leftChild = newNode;
         else
             pp->rightChild = newNode;
     else
-        binarySearchTree::root = newNode; // insertion into empty tree
-    binarySearchTree::treeSize++;
+        root = newNode; // insertion into empty tree
+    treeSize++;
 }
 
 template<class K, class E>
 void binarySearchTree<K, E>::erase(const K &theKey) {// Delete the pair, if any, whose key equals theKey.
 
     // search for node with key theKey
-    binaryTreeNode<pair<const K, E> > *p = binarySearchTree::root,
+    binaryTreeNode<pair<const K, E> > *p = root,
             *pp = NULL;
     while (p != NULL && p->element.first != theKey) {// move to a child of p
         pp = p;
@@ -115,7 +116,7 @@ void binarySearchTree<K, E>::erase(const K &theKey) {// Delete the pair, if any,
                 new binaryTreeNode<pair<const K, E> >
                         (s->element, p->leftChild, p->rightChild);
         if (pp == NULL)
-            binarySearchTree::root = q;
+            root = q;
         else if (p == pp->leftChild)
             pp->leftChild = q;
         else
@@ -135,14 +136,14 @@ void binarySearchTree<K, E>::erase(const K &theKey) {// Delete the pair, if any,
         c = p->rightChild;
 
     // delete p
-    if (p == binarySearchTree::root)
-        binarySearchTree::root = c;
+    if (p == root)
+        root = c;
     else {// is p left or right child of pp?
         if (p == pp->leftChild)
             pp->leftChild = c;
         else pp->rightChild = c;
     }
-    binarySearchTree::treeSize--;
+    treeSize--;
     delete p;
 }
 

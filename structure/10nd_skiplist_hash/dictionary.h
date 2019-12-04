@@ -6,6 +6,8 @@
 #ifndef dictionary_
 #define dictionary_
 
+#include <utility>
+
 using namespace std;
 
 template<class K, class E>
