@@ -1,8 +1,8 @@
 // test AdjacencyWDigraph::allPairs 
 
 #include <iostream>
-#include "adjacencyWDigraph.h"
-#include "adjacencyWGraph.h"
+#include "16nd_graph/adjacencyWDigraph.h"
+#include "16nd_graph/adjacencyWGraph.h"
 
 using namespace std;
 

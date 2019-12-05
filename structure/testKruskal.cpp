@@ -1,9 +1,9 @@
 // test graph::kruskal
 
 #include <iostream>
-#include "adjacencyWGraph.h"
-#include "linkedWGraph.h"
-#include "weightedEdge.h"
+#include "16nd_graph/adjacencyWGraph.h"
+#include "16nd_graph/linkedWGraph.h"
+#include "16nd_graph/weightedEdge.h"
 
 using namespace std;
 

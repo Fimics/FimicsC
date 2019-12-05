@@ -2,8 +2,8 @@
 
 #include <iostream>
 #include <iterator>
-#include "linkedGraph.h"
-#include "graph.h"
+#include "16nd_graph/linkedGraph.h"
+#include "16nd_graph/graph.h"
 
 using namespace std;
 

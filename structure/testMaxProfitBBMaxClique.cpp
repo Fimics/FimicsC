@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include <iterator>
-#include "adjacencyGraph.h"
-#include "unweightedEdge.h"
+#include "16nd_graph/adjacencyGraph.h"
+#include "16nd_graph/unweightedEdge.h"
 
 using namespace std;
 

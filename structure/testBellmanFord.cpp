@@ -1,11 +1,11 @@
 // test graph::bellmanFord
 
 #include <iostream>
-#include "graph.h"
-#include "adjacencyWDigraph.h"
-#include "adjacencyWGraph.h"
-#include "linkedWDigraph.h"
-#include "linkedWGraph.h"
+#include "16nd_graph/graph.h"
+#include "16nd_graph/adjacencyWDigraph.h"
+#include "16nd_graph/adjacencyWGraph.h"
+#include "16nd_graph/linkedWDigraph.h"
+#include "16nd_graph/linkedWGraph.h"
 
 using namespace std;
 

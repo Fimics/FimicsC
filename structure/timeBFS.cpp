@@ -6,10 +6,10 @@
 
 #include <iostream>
 #include <time.h>
-#include "unweightedEdge.h"
-#include "adjacencyGraph.h"
-#include "linkedGraph.h"
-#include "graph.h"
+#include "16nd_graph/unweightedEdge.h"
+#include "16nd_graph/adjacencyGraph.h"
+#include "16nd_graph/linkedGraph.h"
+#include "16nd_graph/graph.h"
 
 using namespace std;
 

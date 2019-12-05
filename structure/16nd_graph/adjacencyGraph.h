@@ -8,7 +8,7 @@
 #include <iterator>
 #include "adjacencyWGraph.h"
 #include "unweightedEdge.h"
-#include "12nd_priority_queue/maxHeap.h"
+#include "../12nd_priority_queue/maxHeap.h"
 
 using namespace std;
 

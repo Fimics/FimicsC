@@ -469,6 +469,28 @@ set(Fimics_C_STRUCTURE
         #15nd_balanced_search_tree
 
         #16nd_graph
+#        structure/16nd_graph/adjacencyDigraph.cpp
+        structure/16nd_graph/adjacencyDigraph.h
+#        structure/16nd_graph/adjacencyGraph.cpp
+        structure/16nd_graph/adjacencyGraph.h
+        structure/16nd_graph/adjacencyMatrixIterator.h
+#        structure/16nd_graph/adjacencyWDigraph.cpp
+        structure/16nd_graph/adjacencyWDigraph.h
+#        structure/16nd_graph/adjacencyWGraph.cpp
+        structure/16nd_graph/adjacencyWGraph.h
+        structure/16nd_graph/edge.h
+        structure/16nd_graph/graph.h
+#        structure/16nd_graph/linkedDigraph.cpp
+        structure/16nd_graph/linkedDigraph.h
+#        structure/16nd_graph/linkedGraph.cpp
+        structure/16nd_graph/linkedGraph.h
+#        structure/16nd_graph/linkedWDigraph.cpp
+        structure/16nd_graph/linkedWDigraph.h
+#        structure/16nd_graph/linkedWGraph.cpp
+        structure/16nd_graph/linkedWGraph.h
+        structure/16nd_graph/unweightedEdge.h
+        structure/16nd_graph/vertexIterator.h
+        structure/16nd_graph/weightedEdge.h
 
        )
 

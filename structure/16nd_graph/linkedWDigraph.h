@@ -10,7 +10,7 @@
 #include "graphChain.h"
 #include "weightedEdge.h"
 #include "vertexIterator.h"
-#include "1nd_review/myExceptions.h"
+#include "../1nd_review/myExceptions.h"
 
 using namespace std;
 

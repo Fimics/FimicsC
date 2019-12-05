@@ -10,12 +10,12 @@
 #include "graph.h"
 #include "weightedEdge.h"
 #include "vertexIterator.h"
-#include "1nd_review/make2dArrayNoCatch.h"
-#include "1nd_review/delete2dArray.h"
-#include "1nd_review/myExceptions.h"
-#include "9nd_queue/arrayQueue.h"
+#include "../1nd_review/make2dArrayNoCatch.h"
+#include "../1nd_review/delete2dArray.h"
+#include "../1nd_review/myExceptions.h"
+#include "../9nd_queue/arrayQueue.h"
 #include "graphChain.h"
-#include "12nd_priority_queue/minHeap.h"
+#include "../12nd_priority_queue/minHeap.h"
 
 using namespace std;
 

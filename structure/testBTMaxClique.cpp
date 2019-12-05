@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <iterator>
-#include "adjacencyGraph.h"
+#include "16nd_graph/adjacencyGraph.h"
 
 using namespace std;
 

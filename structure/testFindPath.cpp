@@ -1,17 +1,17 @@
 // test graph::findPath
 
 #include <iostream>
-#include "graph.h"
-#include "adjacencyWDigraph.h"
-#include "adjacencyDigraph.h"
-#include "adjacencyWGraph.h"
-#include "adjacencyGraph.h"
-#include "linkedWDigraph.h"
-#include "linkedDigraph.h"
-#include "linkedWGraph.h"
-#include "linkedGraph.h"
-#include "weightedEdge.h"
-#include "unweightedEdge.h"
+#include "16nd_graph/graph.h"
+#include "16nd_graph/adjacencyWDigraph.h"
+#include "16nd_graph/adjacencyDigraph.h"
+#include "16nd_graph/adjacencyWGraph.h"
+#include "16nd_graph/adjacencyGraph.h"
+#include "16nd_graph/linkedWDigraph.h"
+#include "16nd_graph/linkedDigraph.h"
+#include "16nd_graph/linkedWGraph.h"
+#include "16nd_graph/linkedGraph.h"
+#include "16nd_graph/weightedEdge.h"
+#include "16nd_graph/unweightedEdge.h"
 
 using namespace std;
 

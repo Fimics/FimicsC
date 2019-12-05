@@ -2,9 +2,9 @@
 
 #include <iostream>
 #include <iterator>
-#include "adjacencyWDigraph.h"
-#include "adjacencyWGraph.h"
-#include "weightedEdge.h"
+#include "16nd_graph/adjacencyWDigraph.h"
+#include "16nd_graph/adjacencyWGraph.h"
+#include "16nd_graph/weightedEdge.h"
 
 using namespace std;
 

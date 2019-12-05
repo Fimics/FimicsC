@@ -10,8 +10,8 @@
 #include "graphChain.h"
 #include "unweightedEdge.h"
 #include "vertexIterator.h"
-#include "1nd_review/myExceptions.h"
-#include "9nd_queue/arrayQueue.h"
+#include "../1nd_review/myExceptions.h"
+#include "../9nd_queue/arrayQueue.h"
 
 
 using namespace std;
