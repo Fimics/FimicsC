@@ -492,6 +492,8 @@ set(Fimics_C_STRUCTURE
         structure/16nd_graph/vertexIterator.h
         structure/16nd_graph/weightedEdge.h
 
+        #17nd_greedy_method
+
        )
 
 
