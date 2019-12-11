@@ -4,7 +4,12 @@
 #include <cstdio>
 #include <iostream>
 #include "O.h"
+#include <gtest/gtest.h>
 using namespace std;
+
+TEST(a,c){
+    cout<<"------------ddd----e"<<endl;
+}
 
 MyArray::MyArray() {
    this->capacity=100;

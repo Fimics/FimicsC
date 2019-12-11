@@ -6,6 +6,8 @@ project(FimicsCSTRUCTURE)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_C_STANDARD 99)
+add_subdirectory(googletest)
+include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 
 set(SOURCE_C_FILES
@@ -120,25 +122,25 @@ set(SOURCE_C_FILES
         )
 
 set(SOURCE_CPP_FILES
-        #basic
-        srcplus/base/Basic.cpp
-
-        #function
-        srcplus/function/ExternC.c
-        srcplus/function/ExternC.h
-        srcplus/function/ExternC.cpp
-        srcplus/function/FunctionPointer.cpp
-        srcplus/function/ReferenceVariavle.cpp
-        srcplus/function/YFunction.cpp
-
-        #objecto
-        srcplus/objecto/Circle.cpp
-        srcplus/objecto/Packing.c
-        srcplus/objecto/Packing.cpp
-        srcplus/objecto/InitObject.cpp
-        srcplus/objecto/StaticDemo.cpp
-        srcplus/objecto/ObjectModel.cpp
-        srcplus/objecto/FriendClass.cpp
+#        #basic
+#        srcplus/base/Basic.cpp
+#
+#        #function
+#        srcplus/function/ExternC.c
+#        srcplus/function/ExternC.h
+#        srcplus/function/ExternC.cpp
+#        srcplus/function/FunctionPointer.cpp
+#        srcplus/function/ReferenceVariavle.cpp
+#        srcplus/function/YFunction.cpp
+#
+#        #objecto
+#        srcplus/objecto/Circle.cpp
+#        srcplus/objecto/Packing.c
+#        srcplus/objecto/Packing.cpp
+#        srcplus/objecto/InitObject.cpp
+#        srcplus/objecto/StaticDemo.cpp
+#        srcplus/objecto/ObjectModel.cpp
+#        srcplus/objecto/FriendClass.cpp
 
         #design
         srcplus/design/Singleton.cpp
@@ -146,77 +148,77 @@ set(SOURCE_CPP_FILES
         #Array
         srcplus/array/O.h
         srcplus/array/Array.cpp
-
-        #string
-        srcplus/string/String.h
-        srcplus/string/String.cpp
-        srcplus/string/StringDemo.cpp
-
-        #operator
-        srcplus/operator/YOperator.cpp
-
-        #memory
-        srcplus/memory/FMemory.cpp
-
-        #extends
-        srcplus/extends/ExtendsMode.cpp
-        srcplus/extends/Polymorphism.cpp
-
-        #funTemplate
-        srcplus/funtemplate/FunTemplate.cpp
-
-        #expection
-        srcplus/exception/FException.cpp
-        srcplus/exception/TypeCast.cpp
-
-        #io
-        srcplus/io/IO.h
-        srcplus/io/IO.cpp
-
-        #stl
-
-        #vector
-        srcplus/stl/container/Vector.cpp
-        srcplus/stl/container/Vector1.cpp
-
-        #string
-        srcplus/stl/container/String.cpp
-
-        #deque
-        srcplus/stl/container/Deque.cpp
-
-        #stack
-        srcplus/stl/container/Stack.cpp
-
-        #queue
-        srcplus/stl/container/Queue.cpp
-
-        #list
-        srcplus/stl/container/List.cpp
-
-        #set
-        srcplus/stl/container/Set.cpp
-
-        #pair
-        srcplus/stl/container/Pair.cpp
-
-        #map
-        srcplus/stl/container/Map.cpp
-
-        #multimap
-        srcplus/stl/container/MultiMap.cpp
-
-        #functor
-        srcplus/stl/algorithm/Functor.cpp
-        srcplus/stl/algorithm/Predicate.cpp
-        srcplus/stl/algorithm/BuiltInFunction.cpp
-        srcplus/stl/algorithm/Adapter.cpp
-        srcplus/stl/algorithm/Traversal.cpp
-        srcplus/stl/algorithm/Find.cpp
-        srcplus/stl/algorithm/Sort.cpp
-        srcplus/stl/algorithm/CopyAndReplace.cpp
-        srcplus/stl/algorithm/AlgorithmCreater.cpp
-        srcplus/stl/algorithm/CommonSet.cpp
+#
+#        #string
+#        srcplus/string/String.h
+#        srcplus/string/String.cpp
+#        srcplus/string/StringDemo.cpp
+#
+#        #operator
+#        srcplus/operator/YOperator.cpp
+#
+#        #memory
+#        srcplus/memory/FMemory.cpp
+#
+#        #extends
+#        srcplus/extends/ExtendsMode.cpp
+#        srcplus/extends/Polymorphism.cpp
+#
+#        #funTemplate
+#        srcplus/funtemplate/FunTemplate.cpp
+#
+#        #expection
+#        srcplus/exception/FException.cpp
+#        srcplus/exception/TypeCast.cpp
+#
+#        #io
+#        srcplus/io/IO.h
+#        srcplus/io/IO.cpp
+#
+#        #stl
+#
+#        #vector
+#        srcplus/stl/container/Vector.cpp
+#        srcplus/stl/container/Vector1.cpp
+#
+#        #string
+#        srcplus/stl/container/String.cpp
+#
+#        #deque
+#        srcplus/stl/container/Deque.cpp
+#
+#        #stack
+#        srcplus/stl/container/Stack.cpp
+#
+#        #queue
+#        srcplus/stl/container/Queue.cpp
+#
+#        #list
+#        srcplus/stl/container/List.cpp
+#
+#        #set
+#        srcplus/stl/container/Set.cpp
+#
+#        #pair
+#        srcplus/stl/container/Pair.cpp
+#
+#        #map
+#        srcplus/stl/container/Map.cpp
+#
+#        #multimap
+#        srcplus/stl/container/MultiMap.cpp
+#
+#        #functor
+#        srcplus/stl/algorithm/Functor.cpp
+#        srcplus/stl/algorithm/Predicate.cpp
+#        srcplus/stl/algorithm/BuiltInFunction.cpp
+#        srcplus/stl/algorithm/Adapter.cpp
+#        srcplus/stl/algorithm/Traversal.cpp
+#        srcplus/stl/algorithm/Find.cpp
+#        srcplus/stl/algorithm/Sort.cpp
+#        srcplus/stl/algorithm/CopyAndReplace.cpp
+#        srcplus/stl/algorithm/AlgorithmCreater.cpp
+#        srcplus/stl/algorithm/CommonSet.cpp
 
         )
 
@@ -497,7 +499,12 @@ set(Fimics_C_STRUCTURE
        )
 
 
-add_executable(FimicsCPP ${SOURCE_CPP_FILES})
+
 add_executable(FimicsC ${SOURCE_C_FILES})
 add_executable(FimicsCLINUX ${SOURCE_SYSTEM_FILES})
+
+add_executable(FimicsCPP ${SOURCE_CPP_FILES})
+target_link_libraries(FimicsCPP gtest gtest_main)
+
 add_executable(FimicsCSTRUCTURE ${Fimics_C_STRUCTURE})
+target_link_libraries(FimicsCSTRUCTURE gtest gtest_main)
