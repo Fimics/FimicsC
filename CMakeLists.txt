@@ -11,10 +11,113 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 
 set(SOURCE_C_FILES
-        src/DataType.c
-        src/String.c
-        src/Function.c
-        src/Array.c
+
+        #dataType
+        src/datatype/DataType.c
+        src/datatype/BinaryConvert.c
+        src/datatype/Char.c
+
+        #function
+        src/function/YFunction.h
+        src/function/YFunction.c
+        src/function/FunctionDemo.c
+
+        #string
+        src/string/GetssPuts.c
+        src/string/FgetsFputs.c
+        src/string/PrintfScanf.c
+        src/string/StrlenStrcpy.c
+        src/string/SprintfSscanf.c
+        src/string/Strchr.c
+        src/string/strtokAtoi.c
+
+        #pointer
+        src/pointer/YPointer.c
+        src/pointer/PointerDefine.c
+        src/pointer/WildNullpointer.c
+        src/pointer/ConstDemo.c
+        src/pointer/PointerAndArray.c
+        src/pointer/PointerOperation.c
+        src/pointer/PointerBubbleSort.c
+        src/pointer/PointerStrchr.c
+        src/pointer/PointerMultilevel.c
+        src/pointer/PointerAndParameter.c
+        src/pointer/PointerReturnValue.c
+        src/pointer/PointerString.c
+
+        #array
+        src/array/YArray.c
+        src/array/Array2d.c
+        src/array/ArrayAndPointer.c
+        src/array/Srand.c
+        src/array/vararr2d.c
+        src/array/StringArray.c
+
+        #system
+        src/system/System.c
+
+        #memory
+        src/memory/Scope.c
+        src/memory/MemGlobal.c
+        src/memory/MemArea.c
+        src/memory/MemHeap.c
+        src/memory/MemFunction.c
+
+        #complex;
+        src/complex/YComplex.h
+        src/complex/StructDefine.c
+        src/complex/StructMemory.c
+        src/complex/StructArray.c
+        src/complex/StructSort.c
+        src/complex/StructPointer.c
+        src/complex/StructFunction.c
+        src/complex/Structstruct.c
+        src/complex/UnionDemo.c
+        src/complex/EnumDemo.c
+        src/complex/TypeDefDemo.c
+
+        #File
+        src/file/FileOperate.c
+        src/file/FileCat.c
+        src/file/FileFscanf.c
+        src/file/FileBigDataSort.c
+        src/file/FreadFwrite.c
+        src/file/FileCopy.c
+        src/file/FileProperty.c
+        src/file/FileRandomAccess.c
+        src/file/FileMvRmRename.c
+        src/file/FileBuffer.c
+
+
+        #improve
+        src/improve/IDataType.c
+        src/improve/YGlobal.c
+        src/improve/IFunction.c
+        src/improve/IPointer.c
+        src/improve/IString.c
+        src/improve/IMemory.c
+        src/improve/IConst.c
+        src/improve/IPointerFunction.c
+        src/improve/IArray.c
+        src/improve/IFile.c
+        src/improve/IBitOperation.c
+        src/improve/IStruct.c
+        src/improve/ISumUp.c
+        src/improve/IFileConfig.h
+        src/improve/IFileConfig.c
+        src/improve/IFunctionPointer.c
+        src/improve/IPreprocessingInstruction.c
+
+        #datastructure
+        #        src/datastructure/YDataStructure.h
+        #        src/datastructure/YDataStructure.c
+        #        src/datastructure/Sort.c
+        #        src/datastructure/LinkedList.c
+        #        src/datastructure/LinkedList.h
+        #        src/datastructure/DynamicArray.c
+        #        src/datastructure/DynamicArray.h
+        #        src/datastructure/LinkedList1.h
+        #        src/datastructure/LinkedList1.c
 
         )
 

@@ -4,30 +4,6 @@
 
 #include <stdio.h>
 
-/**
- * 为了避免同一文件被include多次，c/c++有两种方式，
- * 1.
- * #ifndef YFunction.h
- *#define  YFunction.h
- * #endif
- *2.
- *#pragma once
- */
-
-
-/**
- * 1.声明
- * extern int add(int x ,int y);
- * 2。定义
- * int add(int x ,int y){
- *    return x+y;
- * }
- * 3.调用
- */
-void functionExtern(){
-
-}
-
 
 void andOperator() {
     int pooh = 24;
