@@ -9,6 +9,7 @@ set(CMAKE_C_STANDARD 99)
 add_subdirectory(googletest)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
+#https://www.cnblogs.com/oucbl/p/11664610.html
 
 set(SOURCE_C_FILES
 
