@@ -11,7 +11,7 @@ void getCharPutChar() {
         putchar(ch);
     }
 
-//    while ((ch=getchar()!=EOF)) 判断文件末尾
+//    while ((ch=getchar()!=EOF))// 判断文件末尾
 }
 
 void testFileEof() {
@@ -35,7 +35,7 @@ void testFileEof() {
 
 #if 0
 int main() {
-    getCharPutChar();
+//    getCharPutChar();
     testFileEof();
     return 0;
 }

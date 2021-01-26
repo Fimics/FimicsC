@@ -68,9 +68,9 @@ void  testSizeof1(){
 }
 
 
-#if 0
+#if 1
 int main(){
-    testSizeof();
+    testSizeof1();
     return 0;
 }
 

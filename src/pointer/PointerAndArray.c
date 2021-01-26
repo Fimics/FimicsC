@@ -76,7 +76,7 @@ void pointerArray(){
 #if 0
 int main(){
 //   pointerArray1();
-pointerArray();
+//pointerArray();
 }
 
 #endif

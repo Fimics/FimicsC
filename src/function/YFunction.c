@@ -83,10 +83,10 @@ void testFunctionPointer() {
 #if 0
 
 int main() {
-    andOperator();
+//    andOperator();
 //    testExchange();
 //    testSwap();
-//    testFunctionPointer();
+    testFunctionPointer();
 }
 
 #endif

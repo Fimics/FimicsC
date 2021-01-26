@@ -49,8 +49,8 @@ void declarePointer(){
    pc = &address;
 
    int addressLen = strlen(address);
-    printf("p %ld\n",pc);
-    printf("*p %d\n",*pc);
+    printf("pc %ld\n",pc);
+    printf("*pc %d\n",*pc);
     for (int i = 0; i <addressLen ;i++) {
         printf("p %ld\n",pc);
         printf("*p %c\n",(char)*pc);
@@ -64,6 +64,9 @@ void interChange(int * p,int * q){
      *p = *q;
      *q = temp;
     printf("after change %ld, %ld \n",p,q);
+    printf("-------------------\n");
+    printf("*p %d ->\n",*p);
+    printf("*q %d ->\n",*q);
 }
 
 void swapWithPointer(){
@@ -114,6 +117,12 @@ int testDiffPointer(){
 #if 0
 int main(){
 //    testPoint();
-    declarePointer();
+//    declarePointer();
+    int a = 1;
+    int b = 2;
+    interChange(&a,&b);
+    printf("---------------------\n");
+    printf("a = %d\n",a);
+    printf("b =%d\n",b);
 }
 #endif
