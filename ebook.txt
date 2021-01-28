@@ -1,2 +1,10 @@
 O'Reilly：深入理解LINUX内核（第3版）（涵盖2.6版） https://blog.csdn.net/mrdmmm/article/details/89536988
 正版 Linux C与C++一线开发实践 系统开发
+
+LINUX内核代码
+https://stevenbai.top/other/read_kerenel_use_clion/
+
+光大证 525
+
+//测试框架
+https://www.jetbrains.com/zh-cn/clion/whatsnew/

@@ -185,7 +185,7 @@ void errorPointer() {
 
 int main(){
 
-//    testStepSize();
+    testStepSize();
 //     test1i();
 //     testInputi();
 //     testOutputi();

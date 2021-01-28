@@ -10,9 +10,14 @@ void testSystem() {
     int pwd = system("pwd");
     int who =system("who");
     printf("sytem ls -l ls %d ,pwd %d,who %d ",ls,pwd,who);
+
+    printf("-----");
+    int ga = system("ls -la");
+    printf("ga %d",ga);
+
 }
 
-#if 0
+#if 1
 int main(){
     testSystem();
 }

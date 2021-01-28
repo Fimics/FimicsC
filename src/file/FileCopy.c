@@ -79,5 +79,5 @@ void copyByMalloc(){
 void copyBigFile(){
 //    copyCharByChar();
 //copyLineByLine();
-copyByMalloc();
+//copyByMalloc();
 }

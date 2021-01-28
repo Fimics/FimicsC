@@ -24,8 +24,8 @@ void testString(){
 
     char arr3[]="hello";
     printf("%s\n",arr3);
-    printf("sizeof str%d\n", sizeof(arr3));
-    printf("strlen str%d\n",strlen(arr3));
+    printf("sizeof str%d\n", sizeof(arr3));  //6
+    printf("strlen str%d\n",strlen(arr3)); //5
 }
 
 

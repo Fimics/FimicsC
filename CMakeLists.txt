@@ -105,21 +105,21 @@ set(SOURCE_C_FILES
 #        src/improve/IPreprocessingInstruction.c
 
         #datastructure
-        #        src/datastructure/YDataStructure.h
-        #        src/datastructure/YDataStructure.c
-        #        src/datastructure/Sort.c
-        #        src/datastructure/LinkedList.c
-        #        src/datastructure/LinkedList.h
-        #        src/datastructure/DynamicArray.c
-        #        src/datastructure/DynamicArray.h
-        #        src/datastructure/LinkedList1.h
-        #        src/datastructure/LinkedList1.c
+#        src/datastructure/YDataStructure.h
+#        src/datastructure/YDataStructure.c
+#        src/datastructure/Sort.c
+#        src/datastructure/LinkedList.c
+#        src/datastructure/LinkedList.h
+#        src/datastructure/DynamicArray.c
+#        src/datastructure/DynamicArray.h
+#        src/datastructure/LinkedList1.h
+#        src/datastructure/LinkedList1.c
 
         )
 
 set(SOURCE_CPP_FILES
 #        #basic
-#        srcplus/base/Basic.cpp
+        srcplus/base/Basic.cpp
 #
 #        #function
 #        srcplus/function/ExternC.c
@@ -272,7 +272,7 @@ set(SOURCE_SYSTEM_FILES
 #        system/socket/tcp/server_p.c
         )
 
-add_executable(FimicsC ${SOURCE_C_FILES})
+#add_executable(FimicsC ${SOURCE_C_FILES})
 #add_executable(FimicsCLINUX ${SOURCE_SYSTEM_FILES})
-#add_executable(FimicsCPP ${SOURCE_CPP_FILES})
+add_executable(FimicsCPP ${SOURCE_CPP_FILES})
 

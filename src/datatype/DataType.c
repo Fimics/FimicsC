@@ -23,7 +23,8 @@ void testScanf() {
 
 }
 
-void  testSizeof1(){
+
+ void  testSizeof1(){
     int a; // int ->long int ->unsigned long ->long long
     long b;
     short c;

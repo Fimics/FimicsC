@@ -81,6 +81,7 @@ void print(){
       cout<<num <<"\n";
       //双冒号(作用域运算符)->全局作用域
       cout<<::num <<"\n";//
+      cout<<::num<<"\n";
 }
 
 
@@ -97,7 +98,7 @@ void testUsing(){
 //    int c =20;
 
     /**
-     * 1.写了using 后，下面这行代码说明以后看到的a 就是用E namespace下的
+     * 1.写了using 后，下面这行代码说明以后看到的c 就是用E namespace下的
      * 2.但是编译器的就近原则，全使用当前方法中的a ,产生了二义性，编译器报错
      */
     using  E::c;
@@ -218,7 +219,7 @@ void testBool(){
  * 1.引用基本使用
  *   1.1.引用就是起别名
  *   1.2. &写在左边是引用，写到右边是取地址
- *   1.3.引用必须初始化， 引用初始化化就不能修改了
+ *   1.3.引用必须初始化， 引用初始化就不能修改了
  *
  * 2.引用注意事项
  *   2.1 引用必须引用一块合法的内存空间
@@ -356,14 +357,14 @@ void constRef(){
 
 
 
-//int main() {
-//
+int main() {
+
 //    print();
 //    A::a();
 //    B::a();
 //    testUsing();
-//    testRef();
+    testRef();
 //    testPassParms();
 //    testRefPointer();
 //     constRef();
-//}
+}
