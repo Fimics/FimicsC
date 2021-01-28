@@ -29,9 +29,9 @@ set(CMAKE_CXX_FLAGS   "-Wall")                  # 开启所有警告
 set(WORK
 
         #dataType
-        #        src/datatype/DataType.c
-        #        src/datatype/BinaryConvert.c
-        #        src/datatype/Char.c
+#                src/datatype/DataType.c
+#                src/datatype/BinaryConvert.c
+#                src/datatype/Char.c
 
         #function
         #        src/function/YFunction.h
@@ -292,5 +292,6 @@ set(WORK
         )
 
 add_custom_target(cmake-build-debug)
+add_custom_target(cmake-build-release)
 add_executable(${PROJECT_NAME} ${WORK})
 target_link_libraries(${PROJECT_NAME} gtest)

@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include <stdint.h> //可移植数据类型
-#include <inttypes.h>
+
 
 
 void testScanf() {
@@ -69,7 +69,7 @@ void testScanf() {
 }
 
 
-#if 1
+#if 0
 int main(){
     testSizeof1();
     return 0;

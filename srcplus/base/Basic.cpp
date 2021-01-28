@@ -3,8 +3,10 @@
 //
 
 #include <iostream>
+#include <gtest/gtest.h>
 
 using namespace std;
+
 
 int num = 200;
 
@@ -266,7 +268,23 @@ void testRef(){
     for (int k = 0; k <10 ; ++k) {
         cout<<array1[k]<<"-";
     }
+}
 
+
+void myTest(){
+    cout<<"myTest";
+}
+
+void myTest1(){
+    cout<<"myTest  11";
+}
+
+TEST(MyTEST ,测试1){
+    myTest();
+}
+
+TEST(MyTEST1 ,测试1){
+    myTest1();
 }
 
 /**
@@ -357,13 +375,15 @@ void constRef(){
 
 
 
-int main() {
+GTEST_API_ int main(int argc, char ** argv) {
+    testing::InitGoogleTest(&argc,argv);
+    return RUN_ALL_TESTS();
 
 //    print();
 //    A::a();
 //    B::a();
 //    testUsing();
-    testRef();
+//    testRef();
 //    testPassParms();
 //    testRefPointer();
 //     constRef();
