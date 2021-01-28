@@ -137,6 +137,7 @@ set(WORK
 
 
         # ---------------------------------------c++--------------------------------
+        srcplus/App.cpp
         #        #basic
                  srcplus/base/Basic.cpp
         #
@@ -289,7 +290,7 @@ set(WORK
         #        system/socket/tcp/warp/wrap.c
         #        system/socket/tcp/server_p.c
 
-        )
+        srcplus/App.cpp)
 
 add_custom_target(cmake-build-debug)
 add_custom_target(cmake-build-release)

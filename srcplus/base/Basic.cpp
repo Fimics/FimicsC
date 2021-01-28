@@ -3,15 +3,10 @@
 //
 
 #include <iostream>
+using namespace std;
 #include <gtest/gtest.h>
 
-using namespace std;
-
-
 int num = 200;
-
-
-
 //----------------------::作用域运算符--------------------
 /**
  * 1.namespace命名空间主要解决命名冲突的
@@ -21,8 +16,7 @@ int num = 200;
  * 5.命名空间是开放的，可以随时添加内容
  * 6.命名空间名字相同会合并，合并后取交集
  */
-namespace A{
-    void a();
+namespace A{void a();
 }
 
 namespace A{
@@ -48,7 +42,6 @@ namespace C{
     int sex;
 }
 
-
 //匿名namespace 相当于定了 static int a,static int b;只能在当前文件中使用
 namespace {
     int a ;
@@ -63,17 +56,12 @@ void  A::a() {
     cout<<"namespace A->a()\n";
 }
 
-
 void B::a() {
     cout<<"namespace B->a()\n";
     //命名空间起别名
     namespace vln = veryLongName;
     cout<<vln::a;
 }
-
-
-
-
 
 //----------------------::作用域运算符--------------------
 void print(){
@@ -86,7 +74,11 @@ void print(){
       cout<<::num<<"\n";
 }
 
-
+TEST(运算符,run){
+    A::a();
+    B::a();
+    print();
+}
 
 
 
@@ -110,7 +102,6 @@ void testUsing(){
 
     cout<<c<<endl;
 }
-
 
 
 
@@ -279,13 +270,7 @@ void myTest1(){
     cout<<"myTest  11";
 }
 
-TEST(MyTEST ,测试1){
-    myTest();
-}
 
-TEST(MyTEST1 ,测试1){
-    myTest1();
-}
 
 /**
  * 值传递
@@ -371,20 +356,4 @@ void constRef(){
    int * p =(int *) &ref;
    *p = 90;
    cout<<*p;
-}
-
-
-
-GTEST_API_ int main(int argc, char ** argv) {
-    testing::InitGoogleTest(&argc,argv);
-    return RUN_ALL_TESTS();
-
-//    print();
-//    A::a();
-//    B::a();
-//    testUsing();
-//    testRef();
-//    testPassParms();
-//    testRefPointer();
-//     constRef();
 }
