@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <gtest/gtest.h>
 
 using namespace std;
 
@@ -69,17 +70,13 @@ Teacher::Teacher() {
 }
 
 void Teacher::song() {
+    cout<<"友元函数的目的是访问类中的私有成员"<<"\n";
     cout << "teacher song\n";
     cout << "studnet age" << this->studnet->age << "\nstudent money" << studnet->money << "\n";
 
 }
 
-void testFriendClass() {
+TEST(友元,testFriendClass) {
     Teacher teacher;
     teacher.song();
 }
-
-
-//int main() {
-//    testFriendClass();
-//}

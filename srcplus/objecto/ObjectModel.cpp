@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <gtest/gtest.h>
 using namespace std;
 
 
@@ -11,13 +12,11 @@ class Person{
 
 public:
 
-
     Person(){
         this->age=10;
     }
 
     Person(Person & person){
-
     }
 
     const string name;
@@ -50,12 +49,9 @@ public:
           this->age1=20;
           cout<<"show info\n";
     }
-
-
 };
 
-
-void testObjectModel(){
+TEST(常对象与函数,mutable){
     /**
      * 空类的大小为1 每个实例的对象都有一个独一无二的地址，char 维护这个地址
      */
@@ -66,8 +62,6 @@ void testObjectModel(){
     Person * person = NULL;
     person->show();
     person->getAge();
-
-
     /**
      * 1.常对象不允许修改对象的值
      * 2.不可以调用普通的成员函数
@@ -78,8 +72,3 @@ void testObjectModel(){
 //    p1.show(); 不可以调用普通的成员函数
       p1.showInfo();
 }
-
-
-//int main(){
-//    testObjectModel();
-//}

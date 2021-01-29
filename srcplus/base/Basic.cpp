@@ -101,8 +101,6 @@ TEST(testUsing,using){
     testUsing();
 }
 
-
-
 //----------------------c++对c语言的增强---------------------------
 
 /**
@@ -123,6 +121,10 @@ TEST(testUsing,using){
 
 int getRect(int w,int h){
     return  w*h;
+}
+
+TEST(testFunction,getRect){
+    printf("%d ->",getRect(2,3));
 }
 
 /**
@@ -227,7 +229,7 @@ void testBool(){
 void testRef(){
     int a = 10;
     int c =30;
-    //引用必须初始化， 引用初始化化就不能修改了
+    //引用必须初始化
     int &b = a;
     cout<<a<<"\n";
     cout<<b<<"\n";
@@ -236,13 +238,10 @@ void testRef(){
 
     //对数组建立引用 第一种方式
     int arr[10];
-
     for (int i = 0; i <10 ; ++i) {
         arr[i]=i;
     }
-
     int (&array)[10]=arr;
-
     for (int j = 0; j <10 ; ++j) {
         cout<<array[j]<<"，";
     }
@@ -258,16 +257,9 @@ void testRef(){
     }
 }
 
-
-void myTest(){
-    cout<<"myTest";
+TEST(testRef,run){
+    testRef();
 }
-
-void myTest1(){
-    cout<<"myTest  11";
-}
-
-
 
 /**
  * 值传递
@@ -288,22 +280,20 @@ void swap1(int * a,int * b){
     int tmp = *a;
     *a=*b;
     *b = tmp;
-
     cout<<"\n"<<"swap1"<<"a= "<<*a<<" b= "<<*b;
-
 }
 
 /**
  * 引用传递 与指针一样，可以修改原始值
  */
-
 void swap2(int &a,int &b){
     int tmp = a;
     a = b;
     b = tmp;
     cout<<"\n"<<"swap1"<<"a= "<<a<<" b= "<<b;
 }
-void testPassParms(){
+
+TEST(swap012,swap){
     int a=10;
     int b =20;
 //    swap(a,b);
@@ -315,10 +305,7 @@ void testPassParms(){
     cout<<"\n"<<"testPassParms"<<"a= "<<a<<" b= "<<b;
 }
 
-
-
 /**
- *
  * p 指针的指针
  * *p 对象的指针
  * **p 具体的person对象
@@ -353,4 +340,8 @@ void constRef(){
    int * p =(int *) &ref;
    *p = 90;
    cout<<*p;
+}
+
+TEST(testConstRef,constRef){
+    constRef();
 }

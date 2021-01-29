@@ -3,11 +3,11 @@
 //
 
 #include <iostream>
+#include <gtest/gtest.h>
 
 using namespace std;
 
 const double pi = 3.14;
-
 
 class Circle {
 
@@ -18,20 +18,15 @@ public: //公共权限
         Circle::radius = radius;
     }
 
-    double getArea(){
-        double  area = radius*radius*pi;
+    double getArea() {
+        double area = radius * radius * pi;
         return area;
     }
 };
 
-
-void testGetArea(){
+TEST(public,private){
     Circle circle;
     circle.setRadius(20);
-    double  area = circle.getArea();
-    cout<<"ares is "<<area;
+    double area = circle.getArea();
+    cout << "ares is " << area;
 }
-
-//int main(){
-//    testGetArea();
-//}

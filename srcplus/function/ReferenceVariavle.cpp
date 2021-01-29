@@ -3,8 +3,8 @@
 //
 
 #include <iostream>
+#include <gtest/gtest.h>
 using  namespace std;
-
 
 //--------------------------引用变量---------------------------------
 /**
@@ -26,6 +26,6 @@ void testRefVariable(){
 }
 
 
-void referenceVariable(){
+TEST(引用变量,referenceVariable){
     testRefVariable();
 }

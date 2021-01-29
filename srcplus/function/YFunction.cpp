@@ -3,12 +3,8 @@
 //
 
 #include <iostream>
-#include "ExternC.h"
+#include <gtest/gtest.h>
 using namespace std;
-
-#include "ExternC.h"
-
-
 //------------------------宏函数的缺点----------------------------
 /**
  * 宏函数的缺点
@@ -16,25 +12,25 @@ using namespace std;
  * 2.各种加括号
  */
 #define  add(x,y) x+y
-#define  add1(x,y) （（x）+（y））
+#define  add1(x,y) (x+y)
 
 void testDefineFunction(){
     int result =add(1,2);
     cout<<"result "<<result<<"\n";
-
     int b = add(1,2)*3; //实际输出7 ，这种情况可以用add1() 加小括号处理
-    cout<<"b ="<<b<<"\n";
+    int add1 = add1(1,2)*3;
+    cout<<"add ="<<b<<"\n";
+    cout<<"add1 ="<<add1<<"\n";
 }
-
-
-
+TEST(宏函数,testDefineFunction){
+   testDefineFunction();
+}
 
 //------------------------内联函数----------------------------
 
 //类内部的成员函数默认为inline函数
 inline void funa();//内联函数声明
 inline void funa(){// 如函数实现没有加inline 那么这个函数任然不是内联函数
-
 }
 
 /**
@@ -52,6 +48,8 @@ inline void funa(){// 如函数实现没有加inline 那么这个函数任然不
  * //内联仅仅只是给编译器一个建议，编译器不一定会接受这种建议，如果你没有把函数声明为内联函数，那么编译器也可能吧函数内联编译
  * //一个好的编译器会内联小的，简单的函数
  */
+
+TEST(inline,inline){}
 
 /**
  * 函数的默认参数
@@ -92,17 +90,3 @@ void testOverload(const int &a){}//const也可以作为重载的条件
  * 函数重载原理
  * 1.编译器内部把函数名改了
  */
-
-
-
-
-
-
-#if 1
-//------------------------extern c 分析----------------------------
-
-#endif
-
-//int main(){
-//    testDefineFunction();
-//}

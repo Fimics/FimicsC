@@ -7,10 +7,6 @@
 #include <gtest/gtest.h>
 using namespace std;
 
-TEST(a,c){
-    cout<<"------------ddd----e"<<endl;
-}
-
 MyArray::MyArray() {
    this->capacity=100;
    this->size=0;
@@ -58,7 +54,7 @@ MyArray::~MyArray() {
 //    }
 }
 
-void farray(){
+TEST(array,myarray){
     //堆区创建
     MyArray * array = new MyArray(30);
 
@@ -67,10 +63,8 @@ void farray(){
     }
 
     for (int j = 0; j <10 ; ++j) {
-        cout<<array->get(j);
+        cout<<array->get(j)<<" ";
     }
-
-//    cout<<"array[3] ="<<array[3];
 
    delete [] array;
 }

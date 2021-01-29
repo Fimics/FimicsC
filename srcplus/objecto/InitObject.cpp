@@ -3,17 +3,12 @@
 //
 #include <iostream>
 #include <string>
-
+#include <gtest/gtest.h>
 using namespace std;
-
 /**
  * 对象的实始化与清理
  * 1.构造函数与析构函数
  */
-
-
-
-
 //-----------------------------构造函数------------------------------
 
 /**
@@ -62,11 +57,11 @@ public:
 };
 
 
-void testInit() {
-//    Person p;// Person p() 默认构造函数不能加() 加括号编译顺认为是函数声明
-//    Person p1(1);
-//    Person p2(p1);
-//    p2.eat();
+TEST(对象初始化,testInit) {
+    Person p;// Person p() 默认构造函数不能加() 加括号编译顺认为是函数声明
+    Person p1(1);
+    Person p2(p1);
+    p2.eat();
 
     Person p4 = Person(4);//显示调用
     //Person(4) 叫匿名对象 特点;如果编译器发现了对象是匿名的，那么在这行代码结束后就会释放这个对象
@@ -77,7 +72,6 @@ void testInit() {
      */
 //    Person(p4);
     Person p5 = Person(p4);
-
 }
 
 /**
@@ -105,6 +99,10 @@ void testGetPerson() {
     Person person = getPerson();
 }
 
+TEST(拷贝构造调用时机,objCopy){
+    testCopy();
+    testGetPerson();
+}
 
 //----------------------------构造函数的调用规则-------------------------------
 /**
@@ -149,7 +147,7 @@ public:
     Teacher() : a(1), b(2), c(3) {}
 };
 
-void testTeacher() {
+TEST(初始化列表,initListParams){
     Teacher teacher(1, 2, 3);
 //    Teacher teacher;
     cout << "a= " << teacher.a << "  b= " << teacher.b << "  c= " << teacher.c;
@@ -226,21 +224,22 @@ void testStudent() {
     Student student("zhanshan");
     Phone phone("android");
     Game game("jump");
-
     student.phone = phone;
     student.game = game;
+}
+
+TEST(构造与析构,testStudent){
+    testStudent();
 }
 
 //----------------------------explicit关键字的作用-------------------------------
 
 /**
  * explicit关键字的作用-->防止隐式类型转换
- *
  */
 
 /**
  * 为什么赋值语句会隐式调用构造函数?
-
  *类B有自定义构造函数，所以编译器不会自动生成编译器，但会自动生成析构函数{\red{析构函数}}析构函数，
  * 复制构造函数{\orange{复制构造函数}}复制构造函数，赋值函数{\green{赋值函数}}赋值函数，取址函数{\blue{取址函数}}取址函数。
  *
@@ -248,24 +247,19 @@ void testStudent() {
  *"15"隐式转换为实例B，即调用B(int)构造生成临时实例t，变为B b = t;
  *临时实例t隐式调用复制构造函数，把t复制给b，t销毁。
  */
-
-
 class B {
 public:
     explicit B(int b) { cout << b << endl; }
 };
 
-
 class MyString {
 public:
     MyString(const char *str) {
-
     }
 
     explicit MyString(int strSize) {
         size = strSize;
     }
-
     char *str;
     int size;
 };
@@ -275,10 +269,13 @@ void testMyString() {
     MyString str1 = "dd";//等价于隐式类型转换 MyString str1 =MyString(10)
 }
 
+TEST(防止隐式类型转换,explicit){
+    testMyString();
+}
 
 //------------------------------动态对象创建  new 运算符的使用-------------------------------
 
-static void testNew() {
+TEST(new,delete){
 
 //    Game game;//栈区开辟
 
@@ -302,16 +299,4 @@ static void testNew() {
 
     //在栈上开辟数组，可以指定有参函数
     Game games1[2] = {Game("1"), Game("2")};
-
-
 }
-
-
-//int main() {
-//    testInit();
-//    testGetPerson();
-//    testTeacher();
-//    testStudent();
-//    testMyString();
-//    testNew();
-//}

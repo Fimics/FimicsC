@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <gtest/gtest.h>
 using  namespace std;
 
 /**
@@ -28,17 +29,12 @@ void process(){
     mPrint(300);
 }
 
-double pam(int);//prototype
-
-void testPam(){
+TEST(testFunAddress,process){
+    process();
     /**
-     * 1.用(*pf) 替换函数名，pf就是这类函数的指针
-     * 2.()优先级高于 * ， * pf(int)表示返回指针的函数，(*pf)(int)是指向函数的指针
-     */
+    * 1.用(*pf) 替换函数名，pf就是这类函数的指针
+    * 2.()优先级高于 * ， * pf(int)表示返回指针的函数，(*pf)(int)是指向函数的指针
+    */
     double (*pf)(int);
 }
 
-
-//int main(){
-//    process();
-//}

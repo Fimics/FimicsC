@@ -3,11 +3,10 @@
 //
 
 #include <iostream>
-
+#include <gtest/gtest.h>
 using namespace std;
 
 
-#if 1
 //----------------------------单列模式------------------------------------
 
 class UserManager {
@@ -51,19 +50,16 @@ private:
 UserManager *UserManager::instance = new UserManager;
 
 
-void testUserManager() {
-
+TEST(单列,testUserManager) {
+    cout<<"单列"<<"\n";
     UserManager *u1 = UserManager::getInstance();
     u1->setAge(20);
     u1->setName("lishi");
     cout << "name = " << u1->getName() << " age = " << u1->getAge()<<"\n";
-
     UserManager * u2 = UserManager::getInstance();
-
     if(u2==u1){
         cout<<"u2 == u1\n";
     }
-
     //拷贝构造
 //    UserManager *u3= new UserManager(*u2);
 //
@@ -71,9 +67,3 @@ void testUserManager() {
 //       cout<<"u2==u3"<<"\n";
 //    }
 }
-
-#endif
-//
-//int main() {
-//    testUserManager();
-//}

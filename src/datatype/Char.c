@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <gtest/gtest.h>
 
 void getCharPutChar() {
     char ch;
@@ -13,6 +14,7 @@ void getCharPutChar() {
 
 //    while ((ch=getchar()!=EOF))// 判断文件末尾
 }
+
 
 void testFileEof() {
     int ch;

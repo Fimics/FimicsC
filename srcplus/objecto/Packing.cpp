@@ -5,6 +5,7 @@
 //c++封装 与类成员权限
 
 #include <iostream>
+#include <gtest/gtest.h>
 using namespace std;
 
 /**
@@ -16,37 +17,34 @@ using namespace std;
  *   private
  *
  */
-
-struct Person{
-    char * name;
+struct Person {
+    char *name;
     int age;
-    void eat(){
 
+    void eat() {
     }
 };
 
-
-void testEat(){
+void testEat() {
     Person p1;
-
 }
 
 /**
  * struct与class是一个意思，但struct的默认权限是public ,class的默认权限是private
  */
-class Animal{
+class Animal {
     //如果不声明权限默认是private的
     void eat();//private 在类内部可以访问，类外部不能访问
 public:
-    void running(){};//public 可以在任何地方访问
+    void running() {};//public 可以在任何地方访问
 protected:
-    void sleep(){}; //在子类与当前类可以访问
+    void sleep() {}; //在子类与当前类可以访问
 
 private:
     int age;
 };
 
-class Cube{
+class Cube {
 
 public:
     int getW() const {
@@ -62,7 +60,7 @@ public:
     }
 
     void setH(int h) {
-        Cube::h = h;
+        this->h = h;
     }
 
     int getL() const {
@@ -70,22 +68,21 @@ public:
     }
 
     void setL(int l) {
-       this->l = l;
+        this->l = l;
     }
 
-    int getS(){
-        return 2*(w*h+w*l+h*l);
+    int getS() {
+        return 2 * (w * h + w * l + h * l);
     }
 
-    int getV(){
-        return w*l*h;
+    int getV() {
+        return w * l * h;
     }
 
-    bool isEqual(Cube cube){
-        if(getV()==cube.getV()){
+    bool isEqual(Cube cube) {
+        if (getV() == cube.getV()) {
             return true;
         }
-
         return false;
     }
 
@@ -101,12 +98,12 @@ private:
  * @param c2
  * @return
  */
-bool isEqueal(Cube &c1, Cube &c2){
-    if(c1.getL()==c2.getL()) return true;
+bool isEqueal(Cube &c1, Cube &c2) {
+    if (c1.getL() == c2.getL()) return true;
     return false;
 }
 
-void packing(){
+void packing() {
 
     Cube cube;
     cube.setH(10);
@@ -115,19 +112,17 @@ void packing(){
 
     int s = cube.getS();
     int v = cube.getV();
-
-    cout<<"s="<<s<<" v= "<<v<<"\n";
+    cout << "s=" << s << " v= " << v << "\n";
 
     Cube cube1;
     cube1.setH(10);
     cube1.setL(10);
     cube1.setW(10);
-    bool isGlobalEqual = isEqueal(cube,cube1);
+    bool isGlobalEqual = isEqueal(cube, cube1);
     bool isMemberEqual = cube.isEqual(cube1);
-
-    cout<<"isGlobalEqual ="<<isGlobalEqual<<" isMemberEqual = "<<isMemberEqual<<"\n";
+    cout << "isGlobalEqual =" << isGlobalEqual << " isMemberEqual = " << isMemberEqual << "\n";
 }
 
-//int main(){
-//    packing();
-//}
+TEST(类的基本使用, packing) {
+    packing();
+}

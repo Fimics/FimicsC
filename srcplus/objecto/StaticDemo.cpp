@@ -4,7 +4,7 @@
 
 #include <string>
 #include <iostream>
-
+#include <gtest/gtest.h>
 using namespace std;
 
 
@@ -39,7 +39,7 @@ private:
 int Person::age=10;
 int Person::sex=1;
 
-void testStatic(){
+TEST(static,run){
 
         //通过对象访问static 变量
         Person p1;
@@ -60,8 +60,3 @@ void testStatic(){
         p2.func();
 
 }
-
-
-//int main(){
-//    testStatic();
-//}
