@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <gtest/gtest.h>
 using namespace std;
 
 /**
@@ -18,6 +19,10 @@ void staticCast(){
     char a ='a';
     double  d = static_cast<double>(a);
     cout<<"d= "<<d<<endl;
+}
+
+TEST(staticCast,cast){
+    staticCast();
 }
 
 //父子之间转换

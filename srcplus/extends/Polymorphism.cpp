@@ -3,7 +3,7 @@
 //
 #include <iostream>
 #include <string.h>
-
+#include <gtest/gtest.h>
 using namespace std;
 
 //https://blog.csdn.net/yc461515457/article/details/52658589
@@ -166,11 +166,11 @@ void testCalculator() {
 
 }
 
-//int main() {
+TEST(纯虚函数,virtual){
 
-//    testCalculator();
-    //如果发生了继承关系，编译器允许进行类型转换
-//    Animal *animal = new Cat("Tom");
-//    animal->eat();
-//    delete animal;
-//}
+    testCalculator();
+//    如果发生了继承关系，编译器允许进行类型转换
+    Animal *animal = new Cat("Tom");
+    animal->eat();
+    delete animal;
+}

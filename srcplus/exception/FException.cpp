@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <gtest/gtest.h>
 using namespace std;
 
 /**
@@ -25,8 +26,7 @@ int divTry(int a,int b){
     return a/b;
 }
 
-void testDivTry(){
-
+TEST(try,catchException){
     try {
         divTry(1,0);
     }catch(int){
@@ -36,7 +36,6 @@ void testDivTry(){
     } catch(...){
         cout<<"other"<<endl;
     }
-
 }
 
 /**
@@ -54,9 +53,7 @@ public:
     MyException() {}
 
     virtual ~MyException() {
-
     }
-
 };
 
 //class OutOfRangeException:public exception{
@@ -88,12 +85,3 @@ void testFun2(){
 //    throw MyException(); //自定义异常
 //      throw out_of_range("数组越界"); //使用系统异常
 }
-
-
-
-
-//int main(){
-//   testDivTry();
-//   testFun2();
-//   typeCast();
-//}

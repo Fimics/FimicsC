@@ -5,17 +5,18 @@
 #include <vector>
 #include <algorithm>
 #include <string>
+#include <gtest/gtest.h>
 
 using namespace std;
 
 void myPrint(int v) {
-    cout << v << endl;
+    cout << v << " ";
 }
 
 /**
  * 容器遍历
  */
-void testVector1() {
+TEST(vector, for_each) {
     vector<int> v;
     v.push_back(1);
     v.push_back(2);
@@ -59,11 +60,11 @@ public:
     int height;
 };
 
-void myPersonPrint(Person *p) {
-    cout << "height=" << p->height << " age " << p->age << endl;
+void myPersonPrint(Person &p) {
+    cout << "height=" << p.height << " age " << p.age << endl;
 }
 
-void iteratorPerson() {
+TEST(vector,iterator){
     vector<Person> vp;
     Person p1(100, 1);
     Person p2(200, 2);
@@ -126,9 +127,3 @@ void iteratorPerson1() {
     }
 
 }
-
-//int main() {
-//    testVector1();
-//    iteratorPerson();
-//    iteratorPerson1();
-//}

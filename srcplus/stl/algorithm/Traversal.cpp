@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <vector>
 #include <functional>
+
 using namespace std;
 
 
@@ -22,19 +23,15 @@ using namespace std;
 //	cout << v << endl;
 //}
 
-struct myPrint01
-{
-    void operator()(int v)
-    {
+struct myPrint01 {
+    void operator()(int v) {
         cout << v << endl;
     }
 };
 
-void testForEach()
-{
-    vector<int>v;
-    for (int i = 0; i < 10;i++)
-    {
+void testForEach() {
+    vector<int> v;
+    for (int i = 0; i < 10; i++) {
         v.push_back(i);
     }
 
@@ -42,21 +39,19 @@ void testForEach()
 }
 
 
-struct myPrint02
-{
-    void operator()(int v)
-    {
+struct myPrint02 {
+    void operator()(int v) {
         cout << v << endl;
         m_Count++;
     }
+
     int m_Count;
 };
+
 //2 for_each有返回值
-void testForEach1()
-{
-    vector<int>v;
-    for (int i = 0; i < 10; i++)
-    {
+void testForEach1() {
+    vector<int> v;
+    for (int i = 0; i < 10; i++) {
         v.push_back(i);
     }
 
@@ -65,19 +60,15 @@ void testForEach1()
 }
 
 //3 for_each可以绑定参数进行输出
-struct myPrint03 :public binary_function<int,int,void>
-{
-    void operator()(int v ,int start) const
-    {
-        cout << v  + start << endl;
+struct myPrint03 : public binary_function<int, int, void> {
+    void operator()(int v, int start) const {
+        cout << v + start << endl;
     }
 };
 
-void testForEach2()
-{
-    vector<int>v;
-    for (int i = 0; i < 10; i++)
-    {
+void testForEach2() {
+    vector<int> v;
+    for (int i = 0; i < 10; i++) {
         v.push_back(i);
     }
 
@@ -95,54 +86,47 @@ transform算法 将指定容器区间元素搬运到另一容器中
 @return 返回目标容器迭代器
 */
 
-class TransForm
-{
+class TransForm {
 public:
-    int operator()(int val)
-    {
+    int operator()(int val) {
         return val + 10;
     }
 };
-void testTransForm()
-{
-    vector<int>v; //原容器
-    for (int i = 0; i < 10; i++)
-    {
+
+void testTransForm() {
+    vector<int> v; //原容器
+    for (int i = 0; i < 10; i++) {
         v.push_back(i);
     }
-    vector<int>vTarget; //目标容器
+    vector<int> vTarget; //目标容器
     vTarget.resize(v.size());
 
     transform(v.begin(), v.end(), vTarget.begin(), TransForm());
 
-    for_each(vTarget.begin(), vTarget.end(), [](int val){ cout << val << " "; });
+    for_each(vTarget.begin(), vTarget.end(), [](int val) { cout << val << " "; });
 
 }
 
 //transform 第二种用法 将两个容器数据相加搬运到目标容器
-class TransForm2
-{
+class TransForm2 {
 public:
-    int operator()(int val ,int val2)
-    {
+    int operator()(int val, int val2) {
         return val + val2;
     }
 };
 
-void testTransform2()
-{
-    vector<int>v1;
-    vector<int>v2;
-    for (int i = 0; i < 10;i++)
-    {
+void testTransform2() {
+    vector<int> v1;
+    vector<int> v2;
+    for (int i = 0; i < 10; i++) {
         v1.push_back(100 + i);
         v2.push_back(200 + i);
     }
-    vector<int>vTarget; //目标容器
+    vector<int> vTarget; //目标容器
     vTarget.resize(v1.size());
     transform(v1.begin(), v1.end(), v2.begin(), vTarget.begin(), TransForm2());
 
     // 300 302...
-    for_each(vTarget.begin(), vTarget.end(), [](int val){ cout << val << " "; });
+    for_each(vTarget.begin(), vTarget.end(), [](int val) { cout << val << " "; });
 
 }

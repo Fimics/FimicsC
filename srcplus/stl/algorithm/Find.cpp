@@ -5,10 +5,13 @@
 
 #include<iostream>
 #include <algorithm>
+
 using namespace std;
+
 #include <vector>
 #include <string>
 #include <functional>
+
 /*
 find算法 查找元素
 @param beg 容器开始迭代器
@@ -16,38 +19,29 @@ find算法 查找元素
 @param value 查找的元素
 @return 返回查找元素的位置
 */
-void testFind()
-{
-    vector<int>v;
-    for (int i = 0; i < 10;i++)
-    {
+void testFind() {
+    vector<int> v;
+    for (int i = 0; i < 10; i++) {
         v.push_back(i);
     }
     vector<int>::iterator pos = find(v.begin(), v.end(), 5);
-    if (pos!=v.end())
-    {
+    if (pos != v.end()) {
         cout << "找到了数据：" << *pos << endl;
-    }
-    else
-    {
+    } else {
         cout << "未找到" << endl;
     }
 
 }
 
-class Person
-{
+class Person {
 public:
-    Person(string name, int age)
-    {
+    Person(string name, int age) {
         this->m_Name = name;
         this->m_Age = age;
     }
 
-    bool operator==( const Person&p)
-    {
-        if (this->m_Name == p.m_Name && this->m_Age == p.m_Age)
-        {
+    bool operator==(const Person &p) {
+        if (this->m_Name == p.m_Name && this->m_Age == p.m_Age) {
             return true;
         }
         return false;
@@ -56,10 +50,10 @@ public:
     string m_Name;
     int m_Age;
 };
+
 //利用find查找自定义数据类型
-void testFind1()
-{
-    vector<Person>v;
+void testFind1() {
+    vector<Person> v;
 
     Person p1("aaa", 10);
     Person p2("bbb", 20);
@@ -73,33 +67,27 @@ void testFind1()
 
     vector<Person>::iterator pos = find(v.begin(), v.end(), p2);
 
-    if (pos != v.end())
-    {
+    if (pos != v.end()) {
         cout << "找到了数据姓名：" << (*pos).m_Name << " 年龄：" << pos->m_Age << endl;
-    }
-    else
-    {
+    } else {
         cout << "未找到" << endl;
     }
 }
 
 
-class MyCompare :public binary_function<Person*, Person* ,bool>
-{
+class MyCompare : public binary_function<Person *, Person *, bool> {
 public:
-    bool operator()( Person * p1 , Person * p2) const
-    {
-        if (p1->m_Name == p2->m_Name && p1->m_Age == p2->m_Age)
-        {
+    bool operator()(Person *p1, Person *p2) const {
+        if (p1->m_Name == p2->m_Name && p1->m_Age == p2->m_Age) {
             return true;
         }
         return false;
     }
 
 };
-void testFindIf03()
-{
-    vector<Person *>v;
+
+void testFindIf03() {
+    vector<Person *> v;
 
     Person p1("aaa", 10);
     Person p2("bbb", 20);
@@ -111,15 +99,12 @@ void testFindIf03()
     v.push_back(&p3);
     v.push_back(&p4);
 
-    Person * p = new Person("bbb", 20);
-    vector<Person*>::iterator pos = find_if(v.begin(), v.end(),  bind2nd( MyCompare(), p));
+    Person *p = new Person("bbb", 20);
+    vector<Person *>::iterator pos = find_if(v.begin(), v.end(), bind2nd(MyCompare(), p));
 
-    if (pos != v.end())
-    {
+    if (pos != v.end()) {
         cout << "找到了数据姓名：" << (*pos)->m_Name << " 年龄：" << (*pos)->m_Age << endl;
-    }
-    else
-    {
+    } else {
         cout << "未找到" << endl;
     }
 }
@@ -132,9 +117,8 @@ adjacent_find算法 查找相邻重复元素
 @param  _callback 回调函数或者谓词(返回bool类型的函数对象)
 @return 返回相邻元素的第一个位置的迭代器
 */
-void test04()
-{
-    vector<int>v;
+void test04() {
+    vector<int> v;
     v.push_back(2);
     v.push_back(3);
     v.push_back(4);
@@ -145,12 +129,9 @@ void test04()
 
     vector<int>::iterator pos = adjacent_find(v.begin(), v.end());
 
-    if (pos!= v.end())
-    {
+    if (pos != v.end()) {
         cout << "找到了相邻重复元素为： " << *pos << endl;
-    }
-    else
-    {
+    } else {
         cout << "未找到" << endl;
     }
 
@@ -164,21 +145,16 @@ binary_search算法 二分查找法
 @param value 查找的元素
 @return bool 查找返回true 否则false
 */
-void testBinarySerach()
-{
-    vector<int>v;
-    for (int i = 0; i < 10;i++)
-    {
+void testBinarySerach() {
+    vector<int> v;
+    for (int i = 0; i < 10; i++) {
         v.push_back(i);
     }
 
-    bool ret =  binary_search(v.begin(), v.end(), 4);
-    if (ret)
-    {
+    bool ret = binary_search(v.begin(), v.end(), 4);
+    if (ret) {
         cout << "找到了4" << endl;
-    }
-    else
-    {
+    } else {
         cout << "未找到" << endl;
     }
 
@@ -201,22 +177,19 @@ count_if算法 统计元素出现次数
 @return int返回元素个数
 
 */
-class GreaterThenFour
-{
+class GreaterThenFour {
 
 public:
-    bool operator()(int v)
-    {
+    bool operator()(int v) {
         return v >= 4;
     }
 
 };
-void testCountIf()
-{
 
-    vector<int>v;
-    for (int i = 0; i < 10; i++)
-    {
+void testCountIf() {
+
+    vector<int> v;
+    for (int i = 0; i < 10; i++) {
         v.push_back(i);
     }
 

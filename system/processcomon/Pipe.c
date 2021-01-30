@@ -67,12 +67,3 @@ void testPipParentChildComon(){
   }
 }
 
-void testPipeSize(){
-
-}
-
-//int main(){
-////    testPipe();
-//      testPipParentChildComon();
-//    return 1;
-//}

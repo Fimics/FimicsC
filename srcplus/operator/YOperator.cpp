@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <gtest/gtest.h>
 #include <string.h>
 
 using namespace std;
@@ -154,46 +155,46 @@ public:
     }
 };
 
-//int main() {
-//
-//
-//    MyOperator myOperator(1, 1);
-//    MyOperator myOperator1(2, 2);
-//
-//    MyOperator myOperator2 = myOperator + myOperator1;
-//    cout << "m2 a =" << myOperator2.a << " m2 b=" << myOperator2.b << "\n";
-//
-//    //智能指针
-//    Person *person = new Person(3);
-//    SmartPointer sp(person);
-//    //int age = sp->showAge();// sp->->showAge() 编译器优化了写法
-//
-//    (*sp).showAge();
-//
-//    //=运算符号重载
-//    Person p1(2);
-//    Person p2 = p1;
-//    cout << "p2 age " << p2.showAge();
-//
-//    //=赋值运算符重载
-//    Dog dog1("AAA");
-//    Dog dog2("BBB");
-//    Dog dog3("CCC");
-//    dog1 = dog2 = dog3;
-//    cout << "dog1 name is : " << dog2.getName() << endl;
-//    int a = 10;
-//    int b = 20;
-//    int c;
-//    c = a = b;
-//    cout << " a,b ,c " << a << " , " << b << " , " << c;
-//
-//
-//    MyPrint myPrint;
-//    myPrint("hello");//仿函数，不是函数调用
-//
-//    MyAdd myAdd;
-//    int result = myAdd(1, 2);
-//    cout << "result = " << result << endl;
-//    cout << "Myadd()" << MyAdd()(2, 3) << endl;//通过匿名对象调用
+TEST(运算符,myOperator){
 
-//}
+
+    MyOperator myOperator(1, 1);
+    MyOperator myOperator1(2, 2);
+
+    MyOperator myOperator2 = myOperator + myOperator1;
+    cout << "m2 a =" << myOperator2.a << " m2 b=" << myOperator2.b << "\n";
+
+    //智能指针
+    Person *person = new Person(3);
+    SmartPointer sp(person);
+    //int age = sp->showAge();// sp->->showAge() 编译器优化了写法
+
+    (*sp).showAge();
+
+    //=运算符号重载
+    Person p1(2);
+    Person p2 = p1;
+    cout << "p2 age " << p2.showAge();
+
+    //=赋值运算符重载
+    Dog dog1("AAA");
+    Dog dog2("BBB");
+    Dog dog3("CCC");
+    dog1 = dog2 = dog3;
+    cout << "dog1 name is : " << dog2.getName() << endl;
+    int a = 10;
+    int b = 20;
+    int c;
+    c = a = b;
+    cout << " a,b ,c " << a << " , " << b << " , " << c;
+
+
+    MyPrint myPrint;
+    myPrint("hello");//仿函数，不是函数调用
+
+    MyAdd myAdd;
+    int result = myAdd(1, 2);
+    cout << "result = " << result << endl;
+    cout << "Myadd()" << MyAdd()(2, 3) << endl;//通过匿名对象调用
+
+}

@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <gtest/gtest.h>
 
 using namespace std;
 
@@ -23,6 +24,7 @@ public:
         cout << "BasePage init..." << endl;
     }
 
+    //虚析构  如果一个类有可能会被继承，那么它的析构函数最好加上virtual，不然出现内存泄漏问题找都找不到
     virtual ~BasePage() {
         cout << "BasePage destroy..." << endl;
     }
@@ -64,7 +66,7 @@ int BasePage::niceCount = 1000;
 
 /**
  * 1.先调用parent init-->child init-->child destroy-->parent destroy
- * 2.三种继承方式：->class News: public BasePage 所有的继承都不能访问到private属性
+ * 2.三种继承方式:->class News: public BasePage 所有的继承都不能访问到private属性
  *    public :int a ,protected int b, private int c
  *    2.1 public    : parent  public :int a ,protected int b, private x
  *    2.1 private   : parent  public :----- ,protected int b, int c ,private x 到子类都变成protected
@@ -116,12 +118,6 @@ private:
     int newsCount = 100;
 };
 
-void testNews() {
-    News news;
-    cout << "\nnews.sameCount= " << news.sameCount << endl;
-    cout << "\nnews->basePage->.sameCount= " << news.BasePage::sameCount << endl; //如果子类与父类成员同名，使用作用域调用父类成员
-}
-
 class ArmyNews : public News {
 public:
 
@@ -134,10 +130,12 @@ public:
     }
 };
 
-void testArmyNews() {
-    ArmyNews news;
+TEST(继承,testNews) {
+    News news;
+    cout << "\nnews.sameCount= " << news.sameCount << endl;
+    cout << "\nnews->basePage->.sameCount= " << news.BasePage::sameCount << endl; //如果子类与父类成员同名，使用作用域调用父类成员
+    ArmyNews news1;
 }
-
 //--------------------------多继承的问题----------------------------
 /**
  *
@@ -171,10 +169,9 @@ public:
 };
 
 
-void testChild() {
+TEST(多继承,run) {
     Child child;
     int b = child.Base1::b;//多继承二义性需要作用域
-
     cout << "child size: " << sizeof(Child) << endl;
 }
 
@@ -211,18 +208,13 @@ class SheepTuo : public Sheep, public Tuo {
 
 };
 
-void testSheepTuo() {
+TEST(菱形继承,虚函数虚基类){
     SheepTuo st;
     st.Sheep::age = 1;
     st.Tuo::age = 2;
     cout << "ages = " << st.Sheep::age << "  aget =" << st.Tuo::age << endl;
+
 }
 
-//int main() {
-//    testNews();
-//    testArmyNews();
-//    testChild();
-//    testSheepTuo();
-//}
 
 

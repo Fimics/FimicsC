@@ -15,7 +15,7 @@
 #if 0
 addr 传NULL
 length 映射区长度
-prot 可读，可写
+prot 可读,可写
     PROT_EXEC  Pages may be executed.
     PROT_READ  Pages may be read.
 flags 共享的 私有的  对内存的修改会影响到原文件

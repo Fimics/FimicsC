@@ -159,127 +159,120 @@ set(WORK
     srcplus/objecto/FriendClass.cpp
 
 #design
-        srcplus/design/Singleton.cpp
-#        #Array
-        srcplus/array/O.h
-        srcplus/array/Array.cpp
+    srcplus/design/Singleton.cpp
+#Array
+    srcplus/array/O.h
+    srcplus/array/Array.cpp
+#string
+    srcplus/string/String.h
+    srcplus/string/String.cpp
+#operator
+    srcplus/operator/YOperator.cpp
+
+#memory
+    srcplus/memory/FMemory.cpp
+
+#extends
+    srcplus/extends/ExtendsMode.cpp
+    srcplus/extends/Polymorphism.cpp
+
+#funTemplate
+    srcplus/funtemplate/FunTemplate.cpp
+
+#expection
+    srcplus/exception/FException.cpp
+    srcplus/exception/TypeCast.cpp
+#io
+    srcplus/io/IO.h
+    srcplus/io/IO.cpp
+
+#stl
+#vector
+    srcplus/stl/container/Vector.cpp
+    srcplus/stl/container/Vector1.cpp
+
+#string
+    srcplus/stl/container/String.cpp
 #
-#        #string
-        srcplus/string/String.h
-        srcplus/string/String.cpp
-        #
-#        #operator
-#        srcplus/operator/YOperator.cpp
+#deque
+    srcplus/stl/container/Deque.cpp
+
+#stack
+    srcplus/stl/container/Stack.cpp
 #
-#        #memory
-#        srcplus/memory/FMemory.cpp
+#queue
+    srcplus/stl/container/Queue.cpp
 #
-#        #extends
-#        srcplus/extends/ExtendsMode.cpp
-#        srcplus/extends/Polymorphism.cpp
+#list
+    srcplus/stl/container/List.cpp
 #
-#        #funTemplate
-#        srcplus/funtemplate/FunTemplate.cpp
+#set
+    srcplus/stl/container/Set.cpp
 #
-#        #expection
-#        srcplus/exception/FException.cpp
-#        srcplus/exception/TypeCast.cpp
+ #pair
+    srcplus/stl/container/Pair.cpp
+#map
+    srcplus/stl/container/Map.cpp
 #
-#        #io
-#        srcplus/io/IO.h
-#        srcplus/io/IO.cpp
-#
-#        #stl
-#
-#        #vector
-#        srcplus/stl/container/Vector.cpp
-#        srcplus/stl/container/Vector1.cpp
-#
-#        #string
-#        srcplus/stl/container/String.cpp
-#
-#        #deque
-#        srcplus/stl/container/Deque.cpp
-#
-#        #stack
-#        srcplus/stl/container/Stack.cpp
-#
-#        #queue
-#        srcplus/stl/container/Queue.cpp
-#
-#        #list
-#        srcplus/stl/container/List.cpp
-#
-#        #set
-#        srcplus/stl/container/Set.cpp
-#
-#        #pair
-#        srcplus/stl/container/Pair.cpp
-#
-#        #map
-#        srcplus/stl/container/Map.cpp
-#
-#        #multimap
-#        srcplus/stl/container/MultiMap.cpp
-#
-#        #functor
-#        srcplus/stl/algorithm/Functor.cpp
-#        srcplus/stl/algorithm/Predicate.cpp
-#        srcplus/stl/algorithm/BuiltInFunction.cpp
-#        srcplus/stl/algorithm/Adapter.cpp
-#        srcplus/stl/algorithm/Traversal.cpp
-#        srcplus/stl/algorithm/Find.cpp
-#        srcplus/stl/algorithm/Sort.cpp
-#        srcplus/stl/algorithm/CopyAndReplace.cpp
-#        srcplus/stl/algorithm/AlgorithmCreater.cpp
-#        srcplus/stl/algorithm/CommonSet.cpp
+#multimap
+    srcplus/stl/container/MultiMap.cpp
+#functor
+    srcplus/stl/algorithm/Functor.cpp
+    srcplus/stl/algorithm/Predicate.cpp
+    srcplus/stl/algorithm/BuiltInFunction.cpp
+    srcplus/stl/algorithm/Adapter.cpp
+    srcplus/stl/algorithm/Traversal.cpp
+    srcplus/stl/algorithm/Find.cpp
+    srcplus/stl/algorithm/Sort.cpp
+    srcplus/stl/algorithm/CopyAndReplace.cpp
+    srcplus/stl/algorithm/AlgorithmCreater.cpp
+    srcplus/stl/algorithm/CommonSet.cpp
 
 
 #-----------------------------------system----------------------------
 #file
-#        system/mian.c
-#        system/file/File.c
-#        system/file/MyTouch.c
-#        system/file/MyCat.c
-#        system/file/Lseek.c
-#        system/file/FileStat.c
-#        system/file/AccessTruncate.c
-#        system/file/Link.c
-#        system/file/Chown.c
-#        system/file/CountFiles.c
-#        system/file/Errno.c
-#        system/file/Dup2.c
+        system/file/File.c
+        system/file/MyTouch.c
+        system/file/MyCat.c
+        system/file/Lseek.c
+        system/file/FileStat.c
+        system/file/AccessTruncate.c
+        system/file/Link.c
+        system/file/Chown.c
+        system/file/CountFiles.c
+        system/file/Errno.c
+        system/file/Dup2.c
 
 #processcntl
-#        system/processcntl/Fork.c
-#        system/processcntl/ProcessShared.c
-#        system/processcntl/Execl.c
-#        system/processcntl/Wait.c
+        system/processcntl/Fork.cpp
+        system/processcntl/ProcessShared.c
+        system/processcntl/Execl.c
+        system/processcntl/Wait.c
 
 #processcomon
-#        system/processcomon/Pipe.c
-#        system/processcomon/FifoWrite.c
-#        system/processcomon/FifoRead.c
-#        system/processcomon/Mmap.c
-#        system/processcomon/MmapWriter.c
+        system/processcomon/Pipe.c
+        system/processcomon/FifoWrite.c
+        system/processcomon/FifoRead.c
+        system/processcomon/Mmap.c
+        system/processcomon/MmapWriter.c
 
 #singal
-#        system/signal/Kill.c
-#        system/signal/Alarm.c
-#        system/signal/SetITimer.c
-#        system/signal/SigSet.c
-#        system/signal/SigAction.c
-#        system/signal/SigChild.c
+        system/signal/Kill.c
+        system/signal/Alarm.c
+        system/signal/SetITimer.c
+        system/signal/SigSet.c
+        system/signal/SigAction.c
+        system/signal/SigChild.c
 
 #thread
-#        system/thread/DaemonP.c
-#        system/thread/Thread.c
-#        system/thread/Mutex.c
-#        system/thread/TryLock.c
-#        system/thread/RwLock.c
-#        system/thread/Producer.c
-#        system/thread/Sem.c
-#        system/thread/FileLock.c
+        system/thread/DaemonP.c
+        system/thread/Thread.c
+        system/thread/Mutex.c
+        system/thread/TryLock.c
+        system/thread/RwLock.c
+        system/thread/Producer.c
+        system/thread/Sem.c
+        system/thread/FileLock.c
 
 #socket
 #        system/socket/tcp/client_tcp.c

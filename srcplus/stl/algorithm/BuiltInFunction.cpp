@@ -3,16 +3,16 @@
 //
 
 #include<iostream>
+
 using namespace std;
 //内建函数对象头文件
 #include <functional>
 #include <vector>
 #include <algorithm>
 
-void testNegate()
-{
+void testNegate() {
     //template<class T> T negate<T>//取反仿函数
-    negate<int>n;
+    negate<int> n;
 
     cout << n(10) << endl;
 
@@ -25,9 +25,8 @@ void testNegate()
 
 //template<class T> bool greater<T>//大于
 
-void testGreater()
-{
-    vector<int>v;
+void testGreater() {
+    vector<int> v;
 
     v.push_back(10);
     v.push_back(30);
@@ -37,5 +36,5 @@ void testGreater()
 
     sort(v.begin(), v.end(), greater<int>());
 
-    for_each(v.begin(), v.end(), [](int val){ cout << val << " "; });
+    for_each(v.begin(), v.end(), [](int val) { cout << val << " "; });
 }

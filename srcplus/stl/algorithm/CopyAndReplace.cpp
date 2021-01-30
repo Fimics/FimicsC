@@ -6,6 +6,7 @@
 #include <vector>
 #include <algorithm>
 #include <iterator>
+
 using namespace std;
 
 /*
@@ -15,15 +16,13 @@ copy算法 将容器内指定范围的元素拷贝到另一容器中
 @param dest 目标起始迭代器
 */
 
-void testCopy()
-{
-    vector<int>v;
-    for (int i = 0; i < 10; i++)
-    {
+void testCopy() {
+    vector<int> v;
+    for (int i = 0; i < 10; i++) {
         v.push_back(i);
     }
 
-    vector<int>vTarget;
+    vector<int> vTarget;
     vTarget.resize(v.size());
 
     copy(v.begin(), v.end(), vTarget.begin());
@@ -46,19 +45,16 @@ replace_if算法 将容器内指定范围满足条件的元素替换为新元素
 @param callback函数回调或者谓词(返回Bool类型的函数对象)
 @param oldvalue 新元素
 */
-class MyCompare
-{
+class MyCompare {
 public:
-    bool operator()(int v)
-    {
+    bool operator()(int v) {
         return v > 3;
     }
 };
-void testReplace()
-{
-    vector<int>v;
-    for (int i = 0; i < 10; i++)
-    {
+
+void testReplace() {
+    vector<int> v;
+    for (int i = 0; i < 10; i++) {
         v.push_back(i);
     }
 
@@ -81,15 +77,13 @@ swap算法 互换两个容器的元素
 @param c2容器2
 */
 
-void testSwap()
-{
-    vector<int>v1;
-    for (int i = 0; i < 10; i++)
-    {
+void testSwap() {
+    vector<int> v1;
+    for (int i = 0; i < 10; i++) {
         v1.push_back(i);
     }
 
-    vector<int>v2;
+    vector<int> v2;
     v2.push_back(10);
     v2.push_back(30);
     v2.push_back(20);

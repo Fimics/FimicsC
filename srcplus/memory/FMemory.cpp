@@ -3,16 +3,14 @@
 //
 
 #include <iostream>
-
+#include <gtest/gtest.h>
 using namespace std;
 
 /**
  * 指针:
  * 1.一定要在解除引用运算(*)之前，把指针始化一个确定的，适当的地址，这是使用指针的金科玉律(不然会出现野指针)
  */
-
-
-void testNew() {
+TEST(newInt,newInt) {
     int a;
     int * p = &a;
     *p = 10;
@@ -26,10 +24,9 @@ void testNew() {
     int * pn = new int;
     *pn = 20;
     cout << "*pn = " << *pn << endl;
-
 }
 
-void testDelete() {
+TEST(newInt,delete){
     int * ps = new int;
     /**
      * 1.delete ps 会释放ps指向的内存，但不会删指针ps本身
@@ -40,14 +37,8 @@ void testDelete() {
     ps = NULL;
 }
 
-void testNewArray(){
+TEST(Array,delete){
     int * array = new int[10];
     delete [] array;
     array=NULL;
 }
-
-
-//int main() {
-////     testNew();
-//    testDelete();
-//}

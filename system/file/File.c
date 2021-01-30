@@ -33,8 +33,3 @@ void testOpenFileMax(){
     printf("num==%d\n",num);
     return;0;
 }
-
-//int main(){
-//    testOpen();
-//    return 0;
-//}

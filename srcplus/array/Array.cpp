@@ -66,5 +66,5 @@ TEST(array,myarray){
         cout<<array->get(j)<<" ";
     }
 
-   delete [] array;
+//   delete [] array;
 }

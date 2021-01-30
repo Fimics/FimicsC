@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <gtest/gtest.h>
 using namespace std;
 
 /*
@@ -24,10 +25,9 @@ string& assign(const char *s, int n);//把字符串s的前n个字符赋给当前
 string& assign(const string &s);//把字符串s赋给当前字符串
 string& assign(int n, char c);//用n个字符c赋给当前字符串
 string& assign(const string &s, int start, int n);//将s从start开始n个字符赋值给字符串
-
 */
 
-void create(){
+void create() {
     string str; //默认构造
     string str2(str); //拷贝构造
     string str3 = str;
@@ -52,9 +52,12 @@ void create(){
     str6.assign(str, 1, 3); //ell ? hel 从0索引
 
     cout << str6 << endl;
-
-
 }
+
+TEST(string,create){
+    create();
+}
+
 
 /*
 string存取字符操作
@@ -62,28 +65,23 @@ char& operator[](int n);//通过[]方式取字符
 char& at(int n);//通过at方法获取字符
 
 */
-void strAt()
-{
+void strAt() {
     string s = "hello world";
 
-    for (int i = 0; i < s.size();i++)
-    {
+    for (int i = 0; i < s.size(); i++) {
         //cout << s[i] << endl;
         cout << s.at(i) << endl;
     }
     //[] 和at区别？[]访问越界  直接挂掉 at会抛出异常
 
-    try
-    {
+    try {
         //cout << s[100] << endl;
         cout << s.at(100) << endl;
     }
-    catch (out_of_range & e)
-    {
+    catch (out_of_range &e) {
         cout << e.what() << endl;
     }
-    catch (...)
-    {
+    catch (...) {
         cout << "越界异常" << endl;
     }
 }
@@ -113,8 +111,7 @@ string& replace(int pos, int n, const char* s); //替换从pos开始的n个字�
 
 */
 
-void strFind()
-{
+void strFind() {
     //拼接
     string s1 = "我";
     string s2 = "爱北京";
@@ -142,9 +139,8 @@ void strFind()
 
 }
 
-/*
+/**
 string比较操作
-/*
 compare函数在>时返回 1，<时返回 -1，==时返回 0。
 比较区分大小写，比较时参考字典顺序，排越前面的越小。
 大写的A比小写的a小。
@@ -153,21 +149,15 @@ int compare(const string &s) const;//与字符串s比较
 int compare(const char *s) const;//与字符串s比较
 */
 
-void strCompare()
-{
+void strCompare() {
     string s1 = "abc";
     string s2 = "abcd";
 
-    if (s1.compare(s2) == 0)
-    {
+    if (s1.compare(s2) == 0) {
         cout << "s1 等于 s2" << endl;
-    }
-    else if (s1.compare(s2) == 1)
-    {
+    } else if (s1.compare(s2) == 1) {
         cout << "s1 大于 s2" << endl;
-    }
-    else
-    {
+    } else {
         cout << "s1 小于 s2" << endl;
     }
 
@@ -180,8 +170,7 @@ string substr(int pos = 0, int n = npos) const;//返回由pos开始的n个字符
 
 */
 
-void strSub()
-{
+void strSub() {
     string s1 = "abcde";
 
     string s2 = s1.substr(1, 3);
@@ -207,8 +196,7 @@ string& erase(int pos, int n = npos);//删除从Pos开始的n个字符
 
 */
 
-void strInsert()
-{
+void strInsert() {
     string s1 = "hello";
     s1.insert(1, "111");
     cout << s1 << endl; //h111ello
@@ -224,22 +212,19 @@ void strInsert()
 string和c-style字符串转换
 */
 
-void funcStr(string s)
-{
+void funcStr(string s) {
     cout << s << endl;
 }
 
-void func2Str(const char * s)
-{
+void func2Str(const char *s) {
     cout << s << endl;
 }
 
-void test07Str()
-{
+void test07Str() {
     string s = "abc";
     //string -> const char *
 
-    const char * p = s.c_str();
+    const char *p = s.c_str();
 
     funcStr(p); //const char * 隐式类型转换为 string
 
@@ -249,17 +234,16 @@ void test07Str()
     //func2(s2); //string 不能隐式类型转换为 char *
 }
 
-void test08Str()
-{
+void test08Str() {
     string s = "abcdefg";
-    char& a = s[2];
-    char& b = s[3];
+    char &a = s[2];
+    char &b = s[3];
 
     a = '1';
     b = '2';
 
     cout << s << endl;
-    cout << (int*)s.c_str() << endl;
+    cout << (int *) s.c_str() << endl;
 
     s = "pppppppppppppp";
 
@@ -267,7 +251,7 @@ void test08Str()
     //b = '2';
 
     cout << s << endl;
-    cout << (int*)s.c_str() << endl;
+    cout << (int *) s.c_str() << endl;
 
 }
 
@@ -275,12 +259,10 @@ void test08Str()
 写一个函数，函数内部将string字符串中的所有小写字母都变为大写字母。
 */
 
-void test09Str()
-{
+void test09Str() {
     string s = "abCdEfg";
 
-    for (int i = 0; i < s.size();i++)
-    {
+    for (int i = 0; i < s.size(); i++) {
         //s[i] = toupper(s[i]);
 
         //全变小写
@@ -288,9 +270,4 @@ void test09Str()
     }
 
     cout << s << endl;
-}
-
-
-int main(){
-    create();
 }

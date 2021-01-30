@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <string>
-
+#include <gtest//gtest.h>
 using namespace std;
 
 //https://www.cnblogs.com/yangxiaoping/p/8268209.html
@@ -18,16 +18,14 @@ void swapInt(int &a, int &b) {
     a = b;
     b = tmp;
 }
-
 void swapDouble(double &a, double &b);
 
-void testSwapInt() {
+TEST(testSwapInt,testSwapInt) {
     int a = 10;
     int b = 20;
     swapInt(a, b);
     cout << "a= " << a << "  b= " << b << endl;
 }
-
 
 /**
  * 类型参数化，泛型-模板
@@ -35,8 +33,6 @@ void testSwapInt() {
  * @tparam T
  */
 template<class T>
-
-
 void mySwap(T &a, T &b) {
     T tmp = a;
     a = b;
@@ -46,7 +42,7 @@ void mySwap(T &a, T &b) {
 template<typename T>
 void mySwap2() {};
 
-void testMySwap() {
+TEST(泛型_模板,classT_tytenameT){
     int a = 10;
     int b = 20;
     char c = 'c';
@@ -174,11 +170,9 @@ public:
 };
 
 
-void testClassTemplate() {
+TEST(类模板,class_template){
     //类模板不支持自动类型推倒
 //    Strdent p1("zhangsan",100);
-
-
     Strdent<string, int> s("张三", 100);
     s.showInfo();
 }
@@ -215,7 +209,6 @@ public:
 };
 
 void testPerson1() {
-
     myClass<Person1> m;
     m.func1();
 }

@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <gtest/gtest.h>
 
 //fork 父进程返回子进程ID,子进程返回0
 
@@ -22,17 +23,17 @@ void createPorcessWithFork(){
 //        }
     } else if(pid>0){
         printf("subpid--->%d,pid->%d\n",getpid(),getppid());
-        sleep(130);
     }
 
-
-
     printf("end\n");
+}
 
+TEST(fork,createPorcessWithFork){
+    createPorcessWithFork();
 }
 
 void createMulProcess(){
-    int n = 5;
+    int n = 2;
     int i=0;
 
     pid_t pid = 0;
@@ -53,6 +54,10 @@ void createMulProcess(){
 //        sleep(1);
 //    }
 
+}
+
+TEST(fork,createMulProcess){
+    createMulProcess();
 }
 
 /**
@@ -79,7 +84,6 @@ void testProcessCntl(){
     sleep(i);
 }
 
-//int main(){
-////    createMulProcess();
-//    return 0;
-//}
+TEST(fork,testProcessCntl){
+    testProcessCntl();
+}
